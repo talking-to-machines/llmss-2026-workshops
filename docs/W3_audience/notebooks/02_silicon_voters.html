@@ -1,0 +1,2113 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Notebook 2 — A silicon audience: writing ads for five kinds of voter – Talking to Machines · LLMSS 2026 Workshops</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../W3_legal/notebooks/01_justice_twins.html" rel="next">
+<link href="../../W2_twins/notebooks/02_signals_and_backtest.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-711d5f0cb2eecbce4b54be160a5a7e6e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-4275d7de9d7afaebafdd53a5eb10d6d4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-711d5f0cb2eecbce4b54be160a5a7e6e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Talking to Machines · LLMSS 2026 Workshops</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../../index.html" aria-current="page"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../setup.html"> 
+<span class="menu-text">Run it yourself</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/talking-to-machines/llmss-2026-workshops"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../W3_audience/notebooks/02_silicon_voters.html">Workshop 3 · The Silicon Audience</a></li><li class="breadcrumb-item"><a href="../../W3_audience/notebooks/02_silicon_voters.html">Silicon Voters: ads for five kinds of voter</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Talking to Machines: LLMSS 2026 Workshops</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Run it yourself</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Workshop 1 · AIPOP</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../W1_aipop/notebooks/01_frame_and_sample.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1. Building a silicon sample</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../W1_aipop/notebooks/02_personas_and_interview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2. Personas and the digital interview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../W1_aipop/notebooks/03_mrp_and_validation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3. MrP and validation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Workshop 2 · The Wisdom of Digital Twins</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../W2_twins/notebooks/01_twins_and_interview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1. Finfluencer twins and the daily interview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../W2_twins/notebooks/02_signals_and_backtest.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2. From twin answers to a market signal</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Workshop 3 · The Silicon Audience</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../W3_audience/notebooks/02_silicon_voters.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Silicon Voters: ads for five kinds of voter</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../W3_legal/notebooks/01_justice_twins.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Silicon Jury: a justice twin, one case</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#what-you-will-do" id="toc-what-you-will-do" class="nav-link active" data-scroll-target="#what-you-will-do">What you will do</a></li>
+  <li><a href="#the-voters" id="toc-the-voters" class="nav-link" data-scroll-target="#the-voters">1. The Voters</a></li>
+  <li><a href="#the-question" id="toc-the-question" class="nav-link" data-scroll-target="#the-question">2. The question</a></li>
+  <li><a href="#the-studys-scripts-by-group" id="toc-the-studys-scripts-by-group" class="nav-link" data-scroll-target="#the-studys-scripts-by-group">3. The study’s scripts, by group</a></li>
+  <li><a href="#stage-1-the-basic-prompt" id="toc-stage-1-the-basic-prompt" class="nav-link" data-scroll-target="#stage-1-the-basic-prompt">4. Stage 1: the basic prompt</a>
+  <ul class="collapse">
+  <li><a href="#the-audience-and-the-judges" id="toc-the-audience-and-the-judges" class="nav-link" data-scroll-target="#the-audience-and-the-judges">The audience and the judges</a></li>
+  <li><a href="#what-stage-1-wrote" id="toc-what-stage-1-wrote" class="nav-link" data-scroll-target="#what-stage-1-wrote">What Stage 1 wrote</a></li>
+  </ul></li>
+  <li><a href="#stage-2-what-our-tests-taught-us" id="toc-stage-2-what-our-tests-taught-us" class="nav-link" data-scroll-target="#stage-2-what-our-tests-taught-us">5. Stage 2: what our tests taught us</a></li>
+  <li><a href="#stage-3-sharpen-the-aim" id="toc-stage-3-sharpen-the-aim" class="nav-link" data-scroll-target="#stage-3-sharpen-the-aim">6. Stage 3: sharpen the aim</a>
+  <ul class="collapse">
+  <li><a href="#a-worked-example" id="toc-a-worked-example" class="nav-link" data-scroll-target="#a-worked-example">A worked example</a></li>
+  <li><a href="#your-turn" id="toc-your-turn" class="nav-link" data-scroll-target="#your-turn">Your turn</a></li>
+  </ul></li>
+  <li><a href="#the-leaderboard-and-what-the-loop-does-next" id="toc-the-leaderboard-and-what-the-loop-does-next" class="nav-link" data-scroll-target="#the-leaderboard-and-what-the-loop-does-next">7. The leaderboard, and what the loop does next</a></li>
+  <li><a href="#what-a-twin-cannot-know" id="toc-what-a-twin-cannot-know" class="nav-link" data-scroll-target="#what-a-twin-cannot-know">8. What a twin cannot know</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/talking-to-machines/llmss-2026-workshops/blob/main/W3_audience/notebooks/02_silicon_voters.Rmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/talking-to-machines/llmss-2026-workshops/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../W3_audience/notebooks/02_silicon_voters.html">Workshop 3 · The Silicon Audience</a></li><li class="breadcrumb-item"><a href="../../W3_audience/notebooks/02_silicon_voters.html">Silicon Voters: ads for five kinds of voter</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Notebook 2 — A silicon audience: writing ads for five kinds of voter</h1>
+<p class="subtitle lead">LLMSS 2026, Workshop 3 (The Silicon Audience), Silicon Voters block · Hong Kong, 13 October 2026</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="what-you-will-do" class="level2">
+<h2 class="anchored" data-anchor-id="what-you-will-do">What you will do</h2>
+<p>A <strong>silicon audience</strong> is a panel of digital twins: a language model, given one voter’s record, predicts how that voter would answer a question about a political message. The Talking to Machines group uses such panels to decide which message reaches which voter <em>before</em> the message runs, and it is testing the panels against the people they are built from in a pre-registered study (OSF, 7 October 2026).</p>
+<p>In this notebook a language model writes a thirty-second television ad, and you improve the instructions it is given, in three stages. Every ad is aimed at one of five kinds of Ohio voter, from strong Democrats to strong Republicans, and every ad gets two scores:</p>
+<ul>
+<li><strong>Does it read like a real ad?</strong> Judges compare it with a real Ohio campaign ad and try to spot the machine-written one.</li>
+<li><strong>Does it hit its group?</strong> The twins say how likely they would be to vote for the candidate behind it, and the ad should do better with its own group than with the other four.</li>
+</ul>
+<p>The sections, in about forty-five minutes:</p>
+<ol type="1">
+<li><strong>The Voters:</strong> the 400 Ohio twins you built this morning, in five groups;</li>
+<li><strong>The question:</strong> your issue, and the one question every twin answers;</li>
+<li><strong>The study’s scripts:</strong> how the five groups rated the scripts in the pre-registered study, and how to read a score that is about <em>aim</em>;</li>
+<li><strong>Stage 1:</strong> a basic prompt writes five ads, one per group;</li>
+<li><strong>Stage 2:</strong> the same prompt with what our tests taught us added;</li>
+<li><strong>Stage 3:</strong> your prompt, run live: push the aim higher than Stage 2;</li>
+<li><strong>The leaderboard,</strong> and what the loop does next;</li>
+<li><strong>What a twin cannot know.</strong></li>
+</ol>
+<p>Stages 1 and 2, and one worked example of Stage 3, were run once by the organisers and ship with the notebook, so the same prompt gives everyone the same ads and the same scores. Only Stage 3 calls a language model, and only if an API key is set. Everything else runs offline from the files beside this notebook.</p>
+<p><strong>How to read this notebook.</strong> As in the morning’s notebooks, every table, text block and figure the code prints has a number, given in bold just above the code that prints it, and the text says which table, row or column a number comes from.</p>
+<p><strong>Figure 0.1.</strong> The loop. The optimiser runs the ring over hundreds of messages; this notebook walks it by hand, three times, with the audience and the question already built.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="../figures/loop_map.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The first block loads the packages the notebook uses and sets the folders it reads from and writes to.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(data.table)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(jsonlite)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>DATA <span class="ot">&lt;-</span> <span class="fu">file.path</span>(<span class="st">".."</span>, <span class="st">"data"</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>OUT  <span class="ot">&lt;-</span> <span class="fu">file.path</span>(<span class="st">".."</span>, <span class="st">"output"</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(OUT, <span class="at">showWarnings =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>read_parquet <span class="ot">&lt;-</span> <span class="cf">function</span>(f) {           <span class="co"># arrow on the workshop server; nanoparquet is a light fallback</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">requireNamespace</span>(<span class="st">"arrow"</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>)) <span class="fu">as.data.table</span>(arrow<span class="sc">::</span><span class="fu">read_parquet</span>(f))</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span> <span class="fu">as.data.table</span>(nanoparquet<span class="sc">::</span><span class="fu">read_parquet</span>(f))</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>GROUPS <span class="ot">&lt;-</span> <span class="fu">data.table</span>(</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">group  =</span> <span class="fu">c</span>(<span class="st">"SD"</span>, <span class="st">"WD"</span>, <span class="st">"IND"</span>, <span class="st">"WR"</span>, <span class="st">"SR"</span>),</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="at">label  =</span> <span class="fu">c</span>(<span class="st">"Strong Democrat"</span>, <span class="st">"Weak or leaning Democrat"</span>, <span class="st">"Independent"</span>,</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>             <span class="st">"Weak or leaning Republican"</span>, <span class="st">"Strong Republican"</span>),</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="at">phrase =</span> <span class="fu">c</span>(<span class="st">"strong Democrats"</span>, <span class="st">"weak or leaning Democrats"</span>, <span class="st">"independents"</span>,</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>             <span class="st">"weak or leaning Republicans"</span>, <span class="st">"strong Republicans"</span>))</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>GROUP_COLOURS <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="at">SD =</span> <span class="st">"#1f4e9c"</span>, <span class="at">WD =</span> <span class="st">"#7fa6dd"</span>, <span class="at">IND =</span> <span class="st">"#8c8c8c"</span>, <span class="at">WR =</span> <span class="st">"#e39a8f"</span>, <span class="at">SR =</span> <span class="st">"#b0281a"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<hr>
+</section>
+<section id="the-voters" class="level2">
+<h2 class="anchored" data-anchor-id="the-voters">1. The Voters</h2>
+<p>The audience is the 400-twin Ohio panel from Workshop 1: a seeded draw from the census frame, each twin matched to a Cooperative Election Study respondent and rendered as a persona. The panel ships with this notebook as a copy, so you do not need the morning’s <code>output/</code> folder, but it is the same 400 twins with the same personas, character for character.</p>
+<p>Every persona carries the matched respondent’s own <strong>party identification</strong> on the seven-point scale. The block below reads it from the persona and puts each twin in one of five groups: strong Democrats; weak or leaning Democrats; independents; weak or leaning Republicans; strong Republicans. A twin whose respondent answered “not sure” is in none of the five and is left out of the group tables.</p>
+<p><strong>Table 1.1.</strong> <code>panel</code>: the 400 twins, by party identification and the group it puts them in.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>panel <span class="ot">&lt;-</span> <span class="fu">read_parquet</span>(<span class="fu">file.path</span>(DATA, <span class="st">"oh_panel_400.parquet"</span>))</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>panel[, pid7 <span class="sc">:</span><span class="er">=</span> <span class="fu">sub</span>(<span class="st">"^- Party identification: "</span>, <span class="st">""</span>,</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>                    <span class="fu">regmatches</span>(persona_text, <span class="fu">regexpr</span>(<span class="st">"- Party identification: [^</span><span class="sc">\n</span><span class="st">]+"</span>, persona_text)))]</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>PID_TO_GROUP <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Strong Democrat"</span> <span class="ot">=</span> <span class="st">"SD"</span>, <span class="st">"Not Very Strong Democrat"</span> <span class="ot">=</span> <span class="st">"WD"</span>, <span class="st">"Lean Democrat"</span> <span class="ot">=</span> <span class="st">"WD"</span>,</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>                  <span class="st">"Independent"</span> <span class="ot">=</span> <span class="st">"IND"</span>,</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>                  <span class="st">"Lean Republican"</span> <span class="ot">=</span> <span class="st">"WR"</span>, <span class="st">"Not Very Strong Republican"</span> <span class="ot">=</span> <span class="st">"WR"</span>, <span class="st">"Strong Republican"</span> <span class="ot">=</span> <span class="st">"SR"</span>)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>panel[, group <span class="sc">:</span><span class="er">=</span> <span class="fu">unname</span>(PID_TO_GROUP[pid7])]</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>panel[, .N, by <span class="ot">=</span> .(pid7, group)][<span class="fu">order</span>(<span class="fu">match</span>(group, GROUPS<span class="sc">$</span>group))]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">pid7</th>
+<th style="text-align: left;">group</th>
+<th style="text-align: right;">N</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Strong Democrat</td>
+<td style="text-align: left;">SD</td>
+<td style="text-align: right;">90</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Lean Democrat</td>
+<td style="text-align: left;">WD</td>
+<td style="text-align: right;">37</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Not Very Strong Democrat</td>
+<td style="text-align: left;">WD</td>
+<td style="text-align: right;">31</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Independent</td>
+<td style="text-align: left;">IND</td>
+<td style="text-align: right;">38</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Lean Republican</td>
+<td style="text-align: left;">WR</td>
+<td style="text-align: right;">49</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Not Very Strong Republican</td>
+<td style="text-align: left;">WR</td>
+<td style="text-align: right;">45</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Strong Republican</td>
+<td style="text-align: left;">SR</td>
+<td style="text-align: right;">94</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Not Sure</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">16</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p>The next block prints one persona in full: this is everything the twin is told about who it is, exactly as the morning’s model read it. Change <code>TWIN</code> to read another. Notice the provenance line at the head of each section — modelled from the census cell, or the matched respondent’s own answer — and notice what is <em>not</em> there: no advertisement, no rating of one, nothing about this study.</p>
+<p><strong>Text 1.1.</strong> The persona of twin <code>TWIN</code>.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>TWIN <span class="ot">&lt;-</span> panel<span class="sc">$</span>twin_id[<span class="dv">1</span>]</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(panel[twin_id <span class="sc">==</span> TWIN, persona_text])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>=== PROFILE ===
+The following is a record describing an adult citizen in the state of Ohio. It describes who you are: your
+civic record, your circumstances, your values and your political opinions. Each section states where the
+information comes from.
+
+-- CIVIC RECORD (not observed: synthetic skeleton drawn from the census frame, no voter-file record) --
+- Congressional district: OH-01
+- Voted in the November 2024 general election: yes (modelled from the census frame)
+- Earlier general elections, primary participation, registration: (not observed)
+
+-- DEMOGRAPHICS (census frame cell; modelled fields marked, respondent's own answers marked) --
+- Age: 35
+- Sex: Female (census frame cell; modelled)
+- Ethnicity: Middle Eastern (the matched survey respondent's own answer)
+- Education: Postgraduate degree (the matched survey respondent's own answer)
+- Household income: Prefer not to say (the matched survey respondent's own answer, CES 2025)
+- Marital status: Married (the matched survey respondent's own answer)
+
+-- VALUES &amp; POLITICS (donated from CES 2025 respondent #2524025786) --
+- Party identification: Lean Democrat
+- Party identification including leaners: Democrat (Including Leaners)
+- Ideology: Liberal
+- Retrospective economic evaluation (as of 2025): Gotten much worse
+- Presidential approval (as of 2025): Strongly Disapprove
+- Issue positions (the donor's own answers, CES 2025):
+   - Ukraine (as of 2025): Impose economic sanctions on Russia; Send food, medicine, and other humanitarian aid to Ukraine
+   - Israel/Gaza (as of 2025): Send food, medicine and other aid to the communities affected
+   - Gun control - Ban assault rifles: Support
+   - Gun control - Make it easier for people to obtain concealed-carry permit: Oppose
+   - Gun control - Require criminal background checks on all gun sales: Support
+   - Gun control - Increase the number of police on the street by 10 percent, even if it means fewer funds for other public services: Oppose
+   - Gun control - Decrease the number of police on the street by 10 percent, and increase funding for other public services: Support
+   - Grant legal status to all illegal immigrants who have held jobs and paid taxes for at least 3 years, and not been convicted of any felony crimes: Support
+   - Increase the number of border patrols on the US-Mexican border: Oppose
+   - Build a wall between the U.S. and Mexico: Oppose
+   - Provide permanent resident status to children of immigrants who were brought to the United States by their parents (also known as Dreamers). Provide these immigrants a pathway to citizenship if they meet the citizenship requirements and have committed no crimes: Support
+   - Give the Environmental Protection Agency power to regulate carbon dioxide emissions: Support
+   - Require that at least 20 percent of electricity be generated with renewable sources such as wind, solar, or hydroelectric power: Support
+   - Strengthen the Environmental Protection Agency enforcement of the Clean Air Act and Clean Water Act even if it costs U.S. jobs: Support
+   - Increase fossil fuel production in the U.S: Oppose
+   - Halt new oil and gas leases on federal lands: Support
+   - Relax local zoning laws in your state to allow for construction of more apartments and condos: Oppose
+   - Expand federal tax incentives to encourage developers to build homes for people who make less than half of the average income in your area: Support
+   - Require able-bodied adults under 64 years of age who do not have dependents to have a job in order to receive Medicaid: Support
+   - Repeal the Affordable Care Act: Oppose
+
+-- CIRCUMSTANCES &amp; BELIEFS (donated from CES 2025 respondent #2524025786; the respondent's own answers) --
+- Employment status: Part-time
+- Home: Own
+- Children under 18 in the household: Yes
+- Number of children: not asked in this respondent's survey (CES 2025)
+- Parent or guardian of: a child under 18
+- Household income change over the past year (as of 2025): Stayed about the same
+- Prices of everyday goods over the past year (as of 2025): Increased a lot
+- If faced with an unexpected $400 expense: not asked in this respondent's survey (CES 2025)
+- Labour union member: I formerly was a member of a labor union
+- Union member elsewhere in the household: A member of my household was formerly a member of a labor union, but is not now
+- Covered by a union contract: No
+- Religion: Something else
+- Born-again or evangelical Christian: No
+- Importance of religion: Not at all important
+- Attends religious services: Never
+- Prays: Never
+- Views on race and gender: not asked in this respondent's survey (CES 2025)
+
+-- MEDIA DIET (donated from CES 2025 respondent #2524025786) --
+- Interest in news and public affairs: Only now and then
+- Media market (DMA): (absent)
+- Media use in the past 24 hours (the donor's own answers, as of 2025):
+   - Used: TV news, a newspaper (print or online)
+   - Did not use: social media, radio news
+   - Type of TV news watched: national news
+   - TV networks watched: ABC
+   - Type of newspaper read: online
+   - Political activity on social media: not applicable (did not use social media)
+
+=== END OF PROFILE ===</code></pre>
+</div>
+</div>
+<hr>
+</section>
+<section id="the-question" class="level2">
+<h2 class="anchored" data-anchor-id="the-question">2. The question</h2>
+<p>Pick one of the two issues in Table 2.1 and put it in <code>ISSUE</code>. Every ad you see from here on is about that issue.</p>
+<p><strong>Table 2.1.</strong> <code>issues</code>: the two issues in this block.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>issues <span class="ot">&lt;-</span> <span class="fu">fread</span>(<span class="fu">file.path</span>(DATA, <span class="st">"issues.csv"</span>))[key <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"COST"</span>, <span class="st">"IMM"</span>)]</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>ISSUE  <span class="ot">&lt;-</span> <span class="st">"immigration"</span>     <span class="co"># or "taxes and household relief"</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>it <span class="ot">&lt;-</span> issues[issue <span class="sc">==</span> ISSUE]</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>issues[, .(key, issue, title)]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">key</th>
+<th style="text-align: left;">issue</th>
+<th style="text-align: left;">title</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">COST</td>
+<td style="text-align: left;">taxes and household relief</td>
+<td style="text-align: left;">Taxes and household relief</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">IMM</td>
+<td style="text-align: left;">immigration</td>
+<td style="text-align: left;">Immigration</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p>Every ad is put to every twin with <strong>one question</strong>: how likely this person would be to vote for the candidate behind the ad, from 0 (certainly not) to 10 (certainly would). It is the vote-likelihood item of the pre-registered study, word for word.</p>
+<p>The <strong>header</strong> tells the model what it is doing: <em>predicting</em> the answer a particular person would give, in the third person (“this person”), from that person’s record. That is how the registered study puts it, and it is not the same as asking the model to <em>be</em> the person. The <strong>profile</strong> is the persona you read in Text 1.1; then comes the ad, and the question. The twin is never told which group an ad was written for, who wrote it, or what the study is about.</p>
+<p>The block below defines the header, the question and the JSON schema the answer must match, and prints them.</p>
+<p><strong>Text 2.1.</strong> The question, as sent (the profile omitted).</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>HEADER <span class="ot">&lt;-</span> <span class="fu">paste</span>(</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Below is the profile of an adult in Ohio, and then a political advertisement. Predict how this"</span>,</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"person would answer the question that follows: give the answer this person would actually give,"</span>,</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"not the answer a typical person would give, and not the one you would wish them to give."</span>,</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Return only the JSON object described at the end."</span>)</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>question_block <span class="ot">&lt;-</span> <span class="cf">function</span>(script) <span class="fu">paste0</span>(</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Here is the script for a thirty-second television advertisement by a candidate running for office.</span><span class="sc">\n\n</span><span class="st">"</span>,</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  script, <span class="st">"</span><span class="sc">\n\n</span><span class="st">"</span>,</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  <span class="st">"After reading this, how likely would this person be to vote for the candidate behind this advertisement?</span><span class="sc">\n</span><span class="st">"</span>,</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  <span class="st">"0 = certainly not, 10 = certainly would.</span><span class="sc">\n</span><span class="st">"</span>,</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Return: {</span><span class="sc">\"</span><span class="st">ptv</span><span class="sc">\"</span><span class="st">: &lt;0-10&gt;}"</span>)</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>SCHEMA <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">type =</span> <span class="st">"object"</span>, <span class="at">additionalProperties =</span> <span class="cn">FALSE</span>, <span class="at">required =</span> <span class="fu">list</span>(<span class="st">"ptv"</span>),</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>               <span class="at">properties =</span> <span class="fu">list</span>(<span class="at">ptv =</span> <span class="fu">list</span>(<span class="at">type =</span> <span class="st">"integer"</span>, <span class="at">minimum =</span> <span class="dv">0</span>, <span class="at">maximum =</span> <span class="dv">10</span>)))</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(HEADER, <span class="st">"</span><span class="sc">\n\n</span><span class="st">=== PROFILE ===</span><span class="sc">\n</span><span class="st">{persona_text}</span><span class="sc">\n</span><span class="st">=== END OF PROFILE ===</span><span class="sc">\n\n</span><span class="st">"</span>, <span class="at">sep =</span> <span class="st">""</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Below is the profile of an adult in Ohio, and then a political advertisement. Predict how this person would answer the question that follows: give the answer this person would actually give, not the answer a typical person would give, and not the one you would wish them to give. Return only the JSON object described at the end.
+
+=== PROFILE ===
+{persona_text}
+=== END OF PROFILE ===</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">question_block</span>(<span class="st">"{script}"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Here is the script for a thirty-second television advertisement by a candidate running for office.
+
+{script}
+
+After reading this, how likely would this person be to vote for the candidate behind this advertisement?
+0 = certainly not, 10 = certainly would.
+Return: {"ptv": &lt;0-10&gt;}</code></pre>
+</div>
+</div>
+<hr>
+</section>
+<section id="the-studys-scripts-by-group" class="level2">
+<h2 class="anchored" data-anchor-id="the-studys-scripts-by-group">3. The study’s scripts, by group</h2>
+<p>Before writing anything, look at what the group’s own message factory wrote. The pre-registered study fields fifteen scripts: for each of three issues, four written for positions 20, 40, 60 and 80 on a left–right scale for that issue, and one <strong>untargeted</strong> script on a different matter altogether, the control. They were frozen with the registration, and all fifteen have already been put to all 400 twins.</p>
+<p>One caution about these answers. They were generated before the registration was finalised, with an earlier interview that asked the model to answer <em>as</em> the person, and with four questions rather than one. Only the vote-likelihood answer is used here.</p>
+<p>The block below defines the scoring used in the rest of the notebook, and prints nothing:</p>
+<ul>
+<li><code>group_means()</code> gives each ad’s mean vote likelihood (0–10) in each of the five groups;</li>
+<li><code>aim()</code> gives each ad’s <strong>aim</strong>: the mean in the group it was written for, minus the average of the means in the other four groups.</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>read_jsonl <span class="ot">&lt;-</span> <span class="cf">function</span>(f) {</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="sc">!</span><span class="fu">file.exists</span>(f) <span class="sc">||</span> <span class="fu">length</span>(<span class="fu">readLines</span>(f, <span class="at">warn =</span> <span class="cn">FALSE</span>)) <span class="sc">==</span> <span class="dv">0</span>) <span class="fu">return</span>(<span class="fu">data.table</span>())</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rbindlist</span>(<span class="fu">lapply</span>(<span class="fu">readLines</span>(f, <span class="at">warn =</span> <span class="cn">FALSE</span>), <span class="cf">function</span>(l) <span class="fu">as.data.table</span>(<span class="fu">fromJSON</span>(l))), <span class="at">fill =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>group_means <span class="ot">&lt;-</span> <span class="cf">function</span>(ans) {</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  d <span class="ot">&lt;-</span> <span class="fu">merge</span>(ans, panel[<span class="sc">!</span><span class="fu">is.na</span>(group), .(twin_id, group)], <span class="at">by =</span> <span class="st">"twin_id"</span>)</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>  d[, .(<span class="at">n =</span> .N, <span class="at">ptv =</span> <span class="fu">round</span>(<span class="fu">mean</span>(ptv), <span class="dv">2</span>)), by <span class="ot">=</span> .(ad_id, group)]</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>aim <span class="ot">&lt;-</span> <span class="cf">function</span>(gm, targets) {               <span class="co"># targets: ad_id, target (a group)</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>  d <span class="ot">&lt;-</span> <span class="fu">merge</span>(gm, targets[, .(ad_id, target)], <span class="at">by =</span> <span class="st">"ad_id"</span>)</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>  d[, .(<span class="at">target_ptv =</span> ptv[group <span class="sc">==</span> target[<span class="dv">1</span>]],</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>        <span class="at">others_ptv =</span> <span class="fu">round</span>(<span class="fu">mean</span>(ptv[group <span class="sc">!=</span> target[<span class="dv">1</span>]]), <span class="dv">2</span>)), by <span class="ot">=</span> .(ad_id, target)][</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>    , aim <span class="sc">:</span><span class="er">=</span> <span class="fu">round</span>(target_ptv <span class="sc">-</span> others_ptv, <span class="dv">2</span>)][]</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>The next block reads the cached answers and prints the five group means for the five scripts on your issue, one row per script.</p>
+<p><strong>Table 3.1.</strong> <code>study</code>: mean vote likelihood by group, for the study’s scripts on your issue.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>study_ads <span class="ot">&lt;-</span> <span class="fu">fread</span>(<span class="fu">file.path</span>(DATA, <span class="st">"ads_frozen.csv"</span>))[issue <span class="sc">==</span> ISSUE]</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>study_ads[, script <span class="sc">:</span><span class="er">=</span> <span class="fu">ifelse</span>(arm <span class="sc">==</span> <span class="st">"targeted"</span>, <span class="fu">paste</span>(<span class="st">"position"</span>, target_position), <span class="st">"untargeted"</span>)]</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>cached <span class="ot">&lt;-</span> <span class="fu">read_jsonl</span>(<span class="fu">file.path</span>(DATA, <span class="st">"ad_answers.jsonl"</span>))[ad_id <span class="sc">%in%</span> study_ads<span class="sc">$</span>ad_id, .(twin_id, ad_id, <span class="at">ptv =</span> <span class="fu">as.numeric</span>(ptv))]</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>study <span class="ot">&lt;-</span> <span class="fu">merge</span>(<span class="fu">group_means</span>(cached), study_ads[, .(ad_id, script)], <span class="at">by =</span> <span class="st">"ad_id"</span>)</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="fu">dcast</span>(study, ad_id <span class="sc">+</span> script <span class="sc">~</span> <span class="fu">factor</span>(group, <span class="at">levels =</span> GROUPS<span class="sc">$</span>group), <span class="at">value.var =</span> <span class="st">"ptv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">ad_id</th>
+<th style="text-align: left;">script</th>
+<th style="text-align: right;">SD</th>
+<th style="text-align: right;">WD</th>
+<th style="text-align: right;">IND</th>
+<th style="text-align: right;">WR</th>
+<th style="text-align: right;">SR</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">IMM_20</td>
+<td style="text-align: left;">position 20</td>
+<td style="text-align: right;">9.09</td>
+<td style="text-align: right;">8.41</td>
+<td style="text-align: right;">6.18</td>
+<td style="text-align: right;">3.67</td>
+<td style="text-align: right;">1.65</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">IMM_40</td>
+<td style="text-align: left;">position 40</td>
+<td style="text-align: right;">0.71</td>
+<td style="text-align: right;">1.99</td>
+<td style="text-align: right;">3.63</td>
+<td style="text-align: right;">7.71</td>
+<td style="text-align: right;">9.32</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">IMM_60</td>
+<td style="text-align: left;">position 60</td>
+<td style="text-align: right;">0.28</td>
+<td style="text-align: right;">1.19</td>
+<td style="text-align: right;">3.05</td>
+<td style="text-align: right;">7.09</td>
+<td style="text-align: right;">9.03</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">IMM_80</td>
+<td style="text-align: left;">position 80</td>
+<td style="text-align: right;">0.21</td>
+<td style="text-align: right;">0.96</td>
+<td style="text-align: right;">2.50</td>
+<td style="text-align: right;">7.28</td>
+<td style="text-align: right;">9.11</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">IMM_U</td>
+<td style="text-align: left;">untargeted</td>
+<td style="text-align: right;">7.70</td>
+<td style="text-align: right;">7.18</td>
+<td style="text-align: right;">6.37</td>
+<td style="text-align: right;">7.71</td>
+<td style="text-align: right;">8.72</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p><strong>Figure 3.1.</strong> The same, as five bars per script: one bar per group, strong Democrats on the left, strong Republicans on the right.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(study, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">factor</span>(group, <span class="at">levels =</span> GROUPS<span class="sc">$</span>group), <span class="at">y =</span> ptv, <span class="at">fill =</span> group)) <span class="sc">+</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>() <span class="sc">+</span> <span class="fu">facet_wrap</span>(<span class="sc">~</span> script, <span class="at">nrow =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="cn">NULL</span>, <span class="at">values =</span> GROUP_COLOURS, <span class="at">guide =</span> <span class="st">"none"</span>) <span class="sc">+</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_discrete</span>(<span class="cn">NULL</span>) <span class="sc">+</span> <span class="fu">scale_y_continuous</span>(<span class="st">"Mean vote likelihood, 0-10"</span>, <span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">10</span>)) <span class="sc">+</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="02_silicon_voters_files/figure-html/study-plot-1.png" class="img-fluid figure-img" width="864"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Exercise 3.1.</strong> Suppose you had to pick one of these five scripts to win over <strong>weak or leaning Republicans</strong> (<code>WR</code>). Which script has the highest mean with that group in Table 3.1? Now compute each script’s <strong>aim</strong> for that group with <code>aim(study, study_ads[, .(ad_id, target = "WR")])</code>. Is the script with the highest bar also the script with the best aim? Why might they differ?</p>
+<hr>
+</section>
+<section id="stage-1-the-basic-prompt" class="level2">
+<h2 class="anchored" data-anchor-id="stage-1-the-basic-prompt">4. Stage 1: the basic prompt</h2>
+<p>From here on a language model writes the ads. The factory is a single call to the workshop model with a prompt printed in full below: one prompt, one call, no hidden machinery. <code>{issue}</code> and <code>{group}</code> are filled in for each ad, so one prompt writes five ads, one per group.</p>
+<p>The block below reads your key and the proxy address from the environment, defines the prompts and the model calls, and prints the Stage 1 prompt.</p>
+<ul>
+<li><code>fill()</code> puts the issue and the group into a prompt;</li>
+<li><code>write_ads()</code> sends a filled prompt for each group and returns the five ads. The workshop model sometimes declines to write a political ad aimed at a named group of voters (“Sorry, I can’t create targeted political persuasion…”); when it does, <code>write_ads()</code> asks again, up to three times, and column <code>asked</code> records how many tries each ad took. An ad still declined after three tries is marked <code>declined</code> and is not scored;</li>
+<li><code>run_ads()</code> puts each ad to the audience and to the judges (below).</li>
+</ul>
+<p><strong>Text 4.1.</strong> The Stage 1 prompt.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>MODEL <span class="ot">&lt;-</span> <span class="st">"gpt-5-mini-2025-08-07"</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>key   <span class="ot">&lt;-</span> <span class="fu">Sys.getenv</span>(<span class="st">"OPENAI_API_KEY"</span>)</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>base  <span class="ot">&lt;-</span> <span class="fu">Sys.getenv</span>(<span class="st">"OPENAI_BASE_URL"</span>, <span class="at">unset =</span> <span class="st">"https://api.openai.com/v1"</span>)</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>API   <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="fu">sub</span>(<span class="st">"/+$"</span>, <span class="st">""</span>, base), <span class="st">"/chat/completions"</span>)</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>STAGE1 <span class="ot">&lt;-</span> <span class="fu">paste</span>(</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Write the script for a thirty-second television advertisement by a candidate running for office in Ohio."</span>,</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>  <span class="st">"75 to 85 words, spoken by the candidate in the first person, ending with </span><span class="sc">\"</span><span class="st">And I approve this message.</span><span class="sc">\"</span><span class="st">"</span>,</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Name no candidate, party or office. The advertisement is about {issue}. It should win the vote of {group} in Ohio."</span>)</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>STAGE2_ADD <span class="ot">&lt;-</span> <span class="fu">paste</span>(</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Write it the way a real candidate speaks. Say once, flatly, what you did before politics that gives you the right"</span>,</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>  <span class="st">"to talk about this: a job, a service, a business. Put in one concrete scene or detail, a person, a street, a price,"</span>,</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>  <span class="st">"invented but with nobody named. Promise what you will do in plain verbs, naming the instrument, never </span><span class="sc">\"</span><span class="st">fix</span><span class="sc">\"</span><span class="st"> or"</span>,</span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>  <span class="st">"</span><span class="sc">\"</span><span class="st">stand up to</span><span class="sc">\"</span><span class="st">. Short spoken sentences, contractions, no hedging, no balancing the other side, no neat parallel"</span>,</span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>  <span class="st">"closing line."</span>)</span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>EXAMPLE_ADD <span class="ot">&lt;-</span> <span class="st">"Mention one thing the voter can check for themselves."</span>    <span class="co"># the worked example of Stage 3 (Section 6)</span></span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>fill <span class="ot">&lt;-</span> <span class="cf">function</span>(prompt, group) <span class="fu">paste0</span>(</span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gsub</span>(<span class="st">"{group}"</span>, GROUPS<span class="sc">$</span>phrase[<span class="fu">match</span>(group, GROUPS<span class="sc">$</span>group)], <span class="fu">gsub</span>(<span class="st">"{issue}"</span>, it<span class="sc">$</span>issue, prompt, <span class="at">fixed =</span> <span class="cn">TRUE</span>), <span class="at">fixed =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>  <span class="st">"</span><span class="sc">\n\n</span><span class="st">Return the script only."</span>)</span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a>chat <span class="ot">&lt;-</span> <span class="cf">function</span>(messages, <span class="at">response_format =</span> <span class="cn">NULL</span>) {</span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a>  body <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">model =</span> MODEL, <span class="at">reasoning_effort =</span> <span class="st">"low"</span>, <span class="at">messages =</span> messages)</span>
+<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.null</span>(response_format)) body<span class="sc">$</span>response_format <span class="ot">&lt;-</span> response_format</span>
+<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a>  httr2<span class="sc">::</span><span class="fu">request</span>(API) <span class="sc">|&gt;</span> httr2<span class="sc">::</span><span class="fu">req_auth_bearer_token</span>(key) <span class="sc">|&gt;</span> httr2<span class="sc">::</span><span class="fu">req_body_json</span>(body) <span class="sc">|&gt;</span></span>
+<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a>    httr2<span class="sc">::</span><span class="fu">req_retry</span>(<span class="at">max_tries =</span> <span class="dv">3</span>) <span class="sc">|&gt;</span> httr2<span class="sc">::</span><span class="fu">req_timeout</span>(<span class="dv">120</span>)</span>
+<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb13-28"><a href="#cb13-28" aria-hidden="true" tabindex="-1"></a>perform_all <span class="ot">&lt;-</span> <span class="cf">function</span>(reqs, <span class="at">workers =</span> <span class="dv">8</span>) {</span>
+<span id="cb13-29"><a href="#cb13-29" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">packageVersion</span>(<span class="st">"httr2"</span>) <span class="sc">&gt;=</span> <span class="st">"1.1.0"</span>) httr2<span class="sc">::</span><span class="fu">req_perform_parallel</span>(reqs, <span class="at">on_error =</span> <span class="st">"continue"</span>, <span class="at">max_active =</span> workers, <span class="at">progress =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb13-30"><a href="#cb13-30" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span> httr2<span class="sc">::</span><span class="fu">req_perform_parallel</span>(reqs, <span class="at">pool =</span> curl<span class="sc">::</span><span class="fu">new_pool</span>(<span class="at">total_con =</span> workers, <span class="at">host_con =</span> workers), <span class="at">on_error =</span> <span class="st">"continue"</span>, <span class="at">progress =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb13-31"><a href="#cb13-31" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb13-32"><a href="#cb13-32" aria-hidden="true" tabindex="-1"></a>content_of <span class="ot">&lt;-</span> <span class="cf">function</span>(r) <span class="cf">if</span> (<span class="fu">inherits</span>(r, <span class="st">"error"</span>) <span class="sc">||</span> <span class="fu">is.null</span>(r)) <span class="cn">NA_character_</span> <span class="cf">else</span></span>
+<span id="cb13-33"><a href="#cb13-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">trimws</span>(httr2<span class="sc">::</span><span class="fu">resp_body_json</span>(r)<span class="sc">$</span>choices[[<span class="dv">1</span>]]<span class="sc">$</span>message<span class="sc">$</span>content)</span>
+<span id="cb13-34"><a href="#cb13-34" aria-hidden="true" tabindex="-1"></a>n_words <span class="ot">&lt;-</span> <span class="cf">function</span>(x) <span class="fu">lengths</span>(<span class="fu">strsplit</span>(x, <span class="st">"</span><span class="sc">\\</span><span class="st">s+"</span>))</span>
+<span id="cb13-35"><a href="#cb13-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-36"><a href="#cb13-36" aria-hidden="true" tabindex="-1"></a>is_ad <span class="ot">&lt;-</span> <span class="cf">function</span>(x) <span class="sc">!</span><span class="fu">is.na</span>(x) <span class="sc">&amp;</span> <span class="fu">grepl</span>(<span class="st">"approve this message"</span>, x, <span class="at">ignore.case =</span> <span class="cn">TRUE</span>) <span class="sc">&amp;</span></span>
+<span id="cb13-37"><a href="#cb13-37" aria-hidden="true" tabindex="-1"></a>  <span class="sc">!</span><span class="fu">grepl</span>(<span class="st">"^</span><span class="sc">\\</span><span class="st">W*(sorry|i'm sorry|i am sorry|i can.?t|i cannot)"</span>, x, <span class="at">ignore.case =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb13-38"><a href="#cb13-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-39"><a href="#cb13-39" aria-hidden="true" tabindex="-1"></a>write_ads <span class="ot">&lt;-</span> <span class="cf">function</span>(prompt, id_prefix, <span class="at">tries =</span> <span class="dv">3</span>) {    <span class="co"># asks again, up to `tries` times, for any ad the model declined</span></span>
+<span id="cb13-40"><a href="#cb13-40" aria-hidden="true" tabindex="-1"></a>  text <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="cn">NA_character_</span>, <span class="fu">nrow</span>(GROUPS)); asked <span class="ot">&lt;-</span> <span class="fu">integer</span>(<span class="fu">nrow</span>(GROUPS))</span>
+<span id="cb13-41"><a href="#cb13-41" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (t <span class="cf">in</span> <span class="fu">seq_len</span>(tries)) {</span>
+<span id="cb13-42"><a href="#cb13-42" aria-hidden="true" tabindex="-1"></a>    todo <span class="ot">&lt;-</span> <span class="fu">which</span>(<span class="sc">!</span><span class="fu">is_ad</span>(text))</span>
+<span id="cb13-43"><a href="#cb13-43" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="sc">!</span><span class="fu">length</span>(todo)) <span class="cf">break</span></span>
+<span id="cb13-44"><a href="#cb13-44" aria-hidden="true" tabindex="-1"></a>    reqs <span class="ot">&lt;-</span> <span class="fu">lapply</span>(GROUPS<span class="sc">$</span>group[todo], <span class="cf">function</span>(g) <span class="fu">chat</span>(<span class="fu">list</span>(<span class="fu">list</span>(<span class="at">role =</span> <span class="st">"user"</span>, <span class="at">content =</span> <span class="fu">fill</span>(prompt, g)))))</span>
+<span id="cb13-45"><a href="#cb13-45" aria-hidden="true" tabindex="-1"></a>    text[todo] <span class="ot">&lt;-</span> <span class="fu">vapply</span>(<span class="fu">perform_all</span>(reqs), content_of, <span class="fu">character</span>(<span class="dv">1</span>)); asked[todo] <span class="ot">&lt;-</span> t</span>
+<span id="cb13-46"><a href="#cb13-46" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb13-47"><a href="#cb13-47" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data.table</span>(<span class="at">ad_id =</span> <span class="fu">paste0</span>(id_prefix, <span class="st">"_"</span>, GROUPS<span class="sc">$</span>group), <span class="at">issue =</span> it<span class="sc">$</span>key, <span class="at">target =</span> GROUPS<span class="sc">$</span>group,</span>
+<span id="cb13-48"><a href="#cb13-48" aria-hidden="true" tabindex="-1"></a>             <span class="at">prompt =</span> prompt, <span class="at">text =</span> text, <span class="at">asked =</span> asked, <span class="at">declined =</span> <span class="sc">!</span><span class="fu">is_ad</span>(text))[, words <span class="sc">:</span><span class="er">=</span> <span class="fu">n_words</span>(text)][]</span>
+<span id="cb13-49"><a href="#cb13-49" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb13-50"><a href="#cb13-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-51"><a href="#cb13-51" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">strwrap</span>(STAGE1, <span class="at">width =</span> <span class="dv">90</span>), <span class="at">sep =</span> <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Write the script for a thirty-second television advertisement by a candidate running for
+office in Ohio. 75 to 85 words, spoken by the candidate in the first person, ending with
+"And I approve this message." Name no candidate, party or office. The advertisement is
+about {issue}. It should win the vote of {group} in Ohio.</code></pre>
+</div>
+</div>
+<section id="the-audience-and-the-judges" class="level3">
+<h3 class="anchored" data-anchor-id="the-audience-and-the-judges">The audience and the judges</h3>
+<p>Four hundred twins is more than a live round needs. The next block draws the <strong>audience</strong> for every ad in Stages 1 to 3: ten twins from each group, fifty in all, with a fixed seed so that everyone in the room scores on the same fifty.</p>
+<p>It also loads the <strong>real ads</strong>: ten thirty-second campaign spots, nine from Ohio and one from Illinois, taken from Google’s political-ad archive with the candidates’ names removed (five Republican, five Democratic). They are what the judges compare each machine-written ad with. Each ad is shown to <strong>forty judges</strong>, separate calls to the same model, each with one real ad, and each judge is asked which of the two is the real one. Every machine-written ad meets each of the ten real ads four times: twice with the real ad shown first (text A) and twice with it shown second (text B). The order matters because the judges lean towards text A, and showing each pairing both ways means that lean weighs the same on every ad. An ad’s <strong>spotted</strong> score is the share of its judges who picked the real ad correctly: 0.5 is what guessing gives, so an ad near 0.5 or below reads like a real one, and 1 means every judge saw through it. An ad <strong>passes</strong> if at least one judge was fooled.</p>
+<p>The block prints the judge’s instruction, and one real ad so you can hear what the judges hear.</p>
+<p><strong>Text 4.2.</strong> The judge’s instruction, and one of the real ads.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2026</span>)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>audience <span class="ot">&lt;-</span> panel[<span class="sc">!</span><span class="fu">is.na</span>(group), .SD[<span class="fu">sample</span>(.N, <span class="dv">10</span>)], by <span class="ot">=</span> group]</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>real_ads <span class="ot">&lt;-</span> <span class="fu">read_jsonl</span>(<span class="fu">file.path</span>(DATA, <span class="st">"real_ads_judges.jsonl"</span>))</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>N_JUDGES <span class="ot">&lt;-</span> <span class="dv">40</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>JUDGE <span class="ot">&lt;-</span> <span class="fu">paste</span>(</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">"You are shown two texts. Each is the spoken words of a thirty-second American political advertisement."</span>,</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>  <span class="st">"One of them is a real advertisement that a candidate's campaign put on the air. The other was written"</span>,</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>  <span class="st">"by a machine imitating one. Names have been removed from both.</span><span class="sc">\n</span><span class="st">Say which one is the real advertisement.</span><span class="sc">\n</span><span class="st">"</span>,</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Return only: {</span><span class="sc">\"</span><span class="st">real</span><span class="sc">\"</span><span class="st">: </span><span class="sc">\"</span><span class="st">A</span><span class="sc">\"</span><span class="st"> or </span><span class="sc">\"</span><span class="st">B</span><span class="sc">\"</span><span class="st">, </span><span class="sc">\"</span><span class="st">confidence</span><span class="sc">\"</span><span class="st">: &lt;50-100&gt;}"</span>)</span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>JUDGE_SCHEMA <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">type =</span> <span class="st">"object"</span>, <span class="at">additionalProperties =</span> <span class="cn">FALSE</span>, <span class="at">required =</span> <span class="fu">c</span>(<span class="st">"real"</span>, <span class="st">"confidence"</span>),</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>                     <span class="at">properties =</span> <span class="fu">list</span>(<span class="at">real =</span> <span class="fu">list</span>(<span class="at">type =</span> <span class="st">"string"</span>, <span class="at">enum =</span> <span class="fu">list</span>(<span class="st">"A"</span>, <span class="st">"B"</span>)),</span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>                                       <span class="at">confidence =</span> <span class="fu">list</span>(<span class="at">type =</span> <span class="st">"integer"</span>, <span class="at">minimum =</span> <span class="dv">50</span>, <span class="at">maximum =</span> <span class="dv">100</span>)))</span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>twin_request <span class="ot">&lt;-</span> <span class="cf">function</span>(persona_text, script) <span class="fu">chat</span>(</span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">list</span>(<span class="fu">list</span>(<span class="at">role =</span> <span class="st">"system"</span>, <span class="at">content =</span> HEADER),</span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>       <span class="fu">list</span>(<span class="at">role =</span> <span class="st">"user"</span>, <span class="at">content =</span> <span class="fu">paste0</span>(<span class="st">"=== PROFILE ===</span><span class="sc">\n</span><span class="st">"</span>, persona_text, <span class="st">"</span><span class="sc">\n</span><span class="st">=== END OF PROFILE ===</span><span class="sc">\n\n</span><span class="st">"</span>, <span class="fu">question_block</span>(script)))),</span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">response_format =</span> <span class="fu">list</span>(<span class="at">type =</span> <span class="st">"json_schema"</span>, <span class="at">json_schema =</span> <span class="fu">list</span>(<span class="at">name =</span> <span class="st">"ptv"</span>, <span class="at">strict =</span> <span class="cn">TRUE</span>, <span class="at">schema =</span> SCHEMA)))</span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>judge_pairs <span class="ot">&lt;-</span> <span class="cf">function</span>(id) {                <span class="co"># every real ad in both slots, A and B; the same draw for the same ad, every run</span></span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set.seed</span>(<span class="fu">sum</span>(<span class="fu">utf8ToInt</span>(id) <span class="sc">*</span> <span class="fu">seq_along</span>(<span class="fu">utf8ToInt</span>(id))))</span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a>  grid <span class="ot">&lt;-</span> <span class="fu">CJ</span>(<span class="at">ref_id =</span> real_ads<span class="sc">$</span>ref_id, <span class="at">real_pos =</span> <span class="fu">c</span>(<span class="st">"A"</span>, <span class="st">"B"</span>))</span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a>  grid <span class="ot">&lt;-</span> grid[<span class="fu">rep</span>(<span class="fu">seq_len</span>(.N), <span class="fu">ceiling</span>(N_JUDGES <span class="sc">/</span> .N))][<span class="fu">sample</span>(.N)][<span class="fu">seq_len</span>(N_JUDGES)]</span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data.table</span>(<span class="at">ad_id =</span> id, <span class="at">judge =</span> <span class="fu">seq_len</span>(N_JUDGES), grid)</span>
+<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a>judge_request <span class="ot">&lt;-</span> <span class="cf">function</span>(machine, real, real_pos) <span class="fu">chat</span>(</span>
+<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">list</span>(<span class="fu">list</span>(<span class="at">role =</span> <span class="st">"user"</span>, <span class="at">content =</span> <span class="fu">paste0</span>(JUDGE, <span class="st">"</span><span class="sc">\n\n</span><span class="st">Text A:</span><span class="sc">\n</span><span class="st">"</span>, <span class="cf">if</span> (real_pos <span class="sc">==</span> <span class="st">"A"</span>) real <span class="cf">else</span> machine,</span>
+<span id="cb15-27"><a href="#cb15-27" aria-hidden="true" tabindex="-1"></a>                                            <span class="st">"</span><span class="sc">\n\n</span><span class="st">Text B:</span><span class="sc">\n</span><span class="st">"</span>, <span class="cf">if</span> (real_pos <span class="sc">==</span> <span class="st">"A"</span>) machine <span class="cf">else</span> real))),</span>
+<span id="cb15-28"><a href="#cb15-28" aria-hidden="true" tabindex="-1"></a>  <span class="at">response_format =</span> <span class="fu">list</span>(<span class="at">type =</span> <span class="st">"json_schema"</span>, <span class="at">json_schema =</span> <span class="fu">list</span>(<span class="at">name =</span> <span class="st">"judge"</span>, <span class="at">strict =</span> <span class="cn">TRUE</span>, <span class="at">schema =</span> JUDGE_SCHEMA)))</span>
+<span id="cb15-29"><a href="#cb15-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-30"><a href="#cb15-30" aria-hidden="true" tabindex="-1"></a>run_ads <span class="ot">&lt;-</span> <span class="cf">function</span>(ads) {                   <span class="co"># ads: ad_id, text. 50 twins + 40 judges per ad, all in parallel</span></span>
+<span id="cb15-31"><a href="#cb15-31" aria-hidden="true" tabindex="-1"></a>  tw <span class="ot">&lt;-</span> <span class="fu">CJ</span>(<span class="at">ad =</span> <span class="fu">seq_len</span>(<span class="fu">nrow</span>(ads)), <span class="at">k =</span> <span class="fu">seq_len</span>(<span class="fu">nrow</span>(audience)))</span>
+<span id="cb15-32"><a href="#cb15-32" aria-hidden="true" tabindex="-1"></a>  jp <span class="ot">&lt;-</span> <span class="fu">rbindlist</span>(<span class="fu">lapply</span>(ads<span class="sc">$</span>ad_id, judge_pairs))</span>
+<span id="cb15-33"><a href="#cb15-33" aria-hidden="true" tabindex="-1"></a>  reqs <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">lapply</span>(<span class="fu">seq_len</span>(<span class="fu">nrow</span>(tw)), <span class="cf">function</span>(r) <span class="fu">twin_request</span>(audience<span class="sc">$</span>persona_text[tw<span class="sc">$</span>k[r]], ads<span class="sc">$</span>text[tw<span class="sc">$</span>ad[r]])),</span>
+<span id="cb15-34"><a href="#cb15-34" aria-hidden="true" tabindex="-1"></a>            <span class="fu">lapply</span>(<span class="fu">seq_len</span>(<span class="fu">nrow</span>(jp)), <span class="cf">function</span>(r) <span class="fu">judge_request</span>(ads[ad_id <span class="sc">==</span> jp<span class="sc">$</span>ad_id[r], text],</span>
+<span id="cb15-35"><a href="#cb15-35" aria-hidden="true" tabindex="-1"></a>                                                                real_ads[ref_id <span class="sc">==</span> jp<span class="sc">$</span>ref_id[r], text], jp<span class="sc">$</span>real_pos[r])))</span>
+<span id="cb15-36"><a href="#cb15-36" aria-hidden="true" tabindex="-1"></a>  resps <span class="ot">&lt;-</span> <span class="fu">perform_all</span>(reqs)</span>
+<span id="cb15-37"><a href="#cb15-37" aria-hidden="true" tabindex="-1"></a>  failed <span class="ot">&lt;-</span> <span class="fu">vapply</span>(resps, <span class="cf">function</span>(r) <span class="fu">inherits</span>(r, <span class="st">"error"</span>) <span class="sc">||</span> <span class="fu">is.null</span>(r), <span class="fu">logical</span>(<span class="dv">1</span>))</span>
+<span id="cb15-38"><a href="#cb15-38" aria-hidden="true" tabindex="-1"></a>  first_error <span class="ot">&lt;-</span> <span class="cf">if</span> (<span class="fu">any</span>(failed)) <span class="fu">conditionMessage</span>(resps[[<span class="fu">which</span>(failed)[<span class="dv">1</span>]]]) <span class="cf">else</span> <span class="cn">NA_character_</span></span>
+<span id="cb15-39"><a href="#cb15-39" aria-hidden="true" tabindex="-1"></a>  out <span class="ot">&lt;-</span> <span class="fu">vapply</span>(resps, content_of, <span class="fu">character</span>(<span class="dv">1</span>))</span>
+<span id="cb15-40"><a href="#cb15-40" aria-hidden="true" tabindex="-1"></a>  t_out <span class="ot">&lt;-</span> out[<span class="fu">seq_len</span>(<span class="fu">nrow</span>(tw))]; j_out <span class="ot">&lt;-</span> out[<span class="fu">nrow</span>(tw) <span class="sc">+</span> <span class="fu">seq_len</span>(<span class="fu">nrow</span>(jp))]</span>
+<span id="cb15-41"><a href="#cb15-41" aria-hidden="true" tabindex="-1"></a>  answers <span class="ot">&lt;-</span> tw[, .(<span class="at">ad_id =</span> ads<span class="sc">$</span>ad_id[ad], <span class="at">twin_id =</span> audience<span class="sc">$</span>twin_id[k], <span class="at">persona_sha256 =</span> audience<span class="sc">$</span>persona_sha256[k],</span>
+<span id="cb15-42"><a href="#cb15-42" aria-hidden="true" tabindex="-1"></a>                    <span class="at">ptv =</span> <span class="fu">vapply</span>(t_out, <span class="cf">function</span>(x) <span class="cf">if</span> (<span class="fu">is.na</span>(x)) <span class="cn">NA_real_</span> <span class="cf">else</span> <span class="fu">as.numeric</span>(<span class="fu">fromJSON</span>(x)<span class="sc">$</span>ptv), <span class="fu">numeric</span>(<span class="dv">1</span>)),</span>
+<span id="cb15-43"><a href="#cb15-43" aria-hidden="true" tabindex="-1"></a>                    <span class="at">model =</span> MODEL)][<span class="sc">!</span><span class="fu">is.na</span>(ptv)]</span>
+<span id="cb15-44"><a href="#cb15-44" aria-hidden="true" tabindex="-1"></a>  jp[, <span class="st">`</span><span class="at">:=</span><span class="st">`</span>(<span class="at">pick =</span> <span class="fu">vapply</span>(j_out, <span class="cf">function</span>(x) <span class="cf">if</span> (<span class="fu">is.na</span>(x)) <span class="cn">NA_character_</span> <span class="cf">else</span> <span class="fu">fromJSON</span>(x)<span class="sc">$</span>real, <span class="fu">character</span>(<span class="dv">1</span>)),</span>
+<span id="cb15-45"><a href="#cb15-45" aria-hidden="true" tabindex="-1"></a>            <span class="at">confidence =</span> <span class="fu">vapply</span>(j_out, <span class="cf">function</span>(x) <span class="cf">if</span> (<span class="fu">is.na</span>(x)) <span class="cn">NA_real_</span> <span class="cf">else</span> <span class="fu">as.numeric</span>(<span class="fu">fromJSON</span>(x)<span class="sc">$</span>confidence), <span class="fu">numeric</span>(<span class="dv">1</span>)),</span>
+<span id="cb15-46"><a href="#cb15-46" aria-hidden="true" tabindex="-1"></a>            <span class="at">model =</span> MODEL)]</span>
+<span id="cb15-47"><a href="#cb15-47" aria-hidden="true" tabindex="-1"></a>  jp[, spotted <span class="sc">:</span><span class="er">=</span> pick <span class="sc">==</span> real_pos]</span>
+<span id="cb15-48"><a href="#cb15-48" aria-hidden="true" tabindex="-1"></a>  <span class="fu">list</span>(<span class="at">answers =</span> answers, <span class="at">judges =</span> jp[<span class="sc">!</span><span class="fu">is.na</span>(pick)], <span class="at">failed =</span> <span class="fu">sum</span>(failed), <span class="at">first_error =</span> first_error)</span>
+<span id="cb15-49"><a href="#cb15-49" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb15-50"><a href="#cb15-50" aria-hidden="true" tabindex="-1"></a>scoreboard <span class="ot">&lt;-</span> <span class="cf">function</span>(ads, answers, judges) {</span>
+<span id="cb15-51"><a href="#cb15-51" aria-hidden="true" tabindex="-1"></a>  a <span class="ot">&lt;-</span> <span class="fu">aim</span>(<span class="fu">group_means</span>(answers), ads)</span>
+<span id="cb15-52"><a href="#cb15-52" aria-hidden="true" tabindex="-1"></a>  s <span class="ot">&lt;-</span> judges[, .(<span class="at">judges =</span> .N, <span class="at">spotted =</span> <span class="fu">round</span>(<span class="fu">mean</span>(spotted), <span class="dv">2</span>)), by <span class="ot">=</span> ad_id]</span>
+<span id="cb15-53"><a href="#cb15-53" aria-hidden="true" tabindex="-1"></a>  d <span class="ot">&lt;-</span> <span class="fu">merge</span>(<span class="fu">merge</span>(ads[, .(ad_id, target)], a[, .(ad_id, target_ptv, others_ptv, aim)], <span class="at">by =</span> <span class="st">"ad_id"</span>), s, <span class="at">by =</span> <span class="st">"ad_id"</span>)</span>
+<span id="cb15-54"><a href="#cb15-54" aria-hidden="true" tabindex="-1"></a>  d[, passes <span class="sc">:</span><span class="er">=</span> spotted <span class="sc">&lt;</span> <span class="dv">1</span>][<span class="fu">order</span>(<span class="fu">match</span>(target, GROUPS<span class="sc">$</span>group))]</span>
+<span id="cb15-55"><a href="#cb15-55" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb15-56"><a href="#cb15-56" aria-hidden="true" tabindex="-1"></a>five_bars <span class="ot">&lt;-</span> <span class="cf">function</span>(ads, answers) {</span>
+<span id="cb15-57"><a href="#cb15-57" aria-hidden="true" tabindex="-1"></a>  gm <span class="ot">&lt;-</span> <span class="fu">merge</span>(<span class="fu">group_means</span>(answers), ads[, .(ad_id, target)], <span class="at">by =</span> <span class="st">"ad_id"</span>)</span>
+<span id="cb15-58"><a href="#cb15-58" aria-hidden="true" tabindex="-1"></a>  gm[, panel <span class="sc">:</span><span class="er">=</span> <span class="fu">paste</span>(<span class="st">"written for"</span>, GROUPS<span class="sc">$</span>label[<span class="fu">match</span>(target, GROUPS<span class="sc">$</span>group)])]</span>
+<span id="cb15-59"><a href="#cb15-59" aria-hidden="true" tabindex="-1"></a>  gm[, panel <span class="sc">:</span><span class="er">=</span> <span class="fu">factor</span>(panel, <span class="at">levels =</span> <span class="fu">paste</span>(<span class="st">"written for"</span>, GROUPS<span class="sc">$</span>label))]</span>
+<span id="cb15-60"><a href="#cb15-60" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(gm, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">factor</span>(group, <span class="at">levels =</span> GROUPS<span class="sc">$</span>group), <span class="at">y =</span> ptv, <span class="at">fill =</span> group, <span class="at">alpha =</span> group <span class="sc">==</span> target)) <span class="sc">+</span></span>
+<span id="cb15-61"><a href="#cb15-61" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_col</span>() <span class="sc">+</span> <span class="fu">facet_wrap</span>(<span class="sc">~</span> panel, <span class="at">nrow =</span> <span class="dv">1</span>, <span class="at">labeller =</span> <span class="fu">label_wrap_gen</span>(<span class="dv">16</span>)) <span class="sc">+</span></span>
+<span id="cb15-62"><a href="#cb15-62" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_fill_manual</span>(<span class="cn">NULL</span>, <span class="at">values =</span> GROUP_COLOURS, <span class="at">guide =</span> <span class="st">"none"</span>) <span class="sc">+</span></span>
+<span id="cb15-63"><a href="#cb15-63" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_alpha_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">`</span><span class="at">TRUE</span><span class="st">`</span> <span class="ot">=</span> <span class="dv">1</span>, <span class="st">`</span><span class="at">FALSE</span><span class="st">`</span> <span class="ot">=</span> <span class="fl">0.35</span>), <span class="at">guide =</span> <span class="st">"none"</span>) <span class="sc">+</span></span>
+<span id="cb15-64"><a href="#cb15-64" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_x_discrete</span>(<span class="cn">NULL</span>) <span class="sc">+</span> <span class="fu">scale_y_continuous</span>(<span class="st">"Mean vote likelihood, 0-10"</span>, <span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">10</span>)) <span class="sc">+</span></span>
+<span id="cb15-65"><a href="#cb15-65" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_minimal</span>() <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">7</span>))</span>
+<span id="cb15-66"><a href="#cb15-66" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb15-67"><a href="#cb15-67" aria-hidden="true" tabindex="-1"></a>spotted_adjusted <span class="ot">&lt;-</span> <span class="cf">function</span>(sbs, judges) {  <span class="co"># each ad and each prompt pooled, with real ad x slot fixed effects</span></span>
+<span id="cb15-68"><a href="#cb15-68" aria-hidden="true" tabindex="-1"></a>  key <span class="ot">&lt;-</span> <span class="fu">rbindlist</span>(<span class="fu">lapply</span>(<span class="fu">names</span>(sbs), <span class="cf">function</span>(n) sbs[[n]][, .(ad_id, <span class="at">prompt =</span> n, target)]))</span>
+<span id="cb15-69"><a href="#cb15-69" aria-hidden="true" tabindex="-1"></a>  j <span class="ot">&lt;-</span> <span class="fu">merge</span>(judges[, .(ad_id, ref_id, real_pos, <span class="at">spotted =</span> <span class="fu">as.numeric</span>(spotted))], key, <span class="at">by =</span> <span class="st">"ad_id"</span>)</span>
+<span id="cb15-70"><a href="#cb15-70" aria-hidden="true" tabindex="-1"></a>  j[, cell <span class="sc">:</span><span class="er">=</span> <span class="fu">interaction</span>(ref_id, real_pos)]</span>
+<span id="cb15-71"><a href="#cb15-71" aria-hidden="true" tabindex="-1"></a>  est <span class="ot">&lt;-</span> <span class="cf">function</span>(unit) {                    <span class="co"># unit means at the average real ad and slot, and their 95% intervals</span></span>
+<span id="cb15-72"><a href="#cb15-72" aria-hidden="true" tabindex="-1"></a>    s <span class="ot">&lt;-</span> <span class="fu">coef</span>(<span class="fu">summary</span>(<span class="fu">lm</span>(<span class="fu">as.formula</span>(<span class="fu">paste</span>(<span class="st">"spotted ~ 0 +"</span>, unit, <span class="st">"+ cell"</span>)), <span class="at">data =</span> j, <span class="at">contrasts =</span> <span class="fu">list</span>(<span class="at">cell =</span> <span class="st">"contr.sum"</span>))))</span>
+<span id="cb15-73"><a href="#cb15-73" aria-hidden="true" tabindex="-1"></a>    s <span class="ot">&lt;-</span> s[<span class="fu">startsWith</span>(<span class="fu">rownames</span>(s), unit), , drop <span class="ot">=</span> <span class="cn">FALSE</span>]</span>
+<span id="cb15-74"><a href="#cb15-74" aria-hidden="true" tabindex="-1"></a>    <span class="fu">data.table</span>(<span class="at">id =</span> <span class="fu">sub</span>(<span class="fu">paste0</span>(<span class="st">"^"</span>, unit), <span class="st">""</span>, <span class="fu">rownames</span>(s)), <span class="at">spotted =</span> s[, <span class="dv">1</span>], <span class="at">lo =</span> s[, <span class="dv">1</span>] <span class="sc">-</span> <span class="fl">1.96</span> <span class="sc">*</span> s[, <span class="dv">2</span>], <span class="at">hi =</span> s[, <span class="dv">1</span>] <span class="sc">+</span> <span class="fl">1.96</span> <span class="sc">*</span> s[, <span class="dv">2</span>])</span>
+<span id="cb15-75"><a href="#cb15-75" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb15-76"><a href="#cb15-76" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rbind</span>(<span class="fu">merge</span>(key, <span class="fu">est</span>(<span class="st">"ad_id"</span>), <span class="at">by.x =</span> <span class="st">"ad_id"</span>, <span class="at">by.y =</span> <span class="st">"id"</span>)[, .(prompt, target, spotted, lo, hi)],</span>
+<span id="cb15-77"><a href="#cb15-77" aria-hidden="true" tabindex="-1"></a>        <span class="fu">est</span>(<span class="st">"prompt"</span>)[, .(<span class="at">prompt =</span> id, <span class="at">target =</span> <span class="st">"ALL"</span>, spotted, lo, hi)])</span>
+<span id="cb15-78"><a href="#cb15-78" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb15-79"><a href="#cb15-79" aria-hidden="true" tabindex="-1"></a>spotted_bars <span class="ot">&lt;-</span> <span class="cf">function</span>(sbs, judges) {      <span class="co"># sbs: named list of scoreboards, one per prompt, drawn left to right</span></span>
+<span id="cb15-80"><a href="#cb15-80" aria-hidden="true" tabindex="-1"></a>  d <span class="ot">&lt;-</span> <span class="fu">spotted_adjusted</span>(sbs, judges)</span>
+<span id="cb15-81"><a href="#cb15-81" aria-hidden="true" tabindex="-1"></a>  d[, prompt <span class="sc">:</span><span class="er">=</span> <span class="fu">factor</span>(prompt, <span class="at">levels =</span> <span class="fu">names</span>(sbs))]</span>
+<span id="cb15-82"><a href="#cb15-82" aria-hidden="true" tabindex="-1"></a>  dodge <span class="ot">&lt;-</span> <span class="fu">position_dodge</span>(<span class="at">width =</span> <span class="fl">0.8</span>)</span>
+<span id="cb15-83"><a href="#cb15-83" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(d, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">factor</span>(target, <span class="at">levels =</span> <span class="fu">c</span>(GROUPS<span class="sc">$</span>group, <span class="st">"ALL"</span>)), <span class="at">y =</span> spotted, <span class="at">fill =</span> target, <span class="at">alpha =</span> prompt, <span class="at">group =</span> prompt)) <span class="sc">+</span></span>
+<span id="cb15-84"><a href="#cb15-84" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_col</span>(<span class="at">position =</span> dodge, <span class="at">width =</span> <span class="fl">0.75</span>) <span class="sc">+</span></span>
+<span id="cb15-85"><a href="#cb15-85" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_errorbar</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> lo, <span class="at">ymax =</span> hi), <span class="at">position =</span> dodge, <span class="at">width =</span> <span class="fl">0.25</span>, <span class="at">alpha =</span> <span class="dv">1</span>, <span class="at">colour =</span> <span class="st">"grey20"</span>) <span class="sc">+</span></span>
+<span id="cb15-86"><a href="#cb15-86" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="fl">0.5</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>) <span class="sc">+</span></span>
+<span id="cb15-87"><a href="#cb15-87" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fl">5.5</span>, <span class="at">colour =</span> <span class="st">"grey70"</span>) <span class="sc">+</span></span>
+<span id="cb15-88"><a href="#cb15-88" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_fill_manual</span>(<span class="cn">NULL</span>, <span class="at">values =</span> <span class="fu">c</span>(GROUP_COLOURS, <span class="at">ALL =</span> <span class="st">"#333333"</span>), <span class="at">guide =</span> <span class="st">"none"</span>) <span class="sc">+</span></span>
+<span id="cb15-89"><a href="#cb15-89" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_alpha_manual</span>(<span class="cn">NULL</span>, <span class="at">values =</span> <span class="fu">seq</span>(<span class="fl">0.35</span>, <span class="dv">1</span>, <span class="at">length.out =</span> <span class="fu">length</span>(sbs))) <span class="sc">+</span></span>
+<span id="cb15-90"><a href="#cb15-90" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_x_discrete</span>(<span class="st">"Ad written for"</span>, <span class="at">labels =</span> <span class="fu">c</span>(GROUPS<span class="sc">$</span>group, <span class="st">"All five</span><span class="sc">\n</span><span class="st">pooled"</span>)) <span class="sc">+</span></span>
+<span id="cb15-91"><a href="#cb15-91" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_y_continuous</span>(<span class="st">"Spotted: share of judges who picked the real ad"</span>, <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="fl">0.25</span>, <span class="dv">1</span>, <span class="fl">0.25</span>)) <span class="sc">+</span></span>
+<span id="cb15-92"><a href="#cb15-92" aria-hidden="true" tabindex="-1"></a>    <span class="fu">coord_cartesian</span>(<span class="at">ylim =</span> <span class="fu">c</span>(<span class="fl">0.25</span>, <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb15-93"><a href="#cb15-93" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_minimal</span>() <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"top"</span>)</span>
+<span id="cb15-94"><a href="#cb15-94" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb15-95"><a href="#cb15-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-96"><a href="#cb15-96" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(JUDGE, <span class="st">"</span><span class="sc">\n\n</span><span class="st">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>You are shown two texts. Each is the spoken words of a thirty-second American political advertisement. One of them is a real advertisement that a candidate's campaign put on the air. The other was written by a machine imitating one. Names have been removed from both.
+Say which one is the real advertisement.
+ Return only: {"real": "A" or "B", "confidence": &lt;50-100&gt;} </code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(real_ads<span class="sc">$</span>ref_id[<span class="dv">1</span>], <span class="st">" ("</span>, real_ads<span class="sc">$</span>party[<span class="dv">1</span>], <span class="st">", "</span>, real_ads<span class="sc">$</span>state[<span class="dv">1</span>], <span class="st">", "</span>, real_ads<span class="sc">$</span>words[<span class="dv">1</span>], <span class="st">" words)</span><span class="sc">\n\n</span><span class="st">"</span>, <span class="at">sep =</span> <span class="st">""</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>OH_REAL_01 (R, OH, 85 words)</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">strwrap</span>(real_ads<span class="sc">$</span>text[<span class="dv">1</span>], <span class="at">width =</span> <span class="dv">90</span>), <span class="at">sep =</span> <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>We moved to the farm when I was 10, and that's when I got my first job baling hay, fixing
+fences, and taking care of livestock. I know that things are tough right now for working
+families. So, in Congress, I sponsored the law that eliminates taxes on tips and
+overtime. I've cut taxes for seniors on Social Security. And just like the jobs on the
+farm, we've done a lot, but together there's a lot more we can do. And I approve this
+message.</code></pre>
+</div>
+</div>
+</section>
+<section id="what-stage-1-wrote" class="level3">
+<h3 class="anchored" data-anchor-id="what-stage-1-wrote">What Stage 1 wrote</h3>
+<p>The next block reads the Stage 1 ads for your issue from the stored run and prints them, one per group.</p>
+<p><strong>Text 4.3.</strong> The five Stage 1 ads.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>STAGE_ADS     <span class="ot">&lt;-</span> <span class="fu">fread</span>(<span class="fu">file.path</span>(DATA, <span class="st">"stage_ads.csv"</span>))</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>STAGE_ANSWERS <span class="ot">&lt;-</span> <span class="fu">read_jsonl</span>(<span class="fu">file.path</span>(DATA, <span class="st">"stage_answers.jsonl"</span>))</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>STAGE_JUDGES  <span class="ot">&lt;-</span> <span class="fu">read_jsonl</span>(<span class="fu">file.path</span>(DATA, <span class="st">"stage_judges.jsonl"</span>))</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>show_ads <span class="ot">&lt;-</span> <span class="cf">function</span>(ads) <span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">seq_len</span>(<span class="fu">nrow</span>(ads))) {</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="fu">sprintf</span>(<span class="st">"%s — written for %s (%d words)</span><span class="sc">\n</span><span class="st">"</span>, ads<span class="sc">$</span>ad_id[i], GROUPS<span class="sc">$</span>phrase[<span class="fu">match</span>(ads<span class="sc">$</span>target[i], GROUPS<span class="sc">$</span>group)], ads<span class="sc">$</span>words[i]))</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="fu">strwrap</span>(ads<span class="sc">$</span>text[i], <span class="at">width =</span> <span class="dv">90</span>, <span class="at">prefix =</span> <span class="st">"   "</span>), <span class="at">sep =</span> <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>); <span class="fu">cat</span>(<span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>s1 <span class="ot">&lt;-</span> STAGE_ADS[stage <span class="sc">==</span> <span class="dv">1</span> <span class="sc">&amp;</span> issue <span class="sc">==</span> it<span class="sc">$</span>key]</span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a><span class="fu">show_ads</span>(s1)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>S1_IMM_SD — written for strong Democrats (78 words)
+   I believe our immigration system must reflect our values: compassion, labor rights,
+   and family unity. I’ll expand a fair pathway to citizenship for Dreamers and longtime
+   contributors, protect asylum seekers, and invest in humane processing at the border.
+   I’ll defend workers’ rights so newcomers and Ohioans earn fair wages, and reform visa
+   programs for farmers and manufacturers. Together we can fix a broken system with
+   dignity and common-sense enforcement that keeps communities safe. And I approve this
+   message.
+
+S1_IMM_WD — written for weak or leaning Democrats (79 words)
+   I came from a family that believes in working hard and treating neighbors with
+   dignity. I support secure borders and clear rules, but I also believe we must protect
+   Dreamers, keep families together, and create a fair path to citizenship for people who
+   contribute to our communities and economy. Investing in legal immigration lifts wages
+   and strengthens unions, schools, and small businesses across Ohio. I’ll fight for
+   humane, practical solutions that reflect our values. And I approve this message.
+
+S1_IMM_IND — written for independents (84 words)
+   I grew up in Ohio, and I believe we can secure our borders while treating people with
+   dignity. I will support practical, common-sense policies that protect communities,
+   enforce the law, and grow our economy by legalizing workers we need and fixing our
+   broken system. I will work across parties to deliver sensible solutions that keep
+   families safe and honor our values. Together we can make immigration fair, secure, and
+   focused on opportunity for all who play by the rules. And I approve this message.
+
+S1_IMM_WR — written for weak or leaning Republicans (80 words)
+   I believe our immigration system should be fair, secure, and humane. I will work to
+   protect our borders, support legal pathways for families seeking opportunity, and
+   invest in smart, practical enforcement that keeps Ohio safe. We can fix broken rules
+   so employers, communities, and newcomers can thrive together. I will put honest
+   solutions ahead of fear, cut through the chaos, and get results that respect the law
+   and our values. I'm committed to real leadership. And I approve this message.
+
+S1_IMM_SR — written for strong Republicans (78 words)
+   I believe in secure borders, strict enforcement of immigration laws, and an
+   immigration system that serves American workers first. I will stop illegal entry, end
+   sanctuary policies, and strengthen E-Verify so jobs go to citizens and legal
+   residents. I support expedited deportation for criminal aliens and a merit-based legal
+   immigration system that protects our communities and honors those who follow the
+   rules. I will put safety and opportunity for Ohio families above politics. And I
+   approve this message.</code></pre>
+</div>
+</div>
+<p><strong>Figure 4.1.</strong> How the five groups rated each Stage 1 ad. Each panel is one ad; the bar of the group it was written for is solid, the other four are pale. A well-aimed ad has its solid bar standing above the pale ones; an ad whose solid bar is merely high, with the pale bars just as high, pleases everyone and aims at no one.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">five_bars</span>(s1, STAGE_ANSWERS)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="02_silicon_voters_files/figure-html/stage1-plot-1.png" class="img-fluid figure-img" width="864"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Table 4.1.</strong> Stage 1 scores: <code>aim</code> (the target group’s mean, <code>target_ptv</code>, minus the average of the other four, <code>others_ptv</code>), <code>spotted</code> (the share of the forty judges who picked the real ad) and <code>passes</code> (at least one judge fooled).</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>sb1 <span class="ot">&lt;-</span> <span class="fu">scoreboard</span>(s1, STAGE_ANSWERS, STAGE_JUDGES)</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>sb1</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 10%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 8%">
+<col style="width: 10%">
+<col style="width: 11%">
+<col style="width: 10%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">ad_id</th>
+<th style="text-align: left;">target</th>
+<th style="text-align: right;">target_ptv</th>
+<th style="text-align: right;">others_ptv</th>
+<th style="text-align: right;">aim</th>
+<th style="text-align: right;">judges</th>
+<th style="text-align: right;">spotted</th>
+<th style="text-align: left;">passes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">S1_IMM_SD</td>
+<td style="text-align: left;">SD</td>
+<td style="text-align: right;">9.4</td>
+<td style="text-align: right;">5.45</td>
+<td style="text-align: right;">3.95</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">0.78</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">S1_IMM_WD</td>
+<td style="text-align: left;">WD</td>
+<td style="text-align: right;">8.6</td>
+<td style="text-align: right;">6.32</td>
+<td style="text-align: right;">2.28</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">0.65</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">S1_IMM_IND</td>
+<td style="text-align: left;">IND</td>
+<td style="text-align: right;">6.4</td>
+<td style="text-align: right;">6.88</td>
+<td style="text-align: right;">-0.48</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">0.82</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">S1_IMM_WR</td>
+<td style="text-align: left;">WR</td>
+<td style="text-align: right;">7.6</td>
+<td style="text-align: right;">7.07</td>
+<td style="text-align: right;">0.53</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">0.80</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">S1_IMM_SR</td>
+<td style="text-align: left;">SR</td>
+<td style="text-align: right;">9.5</td>
+<td style="text-align: right;">4.00</td>
+<td style="text-align: right;">5.50</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">0.70</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p><strong>Exercise 4.1.</strong> Which Stage 1 ad has the best aim in Table 4.1, and which the worst? For the ad written for a <em>weak or leaning</em> group, which group gives it the highest bar in Figure 4.1: its own, or the strong partisans on the same side? How many of the five ads did the judges spot every time?</p>
+<hr>
+</section>
+</section>
+<section id="stage-2-what-our-tests-taught-us" class="level2">
+<h2 class="anchored" data-anchor-id="stage-2-what-our-tests-taught-us">5. Stage 2: what our tests taught us</h2>
+<p>The group ran these ads past judges many times before the workshop. Stage 2 is the Stage 1 prompt with one paragraph added, printed below with the one sentence that explains it.</p>
+<p><strong>Text 5.1.</strong> What Stage 2 adds to the Stage 1 prompt.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">strwrap</span>(STAGE2_ADD, <span class="at">width =</span> <span class="dv">90</span>), <span class="at">sep =</span> <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Write it the way a real candidate speaks. Say once, flatly, what you did before politics
+that gives you the right to talk about this: a job, a service, a business. Put in one
+concrete scene or detail, a person, a street, a price, invented but with nobody named.
+Promise what you will do in plain verbs, naming the instrument, never "fix" or "stand up
+to". Short spoken sentences, contractions, no hedging, no balancing the other side, no
+neat parallel closing line.</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"</span><span class="sc">\n</span><span class="st">In our tests, this is what set real candidates' ads apart from machine-written ones.</span><span class="sc">\n</span><span class="st">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+In our tests, this is what set real candidates' ads apart from machine-written ones.</code></pre>
+</div>
+</div>
+<p><strong>Text 5.2.</strong> The five Stage 2 ads, from the stored run.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>s2 <span class="ot">&lt;-</span> STAGE_ADS[stage <span class="sc">==</span> <span class="dv">2</span> <span class="sc">&amp;</span> issue <span class="sc">==</span> it<span class="sc">$</span>key]</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="fu">show_ads</span>(s2)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>S2_IMM_SD — written for strong Democrats (78 words)
+   I grew up here. I ran a community health clinic. I see families on High Street, a mom
+   paying $3.50 for bread while her husband waits for an answer on his work permit.
+   Immigration reform is moral and practical. I'll pass legislation to create a fair
+   pathway to citizenship. I'll expand legal aid and increase visas for essential workers
+   here. I'll enforce humane detention limits with clear rules. I will protect DACA
+   recipients. And I approve this message.
+
+S2_IMM_WD — written for weak or leaning Democrats (79 words)
+   I'm a small-business owner. I hired immigrants and watched them build our
+   neighborhood. I saw a dad on Main Street pay $300 for a single form and wait years for
+   an answer. Immigration should be humane and practical. I will pass a fair path to
+   citizenship. I will expand worker visas, cut fees, clear application backlogs, and
+   protect Dreamers. I'll use legislation and oversight to make it happen. I want people
+   here to belong. And I approve this message.
+
+S2_IMM_IND — written for independents (85 words)
+   I grew up managing a trucking company, so I know how to follow rules and move goods. I
+   walk Main Street and see a woman buying bread for $3.50, and I hear people worry about
+   jobs and safety. I will pass smart laws, fund faster courts, expand legal work visas,
+   and use E-Verify statewide. I'll work with local sheriffs and federal partners to
+   secure our borders and speed legal processing. I say what I'll do, and I will do it.
+   And I approve this message.
+
+S2_IMM_WR — written for weak or leaning Republicans (76 words)
+   I’m a small-business owner; I ran a manufacturing shop for 20 years. I grew up on Elm
+   Street, watching a bus driver lose hours to illegal hires. Illegal crossings cost our
+   towns safety and jobs. I’ll secure the border with more patrols and new fencing. I’ll
+   require E-Verify for every employer. I’ll speed up deportations for violent offenders.
+   I’ll expand legal guest-worker visas processed here in Ohio. I’ll enforce the law. And
+   I approve this message.
+
+S2_IMM_SR — written for strong Republicans (80 words)
+   I was a police officer. I see what weak borders cost us. I watched a mother on Main
+   Street pay $250 for a night at a motel because her daughter was displaced by a crime
+   linked to an illegal entrant. I will secure the border with National Guard patrols. I
+   will hire more Border Patrol agents. I will enforce E-Verify. I will prosecute
+   smugglers and deport criminal aliens. I will protect Ohio jobs and families. And I
+   approve this message.</code></pre>
+</div>
+</div>
+<p><strong>Figure 5.1.</strong> How the five groups rated each Stage 2 ad, drawn as in Figure 4.1.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">five_bars</span>(s2, STAGE_ANSWERS)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="02_silicon_voters_files/figure-html/stage2-plot-1.png" class="img-fluid figure-img" width="864"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Table 5.1.</strong> Stage 1 against Stage 2, ad by ad: the aim and the spotted score of each stage side by side.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>sb2 <span class="ot">&lt;-</span> <span class="fu">scoreboard</span>(s2, STAGE_ANSWERS, STAGE_JUDGES)</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="fu">merge</span>(sb1[, .(target, <span class="at">aim_stage1 =</span> aim, <span class="at">spotted_stage1 =</span> spotted)],</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>      sb2[, .(target, <span class="at">aim_stage2 =</span> aim, <span class="at">spotted_stage2 =</span> spotted)], <span class="at">by =</span> <span class="st">"target"</span>)[<span class="fu">order</span>(<span class="fu">match</span>(target, GROUPS<span class="sc">$</span>group))]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">target</th>
+<th style="text-align: right;">aim_stage1</th>
+<th style="text-align: right;">spotted_stage1</th>
+<th style="text-align: right;">aim_stage2</th>
+<th style="text-align: right;">spotted_stage2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">SD</td>
+<td style="text-align: right;">3.95</td>
+<td style="text-align: right;">0.78</td>
+<td style="text-align: right;">4.08</td>
+<td style="text-align: right;">0.62</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">WD</td>
+<td style="text-align: right;">2.28</td>
+<td style="text-align: right;">0.65</td>
+<td style="text-align: right;">3.02</td>
+<td style="text-align: right;">0.58</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">IND</td>
+<td style="text-align: right;">-0.48</td>
+<td style="text-align: right;">0.82</td>
+<td style="text-align: right;">0.25</td>
+<td style="text-align: right;">0.70</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">WR</td>
+<td style="text-align: right;">0.53</td>
+<td style="text-align: right;">0.80</td>
+<td style="text-align: right;">3.70</td>
+<td style="text-align: right;">0.62</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">SR</td>
+<td style="text-align: right;">5.50</td>
+<td style="text-align: right;">0.70</td>
+<td style="text-align: right;">4.78</td>
+<td style="text-align: right;">0.48</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p><strong>Figure 5.2.</strong> The spotted columns of Table 5.1 as bars: for each group, the Stage 1 ad (pale) and the Stage 2 ad (solid), and on the right the five ads of each stage pooled. A lower bar is harder to spot; the dashed line at 0.5 is what guessing gives. The black lines are 95% confidence intervals.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">spotted_bars</span>(<span class="fu">list</span>(<span class="st">`</span><span class="at">Stage 1</span><span class="st">`</span> <span class="ot">=</span> sb1, <span class="st">`</span><span class="at">Stage 2</span><span class="st">`</span> <span class="ot">=</span> sb2), STAGE_JUDGES)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="02_silicon_voters_files/figure-html/stage2-spotted-plot-1.png" class="img-fluid figure-img" width="864"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><em>Note to Figure 5.2.</em> Each bar is a share of judge calls: of the 40 calls for one ad, or the 200 for the five pooled, the share in which the judge picked the real ad. Much of the noise in that share has a known source. Which real ad a judge saw, and whether it was shown first or second, moves the chance of a correct pick more than anything else: some real ads are picked almost every time when shown first and almost never when shown second. Every machine-written ad meets the same real ads in the same slots, so this does not favour any ad, and the intervals take it out. They come from a linear regression of each call’s <code>spotted</code> (1 if the judge picked the real ad, 0 if not) on one indicator for each ad, or for each stage in the pooled bars, and one fixed effect for each pairing of real ad and slot (A or B), coded to sum to zero; because every ad meets each pairing equally often, each ad’s coefficient is exactly its share. The intervals are the coefficient plus and minus 1.96 standard errors, with the residual variance pooled over all the calls in the figure, so every ad’s interval has the same width. They take the ads as given: they measure how much a share would move with another set of judges for <em>these</em> ads, not the larger variation that would come from the model writing a different ad from the same prompt. Whether the Stage 2 prompt would also beat Stage 1 with five other ads is a question only more ads can answer.</p>
+<p><strong>Exercise 5.1.</strong> Did the Stage 2 paragraph make the ads harder to spot, on average across the five rows of Table 5.1 and in Figure 5.2? Did it cost anything in aim? Read one Stage 2 ad next to its Stage 1 version and name one thing the paragraph changed.</p>
+<hr>
+</section>
+<section id="stage-3-sharpen-the-aim" class="level2">
+<h2 class="anchored" data-anchor-id="stage-3-sharpen-the-aim">6. Stage 3: sharpen the aim</h2>
+<p>Now it is yours. Stage 2 gave you five ads, each with an aim in Table 5.1. The goal of Stage 3 is to push that aim higher: each ad should do even better with its own group, and worse with the other four, than its Stage 2 version did. Keep an eye on the judges while you do it. An ad the judges see through every time does not pass, and only passing ads go on the room’s leaderboard (Section 7), however well they are aimed.</p>
+<p>The prompt is plain text, and every word of it is yours to change: add a rule, delete one, rewrite the voice, start again from nothing. Only <code>{issue}</code> and <code>{group}</code> must stay, because they are where the issue and the group go.</p>
+<section id="a-worked-example" class="level3">
+<h3 class="anchored" data-anchor-id="a-worked-example">A worked example</h3>
+<p>Before you write your own, here is one Stage 3 run the organisers made ahead of time: the Stage 2 prompt with one sentence added at the end, printed below. It was run once, like Stages 1 and 2, and ships with the notebook, so everyone has a Stage 3 run to read whether or not the live calls work. One sentence is the smallest change there is; yours can be as large as you like.</p>
+<p><strong>Text 6.1.</strong> The worked example: the sentence it adds to the Stage 2 prompt, and its five ads.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Stage 2 prompt, plus:"</span>, EXAMPLE_ADD, <span class="st">"</span><span class="sc">\n\n</span><span class="st">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Stage 2 prompt, plus: Mention one thing the voter can check for themselves. </code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>sx <span class="ot">&lt;-</span> STAGE_ADS[stage <span class="sc">==</span> <span class="dv">3</span> <span class="sc">&amp;</span> issue <span class="sc">==</span> it<span class="sc">$</span>key]</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="fu">show_ads</span>(sx)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>S3_IMM_SD — written for strong Democrats (78 words)
+   I grew up teaching ESL at a community college. I see neighbors on Main Street paying
+   $5 for a bus to work, a young mom in line at the shelter. I will introduce a bill to
+   expand work permits. I will create a state visa program. I will fund legal aid through
+   the budget. I will cut wait times at our clinics by hiring doctors. Check my record at
+   ohiovotes.org. I mean it. And I approve this message.
+
+S3_IMM_WD — written for weak or leaning Democrats (78 words)
+   I spent twenty years running a neighborhood bakery. I know whose hands make our food.
+   I walk East Main at 6 a.m. and see a line of workers at $9 an hour. I'll create a
+   state visa for farm and food workers. I'll expand legal clinics at county courthouses.
+   I'll fund language and job training in our towns. Look up my record at my website. I
+   believe in fair wages and safe streets. And I approve this message.
+
+S3_IMM_IND — written for independents (79 words)
+   I grew up restoring houses and later ran a small trucking company, so I know work and
+   lines. I saw a mom on Main Street paying $200 for a lawyer. I will secure our borders
+   by hiring 300 more patrol agents, pass an E-Verify law, and fund legal aid centers for
+   asylum claims. I'll speed processing at ports with new staff. You can check my record
+   at the state ethics site. I mean it. And I approve this message.
+
+S3_IMM_WR — written for weak or leaning Republicans (75 words)
+   I ran a small trucking company before politics. I know who crosses our roads. I see
+   families at the corner store on Main Street paying $3.79 for gas. I'll secure our
+   borders with technology and more patrols. I'll enforce E-Verify and revoke work
+   permits for employers who hire illegal workers. I'll fund local sheriffs' task forces
+   and pass tougher penalties in state law. Check my record at my campaign website. And I
+   approve this message.
+
+S3_IMM_SR — written for strong Republicans (75 words)
+   I’m a small-business owner. I mowed lawns on Main Street for years, met folks who paid
+   cash, sometimes $50 for a job. Illegal immigration costs our schools and wages. I’ll
+   use E-Verify, expand Border Patrol staffing, and enforce deportations through the
+   courts. I’ll stop taxpayer benefits to people here illegally. I’ll work with sheriffs
+   to enforce the law. Check county jail records and E-Verify.gov for proof. I’m running
+   for you. And I approve this message.</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>sbx <span class="ot">&lt;-</span> <span class="fu">scoreboard</span>(sx, STAGE_ANSWERS, STAGE_JUDGES)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><strong>Table 6.1.</strong> Stage 2 against the worked example, ad by ad: the aim and the spotted score of each side by side.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">merge</span>(sb2[, .(target, <span class="at">aim_stage2 =</span> aim, <span class="at">spotted_stage2 =</span> spotted)],</span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>      sbx[, .(target, <span class="at">aim_example =</span> aim, <span class="at">spotted_example =</span> spotted)], <span class="at">by =</span> <span class="st">"target"</span>)[<span class="fu">order</span>(<span class="fu">match</span>(target, GROUPS<span class="sc">$</span>group))]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">target</th>
+<th style="text-align: right;">aim_stage2</th>
+<th style="text-align: right;">spotted_stage2</th>
+<th style="text-align: right;">aim_example</th>
+<th style="text-align: right;">spotted_example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">SD</td>
+<td style="text-align: right;">4.08</td>
+<td style="text-align: right;">0.62</td>
+<td style="text-align: right;">4.22</td>
+<td style="text-align: right;">0.88</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">WD</td>
+<td style="text-align: right;">3.02</td>
+<td style="text-align: right;">0.58</td>
+<td style="text-align: right;">2.72</td>
+<td style="text-align: right;">0.68</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">IND</td>
+<td style="text-align: right;">0.25</td>
+<td style="text-align: right;">0.70</td>
+<td style="text-align: right;">-1.40</td>
+<td style="text-align: right;">0.70</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">WR</td>
+<td style="text-align: right;">3.70</td>
+<td style="text-align: right;">0.62</td>
+<td style="text-align: right;">4.20</td>
+<td style="text-align: right;">0.50</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">SR</td>
+<td style="text-align: right;">4.78</td>
+<td style="text-align: right;">0.48</td>
+<td style="text-align: right;">5.65</td>
+<td style="text-align: right;">0.70</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p>Read Table 6.1 the way the goal asks: for which groups is <code>aim_example</code> above <code>aim_stage2</code>, and did <code>spotted_example</code> stay below 1, so that the ad still passes?</p>
+</section>
+<section id="your-turn" class="level3">
+<h3 class="anchored" data-anchor-id="your-turn">Your turn</h3>
+<p><strong>Exercise 6.1.</strong> <code>MY_PROMPT</code> below starts as the Stage 2 prompt. Change it so that each ad lands harder with its own group, and run the block. Compare your row in Table 6.2 with the Stage 2 row: is <code>mean_aim</code> higher, and is <code>passing</code> no lower? Write that row down. Then move your run out of the way (below), change one thing, run it again, and say which change moved which score. In Figure 6.1, did the solid bars rise, or did the pale bars fall?</p>
+<p>The block writes five new ads with your prompt, one per group, puts each to the same fifty twins and to forty judges, and saves everything to <code>output/</code> in three files: <code>stage3_ads.csv</code>, <code>stage3_answers.jsonl</code> and <code>stage3_judges.jsonl</code>. That is 5 ads, 250 twin answers and 200 judge calls, a minute or two. With no key the block prints your prompt and stops; the worked example above still shows what a Stage 3 run looks like.</p>
+<p>Once those files exist, the block makes no new calls: running it again, or knitting the notebook, shows the saved run, so your results stay the same each time. To make a new run, with a new prompt or the same one again, first move the three files into a folder of their own, for example <code>output/run1/</code> (in the RStudio Files pane: tick them, then More &gt; Move), and run the block again.</p>
+<p><strong>Text 6.2.</strong> Your prompt, and the five ads it wrote.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>MY_PROMPT <span class="ot">&lt;-</span> <span class="fu">paste</span>(STAGE1, STAGE2_ADD)     <span class="co"># edit me, then re-run this block</span></span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>S3_ADS     <span class="ot">&lt;-</span> <span class="fu">file.path</span>(OUT, <span class="st">"stage3_ads.csv"</span>)</span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a>S3_ANSWERS <span class="ot">&lt;-</span> <span class="fu">file.path</span>(OUT, <span class="st">"stage3_answers.jsonl"</span>)</span>
+<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a>S3_JUDGES  <span class="ot">&lt;-</span> <span class="fu">file.path</span>(OUT, <span class="st">"stage3_judges.jsonl"</span>)</span>
+<span id="cb40-6"><a href="#cb40-6" aria-hidden="true" tabindex="-1"></a>short_hash <span class="ot">&lt;-</span> <span class="cf">function</span>(x) { <span class="cf">if</span> (<span class="fu">requireNamespace</span>(<span class="st">"digest"</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>)) <span class="fu">substr</span>(digest<span class="sc">::</span><span class="fu">digest</span>(x, <span class="at">algo =</span> <span class="st">"sha256"</span>, <span class="at">serialize =</span> <span class="cn">FALSE</span>), <span class="dv">1</span>, <span class="dv">6</span>)</span>
+<span id="cb40-7"><a href="#cb40-7" aria-hidden="true" tabindex="-1"></a>                            <span class="cf">else</span> <span class="fu">sprintf</span>(<span class="st">"%06x"</span>, <span class="fu">sum</span>(<span class="fu">utf8ToInt</span>(x) <span class="sc">*</span> <span class="fu">seq_along</span>(<span class="fu">utf8ToInt</span>(x))) <span class="sc">%%</span> <span class="dv">16777216</span>) }</span>
+<span id="cb40-8"><a href="#cb40-8" aria-hidden="true" tabindex="-1"></a>append_jsonl <span class="ot">&lt;-</span> <span class="cf">function</span>(d, f) <span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">seq_len</span>(<span class="fu">nrow</span>(d))) <span class="fu">cat</span>(<span class="fu">toJSON</span>(<span class="fu">as.list</span>(d[i]), <span class="at">auto_unbox =</span> <span class="cn">TRUE</span>, <span class="at">digits =</span> <span class="cn">NA</span>), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>, <span class="at">file =</span> f, <span class="at">append =</span> <span class="cn">TRUE</span>, <span class="at">sep =</span> <span class="st">""</span>)</span>
+<span id="cb40-9"><a href="#cb40-9" aria-hidden="true" tabindex="-1"></a>read_s3_ads <span class="ot">&lt;-</span> <span class="cf">function</span>(f) {                 <span class="co"># fread can keep a CSV's doubled quotes ("") inside text; undo that</span></span>
+<span id="cb40-10"><a href="#cb40-10" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="sc">!</span><span class="fu">file.exists</span>(f)) <span class="fu">return</span>(<span class="fu">data.table</span>())</span>
+<span id="cb40-11"><a href="#cb40-11" aria-hidden="true" tabindex="-1"></a>  d <span class="ot">&lt;-</span> <span class="fu">fread</span>(f)</span>
+<span id="cb40-12"><a href="#cb40-12" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (col <span class="cf">in</span> <span class="fu">intersect</span>(<span class="fu">c</span>(<span class="st">"prompt"</span>, <span class="st">"text"</span>), <span class="fu">names</span>(d))) <span class="fu">set</span>(d, <span class="at">j =</span> col, <span class="at">value =</span> <span class="fu">gsub</span>(<span class="st">'""'</span>, <span class="st">'"'</span>, d[[col]], <span class="at">fixed =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb40-13"><a href="#cb40-13" aria-hidden="true" tabindex="-1"></a>  d</span>
+<span id="cb40-14"><a href="#cb40-14" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb40-15"><a href="#cb40-15" aria-hidden="true" tabindex="-1"></a>saved_run <span class="ot">&lt;-</span> <span class="fu">any</span>(<span class="fu">file.exists</span>(<span class="fu">c</span>(S3_ADS, S3_ANSWERS, S3_JUDGES)))</span>
+<span id="cb40-16"><a href="#cb40-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-17"><a href="#cb40-17" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (saved_run) {                             <span class="co"># a run is already saved: show it, never call the API again</span></span>
+<span id="cb40-18"><a href="#cb40-18" aria-hidden="true" tabindex="-1"></a>  s3 <span class="ot">&lt;-</span> <span class="fu">read_s3_ads</span>(S3_ADS)</span>
+<span id="cb40-19"><a href="#cb40-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="st">"A saved Stage 3 run is in output/, so this block shows it and makes no new calls.</span><span class="sc">\n</span><span class="st">"</span>,</span>
+<span id="cb40-20"><a href="#cb40-20" aria-hidden="true" tabindex="-1"></a>      <span class="st">"To make a new run, move stage3_ads.csv, stage3_answers.jsonl and stage3_judges.jsonl</span><span class="sc">\n</span><span class="st">"</span>,</span>
+<span id="cb40-21"><a href="#cb40-21" aria-hidden="true" tabindex="-1"></a>      <span class="st">"into a folder of their own (for example output/run1/) and run this block again.</span><span class="sc">\n\n</span><span class="st">"</span>, <span class="at">sep =</span> <span class="st">""</span>)</span>
+<span id="cb40-22"><a href="#cb40-22" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">nrow</span>(s3) <span class="sc">&amp;&amp;</span> <span class="sc">!</span><span class="fu">identical</span>(<span class="fu">unique</span>(s3<span class="sc">$</span>prompt), MY_PROMPT))</span>
+<span id="cb40-23"><a href="#cb40-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cat</span>(<span class="st">"Note: MY_PROMPT has changed since the saved run. The ads below come from the saved run's prompt:</span><span class="sc">\n\n</span><span class="st">"</span>,</span>
+<span id="cb40-24"><a href="#cb40-24" aria-hidden="true" tabindex="-1"></a>        <span class="fu">paste</span>(<span class="fu">strwrap</span>(<span class="fu">unique</span>(s3<span class="sc">$</span>prompt)[<span class="dv">1</span>], <span class="at">width =</span> <span class="dv">90</span>), <span class="at">collapse =</span> <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>), <span class="st">"</span><span class="sc">\n\n</span><span class="st">"</span>, <span class="at">sep =</span> <span class="st">""</span>)</span>
+<span id="cb40-25"><a href="#cb40-25" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">nrow</span>(s3) <span class="sc">&amp;&amp;</span> <span class="sc">!</span><span class="fu">any</span>(s3<span class="sc">$</span>issue <span class="sc">==</span> it<span class="sc">$</span>key))</span>
+<span id="cb40-26"><a href="#cb40-26" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cat</span>(<span class="st">"Note: the saved run is for the other issue, so Figure 6.1 and Table 6.2 have no Stage 3 run for this one.</span><span class="sc">\n\n</span><span class="st">"</span>)</span>
+<span id="cb40-27"><a href="#cb40-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">show_ads</span>(s3[issue <span class="sc">==</span> it<span class="sc">$</span>key])</span>
+<span id="cb40-28"><a href="#cb40-28" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb40-29"><a href="#cb40-29" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">strwrap</span>(MY_PROMPT, <span class="at">width =</span> <span class="dv">90</span>), <span class="at">sep =</span> <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>); <span class="fu">cat</span>(<span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb40-30"><a href="#cb40-30" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">all</span>(<span class="fu">grepl</span>(<span class="st">"{issue}"</span>, MY_PROMPT, <span class="at">fixed =</span> <span class="cn">TRUE</span>), <span class="fu">grepl</span>(<span class="st">"{group}"</span>, MY_PROMPT, <span class="at">fixed =</span> <span class="cn">TRUE</span>))) {</span>
+<span id="cb40-31"><a href="#cb40-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="st">"Put {issue} and {group} back into MY_PROMPT: without them every ad is the same.</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb40-32"><a href="#cb40-32" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span> (<span class="fu">nzchar</span>(key)) {</span>
+<span id="cb40-33"><a href="#cb40-33" aria-hidden="true" tabindex="-1"></a>  run_id <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">"S3_"</span>, it<span class="sc">$</span>key, <span class="st">"_"</span>, <span class="fu">short_hash</span>(MY_PROMPT))</span>
+<span id="cb40-34"><a href="#cb40-34" aria-hidden="true" tabindex="-1"></a>  s3 <span class="ot">&lt;-</span> <span class="fu">write_ads</span>(MY_PROMPT, run_id)</span>
+<span id="cb40-35"><a href="#cb40-35" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">any</span>(s3<span class="sc">$</span>declined)) <span class="fu">cat</span>(<span class="st">"The model declined to write the ad for:"</span>, <span class="fu">paste</span>(GROUPS<span class="sc">$</span>phrase[<span class="fu">match</span>(s3[declined <span class="sc">==</span> <span class="cn">TRUE</span>, target], GROUPS<span class="sc">$</span>group)], <span class="at">collapse =</span> <span class="st">", "</span>),</span>
+<span id="cb40-36"><a href="#cb40-36" aria-hidden="true" tabindex="-1"></a>                            <span class="st">"</span><span class="sc">\n</span><span class="st">(three tries each). Those groups are left out of this run; soften the wording or run again.</span><span class="sc">\n\n</span><span class="st">"</span>)</span>
+<span id="cb40-37"><a href="#cb40-37" aria-hidden="true" tabindex="-1"></a>  s3 <span class="ot">&lt;-</span> s3[declined <span class="sc">==</span> <span class="cn">FALSE</span>]</span>
+<span id="cb40-38"><a href="#cb40-38" aria-hidden="true" tabindex="-1"></a>  s3[, stage <span class="sc">:</span><span class="er">=</span> <span class="dv">3</span>]</span>
+<span id="cb40-39"><a href="#cb40-39" aria-hidden="true" tabindex="-1"></a>  res <span class="ot">&lt;-</span> <span class="fu">run_ads</span>(s3)</span>
+<span id="cb40-40"><a href="#cb40-40" aria-hidden="true" tabindex="-1"></a>  <span class="fu">show_ads</span>(s3)</span>
+<span id="cb40-41"><a href="#cb40-41" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (res<span class="sc">$</span>failed) <span class="fu">cat</span>(<span class="fu">sprintf</span>(<span class="st">"%d of the %d twin and judge calls failed. The first error was:</span><span class="sc">\n</span><span class="st">   %s</span><span class="sc">\n\n</span><span class="st">"</span>,</span>
+<span id="cb40-42"><a href="#cb40-42" aria-hidden="true" tabindex="-1"></a>                              res<span class="sc">$</span>failed, <span class="fu">nrow</span>(s3) <span class="sc">*</span> (<span class="fu">nrow</span>(audience) <span class="sc">+</span> N_JUDGES), res<span class="sc">$</span>first_error))</span>
+<span id="cb40-43"><a href="#cb40-43" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">nrow</span>(res<span class="sc">$</span>answers) <span class="sc">==</span> <span class="dv">0</span> <span class="sc">||</span> <span class="fu">nrow</span>(res<span class="sc">$</span>judges) <span class="sc">==</span> <span class="dv">0</span>) {</span>
+<span id="cb40-44"><a href="#cb40-44" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cat</span>(<span class="st">"No twin answers or no judge calls came back, so this run cannot be scored and nothing was saved."</span>,</span>
+<span id="cb40-45"><a href="#cb40-45" aria-hidden="true" tabindex="-1"></a>        <span class="st">"Run the block again in a minute; if it fails again, ask a helper.</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb40-46"><a href="#cb40-46" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb40-47"><a href="#cb40-47" aria-hidden="true" tabindex="-1"></a>    <span class="fu">fwrite</span>(s3, S3_ADS)</span>
+<span id="cb40-48"><a href="#cb40-48" aria-hidden="true" tabindex="-1"></a>    <span class="fu">append_jsonl</span>(res<span class="sc">$</span>answers, S3_ANSWERS); <span class="fu">append_jsonl</span>(res<span class="sc">$</span>judges, S3_JUDGES)</span>
+<span id="cb40-49"><a href="#cb40-49" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cat</span>(<span class="fu">sprintf</span>(<span class="st">"%d ads, %d twin answers and %d judge calls saved to %s</span><span class="sc">\n</span><span class="st">"</span>, <span class="fu">nrow</span>(s3), <span class="fu">nrow</span>(res<span class="sc">$</span>answers), <span class="fu">nrow</span>(res<span class="sc">$</span>judges), OUT))</span>
+<span id="cb40-50"><a href="#cb40-50" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb40-51"><a href="#cb40-51" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="fu">cat</span>(<span class="st">"No API key found; skipping Stage 3.</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb40-52"><a href="#cb40-52" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Write the script for a thirty-second television advertisement by a candidate running for
+office in Ohio. 75 to 85 words, spoken by the candidate in the first person, ending with
+"And I approve this message." Name no candidate, party or office. The advertisement is
+about {issue}. It should win the vote of {group} in Ohio. Write it the way a real
+candidate speaks. Say once, flatly, what you did before politics that gives you the right
+to talk about this: a job, a service, a business. Put in one concrete scene or detail, a
+person, a street, a price, invented but with nobody named. Promise what you will do in
+plain verbs, naming the instrument, never "fix" or "stand up to". Short spoken sentences,
+contractions, no hedging, no balancing the other side, no neat parallel closing line.
+
+No API key found; skipping Stage 3.</code></pre>
+</div>
+</div>
+<p><strong>Figure 6.1.</strong> How the five groups rated each of your ads, drawn as in Figure 4.1 (the run saved in <code>output/</code>).</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>s3_all <span class="ot">&lt;-</span> <span class="fu">read_s3_ads</span>(S3_ADS)</span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">nrow</span>(s3_all)) s3_all <span class="ot">&lt;-</span> s3_all[issue <span class="sc">==</span> it<span class="sc">$</span>key]</span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>s3_ans <span class="ot">&lt;-</span> <span class="fu">read_jsonl</span>(S3_ANSWERS); s3_jud <span class="ot">&lt;-</span> <span class="fu">read_jsonl</span>(S3_JUDGES)</span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">nrow</span>(s3_all)) s3_all <span class="ot">&lt;-</span> s3_all[ad_id <span class="sc">%in%</span> s3_ans<span class="sc">$</span>ad_id <span class="sc">&amp;</span> ad_id <span class="sc">%in%</span> s3_jud<span class="sc">$</span>ad_id]   <span class="co"># only ads that were scored</span></span>
+<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">anyDuplicated</span>(s3_all<span class="sc">$</span>ad_id)) {           <span class="co"># an earlier version of this notebook added each re-run to the same files</span></span>
+<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="st">"output/ holds more than one Stage 3 run in the same files, so they cannot be scored apart.</span><span class="sc">\n</span><span class="st">"</span>,</span>
+<span id="cb42-7"><a href="#cb42-7" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Move stage3_ads.csv, stage3_answers.jsonl and stage3_judges.jsonl into a folder of their own</span><span class="sc">\n</span><span class="st">"</span>,</span>
+<span id="cb42-8"><a href="#cb42-8" aria-hidden="true" tabindex="-1"></a>      <span class="st">"(for example output/old_runs/) and run the Stage 3 block again.</span><span class="sc">\n</span><span class="st">"</span>, <span class="at">sep =</span> <span class="st">""</span>)</span>
+<span id="cb42-9"><a href="#cb42-9" aria-hidden="true" tabindex="-1"></a>  s3_all <span class="ot">&lt;-</span> <span class="fu">data.table</span>()</span>
+<span id="cb42-10"><a href="#cb42-10" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb42-11"><a href="#cb42-11" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">nrow</span>(s3_all)) {</span>
+<span id="cb42-12"><a href="#cb42-12" aria-hidden="true" tabindex="-1"></a>  last <span class="ot">&lt;-</span> s3_all[ad_id <span class="sc">%in%</span> <span class="fu">tail</span>(s3_all<span class="sc">$</span>ad_id, <span class="dv">5</span>)]</span>
+<span id="cb42-13"><a href="#cb42-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">five_bars</span>(last, s3_ans))</span>
+<span id="cb42-14"><a href="#cb42-14" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="fu">cat</span>(<span class="st">"No Stage 3 run yet.</span><span class="sc">\n</span><span class="st">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>No Stage 3 run yet.</code></pre>
+</div>
+</div>
+<p><strong>Table 6.2.</strong> All three stages side by side, one row per prompt: Stages 1 and 2, the worked example, and the Stage 3 run saved in <code>output/</code>. Each row gives the average aim of its five ads, the average spotted score, and how many of the five pass. Your goal is a row whose <code>mean_aim</code> is above the Stage 2 row’s, with <code>passing</code> no lower.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>summ <span class="ot">&lt;-</span> <span class="cf">function</span>(sb, label) sb[, .(<span class="at">stage =</span> label, <span class="at">mean_aim =</span> <span class="fu">round</span>(<span class="fu">mean</span>(aim), <span class="dv">2</span>), <span class="at">mean_spotted =</span> <span class="fu">round</span>(<span class="fu">mean</span>(spotted), <span class="dv">2</span>), <span class="at">passing =</span> <span class="fu">sum</span>(passes))]</span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>rows <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="fu">summ</span>(sb1, <span class="st">"1: basic"</span>), <span class="fu">summ</span>(sb2, <span class="st">"2: our addition"</span>), <span class="fu">summ</span>(sbx, <span class="st">"3: worked example"</span>))</span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">nrow</span>(s3_all)) {</span>
+<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a>  s3_all[, run <span class="sc">:</span><span class="er">=</span> <span class="fu">sub</span>(<span class="st">"_[A-Z]+$"</span>, <span class="st">""</span>, ad_id)]</span>
+<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (r <span class="cf">in</span> <span class="fu">unique</span>(s3_all<span class="sc">$</span>run)) rows[[<span class="fu">length</span>(rows) <span class="sc">+</span> <span class="dv">1</span>]] <span class="ot">&lt;-</span> <span class="fu">summ</span>(<span class="fu">scoreboard</span>(s3_all[run <span class="sc">==</span> r], s3_ans, s3_jud), <span class="fu">paste</span>(<span class="st">"3: yours,"</span>, r))</span>
+<span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb44-7"><a href="#cb44-7" aria-hidden="true" tabindex="-1"></a><span class="fu">rbindlist</span>(rows)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">stage</th>
+<th style="text-align: right;">mean_aim</th>
+<th style="text-align: right;">mean_spotted</th>
+<th style="text-align: right;">passing</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1: basic</td>
+<td style="text-align: right;">2.36</td>
+<td style="text-align: right;">0.75</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2: our addition</td>
+<td style="text-align: right;">3.17</td>
+<td style="text-align: right;">0.60</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3: worked example</td>
+<td style="text-align: right;">3.08</td>
+<td style="text-align: right;">0.69</td>
+<td style="text-align: right;">5</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p><strong>Homework.</strong> Everything above is for the one issue you chose in Section 2. Go back to the <code>issue</code> block, set <code>ISSUE</code> to the other issue, and run the notebook again from there: the stored Stages 1 and 2 and the worked example cover both issues, so this runs offline. Does the same prompt do as well on the other issue? Compare its Table 6.2 with yours, and its Figures 4.1 and 5.1 group by group: which groups’ ads changed most between Stage 1 and Stage 2?</p>
+<hr>
+</section>
+</section>
+<section id="the-leaderboard-and-what-the-loop-does-next" class="level2">
+<h2 class="anchored" data-anchor-id="the-leaderboard-and-what-the-loop-does-next">7. The leaderboard, and what the loop does next</h2>
+<p>The room’s leaderboard is every Stage 3 ad written today that <strong>passes</strong> (at least one judge was fooled), ranked by <strong>aim</strong>. The block below writes your passing ads to a file the session collects at the end, so the leaderboard can go on the screen.</p>
+<p><strong>Table 7.1.</strong> Your entries for the room’s leaderboard.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">nrow</span>(s3_all)) {</span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>  entry <span class="ot">&lt;-</span> <span class="fu">merge</span>(<span class="fu">scoreboard</span>(s3_all, s3_ans, s3_jud)[passes <span class="sc">==</span> <span class="cn">TRUE</span>], s3_all[, .(ad_id, issue, text)], <span class="at">by =</span> <span class="st">"ad_id"</span>)</span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">setorder</span>(entry, <span class="sc">-</span>aim)</span>
+<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a>  entry[, user <span class="sc">:</span><span class="er">=</span> <span class="fu">Sys.getenv</span>(<span class="st">"USER"</span>, <span class="at">unset =</span> <span class="st">"unknown"</span>)]</span>
+<span id="cb45-5"><a href="#cb45-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fwrite</span>(entry, <span class="fu">file.path</span>(OUT, <span class="fu">paste0</span>(<span class="st">"leaderboard_"</span>, entry<span class="sc">$</span>user[<span class="dv">1</span>], <span class="st">".csv"</span>)))</span>
+<span id="cb45-6"><a href="#cb45-6" aria-hidden="true" tabindex="-1"></a>  entry[, .(ad_id, target, aim, spotted)]</span>
+<span id="cb45-7"><a href="#cb45-7" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="fu">cat</span>(<span class="st">"Nothing to deposit yet."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Nothing to deposit yet.</code></pre>
+</div>
+</div>
+<p>What you ran three times by hand, the optimiser runs as a <strong>search</strong>: a population of prompts and ads, scored on the full audience, the best kept, the rest rewritten from what the audience and the judges said, for as many generations as the budget allows, with the audience re-drawn so that the search does not learn the quirks of fifty twins. The session now shows that loop running. Two parts of it are not in this package and are not on GitHub: the search itself — how prompts and ads are mutated and selected — and the tuning of the audience sample. The construction of the twins, the question and the scoring are all here, in the open, exactly as the group runs them. That line is drawn on purpose, and it is drawn here so that you do not have to find it.</p>
+<hr>
+</section>
+<section id="what-a-twin-cannot-know" class="level2">
+<h2 class="anchored" data-anchor-id="what-a-twin-cannot-know">8. What a twin cannot know</h2>
+<p>Three things to carry out of the room.</p>
+<p>The twin answers from a persona built from a census cell and a matched survey respondent’s own answers. It has never seen an advertisement rated by that respondent, and it was told nothing about this study. When an ad scores well, you can read the persona and see why; when it scores badly, the same.</p>
+<p>Whether the twins’ ratings match those of the people they are built from is an open question, and the group is answering it the only way that counts: a pre-registered study (OSF, DOI 10.17605/OSF.IO/CKAM2, 7 October 2026) in which each human respondent rates the fifteen scripts of Section 3 on four questions, and the model predicts that person’s answers from their profile. Today you asked one of those questions, vote likelihood, about ads a model wrote to your instructions. Until the humans have answered, a leaderboard is a leaderboard of twins. The judges are a model too: a judge may recognise a real ad from memory, which works against you, and a human viewer may spot habits the judges miss.</p>
+<p>And a choice worth noticing: this morning’s vote module asked the model to estimate <em>probabilities</em> about a record, as an analyst; this afternoon the model predicted the <em>answer</em> a particular person would give, on the scale that person sees. They are different instruments, and a method that cannot say which it used is not a method. The registered study uses the second.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/talking-to-machines\.github\.io\/llmss-2026-workshops\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../W2_twins/notebooks/02_signals_and_backtest.html" class="pagination-link" aria-label="2. From twin answers to a market signal">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">2. From twin answers to a market signal</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../W3_legal/notebooks/01_justice_twins.html" class="pagination-link" aria-label="Silicon Jury: a justice twin, one case">
+        <span class="nav-page-text">Silicon Jury: a justice twin, one case</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Talking to Machines · LLMSS 2026 pre-conference workshops, City University of Hong Kong, 13 October 2026</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/talking-to-machines/llmss-2026-workshops/blob/main/W3_audience/notebooks/02_silicon_voters.Rmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/talking-to-machines/llmss-2026-workshops/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>Code: MIT · Text and data: CC BY 4.0</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

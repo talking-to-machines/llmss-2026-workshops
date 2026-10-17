@@ -1,0 +1,84 @@
+---
+title: "Run it yourself"
+---
+
+Everything runs in **R**, on your own laptop, with no network connection and no API
+key.
+
+## 1. Install R and RStudio
+
+- **R 4.4 or later:** <https://cran.r-project.org>
+- **RStudio Desktop:** <https://posit.co/download/rstudio-desktop/>
+
+## 2. Install the packages
+
+Open RStudio and run:
+
+```r
+install.packages(c("arrow", "data.table", "ggplot2", "jsonlite", "lme4",
+                   "rmarkdown", "knitr", "httr2"))
+```
+
+`arrow` is the one that sometimes gives trouble. If it fails, try:
+
+```r
+install.packages("arrow", type = "binary")
+```
+
+## 3. Get the materials
+
+Either download the repository as a zip
+([download](https://github.com/talking-to-machines/llmss-2026-workshops/archive/refs/heads/main.zip))
+and unzip it, or clone it:
+
+```bash
+git clone https://github.com/talking-to-machines/llmss-2026-workshops.git
+```
+
+There is one folder per workshop:
+
+| Folder | Workshop | Notebooks |
+|---|---|---|
+| `W1_aipop` | Workshop 1 · AIPOP: AI polling and MrP | 3 |
+| `W2_twins` | Workshop 2 · The Wisdom of Digital Twins | 2 |
+| `W3_audience` | Workshop 3 · The Silicon Audience: Silicon Voters | 1 |
+| `W3_legal` | Workshop 3 · The Silicon Audience: Silicon Jury | 1 |
+
+Each folder has its notebooks in `notebooks/`, numbered in the order you use
+them, and everything they read in `data/`.
+
+## 4. Check it works
+
+In RStudio, set the working directory to one of the workshop folders (for
+Workshop 1, simply open `W1_aipop/W1_aipop.Rproj`) and run:
+
+```r
+source("run_all.R")
+```
+
+It renders that workshop's notebooks in about a minute. If it ends with "All
+notebooks rendered" (or "Output created"), you are ready.
+
+Workshop 1's notebooks hand data from one to the next, so run them in order:
+Notebook 2 writes the interviewed panel that Notebook 3 reads. A copy of that
+panel is already in `W1_aipop/output/`, so Notebook 3 also runs on its own.
+
+## Sending your own prompts (optional)
+
+Some blocks send *your own* prompts to a model. Without a key they are
+skipped and the notebook uses the stored answers. To run them, you need an
+OpenAI API key. Put it in your `~/.Renviron` file (in RStudio:
+`usethis::edit_r_environ()`), then restart R:
+
+```
+OPENAI_API_KEY=your-key-here
+```
+
+The notebooks call `gpt-5-mini`. One full Silicon Voters Stage 3 run is
+270 calls, a few cents at current prices.
+
+## Exercises
+
+The notebooks contain exercises with empty blocks (`# your code here`). The answer
+keys are not part of the public materials, but you can ask for them: write to
+Matías Fuentes Becerra at <mfuentesb@fen.uchile.cl>.

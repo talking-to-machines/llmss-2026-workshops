@@ -1,0 +1,159 @@
+**question: APPLE INC (AAPL)**  
+**explanation: Profile provides no company-specific signals; as an event-driven/income-focused influencer I have no data here to justify buy or sell. Default to neutral (hold) given lack of AAPL-specific info in the profile.**  
+**recommendation: 50**  
+**confidence: 20**  
+**speculation: 100**  
+**expected holding period: 30**  
+**primary catalyst type: Other**
+
+**question: ADVANCED MICRO DEVICES INC (AMD)**  
+**explanation: Profile contains no AMD-specific information. With only the profile data available, I adopt a neutral stance consistent with no actionable signal.**  
+**recommendation: 50**  
+**confidence: 20**  
+**speculation: 100**  
+**expected holding period: 30**  
+**primary catalyst type: Other**
+
+**question: AMAZON COM INC (AMZN)**  
+**explanation: No AMZN-related content or indicators in the profile. Absent firm signals, maintain a hold position.**  
+**recommendation: 50**  
+**confidence: 20**  
+**speculation: 100**  
+**expected holding period: 30**  
+**primary catalyst type: Other**
+
+**question: BROADCOM INC (AVGO)**  
+**explanation: Profile lacks any AVGO-specific posts or references. Default neutral recommendation given profile-only constraints.**  
+**recommendation: 50**  
+**confidence: 20**  
+**speculation: 100**  
+**expected holding period: 30**  
+**primary catalyst type: Other**
+
+**question: CISCO SYSTEMS INC (CSCO)**  
+**explanation: No CSCO information in the profile. With no actionable detail, choose hold.**  
+**recommendation: 50**  
+**confidence: 20**  
+**speculation: 100**  
+**expected holding period: 30**  
+**primary catalyst type: Other**
+
+**question: GOOGLE (GOOG)**  
+**explanation: Profile provides no GOOG-specific content. Neutral (hold) is most appropriate based solely on the profile.**  
+**recommendation: 50**  
+**confidence: 20**  
+**speculation: 100**  
+**expected holding period: 30**  
+**primary catalyst type: Other**
+
+**question: ALPHABET INC (GOOGL)**  
+**explanation: No GOOGL-specific signals appear in the profile data. Maintain a hold recommendation given lack of detail.**  
+**recommendation: 50**  
+**confidence: 20**  
+**speculation: 100**  
+**expected holding period: 30**  
+**primary catalyst type: Other**
+
+**question: INTEL CORP (INTC)**  
+**explanation: Profile contains no INTC-related posts or indicators. Default to neutral (hold) under profile-only constraints.**  
+**recommendation: 50**  
+**confidence: 20**  
+**speculation: 100**  
+**expected holding period: 30**  
+**primary catalyst type: Other**
+
+**question: JOHNSON & JOHNSON (JNJ)**  
+**explanation: No JNJ-specific information is present in the profile. With only profile data, the appropriate stance is hold.**  
+**recommendation: 50**  
+**confidence: 20**  
+**speculation: 100**  
+**expected holding period: 30**  
+**primary catalyst type: Other**
+
+**question: JPMORGAN CHASE & CO (JPM)**  
+**explanation: Profile does not mention JPM or banking-specific trades. Lacking firm signals, pick hold.**  
+**recommendation: 50**  
+**confidence: 20**  
+**speculation: 100**  
+**expected holding period: 30**  
+**primary catalyst type: Other**
+
+**question: LILLY ELI & CO (LLY)**  
+**explanation: No LLY or pharma-specific posts are present in the profile. Neutral (hold) is chosen given available data.**  
+**recommendation: 50**  
+**confidence: 20**  
+**speculation: 100**  
+**expected holding period: 30**  
+**primary catalyst type: Other**
+
+**question: META PLATFORMS INC (META)**  
+**explanation: Profile contains no META-specific content. Default to a hold recommendation due to absence of company-level signals.**  
+**recommendation: 50**  
+**confidence: 20**  
+**speculation: 100**  
+**expected holding period: 30**  
+**primary catalyst type: Other**
+
+**question: MICROSOFT CORP (MSFT)**  
+**explanation: Profile provides no MSFT-related information. With profile-only constraints, maintain neutral (hold).**  
+**recommendation: 50**  
+**confidence: 20**  
+**speculation: 100**  
+**expected holding period: 30**  
+**primary catalyst type: Other**
+
+**question: MICRON TECHNOLOGY INC (MU)**  
+**explanation: No MU-specific signals appear in the profile. Given only the profile data, the neutral position is most defensible.**  
+**recommendation: 50**  
+**confidence: 20**  
+**speculation: 100**  
+**expected holding period: 30**  
+**primary catalyst type: Other**
+
+**question: NVIDIA CORP (NVDA)**  
+**explanation: Profile lacks NVDA-specific posts or indicators. Absent such information, choose hold.**  
+**recommendation: 50**  
+**confidence: 20**  
+**speculation: 100**  
+**expected holding period: 30**  
+**primary catalyst type: Other**
+
+**question: ORACLE CORP (ORCL)**  
+**explanation: No ORCL-related content in the profile. Default to a neutral hold recommendation.**  
+**recommendation: 50**  
+**confidence: 20**  
+**speculation: 100**  
+**expected holding period: 30**  
+**primary catalyst type: Other**
+
+**question: TESLA INC (TSLA)**  
+**explanation: Profile does not include TSLA-specific commentary. With only profile data, the appropriate stance is hold.**  
+**recommendation: 50**  
+**confidence: 20**  
+**speculation: 100**  
+**expected holding period: 30**  
+**primary catalyst type: Other**
+
+**question: VISA INC (V)**  
+**explanation: No V-related information is present in the profile. Neutral (hold) recommendation given lack of firm signals.**  
+**recommendation: 50**  
+**confidence: 20**  
+**speculation: 100**  
+**expected holding period: 30**  
+**primary catalyst type: Other**
+
+**question: WALMART INC (WMT)**  
+**explanation: Profile provides no WMT-specific posts. Given profile-only constraints, maintain a hold.**  
+**recommendation: 50**  
+**confidence: 20**  
+**speculation: 100**  
+**expected holding period: 30**  
+**primary catalyst type: Other**
+
+**question: EXXON MOBIL CORP (XOM)**  
+**explanation: No XOM or energy-specific information is in the profile. Absent company signals, choose hold.**  
+**recommendation: 50**  
+**confidence: 20**  
+**speculation: 100**  
+**expected holding period: 30**  
+**primary catalyst type: Other**

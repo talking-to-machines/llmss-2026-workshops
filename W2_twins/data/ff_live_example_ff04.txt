@@ -1,0 +1,159 @@
+**question: APPLE INC (AAPL)**  
+**explanation: Profile indicates a focus on options income and lists large technology stocks as favorites; as an options-income coach I would favor AAPL for covered-call income and consider a constructive stance.**  
+**recommendation: 75**  
+**confidence: 55**  
+**speculation: 30**  
+**expected holding period: 30**  
+**primary catalyst type: Flow-Technical**
+
+**question: ADVANCED MICRO DEVICES INC (AMD)**  
+**explanation: Profile centers on options income and large tech favorites but does not specifically mention AMD; partial relevance from semiconductor interest but inference is moderate.**  
+**recommendation: 50**  
+**confidence: 45**  
+**speculation: 60**  
+**expected holding period: 30**  
+**primary catalyst type: Flow-Technical**
+
+**question: AMAZON COM INC (AMZN)**  
+**explanation: Profile lists large technology stocks among favorites and focuses on options income strategies; AMZN would be a candidate for covered-call income and a generally constructive stance.**  
+**recommendation: 70**  
+**confidence: 50**  
+**speculation: 30**  
+**expected holding period: 30**  
+**primary catalyst type: Flow-Technical**
+
+**question: BROADCOM INC (AVGO)**  
+**explanation: Broadcom fits the large-tech/semiconductor category and is consistent with income strategies; profile implies favoring large tech names so a mildly positive stance.**  
+**recommendation: 70**  
+**confidence: 50**  
+**speculation: 40**  
+**expected holding period: 30**  
+**primary catalyst type: Flow-Technical**
+
+**question: CISCO SYSTEMS INC (CSCO)**  
+**explanation: Profile focuses on income strategies and established large-cap names; Cisco is a mature name suitable for income (covered calls/dividends), so a neutral-to-hold stance fits the profile.**  
+**recommendation: 50**  
+**confidence: 45**  
+**speculation: 60**  
+**expected holding period: 30**  
+**primary catalyst type: Flow-Technical**
+
+**question: GOOGLE (GOOG)**  
+**explanation: Profile mentions favorite large technology stocks and focuses on options strategies; GOOG (a large tech) is likely viewed positively for income and bullish bias.**  
+**recommendation: 75**  
+**confidence: 55**  
+**speculation: 30**  
+**expected holding period: 30**  
+**primary catalyst type: Flow-Technical**
+
+**question: ALPHABET INC (GOOGL)**  
+**explanation: Same rationale as GOOG — Alphabet is a large tech favorite per profile and suitable for options-income approaches favored by the coach.**  
+**recommendation: 75**  
+**confidence: 55**  
+**speculation: 30**  
+**expected holding period: 30**  
+**primary catalyst type: Flow-Technical**
+
+**question: INTEL CORP (INTC)**  
+**explanation: Profile does not specifically reference Intel; as an options-income coach I might treat older semiconductor names cautiously relative to favorite large tech, so a hold/neutral stance.**  
+**recommendation: 50**  
+**confidence: 40**  
+**speculation: 70**  
+**expected holding period: 30**  
+**primary catalyst type: Flow-Technical**
+
+**question: JOHNSON & JOHNSON (JNJ)**  
+**explanation: Profile focuses on options income and large tech favorites, with no healthcare specifics; JNJ is a mature dividend name suited to income strategies but not highlighted, so hold/neutral.**  
+**recommendation: 50**  
+**confidence: 40**  
+**speculation: 80**  
+**expected holding period: 30**  
+**primary catalyst type: Flow-Technical**
+
+**question: JPMORGAN CHASE & CO (JPM)**  
+**explanation: Profile centers on options income and tech favorites; financials are not emphasized, so a neutral/hold stance aligns with an income-oriented coach who hasn’t promoted this sector.**  
+**recommendation: 50**  
+**confidence: 40**  
+**speculation: 80**  
+**expected holding period: 30**  
+**primary catalyst type: Flow-Technical**
+
+**question: LILLY ELI & CO (LLY)**  
+**explanation: Profile gives no biotech/pharma specifics; as an options-income coach I would be neutral toward a non-mentioned sector name, so hold.**  
+**recommendation: 50**  
+**confidence: 35**  
+**speculation: 85**  
+**expected holding period: 30**  
+**primary catalyst type: Flow-Technical**
+
+**question: META PLATFORMS INC (META)**  
+**explanation: Meta is a large technology platform likely among the coach’s favored large tech names mentioned in the profile; constructive stance for options income and covered call strategies.**  
+**recommendation: 75**  
+**confidence: 55**  
+**speculation: 30**  
+**expected holding period: 30**  
+**primary catalyst type: Flow-Technical**
+
+**question: MICROSOFT CORP (MSFT)**  
+**explanation: Microsoft fits the profile’s favorite large technology stocks and is well suited for options-income approaches; likely a constructive buy stance.**  
+**recommendation: 75**  
+**confidence: 55**  
+**speculation: 30**  
+**expected holding period: 30**  
+**primary catalyst type: Flow-Technical**
+
+**question: MICRON TECHNOLOGY INC (MU)**  
+**explanation: Micron is a semiconductor not specifically mentioned; profile suggests favoring large tech names—Micron would be treated more cautiously, so a neutral/hold stance.**  
+**recommendation: 50**  
+**confidence: 40**  
+**speculation: 70**  
+**expected holding period: 30**  
+**primary catalyst type: Flow-Technical**
+
+**question: NVIDIA CORP (NVDA)**  
+**explanation: NVIDIA is a leading large technology/semiconductor name likely aligned with the profile’s listed favorite large tech stocks; favorable for options-income strategies and bullish exposure.**  
+**recommendation: 80**  
+**confidence: 60**  
+**speculation: 30**  
+**expected holding period: 30**  
+**primary catalyst type: Flow-Technical**
+
+**question: ORACLE CORP (ORCL)**  
+**explanation: Oracle is an established tech name but not explicitly listed; as an income-focused coach I would treat it as neutral/hold unless specifically promoted.**  
+**recommendation: 50**  
+**confidence: 40**  
+**speculation: 70**  
+**expected holding period: 30**  
+**primary catalyst type: Flow-Technical**
+
+**question: TESLA INC (TSLA)**  
+**explanation: Tesla is a large technology/EV name that is commonly a favorite among large-cap tech lists; profile’s emphasis on large tech suggests a constructive stance and suitability for options strategies, though potentially more volatile.**  
+**recommendation: 70**  
+**confidence: 50**  
+**speculation: 40**  
+**expected holding period: 30**  
+**primary catalyst type: Flow-Technical**
+
+**question: VISA INC (V)**  
+**explanation: Visa is a large-cap payments company not specifically mentioned; as an options-income coach I would view it as a stable, income-suitable name but not highlighted—so hold/neutral.**  
+**recommendation: 50**  
+**confidence: 40**  
+**speculation: 80**  
+**expected holding period: 30**  
+**primary catalyst type: Flow-Technical**
+
+**question: WALMART INC (WMT)**  
+**explanation: Walmart is a large-cap retail name not referenced in the profile; consistent with an income-oriented, non-tech favorite approach, the coach would likely be neutral/hold.**  
+**recommendation: 50**  
+**confidence: 40**  
+**speculation: 80**  
+**expected holding period: 30**  
+**primary catalyst type: Flow-Technical**
+
+**question: EXXON MOBIL CORP (XOM)**  
+**explanation: Exxon is an energy name not mentioned in the profile; the coach’s stated focus on tech and options income suggests neutrality toward non-highlighted sectors, so hold.**  
+**recommendation: 50**  
+**confidence: 40**  
+**speculation: 85**  
+**expected holding period: 30**  
+**primary catalyst type: Flow-Technical**

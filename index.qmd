@@ -1,0 +1,109 @@
+---
+title: "Talking to Machines: LLMSS 2026 Workshops"
+subtitle: "Digital twins, silicon samples and silicon audiences, in R"
+toc: false
+---
+
+These are the materials of the three **Talking to Machines** workshops held before
+the LLMSS 2026 conference at City University of Hong Kong on Tuesday 13 October
+2026. Every notebook is here with its output, so you can read it in the browser
+or download it and run it yourself (see [Run it yourself](setup.qmd)).
+
+Every notebook ships with **stored model answers**, so it runs start to finish
+with no network and no API key. Only the blocks where you send your own prompts
+call a model.
+
+## One method, three uses
+
+All three workshops run the same four-step engine and point it at a different
+question. Only the last step changes.
+
+```
+   stratification frame  →  synthetic subjects  →  digital interview  →  aggregation
+   (who the population      (records + donors)      (repeated,             ├─ W1  MrP → public opinion
+    is)                                              time-anchored)        ├─ W2  panel econometrics → market signals
+                                                                           └─ W3  closed-loop search → best narrative
+```
+
+The Ohio panel built in Workshop 1 comes back as the audience in Workshop 3.
+
+## The workshops
+
+### Workshop 1 · AIPOP: AI polling and MrP
+
+Build a stratification frame for Ohio, draw a silicon sample of 400 twins from
+it, interview them with a large language model, and turn their answers into MrP
+estimates checked against certified results and an election the twins never saw.
+
+| Notebook | | |
+|---|---|---|
+| 1 | [Building a silicon sample](W1_aipop/notebooks/01_frame_and_sample.Rmd) | The frame, the draw, and an audit against the project's own panel |
+| 2 | [Personas and the digital interview](W1_aipop/notebooks/02_personas_and_interview.Rmd) | Matching census skeletons to survey donors, rendering personas, the vote interview |
+| 3 | [MrP and validation](W1_aipop/notebooks/03_mrp_and_validation.Rmd) | Two MrP models, the 2026 Ohio Senate race, twelve state panels and a held-out election |
+
+Ray Duch and Matías Fuentes Becerra ·
+[source folder](https://github.com/talking-to-machines/llmss-2026-workshops/tree/main/W1_aipop)
+
+### Workshop 2 · The Wisdom of Digital Twins
+
+Build twins of ten financial influencers, interview them every day about the news
+on a set of stocks, and turn their answers into a long–short signal, set against
+the crowd and the prediction markets.
+
+| Notebook | | |
+|---|---|---|
+| 1 | [Finfluencer twins and the daily interview](W2_twins/notebooks/01_twins_and_interview.Rmd) | Profile cards, the interview prompt, and what a twin says about a stock |
+| 2 | [From twin answers to a market signal](W2_twins/notebooks/02_signals_and_backtest.Rmd) | Panel regressions, a backtest, and a replay of a ten-agent deliberation |
+
+Ray Duch and Matías Fuentes Becerra ·
+[source folder](https://github.com/talking-to-machines/llmss-2026-workshops/tree/main/W2_twins)
+
+### Workshop 3 · The Silicon Audience
+
+Write a message, watch a twin panel score it, and improve it. Once for a political
+ad, once for a closing argument before the Supreme Court.
+
+| Block | | |
+|---|---|---|
+| Silicon Voters | [Ads for five kinds of voter](W3_audience/notebooks/02_silicon_voters.Rmd) | A model writes ads for Ohio voters; you improve its prompt in three stages, scored by the twins and by model judges |
+| Silicon Jury | [A justice twin, one case, by hand](W3_legal/notebooks/01_justice_twins.Rmd) | Run one justice twin on one case, compare it with the full bench and the Court, change one input |
+
+Ray Duch and Laurenz Günther, with Matías Fuentes Becerra ·
+source folders: [Silicon Voters](https://github.com/talking-to-machines/llmss-2026-workshops/tree/main/W3_audience),
+[Silicon Jury](https://github.com/talking-to-machines/llmss-2026-workshops/tree/main/W3_legal)
+
+## Data
+
+The notebooks use public data (the ACS 2019–2023 five-year PUMS, the
+Cooperative Election Study 2020–2025, and certified election results) and
+aggregate results (district, county and cell totals, never an individual) from
+the Talking to Machines digital-twin panels. The personas are built on synthetic
+skeletons from the census, not on voter-file records. Each workshop folder has a
+`data/README.md` with the source of every file.
+
+Only the Ohio panel files are public. The other states' panel results, used in
+Workshop 1, Notebook 3, Section 7, carry non-commercial terms. This site shows
+their output, but the files are not in the repository.
+
+## The method
+
+- **Talking to Machines**: an international collaboration of academics and
+  industry researchers, directed by Sonja Vogt (HEC Lausanne) and Ray Duch
+  (Nuffield College, Oxford), funded by the Swiss National Science Foundation.
+  The frames, panels and vote module in these notebooks come from its
+  digital-twin work.
+- **PoSSUM**: Cerina and Duch, *Protocol for Surveying Social Media Users with
+  Multimodal LLMs*.
+
+## Instructors
+
+- **Ray Duch**, Nuffield College, University of Oxford
+- **Matías Fuentes Becerra**, University of Chile
+- **Laurenz Günther**, Toulouse School of Economics
+
+## Licence
+
+The code is under the [MIT licence](https://github.com/talking-to-machines/llmss-2026-workshops/blob/main/LICENSE).
+The text, figures and data are under
+[CC BY 4.0](https://github.com/talking-to-machines/llmss-2026-workshops/blob/main/LICENSE-CONTENT.md),
+except where a data file's README says otherwise.

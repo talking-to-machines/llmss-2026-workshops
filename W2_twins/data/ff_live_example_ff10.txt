@@ -1,0 +1,159 @@
+**question: APPLE INC (AAPL)**  
+**explanation: Profile indicates a long-term, fundamentals-focused Canadian investor who also posts enthusiastically about rallies and momentum returning. That combination suggests a bias toward owning large-cap, quality equities while leaning into short-term momentum — supporting a buy stance.**  
+**recommendation: 65**  
+**confidence: 50**  
+**speculation: 50**  
+**expected holding period: 180**  
+**primary catalyst type: Flow-Technical**
+
+**question: ADVANCED MICRO DEVICES INC (AMD)**  
+**explanation: Profile audience and posts show enthusiasm for momentum and occasional speculative small-cap mentions; as a long-term equity investor with momentum bias, AMD is likely viewed as a buy for growth/momentum exposure.**  
+**recommendation: 68**  
+**confidence: 45**  
+**speculation: 60**  
+**expected holding period: 120**  
+**primary catalyst type: Flow-Technical**
+
+**question: AMAZON COM INC (AMZN)**  
+**explanation: Large-cap, fundamental name fitting a long-term investor’s core holdings; profile’s momentum enthusiasm suggests buying into rallies as well.**  
+**recommendation: 64**  
+**confidence: 50**  
+**speculation: 50**  
+**expected holding period: 240**  
+**primary catalyst type: Earnings**
+
+**question: BROADCOM INC (AVGO)**  
+**explanation: Broadcom is a quality semiconductor-related company that aligns with a fundamentals-focused long-term investor who also chases momentum — supporting a buy stance.**  
+**recommendation: 66**  
+**confidence: 48**  
+**speculation: 55**  
+**expected holding period: 240**  
+**primary catalyst type: Earnings**
+
+**question: CISCO SYSTEMS INC (CSCO)**  
+**explanation: As a mature, stable tech name, a fundamentals-focused long-term investor may prefer holding rather than aggressively buying, given the profile’s balance of patience and occasional short-term moves.**  
+**recommendation: 52**  
+**confidence: 50**  
+**speculation: 60**  
+**expected holding period: 365**  
+**primary catalyst type: Earnings**
+
+**question: GOOGLE (GOOG)**  
+**explanation: GOOG fits the profile’s preference for large-cap equities and potential momentum play; likely a buy given enthusiastically bullish tone on rallies and fundamentals focus.**  
+**recommendation: 66**  
+**confidence: 50**  
+**speculation: 50**  
+**expected holding period: 240**  
+**primary catalyst type: Earnings**
+
+**question: ALPHABET INC (GOOGL)**  
+**explanation: Same rationale as GOOG — large-cap fundamental holding with momentum appeal for the profile’s audience.**  
+**recommendation: 66**  
+**confidence: 50**  
+**speculation: 50**  
+**expected holding period: 240**  
+**primary catalyst type: Earnings**
+
+**question: INTEL CORP (INTC)**  
+**explanation: Intel is a cyclical/turnaround name; profile’s mix of long-term fundamentals and short-term momentum could result in a hold or cautious buy — lean toward hold given uncertainty in profile about cyclical risk.**  
+**recommendation: 50**  
+**confidence: 45**  
+**speculation: 65**  
+**expected holding period: 180**  
+**primary catalyst type: Macro**
+
+**question: JOHNSON & JOHNSON (JNJ)**  
+**explanation: As a defensive, dividend-paying healthcare name, a patient fundamentals investor would likely hold for long-term stability rather than chase; profile’s conservative description supports Hold.**  
+**recommendation: 50**  
+**confidence: 55**  
+**speculation: 40**  
+**expected holding period: 365**  
+**primary catalyst type: Earnings**
+
+**question: JPMORGAN CHASE & CO (JPM)**  
+**explanation: Financials may be held for fundamentals by a long-term investor; profile’s occasional short-term momentum focus suggests a neutral/hold stance rather than aggressive buy.**  
+**recommendation: 52**  
+**confidence: 48**  
+**speculation: 55**  
+**expected holding period: 240**  
+**primary catalyst type: Macro**
+
+**question: LILLY ELI & CO (LLY)**  
+**explanation: Large healthcare/pharma name fits a fundamentals-oriented, long-term allocation; profile likely holds rather than trades aggressively.**  
+**recommendation: 54**  
+**confidence: 50**  
+**speculation: 50**  
+**expected holding period: 365**  
+**primary catalyst type: Product**
+
+**question: META PLATFORMS INC (META)**  
+**explanation: Growth/tech name attractive to young retail audience and momentum-focused posts; profile suggests a buy stance to capture rallies.**  
+**recommendation: 67**  
+**confidence: 48**  
+**speculation: 55**  
+**expected holding period: 180**  
+**primary catalyst type: Flow-Technical**
+
+**question: MICROSOFT CORP (MSFT)**  
+**explanation: Large-cap, fundamentals-aligned holding that a long-term investor would favor; with momentum bias, profile likely leans buy on pullbacks or rallies.**  
+**recommendation: 65**  
+**confidence: 52**  
+**speculation: 50**  
+**expected holding period: 365**  
+**primary catalyst type: Earnings**
+
+**question: MICRON TECHNOLOGY INC (MU)**  
+**explanation: Cyclical memory name — profile’s mix of long-term fundamentals and interest in short-term momentum/speculation suggests a moderate buy for momentum traders but with higher uncertainty; lean buy.**  
+**recommendation: 60**  
+**confidence: 42**  
+**speculation: 65**  
+**expected holding period: 120**  
+**primary catalyst type: Flow-Technical**
+
+**question: NVIDIA CORP (NVDA)**  
+**explanation: High-momentum, market-favorite growth name that fits the profile’s enthusiasm for rallies and young retail audience — likely a buy.**  
+**recommendation: 70**  
+**confidence: 50**  
+**speculation: 55**  
+**expected holding period: 180**  
+**primary catalyst type: Flow-Technical**
+
+**question: ORACLE CORP (ORCL)**  
+**explanation: Mature enterprise software name consistent with a fundamentals-oriented long-term investor; profile likely prefers holding rather than active trading.**  
+**recommendation: 50**  
+**confidence: 50**  
+**speculation: 60**  
+**expected holding period: 365**  
+**primary catalyst type: Earnings**
+
+**question: TESLA INC (TSLA)**  
+**explanation: Highly momentum-driven and popular with young retail; profile’s enthusiasm for rallies and occasional speculative mentions indicate a buy stance, though the profile’s caution on risk may temper conviction.**  
+**recommendation: 66**  
+**confidence: 42**  
+**speculation: 60**  
+**expected holding period: 120**  
+**primary catalyst type: Flow-Technical**
+
+**question: VISA INC (V)**  
+**explanation: Stable payments name that aligns with fundamentals-focused, long-term investing; profile likely holds or modestly buys — choose hold given conservative tone.**  
+**recommendation: 52**  
+**confidence: 50**  
+**speculation: 55**  
+**expected holding period: 365**  
+**primary catalyst type: Earnings**
+
+**question: WALMART INC (WMT)**  
+**explanation: Defensive retail stalwart fitting a long-term, fundamentals-oriented portfolio; profile would more likely hold for stability.**  
+**recommendation: 50**  
+**confidence: 52**  
+**speculation: 50**  
+**expected holding period: 365**  
+**primary catalyst type: Earnings**
+
+**question: EXXON MOBIL CORP (XOM)**  
+**explanation: Energy cyclicality and macro sensitivity create mixed signals for a fundamentals-focused, patient investor; profile’s emphasis on risk and momentum suggests a cautious hold rather than an outright buy.**  
+**recommendation: 48**  
+**confidence: 45**  
+**speculation: 60**  
+**expected holding period: 180**  
+**primary catalyst type: Macro**

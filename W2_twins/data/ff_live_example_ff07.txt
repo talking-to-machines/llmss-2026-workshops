@@ -1,0 +1,159 @@
+**question: APPLE INC (AAPL)**  
+**explanation: Profile indicates a macro/political-focused influencer who posts opinionated market commentary and rarely issues single-stock picks; given that stance, the most consistent action is to hold rather than make an active buy or sell call.**  
+**recommendation: 50**  
+**confidence: 30**  
+**speculation: 90**  
+**expected holding period: 90**  
+**primary catalyst type: Macro**
+
+**question: ADVANCED MICRO DEVICES INC (AMD)**  
+**explanation: Profile emphasis is on macro and political drivers rather than single-stock analysis; the influencer’s typical approach (opinionated, few single-stock picks) supports a neutral hold stance.**  
+**recommendation: 50**  
+**confidence: 30**  
+**speculation: 90**  
+**expected holding period: 90**  
+**primary catalyst type: Macro**
+
+**question: AMAZON COM INC (AMZN)**  
+**explanation: Given the profile’s macro/political orientation and scarcity of single-stock recommendations, the consistent conservative stance is to hold rather than issue a directional trade.**  
+**recommendation: 50**  
+**confidence: 30**  
+**speculation: 90**  
+**expected holding period: 90**  
+**primary catalyst type: Macro**
+
+**question: BROADCOM INC (AVGO)**  
+**explanation: The account focuses on macro and political events moving markets and rarely advocates single-stock bets; a neutral hold aligns with that profile.**  
+**recommendation: 50**  
+**confidence: 30**  
+**speculation: 90**  
+**expected holding period: 90**  
+**primary catalyst type: Macro**
+
+**question: CISCO SYSTEMS INC (CSCO)**  
+**explanation: Profile signals macro-driven commentary and few single-stock calls, so a hold is the most consistent recommendation from that perspective.**  
+**recommendation: 50**  
+**confidence: 30**  
+**speculation: 90**  
+**expected holding period: 90**  
+**primary catalyst type: Macro**
+
+**question: GOOGLE (GOOG)**  
+**explanation: The influencer’s posts tie market moves to political events and are opinion-focused with limited single-stock picks; a neutral hold reflects that approach.**  
+**recommendation: 50**  
+**confidence: 30**  
+**speculation: 90**  
+**expected holding period: 90**  
+**primary catalyst type: Macro**
+
+**question: ALPHABET INC (GOOGL)**  
+**explanation: With a macro/politics-first posting history and few individual stock endorsements, the profile suggests remaining neutral (hold) rather than taking an active buy/sell position.**  
+**recommendation: 50**  
+**confidence: 30**  
+**speculation: 90**  
+**expected holding period: 90**  
+**primary catalyst type: Macro**
+
+**question: INTEL CORP (INTC)**  
+**explanation: The account’s emphasis on macro and political drivers and its tendency to avoid frequent single-stock picks supports a hold recommendation to stay aligned with that profile.**  
+**recommendation: 50**  
+**confidence: 30**  
+**speculation: 90**  
+**expected holding period: 90**  
+**primary catalyst type: Macro**
+
+**question: JOHNSON & JOHNSON (JNJ)**  
+**explanation: Profile data shows macro-focused, opinionated commentary with few stock-specific calls; holding is the conservative, consistent stance for this influencer.**  
+**recommendation: 50**  
+**confidence: 30**  
+**speculation: 90**  
+**expected holding period: 90**  
+**primary catalyst type: Macro**
+
+**question: JPMORGAN CHASE & CO (JPM)**  
+**explanation: Given the influencer’s macro/political framing of market moves and rare single-stock picks, a neutral hold matches the profile’s typical posture.**  
+**recommendation: 50**  
+**confidence: 30**  
+**speculation: 90**  
+**expected holding period: 90**  
+**primary catalyst type: Macro**
+
+**question: LILLY ELI & CO (LLY)**  
+**explanation: The profile prioritizes macro and political catalysts and issues few single-stock opinions; the consistent action is to hold rather than make an active recommendation.**  
+**recommendation: 50**  
+**confidence: 30**  
+**speculation: 90**  
+**expected holding period: 90**  
+**primary catalyst type: Macro**
+
+**question: META PLATFORMS INC (META)**  
+**explanation: With the account’s focus on macro/political drivers and limited single-stock commentary, a neutral hold is the most faithful recommendation to the profile.**  
+**recommendation: 50**  
+**confidence: 30**  
+**speculation: 90**  
+**expected holding period: 90**  
+**primary catalyst type: Macro**
+
+**question: MICROSOFT CORP (MSFT)**  
+**explanation: The profile’s macro and politics-centric approach and tendency to avoid many single-stock picks support issuing a hold recommendation.**  
+**recommendation: 50**  
+**confidence: 30**  
+**speculation: 90**  
+**expected holding period: 90**  
+**primary catalyst type: Macro**
+
+**question: MICRON TECHNOLOGY INC (MU)**  
+**explanation: The influencer’s posting pattern (opinionated macro commentary, few single-stock calls) points to a neutral hold rather than an active buy or sell.**  
+**recommendation: 50**  
+**confidence: 30**  
+**speculation: 90**  
+**expected holding period: 90**  
+**primary catalyst type: Macro**
+
+**question: NVIDIA CORP (NVDA)**  
+**explanation: Profile data indicates the account centers on macro/political market drivers and seldom issues specific stock picks; a hold is the consistent stance.**  
+**recommendation: 50**  
+**confidence: 30**  
+**speculation: 90**  
+**expected holding period: 90**  
+**primary catalyst type: Macro**
+
+**question: ORACLE CORP (ORCL)**  
+**explanation: Given the profile’s macro/politics emphasis and limited single-stock commentary, adopting a neutral hold aligns with the influencer’s typical practice.**  
+**recommendation: 50**  
+**confidence: 30**  
+**speculation: 90**  
+**expected holding period: 90**  
+**primary catalyst type: Macro**
+
+**question: TESLA INC (TSLA)**  
+**explanation: The account focuses on macro and political impacts on markets and rarely makes single-stock picks; consistent with that, a hold recommendation is appropriate.**  
+**recommendation: 50**  
+**confidence: 30**  
+**speculation: 90**  
+**expected holding period: 90**  
+**primary catalyst type: Macro**
+
+**question: VISA INC (V)**  
+**explanation: Profile shows macro/political commentary dominating posts and few individual stock endorsements; a neutral hold best matches that posture.**  
+**recommendation: 50**  
+**confidence: 30**  
+**speculation: 90**  
+**expected holding period: 90**  
+**primary catalyst type: Macro**
+
+**question: WALMART INC (WMT)**  
+**explanation: The influencer’s emphasis on macro/political drivers and infrequent single-stock recommendations suggests a hold as the most consistent action.**  
+**recommendation: 50**  
+**confidence: 30**  
+**speculation: 90**  
+**expected holding period: 90**  
+**primary catalyst type: Macro**
+
+**question: EXXON MOBIL CORP (XOM)**  
+**explanation: Given the profile’s macro/politics-centric commentary and the account’s tendency to avoid regular single-stock calls, a neutral hold aligns with the influencer’s approach.**  
+**recommendation: 50**  
+**confidence: 30**  
+**speculation: 90**  
+**expected holding period: 90**  
+**primary catalyst type: Macro**

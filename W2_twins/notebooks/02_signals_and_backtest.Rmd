@@ -1,0 +1,504 @@
+---
+title: "Notebook 2 — From twin answers to a market signal"
+subtitle: "LLMSS 2026, Workshop 2 (The Wisdom of Digital Twins) · Hong Kong, 13 October 2026"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    df_print: kable
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE,
+                      fig.width = 8, fig.height = 4.5)
+```
+
+## What you will do
+
+In Notebook 1 you interviewed a handful of finfluencer twins. This notebook
+works with the full panel: about 90 twins of real financial influencers on X,
+each interviewed every trading day and asked to rate 100 large US stocks from 0
+(a very strong sell) to 100 (a very strong buy). You will:
+
+1. **aggregate:** turn each day's answers into one number per stock, a
+   *signal* saying how bullish the twins are on it that day;
+2. **match:** line each signal up with what the stock did *afterwards*, relative
+   to the S&P 500;
+3. **backtest:** sort the stocks on the signal every day, and ask whether the
+   ones the twins liked beat the ones they didn't;
+4. **score forecasts:** look at a second task, where the same kind of twins gave
+   probabilities for economic events traded on Polymarket, and compare them with
+   the market price and with what happened;
+5. **watch twins deliberate:** replay one stored session in which ten twins
+   argued for four rounds before agreeing on one stock to buy.
+
+Nothing here calls a language model. The interviews have already been run and
+are loaded from files, so the notebook runs offline in a few seconds.
+
+**How to read this notebook.** As in Workshop 1, every table and figure the
+code prints has a number, given in bold just above the code that prints it, and
+the text says which table, row or column a number comes from.
+
+The first block loads the R packages the notebook uses and sets the folders it
+reads from and writes to.
+
+```{r libs}
+library(data.table)
+library(ggplot2)
+
+DATA <- file.path("..", "data")
+OUT  <- file.path("..", "output")
+dir.create(OUT, showWarnings = FALSE)
+```
+
+---
+
+## 1. Inputs
+
+The block below loads the twins' answers, already added up by stock and day, as
+a table called `panel`, and prints its size and span.
+
+**Table 2.1.** `panel`: rows, trading days, stocks and twins per day.
+
+```{r panel}
+panel <- fread(file.path(DATA, "ff_signal_panel.csv"))
+panel[, event_date := as.IDate(event_date)]
+data.table(rows = nrow(panel),
+           days = uniqueN(panel$event_date),
+           first_day = min(panel$event_date),
+           last_day  = max(panel$event_date),
+           stocks = uniqueN(panel$ticker),
+           median_twins_per_row = median(panel$n_twins))
+```
+
+Each row of `panel` is one stock on one trading day. Its columns summarise what
+the twins said about that stock that day:
+
+| Column | Meaning |
+|---|---|
+| `n_twins` | twins who rated the stock that day |
+| `mean_rec` | their average rating, 0–100 |
+| `sd_rec` | how much they disagreed: the standard deviation of the ratings |
+| `buy_share` | share of twins rating it 65 or more (a buy) |
+| `sell_share` | share rating it 35 or less (a sell) |
+| `net_buy_share` | `buy_share − sell_share`: from −1 (all sell) to +1 (all buy) |
+| `mean_conf` | their average confidence in the rating, 0–100 |
+
+Two details of how a day is defined, both settled before the file was written.
+A twin interviewed after 15:30 New York time counts towards the *next* trading
+day, because by then the market has nearly closed and the twin's view could only
+be acted on the following day. And if a twin was interviewed twice on one day,
+only the later interview counts.
+
+The block below prints the first five rows so you can see the columns filled in.
+
+**Table 2.2.** `panel`: the first five rows.
+
+```{r panel-head}
+head(panel, 5)
+```
+
+The second file holds the stocks' returns. For every stock and trading day it
+has the day's **log excess return**: the stock's log return from the previous
+close to this close, minus the S&P 500's. A positive number means the stock beat
+the market that day. Log returns add up over days, which is why the file uses
+them. The returns are computed from Yahoo Finance adjusted closing prices.
+
+**Table 2.3.** `rets`: rows, stocks and span.
+
+```{r returns}
+rets <- fread(file.path(DATA, "ff_excess_returns.csv"))
+rets[, date := as.IDate(date)]
+data.table(rows = nrow(rets), stocks = uniqueN(rets$ticker),
+           first_day = min(rets$date), last_day = max(rets$date))
+```
+
+The returns run about two weeks past the last interview day in Table 2.1, so
+even the last signals can be followed for ten trading days.
+
+---
+
+## 2. From answers to a signal
+
+A **signal** is one number per stock and day that ranks the stocks from most to
+least favoured. `panel` offers several; this notebook uses `net_buy_share`, the
+one used in the Talking to Machines finfluencer research, and Exercise 2.1 asks
+you to try `mean_rec` instead.
+
+The block below takes the last interview day in the panel and prints the five
+stocks the twins were most bullish on and the five they were most bearish on.
+
+**Table 2.4.** The most and least favoured stocks on the last day.
+
+```{r top-bottom}
+last_day <- max(panel$event_date)
+day <- panel[event_date == last_day][order(-net_buy_share)]
+rbind(cbind(group = "most favoured",  head(day, 5)[, .(ticker, net_buy_share, mean_rec, sd_rec)]),
+      cbind(group = "least favoured", tail(day, 5)[, .(ticker, net_buy_share, mean_rec, sd_rec)]))
+```
+
+Notice in Table 2.4 that even the "least favoured" stocks often have a
+`net_buy_share` above zero. The twins are bullish on most stocks most of the
+time. What matters
+for a signal is the *ranking* on a given day, not the level. That is why the
+backtest below compares stocks with each other on the same day.
+
+---
+
+## 3. Matching signals to later returns
+
+A signal on day *t* can only be judged on what happens *after* it. The twin
+answered before 15:30 on day *t*, so the earliest you could trade on it is the
+close of day *t*. The block below adds, for every stock and day, the log excess
+return over the next *h* trading days: the sum of the daily returns on days
+*t*+1 to *t*+*h*. It does this for *h* = 1, 5 and 10.
+
+```{r forward}
+setorder(rets, ticker, date)
+for (h in c(1L, 5L, 10L)) {
+  col <- paste0("fwd_", h, "d")
+  rets[, (col) := Reduce(`+`, lapply(seq_len(h), function(k)
+                    shift(log_excess_ret, k, type = "lead"))), by = ticker]
+}
+```
+
+The block below joins those forward returns onto `panel` by stock and day, as a
+table called `events`, and prints how many stock-days have a forward return at
+each horizon.
+
+**Table 2.5.** `events`: stock-days with a forward return, by horizon.
+
+```{r join}
+events <- merge(panel, rets[, .(ticker, event_date = date, fwd_1d, fwd_5d, fwd_10d)],
+                by = c("ticker", "event_date"))
+events[, .(with_1d = sum(!is.na(fwd_1d)), with_5d = sum(!is.na(fwd_5d)),
+           with_10d = sum(!is.na(fwd_10d)))]
+```
+
+---
+
+## 4. The backtest
+
+The test is simple. Every day, sort that day's stocks on `net_buy_share` into
+five equal groups, **quintiles**: quintile 1 holds the fifth the twins liked
+least, quintile 5 the fifth they liked most. Then average the forward excess
+return within each quintile, day by day. If the twins know something, quintile 5
+should beat quintile 1. The difference, quintile 5 minus quintile 1, is the
+return of a **long–short** portfolio: buy the favoured fifth, short the
+disfavoured fifth, so the market's own movement cancels out.
+
+The block below assigns the quintiles. Ties are broken at random, with a fixed
+seed so everyone gets the same answer.
+
+```{r quintiles}
+set.seed(13)
+events[, quintile := ceiling(5 * frank(net_buy_share, ties.method = "random") / .N),
+       by = event_date]
+```
+
+The block below averages the forward return in each quintile on each day, then
+across days, and prints it in basis points (1 bp = 0.01 percentage points).
+
+**Table 2.6.** Mean forward excess return by quintile (bp), averaged over days.
+
+```{r by-quintile}
+q_day <- events[, .(fwd_1d = mean(fwd_1d, na.rm = TRUE), fwd_5d = mean(fwd_5d, na.rm = TRUE),
+                    fwd_10d = mean(fwd_10d, na.rm = TRUE)), by = .(event_date, quintile)]
+q_tab <- q_day[, lapply(.SD, function(x) round(1e4 * mean(x, na.rm = TRUE), 1)),
+               by = quintile, .SDcols = c("fwd_1d", "fwd_5d", "fwd_10d")][order(quintile)]
+q_tab
+```
+
+Figure 2.1 shows the same thing over time: for each quintile, the average
+cumulative excess return from the day of the signal (day 0) to ten trading days
+later. The block below computes it for every horizon from 1 to 10 and plots it.
+
+**Figure 2.1.** Cumulative excess return after the signal, by quintile.
+
+```{r path, fig.height = 4.5}
+path <- rbindlist(lapply(1:10, function(h) {
+  r <- copy(rets)[, fwd := Reduce(`+`, lapply(seq_len(h), function(k)
+                     shift(log_excess_ret, k, type = "lead"))), by = ticker]
+  e <- merge(events[, .(ticker, event_date, quintile)],
+             r[, .(ticker, event_date = date, fwd)], by = c("ticker", "event_date"))
+  e[, .(bp = 1e4 * mean(fwd, na.rm = TRUE)), by = .(event_date, quintile)][
+    , .(bp = mean(bp, na.rm = TRUE)), by = quintile][, h := h]
+}))
+path <- rbind(data.table(quintile = 1:5, bp = 0, h = 0L), path)
+ggplot(path, aes(h, bp, colour = factor(quintile), group = quintile)) +
+  geom_hline(yintercept = 0, colour = "grey60") +
+  geom_line(linewidth = 0.9) + geom_point(size = 1.4) +
+  scale_colour_brewer(palette = "RdYlGn", name = "Quintile\n(5 = most favoured)") +
+  scale_x_continuous(breaks = 0:10) +
+  labs(x = "Trading days after the signal", y = "Cumulative excess return (bp)") +
+  theme_minimal(base_size = 12)
+```
+
+The block below computes the long–short return day by day, quintile 5 minus
+quintile 1, and summarises it: its average, its t-statistic (the average
+divided by its standard error), and the share of days on which it was positive.
+
+**Table 2.7.** The long–short portfolio (quintile 5 minus quintile 1).
+
+```{r long-short}
+ls <- dcast(q_day, event_date ~ quintile, value.var = c("fwd_1d", "fwd_5d", "fwd_10d"))
+ls_tab <- rbindlist(lapply(c("1d", "5d", "10d"), function(h) {
+  s <- ls[[paste0("fwd_", h, "_5")]] - ls[[paste0("fwd_", h, "_1")]]
+  s <- s[is.finite(s)]
+  data.table(horizon = h, days = length(s), mean_bp = round(1e4 * mean(s), 1),
+             t_stat = round(mean(s) / (sd(s) / sqrt(length(s))), 2),
+             share_positive = round(mean(s > 0), 2))
+}))
+ls_tab
+```
+
+**How to read Table 2.7.** Row `1d`, column `mean_bp` is what the long–short
+portfolio earned over the day after the signal, on average across the days in
+column `days`. Rows `5d` and `10d` hold the positions longer. A t-statistic
+around 2 or more is the usual bar for "unlikely to be luck".
+
+Two cautions before you read too much into it:
+
+- **The window is short.** `r ls_tab[horizon == "1d", days]` days (Table 2.7,
+  column `days`) is a few months of one market. The same test on a longer
+  window, or a different one, can come out differently.
+- **The 5- and 10-day t-statistics are too generous.** Consecutive days' 10-day
+  returns share nine of their ten days, so they are not independent, and the
+  simple standard error above understates the uncertainty. Exercise 2.2 asks you
+  to fix this.
+
+---
+
+## 5. Prediction markets
+
+The twins were also asked about the economy. On 21 April 2026, `r uniqueN(fread(file.path(DATA, "ff_prediction_markets.csv"))$twin_id)`
+twins gave a probability for each of 17 events traded on **Polymarket**, a
+prediction market. Examples: "the Fed makes no change at its June 2026 meeting",
+"unemployment reaches 5.0% at some point in 2026". Each question showed the twin
+the event's Polymarket price that day. A price of 0.93 means traders, together,
+put the chance at about 93%.
+
+By mid-August 2026, 9 of the 17 events had settled. The block below loads the
+file as `pm` and prints, for each settled event, the twins' average probability,
+the Polymarket price they were shown, and the outcome (1 = it happened).
+
+**Table 2.8.** Settled events: twins' average probability, market price, outcome.
+
+```{r pm}
+pm <- fread(file.path(DATA, "ff_prediction_markets.csv"))
+settled <- pm[!is.na(outcome)]
+settled[, .(twins_mean = round(mean(twin_prob, na.rm = TRUE), 2),
+            market_price = round(market_prob[1], 2), outcome = outcome[1]),
+        by = .(code, question)]
+```
+
+Two rows of Table 2.8 have no `market_price`: the twins were not shown one for
+those questions.
+
+A standard score for probability forecasts is the **Brier score**: the average
+of (probability − outcome)², where the outcome is 0 or 1. Zero is perfect;
+always saying 0.5 scores 0.25. Lower is better. The block below scores three
+forecasters on the settled events that had a market price: the individual twins,
+the twins' average (the "crowd"), and the market price itself.
+
+**Table 2.9.** Brier scores on the settled events with a market price (lower is better).
+
+```{r brier}
+s <- settled[!is.na(market_prob) & !is.na(twin_prob)]
+crowd <- s[, .(p = mean(twin_prob), m = market_prob[1], o = outcome[1]), by = code]
+data.table(forecaster = c("individual twins", "twin crowd (average)", "market price"),
+           events = uniqueN(s$code),
+           brier = round(c(mean((s$twin_prob - s$outcome)^2),
+                           mean((crowd$p - crowd$o)^2),
+                           mean((crowd$m - crowd$o)^2)), 3))
+```
+
+In Table 2.9 the twin crowd (`twin crowd (average)` row, 0.237) scores a little
+better than the typical single twin (`individual twins` row, 0.248): averaging
+cancels some of each twin's own noise. Both are close to the 0.25 of always
+saying 0.5, and both are worse than the market price (`market price` row, 0.191).
+
+Figure 2.2 shows each twin's probability (a dot) against the market price it was
+shown (the black bar), for every settled event with a price, with the outcome in
+the panel title.
+
+**Figure 2.2.** Twins' probabilities against the market price, settled events.
+
+```{r pm-fig, fig.height = 5}
+s[, label := sprintf("%s (outcome %d)", code, outcome)]
+ggplot(s, aes(x = twin_prob, y = label)) +
+  geom_jitter(height = 0.15, width = 0, alpha = 0.35, colour = "steelblue") +
+  geom_point(aes(x = market_prob), shape = 124, size = 7) +
+  scale_x_continuous(limits = c(0, 1)) +
+  labs(x = "Probability", y = NULL) +
+  theme_minimal(base_size = 12)
+```
+
+**What this can and cannot show.** The twins were *shown* the market price, so
+this is not an independent forecast set against the market: it asks how far the
+twins move away from a number they were given, and whether moving away helped.
+Look at Figure 2.2 for where the twins spread widely around the bar and where
+they sit on it. And with one interview day and seven events, Table 2.9 is a
+description, not a test.
+
+---
+
+## 6. Twins that talk to each other
+
+Every twin so far answered alone. Talking to Machines also runs a second design
+every trading day: ten finfluencer twins discuss the day's market in short,
+tweet-length posts, over four rounds, and the stock most of them back at the end
+is bought. This section replays one stored session, from 28 September 2026. No
+model is called. The ten agents are a different set of finfluencers from
+Notebook 1 and are renamed Agent A to Agent J; the posts are theirs, with names
+and hashtags removed.
+
+The block below loads the posts as `posts`, one row per agent and round, and the
+session's settings as `session`, and prints the settings.
+
+**Table 2.10.** The deliberation session of 28 September 2026.
+
+```{r delib}
+posts   <- fread(file.path(DATA, "ff_deliberation_posts.csv"))
+session <- jsonlite::fromJSON(file.path(DATA, "ff_deliberation_session.json"))
+data.table(date = session$date, model = session$model, agents = session$n_agents,
+           rounds = session$rounds, minutes = session$minutes, cost_usd = session$cost_usd)
+```
+
+The model in Table 2.10 is not the `gpt-5-mini` of the daily panel: this design
+was built separately, on `gpt-4.1-mini`.
+
+The rules change from round to round. In round 0 each agent posts blind, seeing
+nobody else. In rounds 1 and 2 each agent is shown posts written before its
+turn (the columns `sees_this_round` and `sees_total` count them) and gets the
+instruction below. The block prints it word for word.
+
+**Text 2.1.** The instruction for rounds 1 and 2.
+
+```{r delib-rule, comment = ""}
+wrap <- function(x) cat(unlist(lapply(strsplit(x, "
+")[[1]], function(l)
+  if (nzchar(l)) strwrap(l, 80, exdent = if (startsWith(l, "- ")) 2 else 0) else "")), sep = "
+")
+wrap(session$instructions$round_1)
+```
+
+The final round replaces it with the instruction below.
+
+**Text 2.2.** The instruction for round 3, the last.
+
+```{r delib-final, comment = ""}
+wrap(session$instructions$round_3)
+```
+
+The block below puts each agent's buy pick side by side across the rounds. The
+`contrarian` agent was the session's designated devil's advocate: told to push
+back on whatever consensus formed and, in the last round, to pick a different
+stock if five or more others were backing the same one, unless that stock was
+genuinely the best choice.
+
+**Table 2.11.** Each agent's buy pick, by round.
+
+```{r delib-picks}
+dcast(posts, agent + style + contrarian ~ paste0("round_", round), value.var = "buy_ticker")
+```
+
+The block below counts the agents behind each stock in each round.
+
+**Table 2.12.** Number of agents picking each stock to buy, by round.
+
+```{r delib-counts}
+counts <- dcast(posts, buy_ticker ~ paste0("round_", round), fun.aggregate = length,
+                value.var = "agent")
+counts[order(-round_3, -round_0)]
+```
+
+Figure 2.3 draws Table 2.11 as a grid, one colour per stock, so the drift is
+easy to follow.
+
+**Figure 2.3.** Buy picks by agent and round.
+
+```{r delib-fig, fig.height = 4.5}
+ggplot(posts, aes(x = factor(round), y = agent, fill = buy_ticker)) +
+  geom_tile(colour = "white") +
+  geom_text(aes(label = buy_ticker), size = 3.2) +
+  scale_y_discrete(limits = rev) +
+  labs(x = "Round", y = NULL, fill = "Buy pick") +
+  theme_minimal(base_size = 12)
+```
+
+In Table 2.12, no agent picks AMAT in round 0 (`round_0` column, AMAT row); by
+round 3, eight of the ten do. The block below prints the first two posts that
+name AMAT, with how many posts each agent had seen before writing.
+
+**Text 2.3.** Where AMAT came from.
+
+```{r delib-amat, comment = ""}
+show_posts <- function(d) for (i in seq_len(nrow(d)))
+  cat(sprintf("Round %d, %s (had seen %d posts), buys %s:", d$round[i], d$agent[i],
+              d$sees_total[i], d$buy_ticker[i]),
+      strwrap(d$text[i], 76, indent = 2, exdent = 2), "", sep = "
+")
+show_posts(posts[grepl("AMAT", text)][1:2])
+```
+
+The block below prints the posts that cite the anti-herding rule of Text 2.1.
+
+**Text 2.4.** Agents applying the rule.
+
+```{r delib-rule-cited, comment = ""}
+show_posts(posts[grepl("anti-herding", text, ignore.case = TRUE)])
+```
+
+At the end, another call to the model reads the whole discussion and writes a
+summary. The block below prints its verdict on what the discussion added.
+
+**Text 2.5.** The session's own verdict.
+
+```{r delib-verdict, comment = ""}
+wrap(session$summary$value_added)
+```
+
+**What this can and cannot show.** Text 2.5 credits the discussion with
+"mitigating herd risk", yet in Table 2.12 the group ends on the one stock a
+single agent brought up in round 1 (Text 2.3), and later posts repeat that
+agent's argument. Part of the result is the design: the rule in Text 2.1 pushes
+agents off the stocks three others have named (Text 2.4 shows them saying so),
+and Text 2.2 tells them to agree. Even Agent G, the devil's advocate, ends on
+AMAT (Table 2.11, `round_3` column). Change the rules and a different stock may
+win. This is one session on one day, and whether buying AMAT paid off is not
+assessed here.
+
+---
+
+## Exercises
+
+**Exercise 2.1 — another signal.** Re-run the quintile sort of Section 4 with
+`mean_rec` instead of `net_buy_share`. Does the long–short return in Table 2.7
+change? Why might a share of buy votes and an average rating rank stocks
+differently?
+
+**Exercise 2.2 — honest standard errors.** The 5- and 10-day rows of Table 2.7
+use overlapping returns. Recompute them using only every 5th (or 10th) day, so
+that no two holding periods overlap. How do `mean_bp` and `t_stat` change?
+
+**Exercise 2.3 — disagreement.** Split the stock-days by `sd_rec` at its median.
+Is the signal stronger when the twins agree, or when they disagree?
+
+**Exercise 2.4 — moving off the price.** In `pm`, for each settled event with a
+market price, compute how far the twin crowd sat from the price
+(`mean(twin_prob) − market_prob`). Were the twins right more often when they
+moved away from the market, or when they stayed close?
+
+**Exercise 2.5 — the sell side.** Repeat Table 2.12 with `sell_ticker` in place
+of `buy_ticker`. What happens to MU, which three agents wanted to buy in round 0?
+
+**Exercise 2.6 — did the rule bind?** Five agents picked AVGO in round 0 (Table
+2.12). In Table 2.11, which of them still pick it in round 1, and which agents
+move *to* AVGO in round 1? Is that what the rule in Text 2.1 asks for?
+
+The block below saves `events` to `output/`, for your own use after the workshop.
+
+```{r save}
+fwrite(events, file.path(OUT, "ff_events.csv"))
+```

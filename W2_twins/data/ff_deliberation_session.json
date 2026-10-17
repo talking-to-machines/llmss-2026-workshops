@@ -1,0 +1,32 @@
+{
+  "date": "2026-09-28",
+  "model": "gpt-4.1-mini",
+  "n_agents": 10,
+  "rounds": 4,
+  "temperature": {
+    "round_0": 1.25,
+    "rounds_1_2": 1.1,
+    "round_3": 0.65
+  },
+  "universe": "Restricted candidate list (18 names)",
+  "cost_usd": 0.12,
+  "minutes": 3.2,
+  "instructions": {
+    "round_0": "You are posting on X (Twitter) in a group discussion among financial commentators.\n\n**KEY:** Pay close attention to analyst sentiment, upgrades/downgrades, and price target changes — these are conviction signals that often precede price moves. Use analyst consensus (not sentiment alone) to validate your thesis.\n\nPost your market take in 2-4 sentences MAX (under 280 characters if possible, never more than 50 words). Write like a real tweet — punchy, opinionated, with a concrete ticker and direction. No essays.",
+    "round_1": "This is Round 1 of the discussion. You've seen what your fellow commentators think.\n\n**ANTI-HERDING RULE:** If 3 or more commentators in the visible discussion have already named the SAME ticker, you MUST pick a different one (unless you have a genuinely contrarian *bearish* take on that crowded ticker). The group is more valuable with breadth than with pile-on.\n\nDo NOT just agree with the group. Push back HARD. If you disagree with another commentator, say so bluntly and explain why they're wrong. Defend your ticker or attack theirs. Call out weak analysis. This is a competitive debate — argue your position. Post your updated take in 2-4 sentences MAX (under 280 characters if possible, never more than 50 words). Write like a real tweet — punchy, direct, confrontational where warranted. No essays.",
+    "round_2": "This is Round 2 of the discussion. You've seen what your fellow commentators think.\n\n**ANTI-HERDING RULE:** If 3 or more commentators in the visible discussion have already named the SAME ticker, you MUST pick a different one (unless you have a genuinely contrarian *bearish* take on that crowded ticker). The group is more valuable with breadth than with pile-on.\n\nDo NOT just agree with the group. Push back HARD. If you disagree with another commentator, say so bluntly and explain why they're wrong. Defend your ticker or attack theirs. Call out weak analysis. This is a competitive debate — argue your position. Post your updated take in 2-4 sentences MAX (under 280 characters if possible, never more than 50 words). Write like a real tweet — punchy, direct, confrontational where warranted. No essays.",
+    "round_3": "This is the FINAL round. The debate is over. The group must now commit — most of you should AGREE on ONE stock to trade today. Weigh the evidence and COMMIT.\n\n**CRITICAL — NO COPY-PASTE:**\n- Use YOUR OWN voice and phrasing. Do NOT repeat another commentator's sentence structure or exact wording.\n- State in your persona's style why the pick is right today — your own angle, your own vocabulary.\n- If you see the same phrase repeated by 2+ other agents (e.g. \"sticky SaaS revenue, margin expansion\"), you MUST rephrase. Lazy template-copying is forbidden.\n\nYour tweet: 1-2 sentences in your own voice, name your final committed pick ($TICKER and direction), and briefly state your unique reason. Plain, conviction-first. No hedging. No echoing."
+  },
+  "summary": {
+    "consensus": {
+      "ticker": "AMAT",
+      "direction": "buy",
+      "confidence": 80,
+      "final_round_votes": 8,
+      "total_agents": 10
+    },
+    "narrative": "The deliberation began with broad bullish sentiment on semiconductor giants $AVGO, $MU, and $AMD, driven by analyst upgrades and strong AI/5G tailwinds. As rounds progressed, concerns about crowding and valuation saturation emerged, prompting a shift toward more overlooked names like $LRCX, $PLTR, $AMAT, and $QCOM. Divergence centered on hardware versus software exposure and cyclicality risks. The group converged late on $AMAT as a stealthy wafer fab play with durable AI-related upside and better valuation leverage. The session enhanced collective intelligence by surfacing nuanced trade-offs and contrarian opportunities beyond initial herd favorites.",
+    "value_added": "The discussion produced better analysis by challenging initial crowded chip plays and highlighting overlooked contrarian picks like $AMAT and $QCOM, mitigating herd risk and improving risk/reward perspectives."
+  },
+  "source": "Talking to Machines, Market Signal multi-agent deliberation, book V4, session of 28 September 2026. Agents renamed; persona profiles, market brief and full prompts not included."
+}

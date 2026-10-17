@@ -1,0 +1,56 @@
+partisan map: oh_pmap.csv
+county control: ON
+draw pool: 2,389,734 registrants (pool_frac 0.3); 2024 voters in the full file: 5,723,055
+target cells with county: 6,180 (900 without county)
+county margin: 88 counties calibrated to certified 2024 shares; 300 IPF sweeps; max county two-party error 3.07 pts; max district vote-count error 9,277
+targets: adults 8,931,251; voters 5,762,137 (certified 5,765,016); D 2,532,047 R 3,178,910 Other 51,180
+
+Tier C drawn: 4,000 of 4000; cells short: 0 (missing 0)
+rake weights: min 0.948 max 1.044
+Tiers (nested): C=4000 B=800 A=80
+
+Acceptance — Tier C vs target margins (max |diff| in pp), unweighted / weighted:
+  sex       0.23 / 0.00 pp
+  ethnicity 0.15 / 0.00 pp
+  age_bins  0.19 / 0.00 pp
+  vote2024  0.02 / 0.00 pp
+  cd        0.04 / 0.00 pp
+
+Tier C: ethnicity x vote2024 (share of panel)
+vote2024       D  Other      R   stay
+ethnicity                            
+Asian      0.006  0.000  0.006  0.004
+Black      0.041  0.001  0.022  0.051
+Hispanic   0.008  0.000  0.006  0.019
+Other      0.010  0.000  0.010  0.014
+White      0.220  0.004  0.312  0.267
+
+Tier C: age x vote2024 (counts)
+vote2024    D  Other    R  stay
+age_bins                       
+18-24      71      2   74   301
+25-34     159      4  164   336
+35-44     184      2  207   228
+45-54     173      7  227   223
+55-64     191      1  277   233
+65+       357      7  474    98
+
+provenance: {'first_name_inferred': 3703, 'assigned_to_cell': 297} {'bisg_argmax': 3506, 'bisg_prob_draw': 494}
+
+partisan_class (primary ballots) by vote2024 — rows sum to 1:
+partisan_class  dem_primary  no_primary  primary_nopartycode  rep_primary
+vote2024                                                                 
+D                     0.524       0.367                0.038        0.070
+Other                 0.261       0.304                0.043        0.391
+R                     0.018       0.343                0.022        0.616
+stay                  0.076       0.851                0.010        0.063
+
+turnout history (n of 5 generals 2016-24) by vote2024:
+n_gen_2016_2024    0    1    2    3    4    5
+vote2024                                     
+D                  0  143  125  152  158  557
+Other              0    4    3    2    4   10
+R                  0  154  148  198  218  705
+stay             852  301  137   81   48    0
+
+written: tiers_statewide.parquet, targets_statewide.csv, checks_statewide.txt (no PII)

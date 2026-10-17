@@ -1,0 +1,1794 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Notebook 1 — A justice twin, one case, by hand – Talking to Machines · LLMSS 2026 Workshops</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../W3_audience/notebooks/02_silicon_voters.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-711d5f0cb2eecbce4b54be160a5a7e6e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-4275d7de9d7afaebafdd53a5eb10d6d4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-711d5f0cb2eecbce4b54be160a5a7e6e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Talking to Machines · LLMSS 2026 Workshops</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../../index.html" aria-current="page"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../setup.html"> 
+<span class="menu-text">Run it yourself</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/talking-to-machines/llmss-2026-workshops"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../W3_audience/notebooks/02_silicon_voters.html">Workshop 3 · The Silicon Audience</a></li><li class="breadcrumb-item"><a href="../../W3_legal/notebooks/01_justice_twins.html">Silicon Jury: a justice twin, one case</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Talking to Machines: LLMSS 2026 Workshops</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Run it yourself</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Workshop 1 · AIPOP</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../W1_aipop/notebooks/01_frame_and_sample.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1. Building a silicon sample</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../W1_aipop/notebooks/02_personas_and_interview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2. Personas and the digital interview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../W1_aipop/notebooks/03_mrp_and_validation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3. MrP and validation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Workshop 2 · The Wisdom of Digital Twins</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../W2_twins/notebooks/01_twins_and_interview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1. Finfluencer twins and the daily interview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../W2_twins/notebooks/02_signals_and_backtest.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2. From twin answers to a market signal</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Workshop 3 · The Silicon Audience</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../W3_audience/notebooks/02_silicon_voters.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Silicon Voters: ads for five kinds of voter</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../W3_legal/notebooks/01_justice_twins.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Silicon Jury: a justice twin, one case</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#what-you-will-do" id="toc-what-you-will-do" class="nav-link active" data-scroll-target="#what-you-will-do">What you will do</a></li>
+  <li><a href="#the-case" id="toc-the-case" class="nav-link" data-scroll-target="#the-case">1. The case</a></li>
+  <li><a href="#the-justice" id="toc-the-justice" class="nav-link" data-scroll-target="#the-justice">2. The justice</a></li>
+  <li><a href="#the-evidence" id="toc-the-evidence" class="nav-link" data-scroll-target="#the-evidence">3. The evidence</a></li>
+  <li><a href="#the-prompt" id="toc-the-prompt" class="nav-link" data-scroll-target="#the-prompt">4. The prompt</a></li>
+  <li><a href="#ask-the-twin" id="toc-ask-the-twin" class="nav-link" data-scroll-target="#ask-the-twin">5. Ask the twin</a></li>
+  <li><a href="#the-full-bench" id="toc-the-full-bench" class="nav-link" data-scroll-target="#the-full-bench">6. The full bench</a></li>
+  <li><a href="#change-one-thing" id="toc-change-one-thing" class="nav-link" data-scroll-target="#change-one-thing">7. Change one thing</a></li>
+  <li><a href="#what-a-twin-cannot-know" id="toc-what-a-twin-cannot-know" class="nav-link" data-scroll-target="#what-a-twin-cannot-know">8. What a twin cannot know</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/talking-to-machines/llmss-2026-workshops/blob/main/W3_legal/notebooks/01_justice_twins.Rmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/talking-to-machines/llmss-2026-workshops/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../W3_audience/notebooks/02_silicon_voters.html">Workshop 3 · The Silicon Audience</a></li><li class="breadcrumb-item"><a href="../../W3_legal/notebooks/01_justice_twins.html">Silicon Jury: a justice twin, one case</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Notebook 1 — A justice twin, one case, by hand</h1>
+<p class="subtitle lead">LLMSS 2026, Workshop 3 (The Silicon Audience), Silicon Jury block · Hong Kong, 13 October 2026</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="what-you-will-do" class="level2">
+<h2 class="anchored" data-anchor-id="what-you-will-do">What you will do</h2>
+<p>A <strong>justice twin</strong> is a language model asked to answer as one Justice of the United States Supreme Court would, given passages from that Justice’s own opinions and a short description of a case the Court has not yet decided. The Legal Digital Twins project runs nine such twins on every case of the October 2026 sitting and files their votes on FantasySCOTUS before the case is argued. In this notebook you run one of those twins yourself, in about twenty-five minutes:</p>
+<ol type="1">
+<li><strong>read the case:</strong> the one-page packet the twin is asked about;</li>
+<li><strong>meet the justice:</strong> who the twin is, and the one number that summarises their voting record;</li>
+<li><strong>open the evidence:</strong> the eight passages retrieved from that Justice’s own opinions, already found for you;</li>
+<li><strong>assemble the prompt:</strong> exactly what the model receives, line by line;</li>
+<li><strong>ask the twin:</strong> load the answer from the project’s own run, or send the prompt yourself;</li>
+<li><strong>sit the full bench:</strong> nine twins, one predicted outcome, compared with what the Court actually did (practice case) or with the crowd (live case);</li>
+<li><strong>change one thing</strong> and see what moves.</li>
+</ol>
+<p>Only Section 5 calls a language model, and only if an API key is set. Everything else runs offline from the files beside this notebook.</p>
+<p><strong>How to read this notebook.</strong> As in Workshops 1 and 2, every table, text block and figure the code prints has a number, given in bold just above the code that prints it, and the text says which table, row or column a number comes from.</p>
+<p><strong>Figure 1.0.</strong> The whole machine. This notebook walks the middle row, for one justice and one case, with the top row already built.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="../figures/pipeline_map.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The first block loads the packages the notebook uses and sets the folders it reads from and writes to.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(data.table)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(jsonlite)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>DATA <span class="ot">&lt;-</span> <span class="fu">file.path</span>(<span class="st">".."</span>, <span class="st">"data"</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>OUT  <span class="ot">&lt;-</span> <span class="fu">file.path</span>(<span class="st">".."</span>, <span class="st">"output"</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(OUT, <span class="at">showWarnings =</span> <span class="cn">FALSE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<hr>
+</section>
+<section id="the-case" class="level2">
+<h2 class="anchored" data-anchor-id="the-case">1. The case</h2>
+<p>Two cases ship with the notebook. The <strong>practice case</strong> was argued in November 2025 and decided in June 2026, so we can check the twins against the Court. The <strong>live case</strong> is argued on 5 October 2026 and will not be decided until next year; the project’s prediction for it was filed on 4 October. Start with the practice case; Section 7 switches to the live one.</p>
+<p>The block below loads the case index as <code>cases</code> and prints it.</p>
+<p><strong>Table 1.1.</strong> <code>cases</code>: the two cases in the package.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>cases <span class="ot">&lt;-</span> <span class="fu">fread</span>(<span class="fu">file.path</span>(DATA, <span class="st">"cases.csv"</span>))</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>cases[, .(slug, title, docket, term, argued, role)]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 5%">
+<col style="width: 33%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 7%">
+<col style="width: 42%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">slug</th>
+<th style="text-align: left;">title</th>
+<th style="text-align: left;">docket</th>
+<th style="text-align: left;">term</th>
+<th style="text-align: left;">argued</th>
+<th style="text-align: left;">role</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">landor</td>
+<td style="text-align: left;">Landor v. Louisiana Department of Corrections</td>
+<td style="text-align: left;">23-1197</td>
+<td style="text-align: left;">OT2025</td>
+<td style="text-align: left;">2025-11-10</td>
+<td style="text-align: left;">practice case: decided, outcome in data/landor_outcome.csv</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">johnson</td>
+<td style="text-align: left;">Johnson v. United States Congress</td>
+<td style="text-align: left;">25-735</td>
+<td style="text-align: left;">OT2026</td>
+<td style="text-align: left;">2026-10-05</td>
+<td style="text-align: left;">live case: argued 5 Oct 2026, undecided at the workshop</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p>The twin never sees a brief, an opinion or a news story. It sees a <strong>case packet</strong>: the question presented (verbatim from the Court), the lower court’s holding, the procedural posture and three arguments per side, assembled from the public record before argument and checked by a person so that nothing in it reveals an outcome. The next block sets <code>CASE</code>, loads that packet and prints it. Change <code>CASE</code> to <code>"johnson"</code> for the live case.</p>
+<p><strong>Text 1.1.</strong> The case packet for <code>CASE</code>, as the twin receives it.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>CASE <span class="ot">&lt;-</span> <span class="st">"landor"</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>packet <span class="ot">&lt;-</span> <span class="fu">paste</span>(<span class="fu">readLines</span>(<span class="fu">file.path</span>(DATA, <span class="fu">paste0</span>(CASE, <span class="st">"_packet.md"</span>)), <span class="at">warn =</span> <span class="cn">FALSE</span>),</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>                <span class="at">collapse =</span> <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(packet)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># Case packet — Landor v. Louisiana Department of Corrections, No. 23-1197
+
+**Argued:** 2025-11-10 · **Sitting:** October Term 2025 · **Packet author:** auto (Oyez pre-decision fields; verifier initials: ____) · **Packet date:** 2026-09-30
+**Sources used:** Oyez case record — `question` and `facts_of_the_case` as published before argument; lower court from the record. *No brief, no opinion, no post-argument material.*
+**Parties:** Petitioner: Damon Landor · Respondent: Louisiana Department of Corrections and Public Safety
+
+## Question(s) presented (as summarised by Oyez; the Court's QP list governs if they differ)
+1. May an individual sue a government official in his individual capacity for damages for violations of the Religious Land Use and Institutionalized Persons Act (RLUIPA)?
+
+## Facts and lower court (Oyez pre-decision summary)
+Damon Landor, a devout Rastafarian, vowed as part of his faith never to cut his hair—a religious commitment known as the Nazarite Vow. Incarcerated in 2020, Landor was first held at the St. Tammany Parish Detention Center and later at LaSalle Correctional Center, both of which allowed him to maintain his hairstyle in accordance with his religious beliefs. After approximately five months and with three weeks left in his sentence, Landor was transferred to Raymond Laborde Correctional Center. Upon arrival, Landor proactively explained his religious practices and presented documentation of previous accommodations, including a copy of a federal court decision supporting similar claims. An intake guard disregarded his documentation, summoned the warden, and upon Landor’s inability to produce immediate additional proof of his beliefs, guards forcibly handcuffed Landor and shaved his head.
+
+Following his release, Landor sued the Louisiana Department of Corrections and Public Safety, its Secretary James LeBlanc, the correctional center, and Warden Marcus Myers, asserting claims under the Religious Land Use and Institutionalized Persons Act (RLUIPA) and 42 U.S.C. § 1983 for violations of his federal constitutional rights, as well as state law claims.
+
+The U.S. District Court for the Middle District of Louisiana dismissed Landor’s individual-capacity RLUIPA claims for money damages, holding such relief unavailable under controlling Fifth Circuit precedent. The U.S. Court of Appeals for the Fifth Circuit affirmed, relying on its prior decision in Sossamon v. Lone Star State of Texas, and rejecting Landor’s arguments that subsequent Supreme Court authority or other legal developments altered that result.
+
+Lower court: United States Court of Appeals for the Fifth Circuit.
+
+## Procedural posture
+Certiorari granted 2025-06-23; argued 2025-11-10.
+
+## Petitioner's core arguments (three bullets, from the merits brief)
+- not included in this packet type (Oyez facts and question only)
+
+## Respondent's core arguments (three bullets, from the merits brief)
+- not included in this packet type (Oyez facts and question only)
+
+## Doctrinal area / key precedents named in the QP or briefs
+May an individual sue a government official in his individual capacity for damages for violations of the Religious Land Use and Institutionalized Persons Act (RLUIPA)?</code></pre>
+</div>
+</div>
+<hr>
+</section>
+<section id="the-justice" class="level2">
+<h2 class="anchored" data-anchor-id="the-justice">2. The justice</h2>
+<p>Each twin is one of the nine sitting Justices. The twin is told who it is, when and by whom it was appointed, and one number: the Justice’s <strong>Martin–Quinn score</strong> for October Term 2024, a statistical summary of their voting record on a scale where negative is liberal and positive is conservative. The score is a coarse prior; the evidence in Section 3 is what the twin reasons from.</p>
+<p>The block below loads the nine scores as <code>mq</code> and prints them in order.</p>
+<p><strong>Table 2.1.</strong> <code>mq</code>: Martin–Quinn posterior means for October Term 2024 (official 2024 release), with the 95% interval.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>mq <span class="ot">&lt;-</span> <span class="fu">fread</span>(<span class="fu">file.path</span>(DATA, <span class="st">"mq_ot2024.csv"</span>))</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>mq[, .(justice, post_mn, post_025, post_975)]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">justice</th>
+<th style="text-align: right;">post_mn</th>
+<th style="text-align: right;">post_025</th>
+<th style="text-align: right;">post_975</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">sotomayor</td>
+<td style="text-align: right;">-4.191</td>
+<td style="text-align: right;">-5.675</td>
+<td style="text-align: right;">-2.796</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">jackson</td>
+<td style="text-align: right;">-2.809</td>
+<td style="text-align: right;">-3.979</td>
+<td style="text-align: right;">-1.801</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">kagan</td>
+<td style="text-align: right;">-1.844</td>
+<td style="text-align: right;">-2.734</td>
+<td style="text-align: right;">-1.068</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">roberts</td>
+<td style="text-align: right;">0.326</td>
+<td style="text-align: right;">-0.196</td>
+<td style="text-align: right;">0.883</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">barrett</td>
+<td style="text-align: right;">0.515</td>
+<td style="text-align: right;">-0.035</td>
+<td style="text-align: right;">1.089</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">kavanaugh</td>
+<td style="text-align: right;">0.545</td>
+<td style="text-align: right;">-0.010</td>
+<td style="text-align: right;">1.116</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">gorsuch</td>
+<td style="text-align: right;">1.082</td>
+<td style="text-align: right;">0.461</td>
+<td style="text-align: right;">1.773</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">alito</td>
+<td style="text-align: right;">2.496</td>
+<td style="text-align: right;">1.585</td>
+<td style="text-align: right;">3.551</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">thomas</td>
+<td style="text-align: right;">3.070</td>
+<td style="text-align: right;">2.036</td>
+<td style="text-align: right;">4.342</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p><strong>Figure 2.1.</strong> The same nine scores drawn as a line, so the spread is visible.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>mq[, justice <span class="sc">:</span><span class="er">=</span> <span class="fu">factor</span>(justice, <span class="at">levels =</span> justice)]</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mq, <span class="fu">aes</span>(<span class="at">x =</span> post_mn, <span class="at">y =</span> <span class="dv">1</span>, <span class="at">label =</span> justice)) <span class="sc">+</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_errorbar</span>(<span class="fu">aes</span>(<span class="at">xmin =</span> post_025, <span class="at">xmax =</span> post_975), <span class="at">width =</span> <span class="dv">0</span>, <span class="at">orientation =</span> <span class="st">"y"</span>, <span class="at">colour =</span> <span class="st">"grey60"</span>) <span class="sc">+</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="fl">2.5</span>) <span class="sc">+</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="sc">-</span><span class="fl">0.1</span>, <span class="at">vjust =</span> <span class="sc">-</span><span class="fl">0.3</span>, <span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="st">"Martin–Quinn score, OT2024 (negative = liberal)"</span>) <span class="sc">+</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="cn">NULL</span>, <span class="at">breaks =</span> <span class="cn">NULL</span>, <span class="at">limits =</span> <span class="fu">c</span>(<span class="fl">0.9</span>, <span class="fl">1.4</span>)) <span class="sc">+</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="01_justice_twins_files/figure-html/mq-plot-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The next block sets <code>JUSTICE</code> and loads everything the project prepared for that Justice on this case: the evidence, the context blocks and the two prompt messages. Change <code>JUSTICE</code> to any of the nine names in Table 2.1.</p>
+<p><strong>Text 2.1.</strong> Who the twin is.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>JUSTICE <span class="ot">&lt;-</span> <span class="st">"kagan"</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>ev  <span class="ot">&lt;-</span> <span class="fu">fromJSON</span>(<span class="fu">file.path</span>(DATA, <span class="fu">paste0</span>(CASE, <span class="st">"_evidence.json"</span>)), <span class="at">simplifyVector =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>tw  <span class="ot">&lt;-</span> ev<span class="sc">$</span>justices[[JUSTICE]]</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">sprintf</span>(<span class="st">"%s, %s, appointed by %s, on the Court since %d.</span><span class="sc">\n</span><span class="st">Martin–Quinn OT2024: %+.2f</span><span class="sc">\n</span><span class="st">"</span>,</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>            tw<span class="sc">$</span>name, tw<span class="sc">$</span>role, tw<span class="sc">$</span>appointed_by, tw<span class="sc">$</span>since, tw<span class="sc">$</span>mq_ot2024))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Elena Kagan, Associate Justice, appointed by President Barack Obama, on the Court since 2010.
+Martin–Quinn OT2024: -1.84</code></pre>
+</div>
+</div>
+<hr>
+</section>
+<section id="the-evidence" class="level2">
+<h2 class="anchored" data-anchor-id="the-evidence">3. The evidence</h2>
+<p>The twin does not get the Justice’s whole record. For each case it gets <strong>eight passages</strong>, retrieved from an index of that Justice’s own opinions (October Terms 1991 to 2024, about 37,000 passages across the nine) by three queries written from the packet: the question presented, the doctrinal area and precedents, and the two sides’ first arguments. The retrieval has rules: at least two passages from majority opinions and two from separate writings, at most two from any one earlier case, nothing from the case at issue, nothing after October Term 2024. The retrieval has already been done; the eight passages for <code>JUSTICE</code> on <code>CASE</code> are in the file you loaded, together with a hash of the set so the run can be reproduced.</p>
+<p>The block below turns the eight passages into a table and prints where they come from.</p>
+<p><strong>Table 3.1.</strong> <code>passages</code>: the eight passages retrieved for <code>JUSTICE</code> on <code>CASE</code>.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>passages <span class="ot">&lt;-</span> <span class="fu">rbindlist</span>(<span class="fu">lapply</span>(tw<span class="sc">$</span>passages, <span class="cf">function</span>(p)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data.table</span>(<span class="at">n =</span> p<span class="sc">$</span>n, <span class="at">case =</span> p<span class="sc">$</span>title, <span class="at">term =</span> p<span class="sc">$</span>term, <span class="at">type =</span> p<span class="sc">$</span>doc_type, <span class="at">words =</span> <span class="fu">length</span>(<span class="fu">strsplit</span>(p<span class="sc">$</span>text, <span class="st">"</span><span class="sc">\\</span><span class="st">s+"</span>)[[<span class="dv">1</span>]]))))</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>passages</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 3%">
+<col style="width: 63%">
+<col style="width: 5%">
+<col style="width: 20%">
+<col style="width: 7%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">n</th>
+<th style="text-align: left;">case</th>
+<th style="text-align: right;">term</th>
+<th style="text-align: left;">type</th>
+<th style="text-align: right;">words</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">Camreta v. Greene</td>
+<td style="text-align: right;">2010</td>
+<td style="text-align: left;">majority_opinion</td>
+<td style="text-align: right;">339</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">Michigan v. Bay Mills Indian Community</td>
+<td style="text-align: right;">2013</td>
+<td style="text-align: left;">majority_opinion</td>
+<td style="text-align: right;">307</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">Knick v. Township of Scott</td>
+<td style="text-align: right;">2018</td>
+<td style="text-align: left;">dissent</td>
+<td style="text-align: right;">345</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">Koontz v. St.&nbsp;Johns River Water Management Dist.</td>
+<td style="text-align: right;">2012</td>
+<td style="text-align: left;">dissent</td>
+<td style="text-align: right;">314</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td style="text-align: left;">Camreta v. Greene</td>
+<td style="text-align: right;">2010</td>
+<td style="text-align: left;">majority_opinion</td>
+<td style="text-align: right;">326</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">Chiaverini v. City of Napoleon</td>
+<td style="text-align: right;">2023</td>
+<td style="text-align: left;">majority_opinion</td>
+<td style="text-align: right;">333</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">Dunn v. Smith</td>
+<td style="text-align: right;">2020</td>
+<td style="text-align: left;">concurrence</td>
+<td style="text-align: right;">212</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">Cyan, Inc.&nbsp;v. Beaver County Employees Retirement Fund</td>
+<td style="text-align: right;">2017</td>
+<td style="text-align: left;">majority_opinion</td>
+<td style="text-align: right;">273</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p>The next block prints one passage in full. Change <code>N</code> to read another. Ask yourself the three questions the project’s own spot-check asks: are these the Justice’s own words; is the case named the case the passage is about; does it speak to the question presented?</p>
+<p><strong>Text 3.1.</strong> Passage <code>N</code>.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>N <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> tw<span class="sc">$</span>passages[[N]]</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">sprintf</span>(<span class="st">"[%d] %s (OT%d, %s)</span><span class="sc">\n\n</span><span class="st">"</span>, p<span class="sc">$</span>n, p<span class="sc">$</span>title, p<span class="sc">$</span>term, <span class="fu">gsub</span>(<span class="st">"_"</span>, <span class="st">" "</span>, p<span class="sc">$</span>doc_type)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] Camreta v. Greene (OT2010, majority opinion)</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">strwrap</span>(p<span class="sc">$</span>text, <span class="at">width =</span> <span class="dv">90</span>), <span class="at">sep =</span> <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rather, it is because the judgment may have prospective effect on the parties. The court
+in such a case says: “Although this official is immune from damages [ 563 U.S. 703 ]
+today, what he did violates the Constitution and he or anyone else who does that thing
+again will be personally liable.” If the official regularly engages in that conduct as
+part of his job (as Camreta does), he suffers injury caused by the adverse constitutional
+ruling. So long as it continues in effect, he must either change the way he performs his
+duties or risk a meritorious damages action. Cf. id., at 337-338, 100 S. Ct. 1166 , 63 L.
+Ed. 2d 427 (discussing prevailing party’s stake in a ruling’s prospective effects). Only
+by overturning the ruling on appeal can the official gain clearance to engage in the
+conduct in the future. He thus can demonstrate, as we demand, injury, causation, and
+redress-ability. 4 And conversely, if the person who initially brought the suit may again
+be subject to the challenged conduct, she has a stake in preserving the court’s holding.
+See Erie v. Pap’s *1131 A. M., 529 U.S. 277, 287-289 , 120 S. Ct. 1382 , 146 L. Ed. 2d
+265 (2000); Honig v. Doe, 484 U.S. 305, 318-323 , 108 S. Ct. 592 , 98 L. Ed. 2d 686
+(1988); cf. Lyons, 461 U.S., at 111 , 103 S. Ct. 1660 , 75 L. Ed. 2d 675 (examining
+whether the plaintiff had shown “a sufficient likelihood that he will again be wronged in
+a similar way”). Only if the ruling remains good law will she have ongoing protection
+from the practice.  We therefore reject S. G.’s view that Article III bars us from
+adjudicating any and all challenges brought by government officials who have received
+immunity below. That the victor has filed the appeal does not deprive us of jurisdiction.
+The parties in such cases may yet have a sufficient “interest in the outcome of [a
+litigated] issue” to present a case or controversy.</code></pre>
+</div>
+</div>
+<p>Each earlier case cited in the evidence comes with a <strong>context block</strong>: the Reporter of Decisions’ syllabus (prepared by the Reporter, not by the Justices) and the Court’s vote in that case from the Supreme Court Database, so the twin knows what each earlier case was about and how it came out. The block below prints the context for the first prior case.</p>
+<p><strong>Text 3.2.</strong> The context block for the first prior case cited.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>ctx <span class="ot">&lt;-</span> tw<span class="sc">$</span>context</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">strwrap</span>(ctx[[<span class="dv">1</span>]], <span class="at">width =</span> <span class="dv">90</span>), <span class="at">sep =</span> <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>PRIOR CASE: Camreta v. Greene (OT2010, No. 09-1454, decided 2011-05-26) Vote: 7-2.
+Current justices in the majority: roberts, alito, sotomayor, kagan; in dissent: thomas;
+wrote an opinion: sotomayor, kagan.</code></pre>
+</div>
+</div>
+<hr>
+</section>
+<section id="the-prompt" class="level2">
+<h2 class="anchored" data-anchor-id="the-prompt">4. The prompt</h2>
+<p>The twin receives two messages. The <strong>system message</strong> says who it is, where its evidence comes from, and that the case is undecided. The <strong>user message</strong> carries the persona line, the eight passages with their context, the packet, and the task with the JSON format of the answer. The project builds both from a template whose hash is logged with every run; the text below is that build, exactly as sent.</p>
+<p>The block below prints the system message.</p>
+<p><strong>Text 4.1.</strong> The system message.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">strwrap</span>(tw<span class="sc">$</span>system, <span class="at">width =</span> <span class="dv">90</span>), <span class="at">sep =</span> <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>You are a research instrument: a digital twin of Elena Kagan, Associate Justice of the
+Supreme Court of the United States, built for a pre-registered study of whether justice
+twins can anticipate votes on cases the Court has not yet decided.
+
+You reason as Justice Kagan would, from two sources only: (1) the evidence below, which
+consists of passages from opinions Justice Kagan wrote or co-wrote, with short
+Reporter-prepared context on the earlier cases they come from, and (2) your general
+knowledge of Justice Kagan's published jurisprudence up to the end of October Term 2024.
+The case you are asked about has not been decided and you do not know its outcome; if you
+believe you recall a decision in it, disregard that recollection and reason from the
+record and the packet.
+
+Answer in the JSON schema requested, and nothing else.</code></pre>
+</div>
+</div>
+<p>The user message is long because it carries the evidence. The next block prints its first sixty lines and its last thirty, which is where the persona and the task sit; the middle is the evidence you read in Section 3.</p>
+<p><strong>Text 4.2.</strong> The user message, head and tail.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>u <span class="ot">&lt;-</span> <span class="fu">strsplit</span>(tw<span class="sc">$</span>user, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)[[<span class="dv">1</span>]]</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">head</span>(u, <span class="dv">60</span>), <span class="at">sep =</span> <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>## Who you are
+
+Elena Kagan, Associate Justice, appointed by President Barack Obama, on the Court since 2010.
+Ideal point (Martin–Quinn, October Term 2024 posterior mean): -1.84, on a scale where negative values are liberal and positive values conservative; this term the nine justices ran from -4.19 to +3.07. Treat this as a coarse summary of voting tendency, not a rule.
+
+## Evidence: your own prior writing
+
+Each passage is from an opinion you wrote or co-wrote in an earlier case (term and opinion type in the header). Context blocks after the passages summarise those earlier cases; they are prepared by the Reporter of Decisions, not by you, and are provided so you know what each case was about.
+
+[1] Camreta v. Greene (OT2010, majority opinion, authored) — chunk d745d50990c491cf
+Rather, it is because the judgment may have prospective effect on the parties. The court in such a case says: “Although this official is immune from damages 
+ [ 563 U.S. 703 ] 
+ today, what he did violates the Constitution and he or anyone else who does that thing again will be personally liable.” If the official regularly engages in that conduct as part of his job (as Camreta does), he suffers injury caused by the adverse constitutional ruling. So long as it continues in effect, he must either change the way he performs his duties or risk a meritorious damages action. Cf. id., at 337-338, 100 S. Ct. 1166 , 63 L. Ed. 2d 427 (discussing prevailing party’s stake in a ruling’s prospective effects). Only by overturning the ruling on appeal can the official gain clearance to engage in the conduct in the future. He thus can demonstrate, as we demand, injury, causation, and redress-ability. 4 And conversely, if the person who initially brought the suit may again be subject to the challenged conduct, she has a stake in preserving the court’s holding. See Erie v. Pap’s *1131 A. M., 529 U.S. 277, 287-289 , 120 S. Ct. 1382 , 146 L. Ed. 2d 265 (2000); Honig v. Doe, 484 U.S. 305, 318-323 , 108 S. Ct. 592 , 98 L. Ed. 2d 686 (1988); cf. Lyons, 461 U.S., at 111 , 103 S. Ct. 1660 , 75 L. Ed. 2d 675 (examining whether the plaintiff had shown “a sufficient likelihood that he will again be wronged in a similar way”). Only if the ruling remains good law will she have ongoing protection from the practice. 
+ We therefore reject S. G.’s view that Article III bars us from adjudicating any and all challenges brought by government officials who have received immunity below. That the victor has filed the appeal does not deprive us of jurisdiction. The parties in such cases may yet have a sufficient “interest in the outcome of [a litigated] issue” to present a case or controversy.
+
+[2] Michigan v. Bay Mills Indian Community (OT2013, majority opinion, authored) — chunk b4c28c566b2ece20
+Nor will we create a freestanding exception to tribal immunity for all off-reservation commercial conduct. This Court has declined that course once before. To choose it now would entail both overthrowing our precedent and usurping Congress's current policy judgment. Accordingly, Michigan may not sue Bay Mills to enjoin the Vanderbilt casino, but must instead use available alternative means to accomplish that object. 
+ We affirm the Sixth Circuit's judgment and remand the case for further proceedings consistent with this opinion. 
+ It is so ordered. 
+ 
+ The Act defines "Indian lands" as "(A) all lands within the limits of any Indian reservation; and (B) any lands title to which is either held in trust by the United States for the benefit of any Indian tribe or individual[,] or held by any Indian tribe or individual subject to restriction by the United States against alienation and over which an Indian tribe exercises governmental power." § 2703(4). 
+ 
+ 
+ The Sixth Circuit framed part of its analysis in jurisdictional terms, holding that the District Court had no authority to consider Michigan's IGRA claim because § 2710(d)(7)(A)(ii) provides federal jurisdiction only over suits to enjoin gaming on Indian lands (and Michigan's suit was not that). See 695 F.3d, at 412 -413 . That reasoning is wrong, as all parties agree. See Brief for Michigan 22-25; Brief for Bay Mills 23-24; Brief for United States as Amicus Curiae 16-17. The general federal-question statute, 28 U.S.C. § 1331 , gives a district court subject matter jurisdiction to decide any claim alleging a violation of IGRA. Nothing in § 2710(d)(7)(A)(ii) or any other provision of IGRA limits that grant of jurisdiction (although those provisions may indicate that a party has no statutory right of action). See Verizon Md. Inc. v. Public Serv. Comm'n of Md., 535 U.S. 635 , 643-644, 122 S.Ct. 1753 , 152 L.Ed.2d 871 (2002).
+
+[3] Knick v. Township of Scott (OT2018, dissent, authored) — chunk b269ab901039e623
+And under modern takings law, there is “no magic
+formula” to determine “whether a given government interference with property is a taking.” Ibid. For that reason,
+a government actor usually cannot know in advance
+whether implementing a regulatory program will effect a
+taking, much less of whose property. Until today, such an
+official could do his work without fear of wrongdoing, in
+any jurisdiction that had set up a reliable means for property owners to obtain compensation. Even if some regulatory action turned out to take someone’s property, the
+official would not have violated the Constitution. But no
+longer. Now, when a government undertakes land-use
+regulation (and what government doesn’t?), the responsible employees will almost inescapably become constitutional malefactors. That is not a fair position in which to
+place persons carrying out their governmental duties.
+   Still more important, the majority’s ruling channels to
+federal courts a (potentially massive) set of cases that
+more properly belongs, at least in the first instance, in
+state courts—where Williamson County put them. The
+regulation of land use, this Court has stated, is “perhaps
+the quintessential state activity.” FERC v. Mississippi,
+456 U. S. 742, 768, n. 30 (1982). And a claim that a landuse regulation violates the Takings Clause usually turns
+on state-law issues. In that respect, takings claims have
+little in common with other constitutional challenges. The
+question in takings cases is not merely whether a given
+state action meets federal constitutional standards. Before those standards can come into play, a court must
+typically decide whether, under state law, the plaintiff has
+a property interest in the thing regulated. See Phillips v.
+Washington Legal Foundation, 524 U. S. 156, 164 (1998);
+see also Sterk, The Demise of Federal Takings Litigation,
+48 Wm. &amp; Mary L. Rev. 251, 288 (2006) (“[I]f background
+state law did not recognize or create property in the first
+instance, then a subsequent state action cannot take
+property”). Often those questions—how does pre-existing
+state law define the property right?; what interests does
+that law grant?; and conversely what interests does it
+deny?—are nuanced and complicated.</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"</span><span class="sc">\n</span><span class="st">[..."</span>, <span class="fu">length</span>(u) <span class="sc">-</span> <span class="dv">90</span>, <span class="st">"lines of evidence and packet omitted ...]</span><span class="sc">\n\n</span><span class="st">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+[... 330 lines of evidence and packet omitted ...]</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">tail</span>(u, <span class="dv">30</span>), <span class="at">sep =</span> <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+## Petitioner's core arguments (three bullets, from the merits brief)
+- not included in this packet type (Oyez facts and question only)
+
+## Respondent's core arguments (three bullets, from the merits brief)
+- not included in this packet type (Oyez facts and question only)
+
+## Doctrinal area / key precedents named in the QP or briefs
+May an individual sue a government official in his individual capacity for damages for violations of the Religious Land Use and Institutionalized Persons Act (RLUIPA)?
+
+## Your task
+
+Predict how you, Justice Kagan, will vote on the merits of this case when it is decided, and explain the prediction in your own voice as a judge, drawing on the evidence and on your established approach. Consider the questions presented, the posture, and the strongest argument on each side. Do not hedge across both sides; take a position and give a calibrated probability.
+
+Return only this JSON object:
+
+{
+  "justice": "kagan",
+  "vote": "petitioner" | "respondent",
+  "p_petitioner": &lt;number between 0 and 1: your probability that you side with the petitioner&gt;,
+  "disposition": "reverse" | "affirm" | "vacate_and_remand" | "dismiss" | "other",
+  "separate_writing": "none" | "concurrence" | "concurrence_in_judgment" | "dissent",
+  "rationale": "&lt;at most 150 words, first person, in your judicial voice; name the doctrine and the controlling consideration&gt;",
+  "considerations": ["&lt;the three considerations that drive the vote, ranked, one sentence each, most important first&gt;"],
+  "precedents": ["&lt;up to five earlier cases you would rely on, by short name&gt;"],
+  "evidence_used": [&lt;the passage numbers from the evidence section that actually informed the prediction&gt;],
+  "confidence": &lt;number between 0 and 1: how sure you are that the vote above is the vote you will cast&gt;,
+  "speculation": &lt;number between 0 and 1: how much of the reasoning rests on inference beyond the evidence passages and the packet (0 = fully grounded in them, 1 = entirely a guess)&gt;,
+  "confidence_note": "&lt;one sentence on what would change your mind&gt;"
+}</code></pre>
+</div>
+</div>
+<p>Notice three things. The twin is told the case has not been decided and to disregard any recollection of an outcome. It is told the syllabus is the Reporter’s, not its own words. And it is asked for a probability, not just a vote, so the bench in Section 6 can be read as more or less confident.</p>
+<hr>
+</section>
+<section id="ask-the-twin" class="level2">
+<h2 class="anchored" data-anchor-id="ask-the-twin">5. Ask the twin</h2>
+<p>The project’s own answers were produced by Laurenz Günther’s runs on the project’s model (Claude Opus 5.5, called as <code>claude-opus-5-5</code>, with the model id the API returned recorded in the run log; adaptive thinking at medium effort, temperature at the API default, 4,000 output tokens including thinking) and ship with the package as a <strong>cache</strong>, so this section works with no key. If you have a key in your <code>~/.Renviron</code> (see the setup email), the second block sends the same prompt yourself.</p>
+<p>The block below loads the cached answer for <code>JUSTICE</code> on <code>CASE</code> and prints it.</p>
+<p><strong>Text 5.1.</strong> The cached answer.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>cache_file <span class="ot">&lt;-</span> <span class="fu">file.path</span>(DATA, <span class="st">"cached_answers.json"</span>)</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>ans <span class="ot">&lt;-</span> <span class="cn">NULL</span>; cached <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">file.exists</span>(cache_file)) {</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>  cache  <span class="ot">&lt;-</span> <span class="fu">fromJSON</span>(cache_file, <span class="at">simplifyVector =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>  cached <span class="ot">&lt;-</span> cache<span class="sc">$</span>cases[[CASE]]</span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">is.null</span>(cached)) {</span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cat</span>(<span class="st">"No cached answers for this case yet.</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>    <span class="co"># each case is bound to the index and prompt template of the run it came from; a mismatch with this</span></span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># package's evidence file means the cached answer was produced from different inputs than those shown</span></span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># above, and it is not used</span></span>
+<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a>    same_index  <span class="ot">&lt;-</span> <span class="fu">identical</span>(cached<span class="sc">$</span>binding<span class="sc">$</span>chunks_sha256, ev<span class="sc">$</span>index<span class="sc">$</span>chunks_sha256)</span>
+<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a>    same_prompt <span class="ot">&lt;-</span> <span class="fu">identical</span>(cached<span class="sc">$</span>binding<span class="sc">$</span>prompt_template_sha256, ev<span class="sc">$</span>prompt_template_sha256)</span>
+<span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a>    same_input  <span class="ot">&lt;-</span> <span class="fu">identical</span>(cached<span class="sc">$</span>inputs[[JUSTICE]]<span class="sc">$</span>retrieved_set_sha256, tw<span class="sc">$</span>retrieved_set_sha256)</span>
+<span id="cb24-15"><a href="#cb24-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="sc">!</span>same_index <span class="sc">||</span> <span class="sc">!</span>same_prompt <span class="sc">||</span> <span class="sc">!</span>same_input) {</span>
+<span id="cb24-16"><a href="#cb24-16" aria-hidden="true" tabindex="-1"></a>      cached <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb24-17"><a href="#cb24-17" aria-hidden="true" tabindex="-1"></a>      <span class="fu">cat</span>(<span class="st">"Cached answers for this case were produced with a different index, prompt template or evidence set"</span>,</span>
+<span id="cb24-18"><a href="#cb24-18" aria-hidden="true" tabindex="-1"></a>          <span class="st">"than this package's evidence file; not shown.</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb24-19"><a href="#cb24-19" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> {</span>
+<span id="cb24-20"><a href="#cb24-20" aria-hidden="true" tabindex="-1"></a>      ans <span class="ot">&lt;-</span> cached<span class="sc">$</span>answers[[JUSTICE]]</span>
+<span id="cb24-21"><a href="#cb24-21" aria-hidden="true" tabindex="-1"></a>      <span class="fu">cat</span>(<span class="st">"Model:"</span>, cached<span class="sc">$</span>model_id, <span class="st">" | index:"</span>, cached<span class="sc">$</span>binding<span class="sc">$</span>index_version, <span class="st">" | harness:"</span>, cached<span class="sc">$</span>binding<span class="sc">$</span>harness_version,</span>
+<span id="cb24-22"><a href="#cb24-22" aria-hidden="true" tabindex="-1"></a>          <span class="st">" | run:"</span>, cached<span class="sc">$</span>run, <span class="st">"</span><span class="sc">\n\n</span><span class="st">"</span>)</span>
+<span id="cb24-23"><a href="#cb24-23" aria-hidden="true" tabindex="-1"></a>      <span class="fu">cat</span>(<span class="fu">toJSON</span>(ans, <span class="at">auto_unbox =</span> <span class="cn">TRUE</span>, <span class="at">pretty =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb24-24"><a href="#cb24-24" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb24-25"><a href="#cb24-25" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb24-26"><a href="#cb24-26" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb24-27"><a href="#cb24-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="st">"Cached answers not yet in the package."</span>)</span>
+<span id="cb24-28"><a href="#cb24-28" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Model: claude-opus-5-5  | index: v3.1.1  | harness: 1.2  | run: 20261004T111634Z_landor_opus55_codex 
+
+{
+  "justice": "kagan",
+  "vote": "petitioner",
+  "p_petitioner": 0.85,
+  "disposition": "reverse",
+  "separate_writing": "none",
+  "rationale": "RLUIPA authorizes 'appropriate relief against a government,' and defines 'government' to include officials and 'other person[s] acting under color of law.' In Tanzin v. Tanvir we unanimously read identical RFRA text to permit damages against officials in their individual capacities. Damages are the traditional remedy against officers, and often the only one that matters. When a prisoner has been released or transferred, an injunction does nothing for him. Louisiana's Spending Clause objection is that officials never accepted federal funds. That objection proves too much. Congress may attach conditions to funds that reach the recipient's employees acting under color of law, and qualified immunity already protects officials from unfair surprise. Here, guards shaved a Rastafarian's head despite binding circuit precedent and his documentation. If damages are unavailable, the statute's 'heightened duty' becomes a promise without a remedy.",
+  "considerations": [
+    "The text of RLUIPA mirrors RFRA's text, and Tanzin construed that text to include individual-capacity damages.",
+    "Without damages, RLUIPA violations against transferred or released prisoners are effectively unremediable, which defeats the statute's protective purpose.",
+    "The Spending Clause notice concern is answerable because the condition clearly reaches officials, and qualified immunity mitigates unfairness to individual officers."
+  ],
+  "precedents": [
+    "Tanzin v. Tanvir",
+    "Sossamon v. Texas",
+    "Holt v. Hobbs",
+    "Health and Hospital Corp. of Marion County v. Talevski",
+    "Ramirez v. Collier"
+  ],
+  "evidence_used": [
+    5,
+    7
+  ],
+  "confidence": 0.8,
+  "speculation": 0.55,
+  "confidence_note": "A persuasive showing that Spending Clause clear-statement doctrine categorically bars imposing liability on non-recipient individuals would move me toward the respondent.",
+  "_problems": []
+}</code></pre>
+</div>
+</div>
+<p>The next block is the only one that calls a model. It reads your key and the proxy address from the environment, sends the two messages, and parses the JSON the twin returns. <code>MODEL</code> is the model the workshop proxy serves (<code>gpt-5-mini</code>); the cached answer in Text 5.1 came from the project’s model (Claude Opus 5.5) on the same evidence and prompt, so a difference between the two is a difference between models, not between inputs. That comparison is part of the exercise.</p>
+<p><strong>Text 5.2.</strong> Your own answer (runs only if <code>OPENAI_API_KEY</code> is set).</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>MODEL <span class="ot">&lt;-</span> <span class="st">"gpt-5-mini-2025-08-07"</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>key   <span class="ot">&lt;-</span> <span class="fu">Sys.getenv</span>(<span class="st">"OPENAI_API_KEY"</span>)</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>base  <span class="ot">&lt;-</span> <span class="fu">Sys.getenv</span>(<span class="st">"OPENAI_BASE_URL"</span>, <span class="at">unset =</span> <span class="st">"https://api.openai.com/v1"</span>)</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>ask_twin <span class="ot">&lt;-</span> <span class="cf">function</span>(system, user, <span class="at">model =</span> MODEL) {</span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>  resp <span class="ot">&lt;-</span> httr2<span class="sc">::</span><span class="fu">request</span>(<span class="fu">paste0</span>(base, <span class="st">"/chat/completions"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>    httr2<span class="sc">::</span><span class="fu">req_auth_bearer_token</span>(key) <span class="sc">|&gt;</span></span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>    httr2<span class="sc">::</span><span class="fu">req_body_json</span>(<span class="fu">list</span>(<span class="at">model =</span> model,   <span class="co"># gpt-5 models accept only the default temperature</span></span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a>                              <span class="at">messages =</span> <span class="fu">list</span>(<span class="fu">list</span>(<span class="at">role =</span> <span class="st">"system"</span>, <span class="at">content =</span> system),</span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a>                                              <span class="fu">list</span>(<span class="at">role =</span> <span class="st">"user"</span>,   <span class="at">content =</span> user)))) <span class="sc">|&gt;</span></span>
+<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a>    httr2<span class="sc">::</span><span class="fu">req_perform</span>() <span class="sc">|&gt;</span></span>
+<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a>    httr2<span class="sc">::</span><span class="fu">resp_body_json</span>()</span>
+<span id="cb26-13"><a href="#cb26-13" aria-hidden="true" tabindex="-1"></a>  txt <span class="ot">&lt;-</span> resp<span class="sc">$</span>choices[[<span class="dv">1</span>]]<span class="sc">$</span>message<span class="sc">$</span>content</span>
+<span id="cb26-14"><a href="#cb26-14" aria-hidden="true" tabindex="-1"></a>  j   <span class="ot">&lt;-</span> <span class="fu">regmatches</span>(txt, <span class="fu">regexpr</span>(<span class="st">"</span><span class="sc">\\</span><span class="st">{.*</span><span class="sc">\\</span><span class="st">}"</span>, txt))</span>
+<span id="cb26-15"><a href="#cb26-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fromJSON</span>(j, <span class="at">simplifyVector =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb26-16"><a href="#cb26-16" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb26-17"><a href="#cb26-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-18"><a href="#cb26-18" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">nzchar</span>(key)) {</span>
+<span id="cb26-19"><a href="#cb26-19" aria-hidden="true" tabindex="-1"></a>  mine <span class="ot">&lt;-</span> <span class="fu">ask_twin</span>(tw<span class="sc">$</span>system, tw<span class="sc">$</span>user)</span>
+<span id="cb26-20"><a href="#cb26-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="fu">toJSON</span>(mine, <span class="at">auto_unbox =</span> <span class="cn">TRUE</span>, <span class="at">pretty =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb26-21"><a href="#cb26-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">writeLines</span>(<span class="fu">toJSON</span>(mine, <span class="at">auto_unbox =</span> <span class="cn">TRUE</span>), <span class="fu">file.path</span>(OUT, <span class="fu">paste0</span>(<span class="st">"my_answer_"</span>, CASE, <span class="st">"_"</span>, JUSTICE, <span class="st">".json"</span>)))</span>
+<span id="cb26-22"><a href="#cb26-22" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb26-23"><a href="#cb26-23" aria-hidden="true" tabindex="-1"></a>  mine <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb26-24"><a href="#cb26-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="st">"No API key found; skipping the live call."</span>)</span>
+<span id="cb26-25"><a href="#cb26-25" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>No API key found; skipping the live call.</code></pre>
+</div>
+</div>
+<hr>
+</section>
+<section id="the-full-bench" class="level2">
+<h2 class="anchored" data-anchor-id="the-full-bench">6. The full bench</h2>
+<p>One twin is a guess; nine twins are a prediction. The block below assembles the nine cached answers for <code>CASE</code> into one table: each Justice’s vote (petitioner or respondent), the probability it gave, and whether it expects to write separately.</p>
+<p><strong>Table 6.1.</strong> <code>bench</code>: the nine twins on <code>CASE</code>.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.null</span>(cached)) {</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>  bench <span class="ot">&lt;-</span> <span class="fu">rbindlist</span>(<span class="fu">lapply</span>(<span class="fu">names</span>(cached<span class="sc">$</span>answers), <span class="cf">function</span>(j) {</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>    a <span class="ot">&lt;-</span> cached<span class="sc">$</span>answers[[j]]</span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">data.table</span>(<span class="at">justice =</span> j, <span class="at">vote =</span> a<span class="sc">$</span>vote, <span class="at">p_petitioner =</span> <span class="fu">round</span>(a<span class="sc">$</span>p_petitioner, <span class="dv">2</span>),</span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>               <span class="at">disposition =</span> a<span class="sc">$</span>disposition, <span class="at">separate =</span> a<span class="sc">$</span>separate_writing)</span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a>  }))</span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a>  bench <span class="ot">&lt;-</span> <span class="fu">merge</span>(bench, mq[, .(<span class="at">justice =</span> <span class="fu">as.character</span>(justice), <span class="at">mq =</span> post_mn)], <span class="at">by =</span> <span class="st">"justice"</span>)</span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">setorder</span>(bench, mq)</span>
+<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a>  bench</span>
+<span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb28-11"><a href="#cb28-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="st">"Cached answers not yet in the package."</span>)</span>
+<span id="cb28-12"><a href="#cb28-12" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">justice</th>
+<th style="text-align: left;">vote</th>
+<th style="text-align: right;">p_petitioner</th>
+<th style="text-align: left;">disposition</th>
+<th style="text-align: left;">separate</th>
+<th style="text-align: right;">mq</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">sotomayor</td>
+<td style="text-align: left;">petitioner</td>
+<td style="text-align: right;">0.95</td>
+<td style="text-align: left;">reverse</td>
+<td style="text-align: left;">none</td>
+<td style="text-align: right;">-4.191</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">jackson</td>
+<td style="text-align: left;">petitioner</td>
+<td style="text-align: right;">0.90</td>
+<td style="text-align: left;">reverse</td>
+<td style="text-align: left;">none</td>
+<td style="text-align: right;">-2.809</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">kagan</td>
+<td style="text-align: left;">petitioner</td>
+<td style="text-align: right;">0.85</td>
+<td style="text-align: left;">reverse</td>
+<td style="text-align: left;">none</td>
+<td style="text-align: right;">-1.844</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">roberts</td>
+<td style="text-align: left;">respondent</td>
+<td style="text-align: right;">0.36</td>
+<td style="text-align: left;">affirm</td>
+<td style="text-align: left;">none</td>
+<td style="text-align: right;">0.326</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">barrett</td>
+<td style="text-align: left;">respondent</td>
+<td style="text-align: right;">0.40</td>
+<td style="text-align: left;">affirm</td>
+<td style="text-align: left;">none</td>
+<td style="text-align: right;">0.515</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">kavanaugh</td>
+<td style="text-align: left;">respondent</td>
+<td style="text-align: right;">0.40</td>
+<td style="text-align: left;">affirm</td>
+<td style="text-align: left;">none</td>
+<td style="text-align: right;">0.545</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">gorsuch</td>
+<td style="text-align: left;">petitioner</td>
+<td style="text-align: right;">0.75</td>
+<td style="text-align: left;">reverse</td>
+<td style="text-align: left;">none</td>
+<td style="text-align: right;">1.082</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">alito</td>
+<td style="text-align: left;">respondent</td>
+<td style="text-align: right;">0.36</td>
+<td style="text-align: left;">affirm</td>
+<td style="text-align: left;">none</td>
+<td style="text-align: right;">2.496</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">thomas</td>
+<td style="text-align: left;">respondent</td>
+<td style="text-align: right;">0.20</td>
+<td style="text-align: left;">affirm</td>
+<td style="text-align: left;">concurrence</td>
+<td style="text-align: right;">3.070</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p>The next block turns Table 6.1 into the project’s prediction: who wins, by what split, and, for the practice case, how that compares with what the Court did. For the live case it compares with the FantasySCOTUS crowd on 1 October instead.</p>
+<p><strong>Table 6.2.</strong> <code>verdict</code>: the twins’ prediction next to the reference.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.null</span>(cached)) {</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>  pet <span class="ot">&lt;-</span> <span class="fu">sum</span>(bench<span class="sc">$</span>vote <span class="sc">==</span> <span class="st">"petitioner"</span>); resp <span class="ot">&lt;-</span> <span class="fu">sum</span>(bench<span class="sc">$</span>vote <span class="sc">==</span> <span class="st">"respondent"</span>)</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="fu">sprintf</span>(<span class="st">"Twins: %s wins, %d-%d</span><span class="sc">\n</span><span class="st">"</span>, <span class="fu">ifelse</span>(pet <span class="sc">&gt;</span> resp, <span class="st">"petitioner"</span>, <span class="st">"respondent"</span>), <span class="fu">max</span>(pet, resp), <span class="fu">min</span>(pet, resp)))</span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (CASE <span class="sc">==</span> <span class="st">"landor"</span>) {</span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>    truth <span class="ot">&lt;-</span> <span class="fu">fread</span>(<span class="fu">file.path</span>(DATA, <span class="st">"landor_outcome.csv"</span>))</span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cat</span>(<span class="fu">readLines</span>(<span class="fu">file.path</span>(DATA, <span class="st">"landor_outcome_note.txt"</span>), <span class="at">warn =</span> <span class="cn">FALSE</span>), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># the petitioner lost below, so 'respondent' = the Court's majority side when the Court affirmed</span></span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a>    verdict <span class="ot">&lt;-</span> <span class="fu">merge</span>(bench[, .(justice, <span class="at">twin =</span> vote)], truth[, .(justice, <span class="at">court =</span> court_vote)], <span class="at">by =</span> <span class="st">"justice"</span>)</span>
+<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a>    verdict[, court_side <span class="sc">:</span><span class="er">=</span> <span class="fu">ifelse</span>(court <span class="sc">==</span> <span class="st">"majority"</span>, <span class="st">"respondent"</span>, <span class="st">"petitioner"</span>)]</span>
+<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a>    verdict[, agree <span class="sc">:</span><span class="er">=</span> twin <span class="sc">==</span> court_side]</span>
+<span id="cb29-11"><a href="#cb29-11" aria-hidden="true" tabindex="-1"></a>    verdict[<span class="fu">order</span>(<span class="fu">match</span>(justice, mq<span class="sc">$</span>justice))]</span>
+<span id="cb29-12"><a href="#cb29-12" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb29-13"><a href="#cb29-13" aria-hidden="true" tabindex="-1"></a>    crowd <span class="ot">&lt;-</span> <span class="fu">fread</span>(<span class="fu">file.path</span>(DATA, <span class="st">"johnson_crowd.csv"</span>))</span>
+<span id="cb29-14"><a href="#cb29-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cat</span>(<span class="fu">sprintf</span>(<span class="st">"FantasySCOTUS crowd on %s: %s %s</span><span class="sc">\n</span><span class="st">"</span>, crowd<span class="sc">$</span>snapshot, crowd<span class="sc">$</span>crowd_outcome, crowd<span class="sc">$</span>crowd_split))</span>
+<span id="cb29-15"><a href="#cb29-15" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb29-16"><a href="#cb29-16" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Twins: respondent wins, 5-4
+Landor v. Louisiana Department of Corrections, No. 23-1197. Argued 10 Nov 2025; decided 2026-06-23. Winning party: Louisiana DoC (respondent); 6-3. Source: Oyez decision record (draft answer key, verifier pending). Petitioner (Landor) lost below (CA5), so a vote for the respondent = Affirm. </code></pre>
+</div>
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">justice</th>
+<th style="text-align: left;">twin</th>
+<th style="text-align: left;">court</th>
+<th style="text-align: left;">court_side</th>
+<th style="text-align: left;">agree</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">sotomayor</td>
+<td style="text-align: left;">petitioner</td>
+<td style="text-align: left;">minority</td>
+<td style="text-align: left;">petitioner</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">jackson</td>
+<td style="text-align: left;">petitioner</td>
+<td style="text-align: left;">minority</td>
+<td style="text-align: left;">petitioner</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">kagan</td>
+<td style="text-align: left;">petitioner</td>
+<td style="text-align: left;">minority</td>
+<td style="text-align: left;">petitioner</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">roberts</td>
+<td style="text-align: left;">respondent</td>
+<td style="text-align: left;">majority</td>
+<td style="text-align: left;">respondent</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">barrett</td>
+<td style="text-align: left;">respondent</td>
+<td style="text-align: left;">majority</td>
+<td style="text-align: left;">respondent</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">kavanaugh</td>
+<td style="text-align: left;">respondent</td>
+<td style="text-align: left;">majority</td>
+<td style="text-align: left;">respondent</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">gorsuch</td>
+<td style="text-align: left;">petitioner</td>
+<td style="text-align: left;">majority</td>
+<td style="text-align: left;">respondent</td>
+<td style="text-align: left;">FALSE</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">alito</td>
+<td style="text-align: left;">respondent</td>
+<td style="text-align: left;">majority</td>
+<td style="text-align: left;">respondent</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">thomas</td>
+<td style="text-align: left;">respondent</td>
+<td style="text-align: left;">majority</td>
+<td style="text-align: left;">respondent</td>
+<td style="text-align: left;">TRUE</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p>The twins’ accuracy per Justice on the practice case is the number of <code>TRUE</code> in the <code>agree</code> column of Table 6.2 out of nine. One case tells you little; the project’s validation run scores the same twins on all 58 argued cases of October Term 2025, and that number is on the slide behind you.</p>
+<p><strong>Figure 6.1.</strong> Each twin’s probability for the petitioner against the Justice’s Martin–Quinn score. If the twins were only reading the score, this would be a straight line.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.null</span>(cached)) {</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(bench, <span class="fu">aes</span>(<span class="at">x =</span> mq, <span class="at">y =</span> p_petitioner, <span class="at">label =</span> justice)) <span class="sc">+</span></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="fl">0.5</span>, <span class="at">linetype =</span> <span class="st">"dotted"</span>) <span class="sc">+</span></span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="fl">2.5</span>) <span class="sc">+</span> <span class="fu">geom_text</span>(<span class="at">vjust =</span> <span class="sc">-</span><span class="fl">0.8</span>, <span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_x_continuous</span>(<span class="st">"Martin–Quinn score, OT2024"</span>) <span class="sc">+</span></span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_y_continuous</span>(<span class="st">"Twin's probability that the petitioner wins"</span>, <span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_minimal</span>()</span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="01_justice_twins_files/figure-html/bench-plot-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="change-one-thing" class="level2">
+<h2 class="anchored" data-anchor-id="change-one-thing">7. Change one thing</h2>
+<p>Everything above is one draw from one configuration. The question that matters for the method is which inputs the answer depends on. Pick one of the three changes below, re-run Section 5’s live block, and compare.</p>
+<p><strong>(a) Drop the score.</strong> The block below removes the Martin–Quinn line from the user message, so the twin has only the evidence and the packet.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>user_no_mq <span class="ot">&lt;-</span> <span class="fu">sub</span>(<span class="st">"Ideal point </span><span class="sc">\\</span><span class="st">(Martin–Quinn[^</span><span class="sc">\n</span><span class="st">]*</span><span class="sc">\n</span><span class="st">"</span>, <span class="st">""</span>, tw<span class="sc">$</span>user)</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="fu">nchar</span>(tw<span class="sc">$</span>user) <span class="sc">-</span> <span class="fu">nchar</span>(user_no_mq)   <span class="co"># characters removed; about 260</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 264</code></pre>
+</div>
+</div>
+<p><strong>(b) Swap a passage.</strong> The block below replaces passage <code>N</code> with a passage from another Justice’s evidence on the same case, keeping the header, so the twin is reasoning partly from a colleague’s words. (Your own choice of <code>OTHER</code> and <code>N</code>.)</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>OTHER <span class="ot">&lt;-</span> <span class="st">"thomas"</span>; N <span class="ot">&lt;-</span> <span class="dv">3</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>other_p <span class="ot">&lt;-</span> ev<span class="sc">$</span>justices[[OTHER]]<span class="sc">$</span>passages[[N]]</span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>mine_p  <span class="ot">&lt;-</span> tw<span class="sc">$</span>passages[[N]]</span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>user_swapped <span class="ot">&lt;-</span> <span class="fu">sub</span>(mine_p<span class="sc">$</span>text, other_p<span class="sc">$</span>text, tw<span class="sc">$</span>user, <span class="at">fixed =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="at">original =</span> <span class="fu">nchar</span>(tw<span class="sc">$</span>user), <span class="at">swapped =</span> <span class="fu">nchar</span>(user_swapped))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>original  swapped 
+   33531    33375 </code></pre>
+</div>
+</div>
+<p><strong>(c) Another Justice, or the live case.</strong> Set <code>JUSTICE</code> in Section 2 or <code>CASE</code> in Section 1 and run the notebook again from the top; both load in a second.</p>
+<p>To re-ask with a changed message, call <code>ask_twin(tw$system, user_no_mq)</code> or <code>ask_twin(tw$system, user_swapped)</code> in the console, with a key set. Write down what changed in the vote and the probability; that is the result of this exercise, and it is yours.</p>
+<hr>
+</section>
+<section id="what-a-twin-cannot-know" class="level2">
+<h2 class="anchored" data-anchor-id="what-a-twin-cannot-know">8. What a twin cannot know</h2>
+<p>Three things to carry out of the room.</p>
+<p>The twin only ever sees what is in Sections 1 to 4. Nothing from the term being predicted is in its evidence; the case at issue is excluded from retrieval by rule; the packet is checked by a person for anything that reveals an outcome. When the twins are right, it is for reasons you can read; when they are wrong, you can see what they were reading.</p>
+<p>A prediction filed before argument is a prediction. The project’s October votes were filed on FantasySCOTUS on 4 October, each run logged with the hash of its packet, its evidence set, its prompt template and its model. The decisions come in the spring. Until then the numbers on the slide are the validation run on last term’s cases, where the answers are known, and nothing else.</p>
+<p>And the obvious caveat: a model that has read the whole internet may remember a decided case however firmly it is told not to. That is exactly why the record is built on cases that are not yet decided.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/talking-to-machines\.github\.io\/llmss-2026-workshops\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../W3_audience/notebooks/02_silicon_voters.html" class="pagination-link" aria-label="Silicon Voters: ads for five kinds of voter">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Silicon Voters: ads for five kinds of voter</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Talking to Machines · LLMSS 2026 pre-conference workshops, City University of Hong Kong, 13 October 2026</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/talking-to-machines/llmss-2026-workshops/blob/main/W3_legal/notebooks/01_justice_twins.Rmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/talking-to-machines/llmss-2026-workshops/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>Code: MIT · Text and data: CC BY 4.0</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

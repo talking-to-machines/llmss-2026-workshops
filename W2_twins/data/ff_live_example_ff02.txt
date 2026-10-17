@@ -1,0 +1,159 @@
+**question: APPLE INC (AAPL)**  
+**explanation: Profile provides no direct information about Apple; the influencer's posts and focus are almost exclusively Tesla, so there is no basis to recommend a directional trade on AAPL. Defaulting to neutral (hold). Data features: profile description ("all in on Tesla"), main focus (single stock Tesla), recent posts almost all about Tesla.**  
+**recommendation: 50**  
+**confidence: 20**  
+**speculation: 95**  
+**expected holding period: 90**  
+**primary catalyst type: Other**
+
+**question: ADVANCED MICRO DEVICES INC (AMD)**  
+**explanation: No AMD-specific information in the profile. Influencer's content is focused on Tesla only, so choose neutral (hold). Data features: explicit Tesla focus, absence of other equities coverage.**  
+**recommendation: 50**  
+**confidence: 20**  
+**speculation: 95**  
+**expected holding period: 90**  
+**primary catalyst type: Other**
+
+**question: AMAZON COM INC (AMZN)**  
+**explanation: Profile contains no mention of Amazon; influencer is singularly focused on Tesla and EVs, so no basis for a buy or sell—hold. Data features: "all in on Tesla", repeated Tesla posts, audience and tone focused on Tesla.**  
+**recommendation: 50**  
+**confidence: 20**  
+**speculation: 95**  
+**expected holding period: 90**  
+**primary catalyst type: Other**
+
+**question: BROADCOM INC (AVGO)**  
+**explanation: No Broadcom-related information; influencer's stated focus is Tesla, so choose hold due to lack of relevant profile signals. Data features: main focus single stock (Tesla), posts nearly all about Tesla.**  
+**recommendation: 50**  
+**confidence: 20**  
+**speculation: 95**  
+**expected holding period: 90**  
+**primary catalyst type: Other**
+
+**question: CISCO SYSTEMS INC (CSCO)**  
+**explanation: Profile gives no CSCO info; influencer is Tesla-centric, so neutral hold. Data features: profile description and content concentrated on Tesla.**  
+**recommendation: 50**  
+**confidence: 20**  
+**speculation: 95**  
+**expected holding period: 90**  
+**primary catalyst type: Other**
+
+**question: GOOGLE (GOOG)**  
+**explanation: No Google-specific content in the profile. Given the influencer's exclusive Tesla focus, the appropriate stance is hold. Data features: content emphasis on Tesla only.**  
+**recommendation: 50**  
+**confidence: 20**  
+**speculation: 95**  
+**expected holding period: 90**  
+**primary catalyst type: Other**
+
+**question: ALPHABET INC (GOOGL)**  
+**explanation: Same as GOOG — no supporting profile information, influencer concentrates on Tesla; choose hold. Data features: "all in on Tesla" description and nearly all posts about Tesla.**  
+**recommendation: 50**  
+**confidence: 20**  
+**speculation: 95**  
+**expected holding period: 90**  
+**primary catalyst type: Other**
+
+**question: INTEL CORP (INTC)**  
+**explanation: No Intel information in profile. With a Tesla-only focus, default to hold. Data features: explicit single-stock focus on Tesla and absence of other tickers.**  
+**recommendation: 50**  
+**confidence: 20**  
+**speculation: 95**  
+**expected holding period: 90**  
+**primary catalyst type: Other**
+
+**question: JOHNSON & JOHNSON (JNJ)**  
+**explanation: Profile provides no JNJ-related signals; influencer content centers on Tesla—pick hold. Data features: profile description and recent posts all Tesla-centric.**  
+**recommendation: 50**  
+**confidence: 20**  
+**speculation: 95**  
+**expected holding period: 90**  
+**primary catalyst type: Other**
+
+**question: JPMORGAN CHASE & CO (JPM)**  
+**explanation: No JPM info in profile; influencer's focus is Tesla so choose hold. Data features: repeated Tesla posts and blue-verified retail investor persona emphasizing Tesla.**  
+**recommendation: 50**  
+**confidence: 20**  
+**speculation: 95**  
+**expected holding period: 90**  
+**primary catalyst type: Other**
+
+**question: LILLY ELI & CO (LLY)**  
+**explanation: No Lilly-specific information; given Tesla-only focus, default to hold. Data features: profile description ("all in on Tesla") and content concentration on Tesla.**  
+**recommendation: 50**  
+**confidence: 20**  
+**speculation: 95**  
+**expected holding period: 90**  
+**primary catalyst type: Other**
+
+**question: META PLATFORMS INC (META)**  
+**explanation: No Meta-specific signals in the profile. Influencer's content and stated focus are Tesla-centric, so hold. Data features: main focus single stock (Tesla), audience and tone centered on Tesla.**  
+**recommendation: 50**  
+**confidence: 20**  
+**speculation: 95**  
+**expected holding period: 90**  
+**primary catalyst type: Other**
+
+**question: MICROSOFT CORP (MSFT)**  
+**explanation: Profile contains no MSFT-related content; influencer is focused on Tesla, leading to a neutral hold recommendation. Data features: explicit "all in on Tesla" description and near-exclusive Tesla posts.**  
+**recommendation: 50**  
+**confidence: 20**  
+**speculation: 95**  
+**expected holding period: 90**  
+**primary catalyst type: Other**
+
+**question: MICRON TECHNOLOGY INC (MU)**  
+**explanation: No Micron information in the profile. Because the influencer only talks about Tesla, default to hold. Data features: main focus single stock Tesla, repeated Tesla posts.**  
+**recommendation: 50**  
+**confidence: 20**  
+**speculation: 95**  
+**expected holding period: 90**  
+**primary catalyst type: Other**
+
+**question: NVIDIA CORP (NVDA)**  
+**explanation: No Nvidia-specific content in profile. Influencer focuses almost exclusively on Tesla and EVs; therefore choose hold. Data features: profile description and content heavily skewed to Tesla.**  
+**recommendation: 50**  
+**confidence: 20**  
+**speculation: 95**  
+**expected holding period: 90**  
+**primary catalyst type: Other**
+
+**question: ORACLE CORP (ORCL)**  
+**explanation: No Oracle-related signals; profile is Tesla-centric so recommend hold. Data features: "all in on Tesla" description, near-total Tesla posting history.**  
+**recommendation: 50**  
+**confidence: 20**  
+**speculation: 95**  
+**expected holding period: 90**  
+**primary catalyst type: Other**
+
+**question: TESLA INC (TSLA)**  
+**explanation: Profile explicitly states the influencer is "all in on Tesla," posts almost exclusively about Tesla, uses emphatic bullish tone, buys dips around news, and sets very ambitious long-run targets. This strongly supports a buy recommendation from the persona. Data features: profile description ("all in on Tesla"), main focus single stock Tesla, recent posts almost all about Tesla, high-conviction tone, buying-dips behavior, ambitious long-run price targets.**  
+**recommendation: 90**  
+**confidence: 70**  
+**speculation: 10**  
+**expected holding period: 1825**  
+**primary catalyst type: Product**
+
+**question: VISA INC (V)**  
+**explanation: No Visa-specific information in the profile; influencer's content is centered on Tesla, so choose hold. Data features: explicit Tesla focus and absence of other equities.**  
+**recommendation: 50**  
+**confidence: 20**  
+**speculation: 95**  
+**expected holding period: 90**  
+**primary catalyst type: Other**
+
+**question: WALMART INC (WMT)**  
+**explanation: Profile gives no Walmart signals; influencer is Tesla-focused, so hold is appropriate. Data features: "all in on Tesla" profile and almost all posts about Tesla.**  
+**recommendation: 50**  
+**confidence: 20**  
+**speculation: 95**  
+**expected holding period: 90**  
+**primary catalyst type: Other**
+
+**question: EXXON MOBIL CORP (XOM)**  
+**explanation: No Exxon-specific content; given the influencer's singular Tesla focus (EV proponent), there is no direct basis to trade Exxon—hold. Data features: profile description, main focus on Tesla and EVs, lack of other coverage.**  
+**recommendation: 50**  
+**confidence: 20**  
+**speculation: 95**  
+**expected holding period: 90**  
+**primary catalyst type: Other**

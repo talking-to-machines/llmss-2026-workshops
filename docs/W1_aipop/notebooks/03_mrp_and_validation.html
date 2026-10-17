@@ -1,0 +1,1844 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Notebook 3 — MrP and validation – Talking to Machines · LLMSS 2026 Workshops</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../W2_twins/notebooks/01_twins_and_interview.html" rel="next">
+<link href="../../W1_aipop/notebooks/02_personas_and_interview.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-711d5f0cb2eecbce4b54be160a5a7e6e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-4275d7de9d7afaebafdd53a5eb10d6d4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-711d5f0cb2eecbce4b54be160a5a7e6e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Talking to Machines · LLMSS 2026 Workshops</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../../index.html" aria-current="page"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../setup.html"> 
+<span class="menu-text">Run it yourself</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/talking-to-machines/llmss-2026-workshops"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../W1_aipop/notebooks/01_frame_and_sample.html">Workshop 1 · AIPOP</a></li><li class="breadcrumb-item"><a href="../../W1_aipop/notebooks/03_mrp_and_validation.html">3. MrP and validation</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Talking to Machines: LLMSS 2026 Workshops</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Run it yourself</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Workshop 1 · AIPOP</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../W1_aipop/notebooks/01_frame_and_sample.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1. Building a silicon sample</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../W1_aipop/notebooks/02_personas_and_interview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2. Personas and the digital interview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../W1_aipop/notebooks/03_mrp_and_validation.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">3. MrP and validation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Workshop 2 · The Wisdom of Digital Twins</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../W2_twins/notebooks/01_twins_and_interview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1. Finfluencer twins and the daily interview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../W2_twins/notebooks/02_signals_and_backtest.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2. From twin answers to a market signal</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Workshop 3 · The Silicon Audience</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../W3_audience/notebooks/02_silicon_voters.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Silicon Voters: ads for five kinds of voter</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../W3_legal/notebooks/01_justice_twins.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Silicon Jury: a justice twin, one case</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#what-you-will-do" id="toc-what-you-will-do" class="nav-link active" data-scroll-target="#what-you-will-do">What you will do</a></li>
+  <li><a href="#inputs" id="toc-inputs" class="nav-link" data-scroll-target="#inputs">1. Inputs</a></li>
+  <li><a href="#the-starting-point-a-weighted-average" id="toc-the-starting-point-a-weighted-average" class="nav-link" data-scroll-target="#the-starting-point-a-weighted-average">2. The starting point: a weighted average</a></li>
+  <li><a href="#model-a-census-mrp" id="toc-model-a-census-mrp" class="nav-link" data-scroll-target="#model-a-census-mrp">3. Model A: census MrP</a>
+  <ul class="collapse">
+  <li><a href="#post-stratify" id="toc-post-stratify" class="nav-link" data-scroll-target="#post-stratify">Post-stratify</a></li>
+  </ul></li>
+  <li><a href="#validate-model-a-district-by-district" id="toc-validate-model-a-district-by-district" class="nav-link" data-scroll-target="#validate-model-a-district-by-district">4. Validate Model A, district by district</a></li>
+  <li><a href="#model-b-put-the-vote-class-back" id="toc-model-b-put-the-vote-class-back" class="nav-link" data-scroll-target="#model-b-put-the-vote-class-back">5. Model B: put the vote class back</a></li>
+  <li><a href="#the-2026-senate-race" id="toc-the-2026-senate-race" class="nav-link" data-scroll-target="#the-2026-senate-race">6. The 2026 Senate race</a></li>
+  <li><a href="#what-the-talking-to-machines-panels-show" id="toc-what-the-talking-to-machines-panels-show" class="nav-link" data-scroll-target="#what-the-talking-to-machines-panels-show">7. What the Talking to Machines panels show</a>
+  <ul class="collapse">
+  <li><a href="#a-held-out-election-new-jersey-november-2025" id="toc-a-held-out-election-new-jersey-november-2025" class="nav-link" data-scroll-target="#a-held-out-election-new-jersey-november-2025">A held-out election: New Jersey, November 2025</a></li>
+  </ul></li>
+  <li><a href="#what-to-take-away" id="toc-what-to-take-away" class="nav-link" data-scroll-target="#what-to-take-away">What to take away</a></li>
+  <li><a href="#where-this-comes-from" id="toc-where-this-comes-from" class="nav-link" data-scroll-target="#where-this-comes-from">Where this comes from</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/talking-to-machines/llmss-2026-workshops/blob/main/W1_aipop/notebooks/03_mrp_and_validation.Rmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/talking-to-machines/llmss-2026-workshops/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../W1_aipop/notebooks/01_frame_and_sample.html">Workshop 1 · AIPOP</a></li><li class="breadcrumb-item"><a href="../../W1_aipop/notebooks/03_mrp_and_validation.html">3. MrP and validation</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Notebook 3 — MrP and validation</h1>
+<p class="subtitle lead">LLMSS 2026, Workshop 1 (AIPOP) · Hong Kong, 13 October 2026</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="what-you-will-do" class="level2">
+<h2 class="anchored" data-anchor-id="what-you-will-do">What you will do</h2>
+<p>Notebook 2 left you 400 interviewed twins. Each has a probability of voting for Harris in 2024 and for Brown in 2026. Averaging them tells you about <em>these 400 twins</em>. <strong>MrP</strong> (multilevel regression and post-stratification) turns them into an estimate for <em>Ohio</em>, and for each of its 15 districts:</p>
+<ol type="1">
+<li><strong>regress:</strong> fit a multilevel model with the twin’s answer on the left and who the twin is on the right. In words: P(Harris), or P(Brown), modelled on sex, degree, age band, ethnicity and district;</li>
+<li><strong>post-stratify:</strong> predict every cell of the Ohio frame and add the cells up, weighted by how many people the frame puts in each;</li>
+<li><strong>validate:</strong> compare with the certified 2024 result, district by district, and with the 2026 Senate polls.</li>
+</ol>
+<p>You will fit two versions. <strong>Model A</strong> is textbook census MrP and fails at the district level in an instructive way. <strong>Model B</strong> uses the stage-2 frame from Notebook 1 and gets the districts right, for a reason you should be suspicious of.</p>
+<p>The last section steps back from your 400 twins to the Talking to Machines panels: twelve of them, and a held-out election that tests what the 2024 recall cannot.</p>
+<p><strong>Figure 3.1</strong> is a reading guide for the whole notebook: what MrP does with your twins (A), the one thing that separates the two models (B), and the three checks, only one of which can fail (C).</p>
+<p><strong>Figure 3.1.</strong> Reading guide.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="../figures/nb3_reading_guide.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>How to read this notebook.</strong> As in Notebooks 1 and 2, every table and figure the code prints has a number, given in bold just above the code that prints it, and the text says which table, row or column a number comes from.</p>
+<p>The first block loads the R packages the notebook uses, including <code>lme4</code> for the multilevel models, and sets the folders it reads from.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(arrow)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(data.table)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lme4)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>DATA <span class="ot">&lt;-</span> <span class="fu">file.path</span>(<span class="st">".."</span>, <span class="st">"data"</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>OUT  <span class="ot">&lt;-</span> <span class="fu">file.path</span>(<span class="st">".."</span>, <span class="st">"output"</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>PANELS <span class="ot">&lt;-</span> <span class="fu">file.exists</span>(<span class="fu">file.path</span>(DATA, <span class="st">"benchmark_12panels.csv"</span>))   <span class="co"># Section 7: not in the public repository</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<hr>
+</section>
+<section id="inputs" class="level2">
+<h2 class="anchored" data-anchor-id="inputs">1. Inputs</h2>
+<p>The block below loads your interviewed twins, the file Notebook 2 deposited, as a table called <code>iv</code>, and prints its size: 400 twins, one row each, with their skeleton, rake weight and answers.</p>
+<p><strong>Table 3.1.</strong> <code>iv</code>: size (rows, columns).</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>iv <span class="ot">&lt;-</span> <span class="fu">as.data.table</span>(<span class="fu">read_parquet</span>(<span class="fu">file.path</span>(OUT, <span class="st">"oh_mini_panel_400_interviewed.parquet"</span>)))</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(iv)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 400  20</code></pre>
+</div>
+</div>
+<p>The <strong>post-stratification frame</strong> is the list of cells MrP predicts and then adds up. It is the Notebook 1 stage-2 frame (<code>sf2</code>), collapsed to the cells your twins carry: district × sex × ethnicity × age × degree. The block below loads <code>sf2</code>, adds up its rows by that key into a table called <code>frame</code>, and keeps two columns per cell: its adults (<code>N</code>) and its 2024 voters (<code>voters_2024</code>). It prints the totals.</p>
+<p><strong>Table 3.2.</strong> <code>frame</code>: cells, adults and 2024 voters.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>sf2 <span class="ot">&lt;-</span> <span class="fu">as.data.table</span>(<span class="fu">read_parquet</span>(<span class="fu">file.path</span>(DATA, <span class="st">"SF_extended_OH.parquet"</span>)))</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>frame <span class="ot">&lt;-</span> sf2[, .(<span class="at">N =</span> <span class="fu">sum</span>(N), <span class="at">voters_2024 =</span> <span class="fu">sum</span>(N_D <span class="sc">+</span> N_R <span class="sc">+</span> N_Other)),</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>             by <span class="ot">=</span> .(<span class="at">cd =</span> area, gender, ethnicity, age_bins, college_grad)]</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>frame <span class="ot">&lt;-</span> frame[N <span class="sc">&gt;</span> <span class="dv">0</span>]</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">sprintf</span>(<span class="st">"%s cells, %s adults, %s 2024 voters</span><span class="sc">\n</span><span class="st">"</span>, <span class="fu">format</span>(<span class="fu">nrow</span>(frame), <span class="at">big.mark =</span> <span class="st">","</span>),</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>            <span class="fu">format</span>(<span class="fu">round</span>(<span class="fu">sum</span>(frame<span class="sc">$</span>N)), <span class="at">big.mark =</span> <span class="st">","</span>), <span class="fu">format</span>(<span class="fu">round</span>(<span class="fu">sum</span>(frame<span class="sc">$</span>voters_2024)), <span class="at">big.mark =</span> <span class="st">","</span>)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>2,385 cells, 8,931,251 adults, 5,765,026 2024 voters</code></pre>
+</div>
+</div>
+<p>Table 3.2: 2,385 cells holding Ohio’s 8,931,251 citizen adults (the figure in Notebook 1, Table 1.2), of whom about 5.77 million voted in 2024.</p>
+<p>From Section 5 on, the same frame is also needed split by 2024 vote class. The block below builds that as <code>frame_class</code>: each cell of <code>frame</code> becomes four rows, one per class (D, R, Other, stay), with the stage-2 counts <code>N_D</code>, <code>N_R</code>, <code>N_Other</code> and <code>N_stay</code> as their <code>N</code>. It prints the adults in each class.</p>
+<p><strong>Table 3.3.</strong> <code>frame_class</code>: adults per 2024 vote class.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>frame_class <span class="ot">&lt;-</span> <span class="fu">melt</span>(sf2, <span class="at">id.vars =</span> <span class="fu">c</span>(<span class="st">"area"</span>, <span class="st">"gender"</span>, <span class="st">"ethnicity"</span>, <span class="st">"age_bins"</span>, <span class="st">"college_grad"</span>),</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>                    <span class="at">measure.vars =</span> <span class="fu">c</span>(<span class="st">"N_D"</span>, <span class="st">"N_R"</span>, <span class="st">"N_Other"</span>, <span class="st">"N_stay"</span>),</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>                    <span class="at">variable.name =</span> <span class="st">"vote2024"</span>, <span class="at">value.name =</span> <span class="st">"N"</span>)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>frame_class[, vote2024 <span class="sc">:</span><span class="er">=</span> <span class="fu">sub</span>(<span class="st">"^N_"</span>, <span class="st">""</span>, <span class="fu">as.character</span>(vote2024))]</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>frame_class <span class="ot">&lt;-</span> frame_class[N <span class="sc">&gt;</span> <span class="dv">0</span>, .(<span class="at">N =</span> <span class="fu">sum</span>(N)), by <span class="ot">=</span> .(<span class="at">cd =</span> area, gender, ethnicity, age_bins, college_grad, vote2024)]</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>frame_class[, .(<span class="at">adults =</span> <span class="fu">round</span>(<span class="fu">sum</span>(N))), by <span class="ot">=</span> vote2024]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">vote2024</th>
+<th style="text-align: right;">adults</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">D</td>
+<td style="text-align: right;">2533703</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">R</td>
+<td style="text-align: right;">3180121</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Other</td>
+<td style="text-align: right;">51202</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">stay</td>
+<td style="text-align: right;">3166225</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p>The benchmark is the certified 2024 result by district, from the same file as Notebook 1, Section 3. The block below loads it as <code>cert</code> (one row per district, with Harris’s two-party share in <code>certified</code>) and computes the statewide share from the county returns (<code>state_certified</code>, 44.3%). It prints nothing; both appear in Tables 3.5 and 3.8.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>cert <span class="ot">&lt;-</span> <span class="fu">fread</span>(<span class="fu">file.path</span>(DATA, <span class="st">"predictor_cd119_2024.csv"</span>),</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>              <span class="at">colClasses =</span> <span class="fu">list</span>(<span class="at">character =</span> <span class="st">"CD119"</span>))[state <span class="sc">==</span> <span class="st">"OH"</span>]</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>cert <span class="ot">&lt;-</span> cert[, .(<span class="at">cd =</span> <span class="fu">paste0</span>(<span class="st">"OH-"</span>, CD119), <span class="at">certified =</span> votes_D <span class="sc">/</span> (votes_D <span class="sc">+</span> votes_R))]</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>state_certified <span class="ot">&lt;-</span> <span class="fu">fread</span>(<span class="fu">file.path</span>(DATA, <span class="st">"oh_county_certified_2024.csv"</span>))[, <span class="fu">sum</span>(sD <span class="sc">*</span> votes) <span class="sc">/</span> <span class="fu">sum</span>((sD <span class="sc">+</span> sR) <span class="sc">*</span> votes)]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<hr>
+</section>
+<section id="the-starting-point-a-weighted-average" class="level2">
+<h2 class="anchored" data-anchor-id="the-starting-point-a-weighted-average">2. The starting point: a weighted average</h2>
+<p>Notebook 2 averaged the twins with their rake weights. That is a fair statewide number, since the weights make the 400 match the frame’s margins. It is a poor district number, because 400 twins spread over 15 districts leaves about 27 a district.</p>
+<p>The block below repeats that average. <code>voters</code> keeps the twins whose class is D or R; <code>harris_2p</code> is each one’s Harris share of its own Harris + Trump probability. <code>raw_state</code> is the weighted average for Ohio, and <code>raw_cd</code> the same average for each district. It prints the five districts with the fewest twins.</p>
+<p><strong>Table 3.4.</strong> The weighted average by district (<code>raw</code>), for the five districts with the fewest twins.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>voters <span class="ot">&lt;-</span> iv[vote2024 <span class="sc">!=</span> <span class="st">"stay"</span>]</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>voters[, harris_2p <span class="sc">:</span><span class="er">=</span> harris <span class="sc">/</span> (harris <span class="sc">+</span> trump)]</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>raw_state <span class="ot">&lt;-</span> voters[, <span class="fu">sum</span>(weight <span class="sc">*</span> harris_2p) <span class="sc">/</span> <span class="fu">sum</span>(weight)]</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>raw_cd <span class="ot">&lt;-</span> voters[, .(<span class="at">twins =</span> .N, <span class="at">raw =</span> <span class="fu">sum</span>(weight <span class="sc">*</span> harris_2p) <span class="sc">/</span> <span class="fu">sum</span>(weight)), by <span class="ot">=</span> cd]</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>raw_cd[<span class="fu">order</span>(twins)][<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">cd</th>
+<th style="text-align: right;">twins</th>
+<th style="text-align: right;">raw</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">OH-11</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">0.7417537</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">OH-02</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">0.2887492</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">OH-03</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">0.6067182</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">OH-15</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">0.4461607</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">OH-05</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">0.3545532</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p>Look at the <code>twins</code> column of Table 3.4: OH-11 rests on 14 voting twins, and the others on 16 or 17. A district estimate from so few people is noisy.</p>
+<hr>
+</section>
+<section id="model-a-census-mrp" class="level2">
+<h2 class="anchored" data-anchor-id="model-a-census-mrp">3. Model A: census MrP</h2>
+<p>The outcome is each twin’s Harris probability among 2024 voters. The probability comes from the interview in Notebook 2: each twin answered with probabilities rather than a choice, so it enters the model as a fractional Harris vote and a fractional Trump vote. In practice every twin enters <strong>twice</strong>: once as a Harris vote with weight <em>p</em>, once as a Trump vote with weight 1 − <em>p</em>. A logistic model fitted to these rows estimates the same thing as a model of the probabilities themselves. <code>glmer</code> warns about non-integer weights, which is expected here.</p>
+<p>Model A is the textbook MrP: it uses only what the census knows about people.</p>
+<ul>
+<li><strong>Fixed effects</strong> for the two-level variables, sex and degree.</li>
+<li><strong>Random intercepts</strong> for age, ethnicity and district. A district with few twins is pulled towards the state average; one with more is left closer to its own data. This partial pooling is the “multilevel” in MrP.</li>
+</ul>
+<p>The block below prints nothing. It defines <code>stack()</code>, which makes the two rows per twin (<code>y = 1</code> weighted by <em>p</em>, <code>y = 0</code> weighted by 1 − <em>p</em>), applies it to <code>voters</code> to build the model’s data, <code>s24</code>, and defines <code>fit()</code>, the one call that fits every model in this notebook.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>stack <span class="ot">&lt;-</span> <span class="cf">function</span>(d, p, <span class="at">w =</span> <span class="fu">rep</span>(<span class="dv">1</span>, <span class="fu">nrow</span>(d))) {</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  keep <span class="ot">&lt;-</span> d[, .(cd, gender, ethnicity, age_bins, college_grad, vote2024)]</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rbind</span>(<span class="fu">cbind</span>(keep, <span class="at">y =</span> <span class="dv">1</span>L, <span class="at">wt =</span> p <span class="sc">*</span> w), <span class="fu">cbind</span>(keep, <span class="at">y =</span> <span class="dv">0</span>L, <span class="at">wt =</span> (<span class="dv">1</span> <span class="sc">-</span> p) <span class="sc">*</span> w))</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>s24 <span class="ot">&lt;-</span> <span class="fu">stack</span>(voters, voters<span class="sc">$</span>harris_2p)</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co"># one fitting call for every model in this notebook; nAGQ = 0 is the fast, robust approximation</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>fit <span class="ot">&lt;-</span> <span class="cf">function</span>(f, d) <span class="fu">suppressWarnings</span>(<span class="fu">glmer</span>(f, <span class="at">data =</span> d, <span class="at">weights =</span> wt, <span class="at">family =</span> binomial, <span class="at">nAGQ =</span> <span class="dv">0</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>The next block fits Model A as <code>m_a</code>, prints how long it took, and prints the standard deviation of each random intercept.</p>
+<p><strong>Table 3.5.</strong> Model A: the random-intercept standard deviations (<code>Std.Dev.</code>), one per grouping.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>t0 <span class="ot">&lt;-</span> <span class="fu">Sys.time</span>()</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>m_a <span class="ot">&lt;-</span> <span class="fu">fit</span>(y <span class="sc">~</span> gender <span class="sc">+</span> college_grad <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> age_bins) <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> ethnicity) <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> cd), s24)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">sprintf</span>(<span class="st">"fitted in %.1f s</span><span class="sc">\n</span><span class="st">"</span>, <span class="fu">as.numeric</span>(<span class="fu">difftime</span>(<span class="fu">Sys.time</span>(), t0, <span class="at">units =</span> <span class="st">"secs"</span>))))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>fitted in 0.4 s</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">VarCorr</span>(m_a)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> Groups    Name        Std.Dev.
+ cd        (Intercept) 0.0000  
+ age_bins  (Intercept) 0.0000  
+ ethnicity (Intercept) 1.0644  </code></pre>
+</div>
+</div>
+<p>The random-effect standard deviations say how much each grouping matters once the others are held fixed. Look at the <code>cd</code> (district) row of Table 3.5: its standard deviation is 0. The model found no district differences worth keeping.</p>
+<section id="post-stratify" class="level3">
+<h3 class="anchored" data-anchor-id="post-stratify">Post-stratify</h3>
+<p>Predict every frame cell, including cells no twin sits in (<code>allow.new.levels</code> gives them the average for that group). Then weight each cell by its <strong>2024 voters</strong>, and add up.</p>
+<p>The block below does exactly that and prints nothing. It adds Model A’s predicted Harris share to every row of <code>frame</code> (column <code>p_a</code>), then averages <code>p_a</code> weighted by <code>voters_2024</code>: by district into <code>a_cd</code>, and for Ohio into <code>a_state</code>. Both appear in the tables below.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>frame[, p_a <span class="sc">:</span><span class="er">=</span> <span class="fu">predict</span>(m_a, <span class="at">newdata =</span> frame, <span class="at">type =</span> <span class="st">"response"</span>, <span class="at">allow.new.levels =</span> <span class="cn">TRUE</span>)]</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>a_cd <span class="ot">&lt;-</span> frame[, .(<span class="at">model_a =</span> <span class="fu">sum</span>(voters_2024 <span class="sc">*</span> p_a) <span class="sc">/</span> <span class="fu">sum</span>(voters_2024)), by <span class="ot">=</span> cd]</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>a_state <span class="ot">&lt;-</span> frame[, <span class="fu">sum</span>(voters_2024 <span class="sc">*</span> p_a) <span class="sc">/</span> <span class="fu">sum</span>(voters_2024)]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<hr>
+</section>
+</section>
+<section id="validate-model-a-district-by-district" class="level2">
+<h2 class="anchored" data-anchor-id="validate-model-a-district-by-district">4. Validate Model A, district by district</h2>
+<p>The block below joins <code>cert</code>, <code>raw_cd</code> and <code>a_cd</code> into one table, <code>v</code>, one row per district, and prints it in percent. It then summarises each estimate’s error across the 15 districts as a root mean squared error (RMSE), in points: the typical size of a district’s miss.</p>
+<p><strong>Table 3.6.</strong> For each district: the <strong>certified</strong> Harris share, the plain <strong>weighted average</strong> (Section 2), and <strong>Model A</strong>, all in percent.</p>
+<p><strong>Table 3.7.</strong> The error of each estimate across the 15 districts (RMSE, in points).</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>v <span class="ot">&lt;-</span> <span class="fu">Reduce</span>(<span class="cf">function</span>(a, b) <span class="fu">merge</span>(a, b, <span class="at">by =</span> <span class="st">"cd"</span>), <span class="fu">list</span>(cert, raw_cd, a_cd))</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>v[<span class="fu">order</span>(cd), .(cd, twins, <span class="at">certified =</span> <span class="fu">round</span>(<span class="dv">100</span> <span class="sc">*</span> certified, <span class="dv">1</span>), <span class="at">weighted_avg =</span> <span class="fu">round</span>(<span class="dv">100</span> <span class="sc">*</span> raw, <span class="dv">1</span>),</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>               <span class="at">model_a =</span> <span class="fu">round</span>(<span class="dv">100</span> <span class="sc">*</span> model_a, <span class="dv">1</span>))]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">cd</th>
+<th style="text-align: right;">twins</th>
+<th style="text-align: right;">certified</th>
+<th style="text-align: right;">weighted_avg</th>
+<th style="text-align: right;">model_a</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">OH-01</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">53.2</td>
+<td style="text-align: right;">54.9</td>
+<td style="text-align: right;">50.5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">OH-02</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">26.0</td>
+<td style="text-align: right;">28.9</td>
+<td style="text-align: right;">39.9</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">OH-03</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">70.3</td>
+<td style="text-align: right;">60.7</td>
+<td style="text-align: right;">53.5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">OH-04</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">31.5</td>
+<td style="text-align: right;">37.2</td>
+<td style="text-align: right;">41.7</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">OH-05</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">35.2</td>
+<td style="text-align: right;">35.5</td>
+<td style="text-align: right;">41.8</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">OH-06</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">33.0</td>
+<td style="text-align: right;">36.9</td>
+<td style="text-align: right;">41.1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">OH-07</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">44.6</td>
+<td style="text-align: right;">41.8</td>
+<td style="text-align: right;">44.2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">OH-08</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">38.0</td>
+<td style="text-align: right;">40.9</td>
+<td style="text-align: right;">45.1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">OH-09</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">46.6</td>
+<td style="text-align: right;">50.6</td>
+<td style="text-align: right;">44.4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">OH-10</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">47.1</td>
+<td style="text-align: right;">47.9</td>
+<td style="text-align: right;">46.9</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">OH-11</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">77.7</td>
+<td style="text-align: right;">74.2</td>
+<td style="text-align: right;">58.7</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">OH-12</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">33.5</td>
+<td style="text-align: right;">38.7</td>
+<td style="text-align: right;">41.5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">OH-13</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">50.0</td>
+<td style="text-align: right;">52.7</td>
+<td style="text-align: right;">45.6</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">OH-14</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">41.0</td>
+<td style="text-align: right;">48.1</td>
+<td style="text-align: right;">42.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">OH-15</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">45.4</td>
+<td style="text-align: right;">44.6</td>
+<td style="text-align: right;">46.0</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>v[, .(<span class="at">rmse_weighted_avg =</span> <span class="fu">sqrt</span>(<span class="fu">mean</span>((<span class="dv">100</span> <span class="sc">*</span> (raw <span class="sc">-</span> certified))<span class="sc">^</span><span class="dv">2</span>)),</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>      <span class="at">rmse_model_a      =</span> <span class="fu">sqrt</span>(<span class="fu">mean</span>((<span class="dv">100</span> <span class="sc">*</span> (model_a <span class="sc">-</span> certified))<span class="sc">^</span><span class="dv">2</span>)))]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: right;">rmse_weighted_avg</th>
+<th style="text-align: right;">rmse_model_a</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">4.352239</td>
+<td style="text-align: right;">8.939417</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p>Model A pulls every district towards the middle, and it does <em>worse</em> than the plain weighted average: its RMSE in Table 3.7 is about twice the weighted average’s. In Table 3.6, the strongly Democratic districts around Columbus and Cleveland come out far too low (OH-03: certified 70.3, Model A 53.5; OH-11: 77.7 against 58.7), and the most Republican ones too high (OH-02: 26.0 against 39.9).</p>
+<p>The reason is that Ohio’s districts differ <strong>politically</strong>, not just demographically. Two white, non-graduate 50-year-olds in OH-11 and OH-06 vote differently, and the census cell cannot tell them apart. The district intercept could in principle pick that up, but with about 27 twins a district it is shrunk to zero (Table 3.5). Census MrP normally rescues this with a <strong>district-level predictor</strong>, such as the previous election’s result.</p>
+<p><strong>Exercise 4.1.</strong> Which districts does Model A move furthest from the weighted average, and are they the ones with the fewest twins? Write a block that computes each district’s shift in <code>v</code> (Model A minus the weighted average, <code>model_a - raw</code>, in points) and prints the five largest with their <code>twins</code>.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># your code here</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<hr>
+</section>
+<section id="model-b-put-the-vote-class-back" class="level2">
+<h2 class="anchored" data-anchor-id="model-b-put-the-vote-class-back">5. Model B: put the vote class back</h2>
+<p>Your frame already knows each cell’s 2024 politics. Stage 2 (Notebook 1, Section 2) split every cell into D, R, other and stay-home, raked to the certified result. Every twin carries its class, and the donor was matched on it. Model B adds the class as a predictor and post-stratifies over <strong>cell × vote class</strong>, using the stage-2 counts.</p>
+<p>Be clear about the mechanism before you look at the result. The new predictor is the 2024 vote class of the twin’s cell, which was raked to the certified result. The outcome is the twin’s own 2024 answer, and the twin’s donor was chosen to share that same class. So the model regresses the twins’ 2024 answers on a variable those answers were built to follow. A strong fit is guaranteed by construction.</p>
+<p>The block below fits Model B as <code>m_b</code>: Model A plus the vote class as a fixed effect. It prints the fixed effects.</p>
+<p><strong>Table 3.8.</strong> Model B: fixed effects, on the log-odds scale.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>m_b <span class="ot">&lt;-</span> <span class="fu">fit</span>(y <span class="sc">~</span> gender <span class="sc">+</span> college_grad <span class="sc">+</span> vote2024 <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> age_bins) <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> ethnicity) <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> cd), s24)</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">fixef</span>(m_b)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                     (Intercept)                          genderM 
+                       1.8718986                       -0.2068337 
+college_gradHas a College Degree                        vote2024R 
+                       0.3647604                       -3.7996738 </code></pre>
+</div>
+</div>
+<p>In Table 3.8, <code>vote2024R</code> is by far the largest effect: being in an R cell rather than a D cell lowers the log-odds of a Harris answer by about 3.8.</p>
+<p>The two-party share is about D and R voters only, so post-stratification uses the D and R cells of the stage-2 frame. Third-party voters count for neither.</p>
+<p>The block below keeps the D and R rows of <code>frame_class</code> as <code>dr</code>, adds Model B’s prediction to each (<code>p_b</code>), and averages it weighted by the cell’s <code>N</code>: by district into <code>b_cd</code>, and for Ohio into <code>b_state</code>. It adds Model B to <code>v</code> and prints two tables.</p>
+<p><strong>Table 3.9.</strong> District error of all three estimates (RMSE, in points), and the correlation between Model B and the certified result (<code>r_model_b</code>).</p>
+<p><strong>Table 3.10.</strong> Statewide Harris share from each estimate, against the certified result, in percent.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>dr <span class="ot">&lt;-</span> frame_class[vote2024 <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"D"</span>, <span class="st">"R"</span>)]</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>dr[, p_b <span class="sc">:</span><span class="er">=</span> <span class="fu">predict</span>(m_b, <span class="at">newdata =</span> dr, <span class="at">type =</span> <span class="st">"response"</span>, <span class="at">allow.new.levels =</span> <span class="cn">TRUE</span>)]</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>b_cd <span class="ot">&lt;-</span> dr[, .(<span class="at">model_b =</span> <span class="fu">sum</span>(N <span class="sc">*</span> p_b) <span class="sc">/</span> <span class="fu">sum</span>(N)), by <span class="ot">=</span> cd]</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>b_state <span class="ot">&lt;-</span> dr[, <span class="fu">sum</span>(N <span class="sc">*</span> p_b) <span class="sc">/</span> <span class="fu">sum</span>(N)]</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>v <span class="ot">&lt;-</span> <span class="fu">merge</span>(v, b_cd, <span class="at">by =</span> <span class="st">"cd"</span>)</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>v[, .(<span class="at">rmse_weighted_avg =</span> <span class="fu">sqrt</span>(<span class="fu">mean</span>((<span class="dv">100</span> <span class="sc">*</span> (raw <span class="sc">-</span> certified))<span class="sc">^</span><span class="dv">2</span>)),</span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>      <span class="at">rmse_model_a      =</span> <span class="fu">sqrt</span>(<span class="fu">mean</span>((<span class="dv">100</span> <span class="sc">*</span> (model_a <span class="sc">-</span> certified))<span class="sc">^</span><span class="dv">2</span>)),</span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>      <span class="at">rmse_model_b      =</span> <span class="fu">sqrt</span>(<span class="fu">mean</span>((<span class="dv">100</span> <span class="sc">*</span> (model_b <span class="sc">-</span> certified))<span class="sc">^</span><span class="dv">2</span>)),</span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>      <span class="at">r_model_b         =</span> <span class="fu">cor</span>(model_b, certified))]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: right;">rmse_weighted_avg</th>
+<th style="text-align: right;">rmse_model_a</th>
+<th style="text-align: right;">rmse_model_b</th>
+<th style="text-align: right;">r_model_b</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">4.352239</td>
+<td style="text-align: right;">8.939417</td>
+<td style="text-align: right;">3.583824</td>
+<td style="text-align: right;">0.9997924</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data.table</span>(<span class="at">estimate =</span> <span class="fu">c</span>(<span class="st">"weighted average (Notebook 2)"</span>, <span class="st">"Model A: census MrP"</span>, <span class="st">"Model B: stage-2 frame"</span>, <span class="st">"certified"</span>),</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>           <span class="at">harris_2p =</span> <span class="fu">round</span>(<span class="dv">100</span> <span class="sc">*</span> <span class="fu">c</span>(raw_state, a_state, b_state, state_certified), <span class="dv">1</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">estimate</th>
+<th style="text-align: right;">harris_2p</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">weighted average (Notebook 2)</td>
+<td style="text-align: right;">45.9</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Model A: census MrP</td>
+<td style="text-align: right;">45.3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Model B: stage-2 frame</td>
+<td style="text-align: right;">45.8</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">certified</td>
+<td style="text-align: right;">44.3</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p>In Table 3.9, Model B has the smallest district error of the three and a correlation with the certified result of almost 1. In Table 3.10 all three statewide estimates sit one to two points above the certified 44.3.</p>
+<p>The last block plots all three estimates against the certified result, one point per district and estimate, saves the plot to <code>figures/</code>, and shows it.</p>
+<p><strong>Figure 3.2.</strong> Your 400 twins against the certified 2024 result, by district: weighted average (grey), Model A (red), Model B (blue, labelled by district).</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>long <span class="ot">&lt;-</span> <span class="fu">melt</span>(v, <span class="at">id.vars =</span> <span class="fu">c</span>(<span class="st">"cd"</span>, <span class="st">"certified"</span>, <span class="st">"twins"</span>), <span class="at">measure.vars =</span> <span class="fu">c</span>(<span class="st">"raw"</span>, <span class="st">"model_a"</span>, <span class="st">"model_b"</span>),</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>             <span class="at">variable.name =</span> <span class="st">"estimate"</span>, <span class="at">value.name =</span> <span class="st">"twins_2p"</span>)</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>long[, estimate <span class="sc">:</span><span class="er">=</span> <span class="fu">factor</span>(estimate, <span class="fu">c</span>(<span class="st">"raw"</span>, <span class="st">"model_a"</span>, <span class="st">"model_b"</span>),</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>                          <span class="fu">c</span>(<span class="st">"Weighted average"</span>, <span class="st">"Model A: census MrP"</span>, <span class="st">"Model B: stage-2 frame"</span>))]</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>p_mrp <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(long, <span class="fu">aes</span>(<span class="dv">100</span> <span class="sc">*</span> certified, <span class="dv">100</span> <span class="sc">*</span> twins_2p, <span class="at">colour =</span> estimate)) <span class="sc">+</span></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_abline</span>(<span class="at">slope =</span> <span class="dv">1</span>, <span class="at">intercept =</span> <span class="dv">0</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">colour =</span> <span class="st">"grey50"</span>) <span class="sc">+</span></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="fl">2.6</span>) <span class="sc">+</span></span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="at">data =</span> long[estimate <span class="sc">==</span> <span class="st">"Model B: stage-2 frame"</span>], <span class="fu">aes</span>(<span class="at">label =</span> <span class="fu">sub</span>(<span class="st">"OH-"</span>, <span class="st">""</span>, cd)),</span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>            <span class="at">nudge_y =</span> <span class="fl">1.8</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">colour =</span> <span class="st">"grey30"</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_colour_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"Weighted average"</span> <span class="ot">=</span> <span class="st">"grey65"</span>, <span class="st">"Model A: census MrP"</span> <span class="ot">=</span> <span class="st">"#c0504d"</span>,</span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a>                                 <span class="st">"Model B: stage-2 frame"</span> <span class="ot">=</span> <span class="st">"#2c6e9e"</span>)) <span class="sc">+</span></span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Certified Harris share, two-party (%)"</span>, <span class="at">y =</span> <span class="st">"Twins' Harris share, two-party (%)"</span>,</span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a>       <span class="at">colour =</span> <span class="cn">NULL</span>, <span class="at">title =</span> <span class="st">"Your 400 twins against the certified 2024 result, by district"</span>,</span>
+<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a>       <span class="at">subtitle =</span> <span class="st">"Each point is one of Ohio's 15 districts"</span>) <span class="sc">+</span></span>
+<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_equal</span>() <span class="sc">+</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">12</span>) <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>)</span>
+<span id="cb22-16"><a href="#cb22-16" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="fu">file.path</span>(<span class="st">".."</span>, <span class="st">"figures"</span>, <span class="st">"oh_mrp_vs_certified.png"</span>), p_mrp, <span class="at">width =</span> <span class="dv">8</span>, <span class="at">height =</span> <span class="dv">6</span>, <span class="at">dpi =</span> <span class="dv">200</span>)</span>
+<span id="cb22-17"><a href="#cb22-17" aria-hidden="true" tabindex="-1"></a>p_mrp</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="03_mrp_and_validation_files/figure-html/validate-plot-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>In Figure 3.2, the blue points (Model B) sit close to the dashed line, and the red points (Model A) are squeezed towards the middle.</p>
+<blockquote class="blockquote">
+<p><strong>Discussion: why Model B’s success is not evidence.</strong> Model B lands close to the certified result. Now trace what went in, step by step:</p>
+<ol type="1">
+<li>each cell’s D and R counts were <strong>raked to that very result</strong> (Notebook 1, Section 2);</li>
+<li>each twin’s donor was <strong>matched on the class</strong> of its cell (Notebook 2, Section 3);</li>
+<li>so the donated attitudes the model read were chosen to fit that class, and the model gave the class back almost every time (Notebook 2, Table 2.12);</li>
+<li>Model B then weights those answers by the same raked class counts.</li>
+</ol>
+<p>Recovering 2024 therefore tests whether the pipeline <strong>kept what it was given</strong>. It says nothing about whether the twins can read an election. That is worth knowing, since a pipeline that lost its inputs would be broken, but it is a check on the plumbing. A recovery within a point or two is the pipeline working as designed.</p>
+<p>Evidence that twins can read an election needs an election that is in <strong>no part</strong> of the pipeline: not in the frame, the rake, the donors or the persona. If the twins get that one right, the calibration cannot be the reason. Section 7 has one: New Jersey, November 2025.</p>
+</blockquote>
+<hr>
+</section>
+<section id="the-2026-senate-race" class="level2">
+<h2 class="anchored" data-anchor-id="the-2026-senate-race">6. The 2026 Senate race</h2>
+<p>For 2026, Model B’s structure is the useful one. It asks how each 2024 class, within each census cell, votes in 2026, and weights the cells by the frame’s class counts. It needs two models, because who turns out is not given:</p>
+<ul>
+<li>a <strong>turnout</strong> model, fitted on every twin (the probability of voting at all);</li>
+<li>a <strong>vote</strong> model on Brown’s two-party share, with each twin weighted by its own probability of voting.</li>
+</ul>
+<p>Your twins have no third-party class, so the vote class enters as a random intercept. The frame’s small “Other” class (51,202 adults in Table 3.3, about 0.6% of Ohio) then gets the average.</p>
+<p>The block below prints nothing. It adds two columns to <code>iv</code>: <code>turnout</code> (one minus the <code>no_vote</code> probability) and <code>brown_2p</code> (Brown’s share of the Brown + Husted probability). It fits the turnout model (<code>m_turn</code>) and the vote model (<code>m_vote</code>), and adds both predictions to every row of <code>frame_class</code> (<code>p_turn</code>, <code>p_brown</code>). <code>brown_state</code> is Brown’s share among expected voters in Ohio, and <code>turnout_state</code> the expected turnout among adults.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>iv[, <span class="st">`</span><span class="at">:=</span><span class="st">`</span>(<span class="at">turnout =</span> <span class="dv">1</span> <span class="sc">-</span> no_vote, <span class="at">brown_2p =</span> dem <span class="sc">/</span> (dem <span class="sc">+</span> rep))]</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>f26 <span class="ot">&lt;-</span> y <span class="sc">~</span> gender <span class="sc">+</span> college_grad <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> vote2024) <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> age_bins) <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> ethnicity) <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> cd)</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>m_turn <span class="ot">&lt;-</span> <span class="fu">fit</span>(f26, <span class="fu">stack</span>(iv, iv<span class="sc">$</span>turnout))</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>m_vote <span class="ot">&lt;-</span> <span class="fu">fit</span>(f26, <span class="fu">stack</span>(iv, iv<span class="sc">$</span>brown_2p, iv<span class="sc">$</span>turnout))</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>frame_class[, <span class="st">`</span><span class="at">:=</span><span class="st">`</span>(<span class="at">p_turn  =</span> <span class="fu">predict</span>(m_turn, <span class="at">newdata =</span> frame_class, <span class="at">type =</span> <span class="st">"response"</span>, <span class="at">allow.new.levels =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>                   <span class="at">p_brown =</span> <span class="fu">predict</span>(m_vote, <span class="at">newdata =</span> frame_class, <span class="at">type =</span> <span class="st">"response"</span>, <span class="at">allow.new.levels =</span> <span class="cn">TRUE</span>))]</span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>brown_state   <span class="ot">&lt;-</span> frame_class[, <span class="fu">sum</span>(N <span class="sc">*</span> p_turn <span class="sc">*</span> p_brown) <span class="sc">/</span> <span class="fu">sum</span>(N <span class="sc">*</span> p_turn)]</span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>turnout_state <span class="ot">&lt;-</span> frame_class[, <span class="fu">sum</span>(N <span class="sc">*</span> p_turn) <span class="sc">/</span> <span class="fu">sum</span>(N)]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>The next block puts your twins’ Brown share beside three comparisons: the project’s panel (its Ohio row in <code>benchmark_ohio.csv</code>; Section 7 shows all twelve panels); the RealClearPolitics polling average of 8–9 September 2026 (Brown 48.8, Husted 45.5); and, as a baseline, Harris’s certified 2024 share. It then prints the turnout your twins imply.</p>
+<p><strong>Table 3.11.</strong> Brown’s share of the two-party vote in 2026, in percent, from four sources; then the turnout your twins imply.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># RealClearPolitics average of 8–9 September 2026, Brown 48.8 / Husted 45.5</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>POLL_BROWN_2P <span class="ot">&lt;-</span> <span class="fl">48.8</span> <span class="sc">/</span> (<span class="fl">48.8</span> <span class="sc">+</span> <span class="fl">45.5</span>)</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>bench <span class="ot">&lt;-</span> <span class="fu">fread</span>(<span class="fu">file.path</span>(DATA, <span class="st">"benchmark_ohio.csv"</span>))[panel <span class="sc">==</span> <span class="st">"oh_statewide"</span>]</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a><span class="fu">data.table</span>(</span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">source   =</span> <span class="fu">c</span>(<span class="st">"Your twins, MrP"</span>, <span class="st">"Talking to Machines panel, 4,000 registrants"</span>, <span class="st">"RCP polling average"</span>,</span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>               <span class="st">"2024 baseline: certified Harris share"</span>),</span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">brown_2p =</span> <span class="fu">round</span>(<span class="dv">100</span> <span class="sc">*</span> <span class="fu">c</span>(brown_state, bench<span class="sc">$</span>dem_2p_2026_llm <span class="sc">/</span> <span class="dv">100</span>, POLL_BROWN_2P, state_certified), <span class="dv">1</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">source</th>
+<th style="text-align: right;">brown_2p</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Your twins, MrP</td>
+<td style="text-align: right;">47.3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Talking to Machines panel, 4,000 registrants</td>
+<td style="text-align: right;">46.6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">RCP polling average</td>
+<td style="text-align: right;">51.7</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2024 baseline: certified Harris share</td>
+<td style="text-align: right;">44.3</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">sprintf</span>(<span class="st">"Turnout implied by your twins: %.1f%% of adults</span><span class="sc">\n</span><span class="st">"</span>, <span class="dv">100</span> <span class="sc">*</span> turnout_state))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Turnout implied by your twins: 66.2% of adults</code></pre>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>Discussion.</strong> In Table 3.11, the project’s twins give Brown 46.6 (the <code>Talking to Machines panel</code> row) and yours give him 47.3 (<code>Your twins, MrP</code>), both close to the 2024 baseline of 44.3, while the polls give him 51.7 (<code>RCP polling average</code>). The persona carries 2024-era partisanship and issue positions and <strong>nothing about 2026</strong>: no national environment, no incumbency, no campaign, no Sherrod Brown crossover vote. A record-only twin is a <em>stable partisan baseline</em>, not a reading of the current race.</p>
+</blockquote>
+<p><strong>Exercise 6.1.</strong> Brown’s appeal rests on winning some Trump voters. How much crossover do your twins give him? Write a block that adds up <code>frame_class</code> by 2024 class (<code>vote2024</code>) and prints each class’s adults, predicted turnout (<code>p_turn</code>) and predicted Brown share (<code>p_brown</code>), in percent.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># your code here</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<hr>
+</section>
+<section id="what-the-talking-to-machines-panels-show" class="level2">
+<h2 class="anchored" data-anchor-id="what-the-talking-to-machines-panels-show">7. What the Talking to Machines panels show</h2>
+<p>Your panel is 400 synthetic twins. Talking to Machines builds panels of 4,000 real registrants each and interviews every one with the same vote module. Twelve of them are shown here, in six states: Ohio, North Carolina, Pennsylvania, Washington, New York and New Jersey.</p>
+<blockquote class="blockquote">
+<p><strong>Note on the data.</strong> Only the Ohio files are public. The other states’ panel results carry non-commercial terms, so they are not in this repository, and the blocks in this section run only when those files are present. The website version of this notebook shows their output.</p>
+</blockquote>
+<p>The block below loads their results from <code>benchmark_12panels.csv</code> as a table called <code>b</code>, and prints one row per panel. The New Jersey Senate race has no public poll, so its 2026 poll and gap show a dash.</p>
+<p><strong>Table 3.12.</strong> The twelve panels. Each row is a <strong>different panel</strong>: twelve different electorates, statewide or single-district, each compared with its <strong>own</strong> benchmark. They are not twelve versions of the same thing. The first three numeric columns are 2024: the certified Democratic two-party share (<code>harris_certified</code>), the twins’ recall of their own 2024 vote (<code>harris_twins</code>), and the gap. The last three are 2026: the polling average for that race (<code>polls_2026</code>), the twins’ stated intention (<code>twins_2026</code>), and the gap. All figures are in percent.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">fread</span>(<span class="fu">file.path</span>(DATA, <span class="st">"benchmark_12panels.csv"</span>))</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>dash <span class="ot">&lt;-</span> <span class="cf">function</span>(x) <span class="fu">fifelse</span>(<span class="fu">is.na</span>(x), <span class="st">"—"</span>, <span class="fu">formatC</span>(x, <span class="at">format =</span> <span class="st">"f"</span>, <span class="at">digits =</span> <span class="dv">1</span>))   <span class="co"># no poll: shown as a dash, never filled</span></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>b[, .(<span class="at">panel =</span> label, <span class="at">harris_certified =</span> harris_2p_certified, <span class="at">harris_twins =</span> harris_2p_twins, gap_2024,</span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>      <span class="at">polls_2026 =</span> <span class="fu">dash</span>(dem_2p_polls), <span class="at">twins_2026 =</span> dem_2p_2026_llm, <span class="at">gap_2026 =</span> <span class="fu">dash</span>(dem_2p_2026_llm <span class="sc">-</span> dem_2p_polls))]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 20%">
+<col style="width: 15%">
+<col style="width: 10%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 10%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">panel</th>
+<th style="text-align: right;">harris_certified</th>
+<th style="text-align: right;">harris_twins</th>
+<th style="text-align: right;">gap_2024</th>
+<th style="text-align: left;">polls_2026</th>
+<th style="text-align: right;">twins_2026</th>
+<th style="text-align: left;">gap_2026</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">OH Senate</td>
+<td style="text-align: right;">44.3</td>
+<td style="text-align: right;">46.1</td>
+<td style="text-align: right;">1.8</td>
+<td style="text-align: left;">51.7</td>
+<td style="text-align: right;">46.6</td>
+<td style="text-align: left;">-5.1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">OH-07</td>
+<td style="text-align: right;">44.6</td>
+<td style="text-align: right;">45.6</td>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: left;">53.7</td>
+<td style="text-align: right;">42.7</td>
+<td style="text-align: left;">-11.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">OH-09</td>
+<td style="text-align: right;">46.6</td>
+<td style="text-align: right;">47.7</td>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: left;">47.8</td>
+<td style="text-align: right;">48.9</td>
+<td style="text-align: left;">1.1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NC Senate</td>
+<td style="text-align: right;">48.4</td>
+<td style="text-align: right;">47.6</td>
+<td style="text-align: right;">-0.7</td>
+<td style="text-align: left;">54.2</td>
+<td style="text-align: right;">48.6</td>
+<td style="text-align: left;">-5.6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PA Governor</td>
+<td style="text-align: right;">49.1</td>
+<td style="text-align: right;">49.8</td>
+<td style="text-align: right;">0.7</td>
+<td style="text-align: left;">62.4</td>
+<td style="text-align: right;">52.4</td>
+<td style="text-align: left;">-10.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PA-07</td>
+<td style="text-align: right;">48.4</td>
+<td style="text-align: right;">49.1</td>
+<td style="text-align: right;">0.8</td>
+<td style="text-align: left;">52.2</td>
+<td style="text-align: right;">46.5</td>
+<td style="text-align: left;">-5.7</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PA-08</td>
+<td style="text-align: right;">45.7</td>
+<td style="text-align: right;">46.5</td>
+<td style="text-align: right;">0.8</td>
+<td style="text-align: left;">51.1</td>
+<td style="text-align: right;">46.4</td>
+<td style="text-align: left;">-4.7</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PA-10</td>
+<td style="text-align: right;">47.4</td>
+<td style="text-align: right;">47.2</td>
+<td style="text-align: right;">-0.1</td>
+<td style="text-align: left;">50.3</td>
+<td style="text-align: right;">44.1</td>
+<td style="text-align: left;">-6.2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">WA-03</td>
+<td style="text-align: right;">48.3</td>
+<td style="text-align: right;">50.5</td>
+<td style="text-align: right;">2.2</td>
+<td style="text-align: left;">49.0</td>
+<td style="text-align: right;">49.9</td>
+<td style="text-align: left;">0.9</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NY-17</td>
+<td style="text-align: right;">50.3</td>
+<td style="text-align: right;">53.9</td>
+<td style="text-align: right;">3.6</td>
+<td style="text-align: left;">49.5</td>
+<td style="text-align: right;">52.4</td>
+<td style="text-align: left;">2.9</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">NJ Senate</td>
+<td style="text-align: right;">53.0</td>
+<td style="text-align: right;">56.8</td>
+<td style="text-align: right;">3.8</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: right;">59.0</td>
+<td style="text-align: left;">—</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NJ-07</td>
+<td style="text-align: right;">49.4</td>
+<td style="text-align: right;">51.3</td>
+<td style="text-align: right;">1.9</td>
+<td style="text-align: left;">51.8</td>
+<td style="text-align: right;">47.5</td>
+<td style="text-align: left;">-4.3</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p>The first row of Table 3.12, <code>OH Senate</code>, is the project’s panel from Notebook 2, Table 2.13. In the <code>gap_2024</code> column, ten of the twelve panels reproduce the certified 2024 Democratic two-party share to within 2.6 points, and nine to within 2; the largest error is 3.8 points, in New Jersey (<code>NJ Senate</code>). Against 2026 polling the picture is different, and consistently so. Of the eleven panels with a poll, eight have a negative <code>gap_2026</code>, between 4.3 and 11.0 points below the polls, and three sit above them, by 0.9 to 2.9 (<code>OH-09</code>, <code>WA-03</code>, <code>NY-17</code>). The panels recover where the electorate has already been, and read more Republican than the polls about where it is going.</p>
+<p>The next block plots the same table: each panel appears twice, once for 2024 (blue: twins against the certified result) and once for 2026 (red: twins against the polls).</p>
+<p><strong>Figure 3.3.</strong> The twelve panels: 2024 recall and 2026 intention against their benchmarks.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>bl <span class="ot">&lt;-</span> <span class="fu">rbind</span>(b[, .(label, <span class="at">benchmark =</span> harris_2p_certified, <span class="at">twins =</span> harris_2p_twins, <span class="at">contest =</span> <span class="st">"2024 recall vs certified"</span>)],</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>            b[<span class="sc">!</span><span class="fu">is.na</span>(dem_2p_polls), .(label, <span class="at">benchmark =</span> dem_2p_polls, <span class="at">twins =</span> dem_2p_2026_llm, <span class="at">contest =</span> <span class="st">"2026 intention vs polls"</span>)])</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(bl, <span class="fu">aes</span>(benchmark, twins, <span class="at">colour =</span> contest)) <span class="sc">+</span></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_abline</span>(<span class="at">slope =</span> <span class="dv">1</span>, <span class="at">intercept =</span> <span class="dv">0</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">colour =</span> <span class="st">"grey50"</span>) <span class="sc">+</span></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="fl">2.6</span>) <span class="sc">+</span></span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_colour_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"#2c6e9e"</span>, <span class="st">"#c0504d"</span>)) <span class="sc">+</span></span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Benchmark, Democratic two-party share (%)"</span>, <span class="at">y =</span> <span class="st">"Twins (%)"</span>, <span class="at">colour =</span> <span class="cn">NULL</span>,</span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a>       <span class="at">title =</span> <span class="st">"Twelve Talking to Machines panels: 2024 recall and 2026 intention"</span>,</span>
+<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a>       <span class="at">subtitle =</span> <span class="st">"The 2024 recall sits near the line; the 2026 answer mostly sits below the polls"</span>) <span class="sc">+</span></span>
+<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_equal</span>() <span class="sc">+</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">12</span>) <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="03_mrp_and_validation_files/figure-html/benchmark-plot-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+<section id="a-held-out-election-new-jersey-november-2025" class="level3">
+<h3 class="anchored" data-anchor-id="a-held-out-election-new-jersey-november-2025">A held-out election: New Jersey, November 2025</h3>
+<p>The 2024 result is <em>inside</em> the pipeline. The 4 November 2025 New Jersey governor’s race is in no part of it: not in the frame, the donors or the persona. That makes it the real test.</p>
+<p>The block below loads the test as <code>nj</code>, one row per New Jersey county: the number of twins in the county (<code>n_twins</code>), the certified share for Mikie Sherrill, the Democrat (<code>certified</code>), the twins’ predicted share (<code>twins</code>), and the gap. It prints two summaries across the 21 counties, then plots each county.</p>
+<p><strong>Figure 3.4.</strong> New Jersey 2025 governor, by county: twins against the certified result. Above the plot, <code>r</code> is the correlation between the two, and <code>MAE</code> the average miss in points, each county weighted by its twins.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>nj <span class="ot">&lt;-</span> <span class="fu">fread</span>(<span class="fu">file.path</span>(DATA, <span class="st">"nj2025_holdout_counties.csv"</span>))</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">sprintf</span>(<span class="st">"21 counties: r = %.3f, twin-weighted MAE %.1f points</span><span class="sc">\n</span><span class="st">"</span>,</span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>            nj[, <span class="fu">cor</span>(twins, certified)], nj[, <span class="fu">sum</span>(n_twins <span class="sc">*</span> <span class="fu">abs</span>(gap)) <span class="sc">/</span> <span class="fu">sum</span>(n_twins)]))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>21 counties: r = 0.944, twin-weighted MAE 2.5 points</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(nj, <span class="fu">aes</span>(certified, twins)) <span class="sc">+</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_abline</span>(<span class="at">slope =</span> <span class="dv">1</span>, <span class="at">intercept =</span> <span class="dv">0</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">colour =</span> <span class="st">"grey50"</span>) <span class="sc">+</span></span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">size =</span> n_twins), <span class="at">colour =</span> <span class="st">"#2c6e9e"</span>, <span class="at">alpha =</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> county), <span class="at">nudge_y =</span> <span class="fl">1.8</span>, <span class="at">size =</span> <span class="fl">2.8</span>, <span class="at">colour =</span> <span class="st">"grey30"</span>) <span class="sc">+</span></span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Certified Sherrill share, two-party (%)"</span>, <span class="at">y =</span> <span class="st">"Twins' Sherrill share (%)"</span>, <span class="at">size =</span> <span class="st">"twins"</span>,</span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">title =</span> <span class="st">"New Jersey 2025 governor, by county: an election the twins never saw"</span>) <span class="sc">+</span></span>
+<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_equal</span>() <span class="sc">+</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">12</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="03_mrp_and_validation_files/figure-html/nj-counties-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The geography is right: the counties in Figure 3.4 fall along the line, with a correlation of 0.94, in an election the twins were never calibrated to.</p>
+<p>The statewide level needs its own numbers, which the county file does not give. The block below prints them: five statewide shares for New Jersey, three for the 2025 governor’s race and two for the 2024 presidential race, each with where it comes from.</p>
+<p><strong>Table 3.13.</strong> New Jersey statewide, Democratic two-party share in percent (<code>value_pct</code>): the twins against the certified result, in 2025 and in 2024.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">fread</span>(<span class="fu">file.path</span>(DATA, <span class="st">"nj2025_holdout_headline.csv"</span>))[, .(quantity, election, value_pct, source)]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 6%">
+<col style="width: 3%">
+<col style="width: 75%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">quantity</th>
+<th style="text-align: left;">election</th>
+<th style="text-align: right;">value_pct</th>
+<th style="text-align: left;">source</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">sherrill_share_twins</td>
+<td style="text-align: left;">NJ 2025 governor</td>
+<td style="text-align: right;">57.3</td>
+<td style="text-align: left;">Talking to Machines New Jersey statewide panel (4,000 twins), asked about the 2025 governor’s race</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">sherrill_share_twins_actual_turnout</td>
+<td style="text-align: left;">NJ 2025 governor</td>
+<td style="text-align: right;">56.6</td>
+<td style="text-align: left;">Talking to Machines New Jersey statewide panel (4,000 twins), asked about the 2025 governor’s race</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">sherrill_share_certified</td>
+<td style="text-align: left;">NJ 2025 governor</td>
+<td style="text-align: right;">57.2</td>
+<td style="text-align: left;">New Jersey Division of Elections, official 2025 general election results, governor: https://www.nj.gov/state/elections/assets/pdf/election-results/2025/2025-official-general-results-governor.pdf</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">harris_share_twins</td>
+<td style="text-align: left;">NJ 2024 president</td>
+<td style="text-align: right;">57.2</td>
+<td style="text-align: left;">Talking to Machines New Jersey statewide panel (4,000 twins), the same panel as the 2025 rows, recalling their own 2024 vote</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">harris_share_certified</td>
+<td style="text-align: left;">NJ 2024 president</td>
+<td style="text-align: right;">53.0</td>
+<td style="text-align: left;">New Jersey Division of Elections, official 2024 general election results, president: https://www.nj.gov/state/elections/assets/pdf/election-results/2024/2024-official-general-results-president.pdf</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p>The twins’ 2025 share appears twice in Table 3.13, because a vote share depends on who votes as well as on how they vote. <code>sherrill_share_twins</code> (57.3) counts each twin’s answer in proportion to the chance of voting the twin itself stated in the interview. This is the number the panel gives on its own, before the election. <code>sherrill_share_twins_actual_turnout</code> (56.6) counts only the twins whose registrant did vote in November 2025, according to the voter file, which can only be known afterwards. The second holds turnout at its true value, so it measures vote choice alone. The 0.7 points between them are the twins’ turnout error showing up in the vote share; Table 3.14 below shows that error directly. Both are within a point of the certified result, so the argument that follows holds for either.</p>
+<p>In Table 3.13 the project’s panel gives Sherrill 57.3 (<code>sherrill_share_twins</code>), or 56.6 counting only actual voters, against a certified 57.2 (<code>sherrill_share_certified</code>). That near-hit is <strong>two errors cancelling</strong>, not accuracy. New Jersey is where the panels are weakest on 2024: in Table 3.12, <code>NJ Senate</code> has the largest <code>gap_2024</code> of the twelve, 3.8 points too Democratic, and it is the state where the CES donor pool is thinnest relative to the state’s registered Republicans. Table 3.13 shows the same bias, about 4 points: the twins recall 57.2 for Harris (<code>harris_share_twins</code>) against her certified 53.0 (<code>harris_share_certified</code>). Table 3.13 comes from an earlier draw of the New Jersey panel, which is why its recall differs slightly from Table 3.12. Then the electorate swung about 4 points Democratic in 2025, from Harris’s certified 53.0 to Sherrill’s 57.2. The twins did not move; the electorate moved onto them.</p>
+<p>Turnout is where the twins fail. The block below prints the turnout test.</p>
+<p><strong>Table 3.14.</strong> New Jersey 2025 turnout, twins against the voter file. Each row is a group of New Jersey twins with the same voting record: how many of the five general elections from 2016 to 2024 the file shows them voting in (<code>generals_voted_of_5</code>, from 0 to 5). For each group: the number of twins; the share the twins themselves predicted would vote in November 2025 (<code>twins_predict</code>); the share of the same registrants who actually voted, according to the file (<code>actually_voted</code>); and the difference (<code>error</code>). Shares are in percent.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">fread</span>(<span class="fu">file.path</span>(DATA, <span class="st">"nj2025_holdout_turnout_by_record.csv"</span>))[</span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>  , .(<span class="at">generals_voted_of_5 =</span> grp, <span class="at">twins =</span> n, <span class="at">twins_predict =</span> llm, <span class="at">actually_voted =</span> actual, <span class="at">error =</span> gap)]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: right;">generals_voted_of_5</th>
+<th style="text-align: right;">twins</th>
+<th style="text-align: right;">twins_predict</th>
+<th style="text-align: right;">actually_voted</th>
+<th style="text-align: right;">error</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">792</td>
+<td style="text-align: right;">16.5</td>
+<td style="text-align: right;">10.2</td>
+<td style="text-align: right;">6.3</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">652</td>
+<td style="text-align: right;">55.2</td>
+<td style="text-align: right;">35.0</td>
+<td style="text-align: right;">20.2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">456</td>
+<td style="text-align: right;">66.2</td>
+<td style="text-align: right;">37.7</td>
+<td style="text-align: right;">28.5</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">486</td>
+<td style="text-align: right;">88.5</td>
+<td style="text-align: right;">53.1</td>
+<td style="text-align: right;">35.4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">543</td>
+<td style="text-align: right;">91.4</td>
+<td style="text-align: right;">72.9</td>
+<td style="text-align: right;">18.5</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">1071</td>
+<td style="text-align: right;">93.0</td>
+<td style="text-align: right;">91.6</td>
+<td style="text-align: right;">1.4</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p>Read the <code>error</code> column of Table 3.14 from top to bottom. The two ends are right: people who never vote, and people who always do, are off by 6 points or less. The middle is rounded up to “regular voter”: twins with one to four generals on their record are predicted to vote 18 to 35 points more often than they did. The project’s rule follows from this: <strong>take vote choice from the twin, take turnout from the voter file.</strong></p>
+<hr>
+</section>
+</section>
+<section id="what-to-take-away" class="level2">
+<h2 class="anchored" data-anchor-id="what-to-take-away">What to take away</h2>
+<ol type="1">
+<li><strong>MrP is what turns 400 twins into Ohio</strong>, but only as well as the frame knows what matters. A census-only frame knows demographics. Ohio’s districts differ politically, so census MrP shrinks them together.</li>
+<li><strong>Recovering 2024 is not validation.</strong> The stage-2 frame and the donor match were both calibrated to it, so Model B gets it right largely by construction.</li>
+<li><strong>A record-only twin is a stable partisan baseline.</strong> It does not know the 2026 environment, and the gap to the polls is the size of that environment.</li>
+<li><strong>The structure is real; the level needs care.</strong> Geography holds up on an election the twins never saw. Level accuracy in any one election depends on knowing both the panel’s baseline bias and the swing.</li>
+</ol>
+</section>
+<section id="where-this-comes-from" class="level2">
+<h2 class="anchored" data-anchor-id="where-this-comes-from">Where this comes from</h2>
+<p>The twelve panels and the New Jersey held-out test come from the digital-twin work of <strong>Talking to Machines</strong>, an international collaboration of academics and industry researchers directed by Sonja Vogt (HEC Lausanne) and Ray Duch (Nuffield College, Oxford).</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/talking-to-machines\.github\.io\/llmss-2026-workshops\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../W1_aipop/notebooks/02_personas_and_interview.html" class="pagination-link" aria-label="2. Personas and the digital interview">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">2. Personas and the digital interview</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../W2_twins/notebooks/01_twins_and_interview.html" class="pagination-link" aria-label="1. Finfluencer twins and the daily interview">
+        <span class="nav-page-text">1. Finfluencer twins and the daily interview</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Talking to Machines · LLMSS 2026 pre-conference workshops, City University of Hong Kong, 13 October 2026</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/talking-to-machines/llmss-2026-workshops/blob/main/W1_aipop/notebooks/03_mrp_and_validation.Rmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/talking-to-machines/llmss-2026-workshops/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>Code: MIT · Text and data: CC BY 4.0</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

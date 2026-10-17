@@ -1,0 +1,1293 @@
+interview_date,code,question,twin_id,twin_prob,market_prob,outcome
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_001,0.85,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_002,0.75,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_003,0.95,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_004,0.75,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_005,0.85,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_006,0.7,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_007,0.8,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_008,0.85,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_009,0.65,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_010,0.95,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_011,0.7,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_012,0.6,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_013,0.9,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_014,0.8,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_015,0.75,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_016,0.55,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_017,0.95,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_018,0.8,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_019,0.85,,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_020,0.85,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_021,0.85,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_022,0.5,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_023,0.85,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_024,0.9,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_025,0.8,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_026,0.9,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_027,0.8,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_028,0.85,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_029,0.78,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_030,0.9,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_031,0.95,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_032,0.85,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_033,0.75,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_034,0.75,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_035,0.7,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_036,0.8,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_037,0.8,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_038,0.95,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_039,0.9,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_040,0.9,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_041,0.88,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_042,0.75,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_043,0.95,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_044,0.75,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_045,0.75,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_046,0.9,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_047,0.8,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_048,0.85,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_049,0.9,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_050,0.9,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_051,0.85,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_052,0.9935,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_053,0.95,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_054,0.7,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_055,0.95,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_056,0.95,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_057,0.92,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_058,0.9,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_059,0.6,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_060,0.9,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_061,0.6,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_062,0.75,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_063,0.7,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_064,0.95,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_065,0.99,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_066,0.6,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_067,0.99,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_068,0.9,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_069,0.6,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_070,0.25,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_071,0.7,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_072,0.95,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_073,0.9,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_074,0.85,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_075,0.8,0.9935,1
+2026-04-21,pm01,Fed makes no change at the 29 April 2026 meeting,twin_076,0.85,0.9935,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_001,0.75,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_002,0.7,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_003,0.85,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_004,0.6,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_005,0.75,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_006,0.65,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_007,0.75,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_008,0.8,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_009,0.6,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_010,0.9,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_011,0.65,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_012,0.5,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_013,0.85,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_014,0.75,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_015,0.65,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_016,0.5,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_017,0.9,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_018,0.75,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_019,0.65,,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_020,0.8,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_021,0.78,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_022,0.5,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_023,0.8,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_024,0.85,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_025,0.75,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_026,0.85,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_027,0.7,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_028,0.75,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_029,0.7,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_030,0.85,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_031,0.85,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_032,0.78,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_033,0.65,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_034,0.65,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_035,0.65,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_036,0.7,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_037,0.75,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_038,0.9,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_039,0.8,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_040,0.8,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_041,0.75,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_042,0.7,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_043,0.88,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_044,0.7,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_045,0.65,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_046,0.85,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_047,0.75,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_048,0.8,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_049,0.85,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_050,0.82,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_051,0.8,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_052,0.925,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_053,0.9,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_054,0.65,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_055,0.85,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_056,0.9,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_057,0.88,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_058,0.85,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_059,0.55,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_060,0.85,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_061,0.55,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_062,0.7,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_063,0.6,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_064,0.9,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_065,0.92,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_066,0.55,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_067,0.9,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_068,0.8,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_069,0.55,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_070,0.15,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_071,0.6,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_072,0.85,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_073,0.85,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_074,0.75,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_075,0.75,0.925,1
+2026-04-21,pm02,Fed makes no change at the June 2026 meeting,twin_076,0.75,0.925,1
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_001,0.65,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_002,0.6,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_003,0.75,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_004,0.5,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_005,0.65,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_006,0.6,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_007,0.65,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_008,0.75,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_009,0.5,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_010,0.8,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_011,0.6,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_012,0.35,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_013,0.75,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_014,0.7,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_015,0.55,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_016,0.45,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_017,0.85,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_018,0.65,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_019,0.55,,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_020,0.7,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_021,0.7,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_022,0.5,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_023,0.75,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_024,0.75,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_025,0.6,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_026,0.75,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_027,0.55,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_028,0.65,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_029,0.6,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_030,0.75,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_031,0.75,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_032,0.7,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_033,0.55,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_034,0.55,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_035,0.6,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_036,0.6,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_037,0.65,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_038,0.8,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_039,0.7,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_040,0.75,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_041,0.6,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_042,0.65,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_043,0.75,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_044,0.6,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_045,0.55,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_046,0.75,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_047,0.7,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_048,0.75,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_049,0.75,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_050,0.7,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_051,0.7,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_052,0.795,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_053,0.8,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_054,0.6,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_055,0.7,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_056,0.8,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_057,0.8,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_058,0.75,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_059,0.5,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_060,0.7,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_061,0.5,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_062,0.6,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_063,0.5,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_064,0.8,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_065,0.8,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_066,0.5,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_067,0.8,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_068,0.7,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_069,0.45,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_070,0.1,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_071,0.55,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_072,0.7,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_073,0.75,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_074,0.65,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_075,0.65,0.795,
+2026-04-21,pm03,Fed makes no change at the July 2026 meeting,twin_076,0.65,0.795,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_001,0.4,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_002,0.25,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_003,0.3,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_004,0.25,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_005,0.35,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_006,0.35,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_007,0.45,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_008,0.35,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_009,0.35,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_010,0.4,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_011,0.4,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_012,0.25,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_013,0.4,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_014,0.35,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_015,0.35,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_016,0.35,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_017,0.4,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_018,0.35,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_019,0.25,,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_020,0.35,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_021,0.6,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_022,0.5,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_023,0.35,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_024,0.35,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_025,0.55,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_026,0.4,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_027,0.3,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_028,0.35,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_029,0.35,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_030,0.45,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_031,0.35,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_032,0.5,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_033,0.4,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_034,0.3,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_035,0.4,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_036,0.35,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_037,0.5,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_038,0.25,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_039,0.25,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_040,0.4,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_041,0.35,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_042,0.35,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_043,0.5,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_044,0.4,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_045,0.34,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_046,0.4,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_047,0.4,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_048,0.6,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_049,0.4,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_050,0.3,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_051,0.45,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_052,0.3375,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_053,0.25,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_054,0.3,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_055,0.25,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_056,0.3,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_057,0.4,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_058,0.6,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_059,0.5,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_060,0.4,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_061,0.35,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_062,0.35,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_063,0.25,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_064,0.3,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_065,0.35,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_066,0.35,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_067,0.35,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_068,0.35,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_069,0.35,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_070,0.2,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_071,0.4,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_072,0.35,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_073,0.4,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_074,0.4,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_075,0.55,0.3375,
+2026-04-21,pm04,No Fed rate cuts in 2026,twin_076,0.6,0.3375,
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_001,0.6,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_002,0.65,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_003,0.8,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_004,1,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_005,0.85,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_006,0.4,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_007,0.4,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_008,0.7,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_009,0.5,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_010,0.65,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_011,0.55,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_012,0.65,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_013,0.8,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_014,0.8,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_015,0.6,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_016,0.5,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_017,0.55,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_018,0.5,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_019,0.6,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_020,0.6,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_021,0.85,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_022,0.5,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_023,0.75,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_024,0.85,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_025,0.7,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_026,0.6,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_027,0.65,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_028,0.6,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_029,0.95,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_030,0.7,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_031,0.95,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_032,0.6,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_033,0.6,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_034,0.6,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_035,0.5,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_036,0.55,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_037,0.6,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_038,0.6,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_039,1,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_040,0.5,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_041,0.7,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_042,0.6,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_043,0.7,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_044,0.6,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_045,0.7,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_046,0.6,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_047,0.6,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_048,0.3,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_049,0.75,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_050,0.5,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_051,0.95,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_052,0.99,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_053,0.85,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_054,0.5,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_055,0.8,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_056,0.5,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_057,0.75,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_058,0.7,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_059,0.5,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_060,0.55,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_061,0.5,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_062,0.55,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_063,0.4,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_064,0.85,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_065,0.9,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_066,0.5,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_067,0.9,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_068,0.45,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_069,0.5,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_070,0.3,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_071,0.6,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_072,0.6,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_073,0.6,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_074,0.8,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_075,0.7,,1
+2026-04-21,pm05,Annual CPI inflation 2.8% or higher in the March 2026 release,twin_076,0.8,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_001,0.7,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_002,0.55,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_003,0.75,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_004,1,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_005,0.8,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_006,0.45,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_007,0.35,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_008,0.8,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_009,0.55,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_010,0.6,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_011,0.5,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_012,0.6,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_013,0.75,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_014,0.7,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_015,0.5,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_016,0.55,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_017,0.6,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_018,0.5,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_019,0.6,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_020,0.55,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_021,0.9,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_022,0.5,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_023,0.7,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_024,0.8,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_025,0.6,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_026,0.6,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_027,0.7,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_028,0.55,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_029,0.65,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_030,0.6,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_031,0.9,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_032,0.65,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_033,0.65,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_034,0.5,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_035,0.5,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_036,0.5,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_037,0.55,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_038,0.65,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_039,1,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_040,0.55,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_041,0.65,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_042,0.6,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_043,0.6,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_044,0.7,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_045,0.75,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_046,0.6,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_047,0.4,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_048,0.25,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_049,0.6,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_050,0.55,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_051,0.9,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_052,0.95,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_053,0.8,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_054,0.4,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_055,0.75,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_056,0.45,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_057,0.8,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_058,0.65,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_059,0.5,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_060,0.6,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_061,0.45,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_062,0.6,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_063,0.35,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_064,0.7,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_065,0.85,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_066,0.4,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_067,0.85,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_068,0.4,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_069,0.6,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_070,0.35,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_071,0.55,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_072,0.65,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_073,0.5,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_074,0.6,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_075,0.6,,1
+2026-04-21,pm06,Annual inflation above 3.0% at some point in 2026,twin_076,0.9,,1
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_001,0.25,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_002,0.25,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_003,0.25,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_004,0.45,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_005,0.2,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_006,0.2,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_007,0.25,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_008,0.2,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_009,0.45,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_010,0.25,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_011,0.25,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_012,0.5,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_013,0.15,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_014,0.25,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_015,0.25,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_016,0.25,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_017,0.2,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_018,0.25,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_019,0.3,,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_020,0.25,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_021,0.25,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_022,0.5,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_023,0.2,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_024,0.25,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_025,0.25,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_026,0.3,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_027,0.35,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_028,0.25,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_029,0.22,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_030,0.25,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_031,0.45,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_032,0.25,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_033,0.25,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_034,0.35,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_035,0.3,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_036,0.25,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_037,0.25,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_038,0.3,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_039,0.45,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_040,0.25,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_041,0.3,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_042,0.25,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_043,0.25,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_044,0.3,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_045,0.25,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_046,0.25,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_047,0.25,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_048,0.15,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_049,0.25,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_050,0.25,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_051,0.2,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_052,0.445,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_053,0.2,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_054,0.25,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_055,0.6,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_056,0.25,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_057,0.25,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_058,0.25,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_059,0.4,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_060,0.25,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_061,0.3,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_062,0.25,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_063,0.2,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_064,0.25,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_065,0.3,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_066,0.3,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_067,0.35,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_068,0.25,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_069,0.45,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_070,0.15,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_071,0.3,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_072,0.45,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_073,0.25,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_074,0.45,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_075,0.2,0.445,
+2026-04-21,pm07,Unemployment reaches 5.0% at some point in 2026,twin_076,0.5,0.445,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_001,0.15,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_002,0.15,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_003,0.12,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_004,0.2,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_005,0.1,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_006,0.1,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_007,0.15,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_008,0.1,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_009,0.25,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_010,0.1,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_011,0.15,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_012,0.3,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_013,0.05,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_014,0.15,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_015,0.15,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_016,0.15,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_017,0.1,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_018,0.1,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_019,0.15,,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_020,0.15,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_021,0.15,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_022,0.5,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_023,0.1,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_024,0.1,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_025,0.1,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_026,0.15,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_027,0.2,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_028,0.15,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_029,0.12,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_030,0.15,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_031,0.25,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_032,0.12,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_033,0.15,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_034,0.2,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_035,0.15,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_036,0.15,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_037,0.1,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_038,0.15,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_039,0.29,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_040,0.15,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_041,0.15,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_042,0.15,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_043,0.15,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_044,0.15,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_045,0.15,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_046,0.15,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_047,0.15,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_048,0.08,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_049,0.1,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_050,0.1,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_051,0.1,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_052,0.29,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_053,0.1,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_054,0.15,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_055,0.4,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_056,0.15,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_057,0.15,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_058,0.1,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_059,0.2,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_060,0.15,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_061,0.15,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_062,0.1,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_063,0.1,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_064,0.1,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_065,0.15,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_066,0.15,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_067,0.2,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_068,0.15,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_069,0.25,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_070,0.08,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_071,0.2,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_072,0.25,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_073,0.15,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_074,0.25,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_075,0.1,0.29,
+2026-04-21,pm08,Unemployment reaches 5.5% at some point in 2026,twin_076,0.25,0.29,
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_001,0.05,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_002,0.1,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_003,0.05,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_004,0.05,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_005,0.05,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_006,0.1,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_007,0.05,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_008,0.05,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_009,0.05,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_010,0.05,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_011,0.05,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_012,0.05,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_013,0.1,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_014,0.05,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_015,0.05,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_016,0.06,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_017,0.2,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_018,0.05,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_019,0.05,,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_020,0.05,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_021,0.06,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_022,0.5,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_023,0.05,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_024,0.1,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_025,0.05,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_026,0.05,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_027,0.05,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_028,0.2,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_029,0.06,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_030,0.08,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_031,0.05,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_032,0.05,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_033,0.05,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_034,0.05,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_035,0.05,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_036,0.05,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_037,0.05,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_038,0.05,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_039,0.053,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_040,0.06,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_041,0.05,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_042,0.05,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_043,0.05,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_044,0.05,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_045,0.05,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_046,0.06,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_047,0.08,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_048,0.1,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_049,0.05,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_050,0.08,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_051,0.05,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_052,0.053,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_053,0.05,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_054,0.08,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_055,0.05,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_056,0.05,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_057,0.1,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_058,0.05,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_059,0.1,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_060,0.08,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_061,0.1,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_062,0.1,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_063,0.05,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_064,0.05,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_065,0.05,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_066,0.05,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_067,0.05,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_068,0.05,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_069,0.05,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_070,0.1,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_071,0.1,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_072,0.05,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_073,0.1,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_074,0.06,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_075,0.05,0.053,0
+2026-04-21,pm09,Q1 2026 GDP growth above 3.5% (annualised),twin_076,0.05,0.053,0
+2026-04-21,pm10,Negative GDP growth in 2026,twin_001,0.07,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_002,0.12,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_003,0.07,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_004,0.06,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_005,0.4,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_006,0.06,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_007,0.25,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_008,0.06,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_009,0.5,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_010,0.06,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_011,0.08,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_012,0.25,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_013,0.06,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_014,0.07,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_015,0.06,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_016,0.07,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_017,0.05,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_018,0.25,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_019,0.3,,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_020,0.06,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_021,0.07,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_022,0.5,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_023,0.06,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_024,0.05,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_025,0.08,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_026,0.06,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_027,0.06,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_028,0.1,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_029,0.08,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_030,0.06,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_031,0.06,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_032,0.1,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_033,0.08,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_034,0.08,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_035,0.06,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_036,0.06,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_037,0.08,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_038,0.1,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_039,0.07,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_040,0.08,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_041,0.06,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_042,0.07,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_043,0.06,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_044,0.06,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_045,0.3,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_046,0.07,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_047,0.06,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_048,0.05,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_049,0.08,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_050,0.06,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_051,0.06,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_052,0.066,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_053,0.07,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_054,0.08,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_055,0.65,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_056,0.07,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_057,0.07,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_058,0.1,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_059,0.1,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_060,0.06,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_061,0.07,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_062,0.05,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_063,0.08,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_064,0.07,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_065,0.07,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_066,0.07,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_067,0.07,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_068,0.07,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_069,0.07,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_070,0.12,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_071,0.25,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_072,0.06,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_073,0.06,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_074,0.5,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_075,0.07,0.066,
+2026-04-21,pm10,Negative GDP growth in 2026,twin_076,0.2,0.066,
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_001,0.1,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_002,0.1,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_003,0.15,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_004,0.1,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_005,0.15,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_006,0.1,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_007,0.1,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_008,0.1,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_009,0.1,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_010,0.05,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_011,0.1,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_012,0.2,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_013,0.1,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_014,0.1,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_015,0.15,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_016,0.2,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_017,0.03,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_018,0.1,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_019,0.2,,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_020,0.1,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_021,0.25,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_022,0.5,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_023,0.1,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_024,0.15,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_025,0.15,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_026,0.1,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_027,0.2,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_028,0.05,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_029,0.12,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_030,0.2,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_031,0.2,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_032,0.1,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_033,0.2,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_034,0.1,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_035,0.1,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_036,0.1,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_037,0.1,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_038,0.1,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_039,0.28,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_040,0.15,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_041,0.1,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_042,0.1,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_043,0.1,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_044,0.1,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_045,0.1,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_046,0.1,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_047,0.1,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_048,0.15,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_049,0.1,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_050,0.1,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_051,0.1,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_052,0.275,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_053,0.25,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_054,0.2,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_055,0.2,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_056,0.2,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_057,0.2,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_058,0.05,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_059,0.15,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_060,0.1,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_061,0.1,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_062,0.05,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_063,0.15,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_064,0.1,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_065,0.1,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_066,0.1,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_067,0.25,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_068,0.2,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_069,0.25,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_070,0.1,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_071,0.1,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_072,0.25,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_073,0.1,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_074,0.15,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_075,0.1,0.275,0
+2026-04-21,pm11,Powell leaves the Fed Board by 30 May 2026,twin_076,0.1,0.275,0
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_001,0.12,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_002,0.12,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_003,0.12,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_004,0.12,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_005,0.12,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_006,0.12,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_007,0.12,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_008,0.12,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_009,0.12,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_010,0.12,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_011,0.12,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_012,0.15,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_013,0.08,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_014,0.12,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_015,0.12,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_016,0.12,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_017,0.08,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_018,0.12,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_019,0.12,,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_020,0.12,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_021,0.12,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_022,0.5,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_023,0.12,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_024,0.1,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_025,0.08,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_026,0.1,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_027,0.1,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_028,0.12,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_029,0.1,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_030,0.12,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_031,0.12,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_032,0.12,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_033,0.12,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_034,0.05,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_035,0.12,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_036,0.1,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_037,0.12,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_038,0.12,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_039,0.12,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_040,0.1,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_041,0.12,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_042,0.12,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_043,0.12,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_044,0.12,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_045,0.12,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_046,0.12,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_047,0.12,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_048,0.1,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_049,0.12,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_050,0.12,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_051,0.05,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_052,0.12,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_053,0.12,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_054,0.12,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_055,0.2,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_056,0.12,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_057,0.12,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_058,0.1,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_059,0.12,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_060,0.12,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_061,0.12,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_062,0.05,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_063,0.12,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_064,0.12,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_065,0.12,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_066,0.12,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_067,0.12,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_068,0.12,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_069,0.12,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_070,0.1,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_071,0.12,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_072,0.12,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_073,0.08,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_074,0.12,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_075,0.12,0.12,
+2026-04-21,pm12,Emergency Fed rate cut before the end of 2026,twin_076,0.15,0.12,
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_001,0.1,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_002,0.1,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_003,0.1,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_004,0.1,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_005,0.1,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_006,0.1,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_007,0.1,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_008,0.1,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_009,0.1,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_010,0.1,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_011,0.1,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_012,0.1,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_013,0.1,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_014,0.1,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_015,0.1,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_016,0.1,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_017,0.1,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_018,0.1,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_019,0.1,,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_020,0.1,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_021,0.1,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_022,0.5,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_023,0.1,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_024,0.08,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_025,0.1,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_026,0.1,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_027,0.08,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_028,0.12,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_029,0.08,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_030,0.1,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_031,0.1,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_032,0.1,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_033,0.1,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_034,0.1,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_035,0.1,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_036,0.1,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_037,0.15,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_038,0.1,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_039,0.1,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_040,0.12,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_041,0.1,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_042,0.1,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_043,0.1,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_044,0.1,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_045,0.1,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_046,0.1,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_047,0.1,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_048,0.12,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_049,0.1,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_050,0.12,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_051,0.08,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_052,0.095,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_053,0.1,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_054,0.1,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_055,0.15,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_056,0.1,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_057,0.1,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_058,0.15,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_059,0.2,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_060,0.2,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_061,0.1,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_062,0.1,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_063,0.1,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_064,0.1,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_065,0.1,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_066,0.1,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_067,0.1,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_068,0.1,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_069,0.1,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_070,0.1,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_071,0.15,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_072,0.1,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_073,0.12,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_074,0.1,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_075,0.15,0.095,1
+2026-04-21,pm13,10-year Treasury yield hits 4.4% by 30 April 2026,twin_076,0.12,0.095,1
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_001,0.25,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_002,0.3,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_003,0.3,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_004,0.3,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_005,0.3,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_006,0.2,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_007,0.2,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_008,0.25,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_009,0.25,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_010,0.2,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_011,0.2,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_012,0.35,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_013,0.3,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_014,0.25,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_015,0.3,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_016,0.25,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_017,0.2,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_018,0.2,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_019,0.35,,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_020,0.3,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_021,0.3,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_022,0.5,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_023,0.3,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_024,0.2,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_025,0.4,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_026,0.25,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_027,0.4,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_028,0.25,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_029,0.3,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_030,0.3,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_031,0.3,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_032,0.25,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_033,0.3,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_034,0.35,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_035,0.3,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_036,0.3,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_037,0.35,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_038,0.25,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_039,0.72,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_040,0.3,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_041,0.3,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_042,0.25,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_043,0.2,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_044,0.3,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_045,0.25,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_046,0.2,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_047,0.35,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_048,0.2,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_049,0.3,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_050,0.25,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_051,0.2,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_052,0.72,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_053,0.3,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_054,0.4,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_055,0.35,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_056,0.6,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_057,0.45,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_058,0.4,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_059,0.35,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_060,0.3,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_061,0.3,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_062,0.3,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_063,0.25,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_064,0.3,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_065,0.35,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_066,0.35,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_067,0.3,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_068,0.3,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_069,0.6,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_070,0.25,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_071,0.3,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_072,0.6,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_073,0.25,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_074,0.35,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_075,0.3,0.72,
+2026-04-21,pm14,Powell leaves the Fed Board by 31 December 2026,twin_076,0.6,0.72,
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_001,0.25,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_002,0.25,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_003,0.35,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_004,0.25,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_005,0.2,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_006,0.15,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_007,0.15,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_008,0.3,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_009,0.35,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_010,0.3,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_011,0.18,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_012,0.25,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_013,0.25,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_014,0.2,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_015,0.25,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_016,0.3,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_017,0.25,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_018,0.2,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_019,0.25,,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_020,0.25,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_021,0.25,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_022,0.5,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_023,0.35,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_024,0.25,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_025,0.2,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_026,0.3,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_027,0.25,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_028,0.25,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_029,0.15,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_030,0.25,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_031,0.35,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_032,0.2,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_033,0.25,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_034,0.15,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_035,0.2,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_036,0.2,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_037,0.25,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_038,0.2,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_039,0.36,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_040,0.2,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_041,0.25,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_042,0.2,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_043,0.25,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_044,0.2,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_045,0.2,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_046,0.35,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_047,0.25,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_048,0.18,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_049,0.2,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_050,0.2,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_051,0.15,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_052,0.355,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_053,0.35,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_054,0.3,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_055,0.35,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_056,0.25,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_057,0.25,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_058,0.2,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_059,0.25,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_060,0.25,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_061,0.25,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_062,0.15,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_063,0.2,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_064,0.25,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_065,0.35,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_066,0.25,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_067,0.35,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_068,0.2,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_069,0.3,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_070,0.15,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_071,0.25,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_072,0.35,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_073,0.2,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_074,0.25,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_075,0.25,0.355,1
+2026-04-21,pm15,Annual inflation above 4% at some point in 2026,twin_076,0.4,0.355,1
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_001,0.02,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_002,0.02,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_003,0.02,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_004,0.02,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_005,0.02,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_006,0.02,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_007,0.01,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_008,0.02,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_009,0.02,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_010,0.02,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_011,0.02,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_012,0.02,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_013,0.02,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_014,0.02,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_015,0.02,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_016,0.02,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_017,0.01,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_018,0.02,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_019,0.02,,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_020,0.02,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_021,0.02,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_022,0.5,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_023,0.02,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_024,0.01,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_025,0.02,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_026,0.02,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_027,0.02,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_028,0.02,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_029,0.02,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_030,0.02,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_031,0.02,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_032,0.02,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_033,0.02,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_034,0.01,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_035,0.01,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_036,0.02,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_037,0.02,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_038,0.02,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_039,0.05,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_040,0.02,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_041,0.02,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_042,0.01,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_043,0.02,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_044,0.02,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_045,0.02,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_046,0.02,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_047,0.02,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_048,0.01,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_049,0.02,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_050,0.02,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_051,0.01,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_052,0.051,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_053,0.02,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_054,0.05,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_055,0.03,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_056,0.02,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_057,0.02,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_058,0.01,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_059,0.02,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_060,0.02,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_061,0.02,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_062,0.02,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_063,0.02,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_064,0.02,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_065,0.03,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_066,0.03,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_067,0.03,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_068,0.02,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_069,0.02,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_070,0.02,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_071,0.05,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_072,0.05,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_073,0.02,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_074,0.02,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_075,0.02,0.051,
+2026-04-21,pm16,Unemployment reaches 10.0% at some point in 2026,twin_076,0.02,0.051,
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_001,0.6,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_002,0.45,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_003,0.8,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_004,0.45,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_005,0.7,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_006,0.2,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_007,0.25,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_008,0.8,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_009,0.5,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_010,0.65,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_011,0.45,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_012,0.55,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_013,0.8,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_014,0.65,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_015,0.5,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_016,0.6,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_017,0.6,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_018,0.5,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_019,0.5,,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_020,0.35,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_021,0.7,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_022,0.5,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_023,0.7,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_024,0.75,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_025,0.25,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_026,0.55,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_027,0.6,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_028,0.55,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_029,0.55,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_030,0.7,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_031,0.8,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_032,0.6,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_033,0.45,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_034,0.45,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_035,0.6,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_036,0.45,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_037,0.45,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_038,0.4,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_039,0.86,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_040,0.45,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_041,0.6,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_042,0.4,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_043,0.6,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_044,0.6,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_045,0.65,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_046,0.55,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_047,0.7,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_048,0.22,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_049,0.65,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_050,0.6,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_051,0.8,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_052,0.855,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_053,0.85,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_054,0.4,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_055,0.7,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_056,0.6,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_057,0.65,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_058,0.6,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_059,0.5,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_060,0.65,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_061,0.55,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_062,0.4,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_063,0.3,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_064,0.55,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_065,0.85,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_066,0.4,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_067,0.75,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_068,0.45,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_069,0.6,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_070,0.2,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_071,0.5,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_072,0.8,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_073,0.45,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_074,0.55,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_075,0.65,0.855,1
+2026-04-21,pm17,Annual inflation above 3.5% at some point in 2026,twin_076,0.8,0.855,1

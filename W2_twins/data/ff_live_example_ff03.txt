@@ -1,0 +1,159 @@
+**question: APPLE INC (AAPL)**  
+**explanation: Profile indicates frequent short-term directional calls, often short, on mega-cap tech; AAPL is a mega-cap tech so persona leans short-term SELL based on signals/flow rather than fundamentals.**  
+**recommendation: 25**  
+**confidence: 60**  
+**speculation: 15**  
+**expected holding period: 7**  
+**primary catalyst type: Flow-Technical**
+
+**question: ADVANCED MICRO DEVICES INC (AMD)**  
+**explanation: AMD is a large-cap semiconductor. Profile focuses on short-term directional trades and often shorts mega-cap tech/indices; by persona this stock is approached short-term with a bias to SELL/short on technical signals.**  
+**recommendation: 30**  
+**confidence: 50**  
+**speculation: 30**  
+**expected holding period: 7**  
+**primary catalyst type: Flow-Technical**
+
+**question: AMAZON COM INC (AMZN)**  
+**explanation: AMZN is mega-cap tech/consumer tech and fits profile's frequent short-term short bias on mega-cap tech; persona would tend to SELL short-term based on signals.**  
+**recommendation: 25**  
+**confidence: 60**  
+**speculation: 15**  
+**expected holding period: 7**  
+**primary catalyst type: Flow-Technical**
+
+**question: BROADCOM INC (AVGO)**  
+**explanation: Broadcom is a large tech/semi-equipment name; profile's short-term, often-short stance on tech implies a short/SELL bias in this persona, driven by technical/flow signals.**  
+**recommendation: 30**  
+**confidence: 50**  
+**speculation: 35**  
+**expected holding period: 7**  
+**primary catalyst type: Flow-Technical**
+
+**question: CISCO SYSTEMS INC (CSCO)**  
+**explanation: Cisco is a tech/infrastructure name; profile data gives limited direct info on networking names, but overall short-term tech bias suggests SELL/short preference if signals align.**  
+**recommendation: 35**  
+**confidence: 45**  
+**speculation: 40**  
+**expected holding period: 10**  
+**primary catalyst type: Flow-Technical**
+
+**question: GOOGLE (GOOG)**  
+**explanation: GOOG (mega-cap tech) fits profile's frequent short-term short calls on mega-cap tech; persona leans to SELL on near-term signals.**  
+**recommendation: 25**  
+**confidence: 60**  
+**speculation: 15**  
+**expected holding period: 7**  
+**primary catalyst type: Flow-Technical**
+
+**question: ALPHABET INC (GOOGL)**  
+**explanation: GOOGL is the other share class of Alphabet; same rationale as GOOG—persona tends to short mega-cap tech on short-term signals.**  
+**recommendation: 25**  
+**confidence: 60**  
+**speculation: 15**  
+**expected holding period: 7**  
+**primary catalyst type: Flow-Technical**
+
+**question: INTEL CORP (INTC)**  
+**explanation: Intel is a semiconductor/tech name; profile's focus on short-term trading with a bias to short mega-cap tech/indices suggests a SELL stance unless signals indicate otherwise.**  
+**recommendation: 35**  
+**confidence: 45**  
+**speculation: 40**  
+**expected holding period: 7**  
+**primary catalyst type: Flow-Technical**
+
+**question: JOHNSON & JOHNSON (JNJ)**  
+**explanation: JNJ is a defensive healthcare name not specifically covered by profile; lacking direct info, persona would default to HOLD rather than an active short/long recommendation.**  
+**recommendation: 50**  
+**confidence: 40**  
+**speculation: 60**  
+**expected holding period: 30**  
+**primary catalyst type: Earnings**
+
+**question: JPMORGAN CHASE & CO (JPM)**  
+**explanation: Financials are not a stated focus in the profile; with no direct info, persona would generally HOLD absent short-term technical signal.**  
+**recommendation: 50**  
+**confidence: 40**  
+**speculation: 60**  
+**expected holding period: 14**  
+**primary catalyst type: Macro**
+
+**question: LILLY ELI & CO (LLY)**  
+**explanation: Biotech/pharma not in profile focus; insufficient direct signals, so persona prefers HOLD unless short-term setup appears.**  
+**recommendation: 50**  
+**confidence: 35**  
+**speculation: 65**  
+**expected holding period: 30**  
+**primary catalyst type: Product**
+
+**question: META PLATFORMS INC (META)**  
+**explanation: META is a mega-cap tech; profile often issues short-term short calls on mega-cap tech — persona leans to SELL near-term based on flow/technical signals.**  
+**recommendation: 25**  
+**confidence: 60**  
+**speculation: 15**  
+**expected holding period: 7**  
+**primary catalyst type: Flow-Technical**
+
+**question: MICROSOFT CORP (MSFT)**  
+**explanation: MSFT is mega-cap tech; consistent with profile's tendency to short mega-cap tech in short-term trades, persona would SELL on technical signal.**  
+**recommendation: 25**  
+**confidence: 60**  
+**speculation: 15**  
+**expected holding period: 7**  
+**primary catalyst type: Flow-Technical**
+
+**question: MICRON TECHNOLOGY INC (MU)**  
+**explanation: Micron is a semiconductor; profile's short-term trading approach and frequent short bias on tech suggests a short/SELL stance in this persona for near-term trades.**  
+**recommendation: 30**  
+**confidence: 50**  
+**speculation: 35**  
+**expected holding period: 7**  
+**primary catalyst type: Flow-Technical**
+
+**question: NVIDIA CORP (NVDA)**  
+**explanation: NVDA is a mega-cap semiconductor and a focal point of tech positioning; profile's tendency to make short-term short calls on mega-cap tech implies a SELL bias for this persona in the near term.**  
+**recommendation: 25**  
+**confidence: 60**  
+**speculation: 20**  
+**expected holding period: 7**  
+**primary catalyst type: Flow-Technical**
+
+**question: ORACLE CORP (ORCL)**  
+**explanation: Oracle is an enterprise tech name; profile gives limited direct info on enterprise software so persona would likely SELL/short on adverse technical signals but with more uncertainty.**  
+**recommendation: 40**  
+**confidence: 45**  
+**speculation: 45**  
+**expected holding period: 10**  
+**primary catalyst type: Flow-Technical**
+
+**question: TESLA INC (TSLA)**  
+**explanation: Tesla is explicitly one of the profile's primary traded assets (short-term trading of Tesla); profile doesn't state consistent direction, only that they trade it often. Given focus on short-term signals over emotions, persona would take signal-driven stance — default to HOLD unless a clear short signal; here choose HOLD to reflect neutrality.**  
+**recommendation: 50**  
+**confidence: 65**  
+**speculation: 20**  
+**expected holding period: 5**  
+**primary catalyst type: Flow-Technical**
+
+**question: VISA INC (V)**  
+**explanation: Payments/financials are not highlighted in the profile; lacking direct info, persona defaults to HOLD rather than active short or buy.**  
+**recommendation: 50**  
+**confidence: 35**  
+**speculation: 65**  
+**expected holding period: 14**  
+**primary catalyst type: Macro**
+
+**question: WALMART INC (WMT)**  
+**explanation: Consumer retail is outside the stated focus; profile offers no direct signals for WMT so persona would HOLD pending short-term technical setups.**  
+**recommendation: 50**  
+**confidence: 35**  
+**speculation: 65**  
+**expected holding period: 30**  
+**primary catalyst type: Macro**
+
+**question: EXXON MOBIL CORP (XOM)**  
+**explanation: Energy names aren't part of the profile's core focus; without direct info, persona chooses HOLD pending signal or macro catalyst.**  
+**recommendation: 50**  
+**confidence: 35**  
+**speculation: 65**  
+**expected holding period: 30**  
+**primary catalyst type: Macro**

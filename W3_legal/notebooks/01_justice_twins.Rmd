@@ -1,0 +1,449 @@
+---
+title: "Notebook 1 — A justice twin, one case, by hand"
+subtitle: LLMSS 2026, Workshop 3 (The Silicon Audience), Silicon Jury block · Hong
+  Kong, 13 October 2026
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    df_print: kable
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE,
+                      fig.width = 8, fig.height = 4.5)
+```
+
+## What you will do
+
+A **justice twin** is a language model asked to answer as one Justice of the
+United States Supreme Court would, given passages from that Justice's own
+opinions and a short description of a case the Court has not yet decided. The
+Legal Digital Twins project runs nine such twins on every case of the October
+2026 sitting and files their votes on FantasySCOTUS before the case is argued.
+In this notebook you run one of those twins yourself, in about twenty-five
+minutes:
+
+1. **read the case:** the one-page packet the twin is asked about;
+2. **meet the justice:** who the twin is, and the one number that summarises
+   their voting record;
+3. **open the evidence:** the eight passages retrieved from that Justice's own
+   opinions, already found for you;
+4. **assemble the prompt:** exactly what the model receives, line by line;
+5. **ask the twin:** load the answer from the project's own run, or send the
+   prompt yourself;
+6. **sit the full bench:** nine twins, one predicted outcome, compared with what
+   the Court actually did (practice case) or with the crowd (live case);
+7. **change one thing** and see what moves.
+
+Only Section 5 calls a language model, and only if an API key is set. Everything
+else runs offline from the files beside this notebook.
+
+**How to read this notebook.** As in Workshops 1 and 2, every table, text block
+and figure the code prints has a number, given in bold just above the code that
+prints it, and the text says which table, row or column a number comes from.
+
+**Figure 1.0.** The whole machine. This notebook walks the middle row, for one
+justice and one case, with the top row already built.
+
+```{r pipeline-figure, echo = FALSE, out.width = "100%"}
+knitr::include_graphics(file.path("..", "figures", "pipeline_map.png"))
+```
+
+The first block loads the packages the notebook uses and sets the folders it
+reads from and writes to.
+
+```{r libs}
+library(data.table)
+library(jsonlite)
+library(ggplot2)
+
+DATA <- file.path("..", "data")
+OUT  <- file.path("..", "output")
+dir.create(OUT, showWarnings = FALSE)
+```
+
+---
+
+## 1. The case
+
+Two cases ship with the notebook. The **practice case** was argued in November
+2025 and decided in June 2026, so we can check the twins against the Court. The
+**live case** is argued on 5 October 2026 and will not be decided until next
+year; the project's prediction for it was filed on 4 October. Start with the
+practice case; Section 7 switches to the live one.
+
+The block below loads the case index as `cases` and prints it.
+
+**Table 1.1.** `cases`: the two cases in the package.
+
+```{r cases}
+cases <- fread(file.path(DATA, "cases.csv"))
+cases[, .(slug, title, docket, term, argued, role)]
+```
+
+The twin never sees a brief, an opinion or a news story. It sees a **case
+packet**: the question presented (verbatim from the Court), the lower court's
+holding, the procedural posture and three arguments per side, assembled from the
+public record before argument and checked by a person so that nothing in it
+reveals an outcome. The next block sets `CASE`, loads that packet and prints it.
+Change `CASE` to `"johnson"` for the live case.
+
+**Text 1.1.** The case packet for `CASE`, as the twin receives it.
+
+```{r packet, comment = ""}
+CASE <- "landor"
+
+packet <- paste(readLines(file.path(DATA, paste0(CASE, "_packet.md")), warn = FALSE),
+                collapse = "\n")
+cat(packet)
+```
+
+---
+
+## 2. The justice
+
+Each twin is one of the nine sitting Justices. The twin is told who it is, when
+and by whom it was appointed, and one number: the Justice's **Martin–Quinn
+score** for October Term 2024, a statistical summary of their voting record on a
+scale where negative is liberal and positive is conservative. The score is a
+coarse prior; the evidence in Section 3 is what the twin reasons from.
+
+The block below loads the nine scores as `mq` and prints them in order.
+
+**Table 2.1.** `mq`: Martin–Quinn posterior means for October Term 2024 (official
+2024 release), with the 95% interval.
+
+```{r mq}
+mq <- fread(file.path(DATA, "mq_ot2024.csv"))
+mq[, .(justice, post_mn, post_025, post_975)]
+```
+
+**Figure 2.1.** The same nine scores drawn as a line, so the spread is visible.
+
+```{r mq-plot, fig.height = 2.8}
+mq[, justice := factor(justice, levels = justice)]
+ggplot(mq, aes(x = post_mn, y = 1, label = justice)) +
+  geom_errorbar(aes(xmin = post_025, xmax = post_975), width = 0, orientation = "y", colour = "grey60") +
+  geom_point(size = 2.5) +
+  geom_text(angle = 45, hjust = -0.1, vjust = -0.3, size = 3) +
+  scale_x_continuous("Martin–Quinn score, OT2024 (negative = liberal)") +
+  scale_y_continuous(NULL, breaks = NULL, limits = c(0.9, 1.4)) +
+  theme_minimal()
+```
+
+The next block sets `JUSTICE` and loads everything the project prepared for that
+Justice on this case: the evidence, the context blocks and the two prompt
+messages. Change `JUSTICE` to any of the nine names in Table 2.1.
+
+**Text 2.1.** Who the twin is.
+
+```{r justice, comment = ""}
+JUSTICE <- "kagan"
+
+ev  <- fromJSON(file.path(DATA, paste0(CASE, "_evidence.json")), simplifyVector = FALSE)
+tw  <- ev$justices[[JUSTICE]]
+cat(sprintf("%s, %s, appointed by %s, on the Court since %d.\nMartin–Quinn OT2024: %+.2f\n",
+            tw$name, tw$role, tw$appointed_by, tw$since, tw$mq_ot2024))
+```
+
+---
+
+## 3. The evidence
+
+The twin does not get the Justice's whole record. For each case it gets **eight
+passages**, retrieved from an index of that Justice's own opinions (October Terms
+1991 to 2024, about 37,000 passages across the nine) by three queries written
+from the packet: the question presented, the doctrinal area and precedents, and
+the two sides' first arguments. The retrieval has rules: at least two passages
+from majority opinions and two from separate writings, at most two from any one
+earlier case, nothing from the case at issue, nothing after October Term 2024.
+The retrieval has already been done; the eight passages for `JUSTICE` on `CASE`
+are in the file you loaded, together with a hash of the set so the run can be
+reproduced.
+
+The block below turns the eight passages into a table and prints where they come
+from.
+
+**Table 3.1.** `passages`: the eight passages retrieved for `JUSTICE` on `CASE`.
+
+```{r passages}
+passages <- rbindlist(lapply(tw$passages, function(p)
+  data.table(n = p$n, case = p$title, term = p$term, type = p$doc_type, words = length(strsplit(p$text, "\\s+")[[1]]))))
+passages
+```
+
+The next block prints one passage in full. Change `N` to read another. Ask
+yourself the three questions the project's own spot-check asks: are these the
+Justice's own words; is the case named the case the passage is about; does it
+speak to the question presented?
+
+**Text 3.1.** Passage `N`.
+
+```{r one-passage, comment = ""}
+N <- 1
+p <- tw$passages[[N]]
+cat(sprintf("[%d] %s (OT%d, %s)\n\n", p$n, p$title, p$term, gsub("_", " ", p$doc_type)))
+cat(strwrap(p$text, width = 90), sep = "\n")
+```
+
+Each earlier case cited in the evidence comes with a **context block**: the
+Reporter of Decisions' syllabus (prepared by the Reporter, not by the Justices)
+and the Court's vote in that case from the Supreme Court Database, so the twin
+knows what each earlier case was about and how it came out. The block below
+prints the context for the first prior case.
+
+**Text 3.2.** The context block for the first prior case cited.
+
+```{r context, comment = ""}
+ctx <- tw$context
+cat(strwrap(ctx[[1]], width = 90), sep = "\n")
+```
+
+---
+
+## 4. The prompt
+
+The twin receives two messages. The **system message** says who it is, where its
+evidence comes from, and that the case is undecided. The **user message** carries
+the persona line, the eight passages with their context, the packet, and the task
+with the JSON format of the answer. The project builds both from a template whose
+hash is logged with every run; the text below is that build, exactly as sent.
+
+The block below prints the system message.
+
+**Text 4.1.** The system message.
+
+```{r system, comment = ""}
+cat(strwrap(tw$system, width = 90), sep = "\n")
+```
+
+The user message is long because it carries the evidence. The next block prints
+its first sixty lines and its last thirty, which is where the persona and the
+task sit; the middle is the evidence you read in Section 3.
+
+**Text 4.2.** The user message, head and tail.
+
+```{r user, comment = ""}
+u <- strsplit(tw$user, "\n")[[1]]
+cat(head(u, 60), sep = "\n")
+cat("\n[...", length(u) - 90, "lines of evidence and packet omitted ...]\n\n")
+cat(tail(u, 30), sep = "\n")
+```
+
+Notice three things. The twin is told the case has not been decided and to
+disregard any recollection of an outcome. It is told the syllabus is the
+Reporter's, not its own words. And it is asked for a probability, not just a
+vote, so the bench in Section 6 can be read as more or less confident.
+
+---
+
+## 5. Ask the twin
+
+The project's own answers were produced by Laurenz Günther's runs on the
+project's model (Claude Opus 5.5, called as `claude-opus-5-5`, with the model id
+the API returned recorded in the run log; adaptive thinking at medium effort,
+temperature at the API default, 4,000 output tokens including thinking) and ship
+with the package as a **cache**, so this section works with no key. If you
+have a key in your `~/.Renviron` (see the setup email), the second block sends
+the same prompt yourself.
+
+The block below loads the cached answer for `JUSTICE` on `CASE` and prints it.
+
+**Text 5.1.** The cached answer.
+
+```{r cached, comment = ""}
+cache_file <- file.path(DATA, "cached_answers.json")
+ans <- NULL; cached <- NULL
+if (file.exists(cache_file)) {
+  cache  <- fromJSON(cache_file, simplifyVector = FALSE)
+  cached <- cache$cases[[CASE]]
+  if (is.null(cached)) {
+    cat("No cached answers for this case yet.\n")
+  } else {
+    # each case is bound to the index and prompt template of the run it came from; a mismatch with this
+    # package's evidence file means the cached answer was produced from different inputs than those shown
+    # above, and it is not used
+    same_index  <- identical(cached$binding$chunks_sha256, ev$index$chunks_sha256)
+    same_prompt <- identical(cached$binding$prompt_template_sha256, ev$prompt_template_sha256)
+    same_input  <- identical(cached$inputs[[JUSTICE]]$retrieved_set_sha256, tw$retrieved_set_sha256)
+    if (!same_index || !same_prompt || !same_input) {
+      cached <- NULL
+      cat("Cached answers for this case were produced with a different index, prompt template or evidence set",
+          "than this package's evidence file; not shown.\n")
+    } else {
+      ans <- cached$answers[[JUSTICE]]
+      cat("Model:", cached$model_id, " | index:", cached$binding$index_version, " | harness:", cached$binding$harness_version,
+          " | run:", cached$run, "\n\n")
+      cat(toJSON(ans, auto_unbox = TRUE, pretty = TRUE))
+    }
+  }
+} else {
+  cat("Cached answers not yet in the package.")
+}
+```
+
+The next block is the only one that calls a model. It reads your key and the
+proxy address from the environment, sends the two messages, and parses the JSON
+the twin returns. `MODEL` is the model the workshop proxy serves (`gpt-5-mini`);
+the cached answer in Text 5.1 came from the project's model (Claude Opus 5.5) on
+the same evidence and prompt, so a difference between the two is a difference
+between models, not between inputs. That comparison is part of the exercise.
+
+**Text 5.2.** Your own answer (runs only if `OPENAI_API_KEY` is set).
+
+```{r live, comment = ""}
+MODEL <- "gpt-5-mini-2025-08-07"
+key   <- Sys.getenv("OPENAI_API_KEY")
+base  <- Sys.getenv("OPENAI_BASE_URL", unset = "https://api.openai.com/v1")
+
+ask_twin <- function(system, user, model = MODEL) {
+  resp <- httr2::request(paste0(base, "/chat/completions")) |>
+    httr2::req_auth_bearer_token(key) |>
+    httr2::req_body_json(list(model = model,   # gpt-5 models accept only the default temperature
+                              messages = list(list(role = "system", content = system),
+                                              list(role = "user",   content = user)))) |>
+    httr2::req_perform() |>
+    httr2::resp_body_json()
+  txt <- resp$choices[[1]]$message$content
+  j   <- regmatches(txt, regexpr("\\{.*\\}", txt))
+  fromJSON(j, simplifyVector = TRUE)
+}
+
+if (nzchar(key)) {
+  mine <- ask_twin(tw$system, tw$user)
+  cat(toJSON(mine, auto_unbox = TRUE, pretty = TRUE))
+  writeLines(toJSON(mine, auto_unbox = TRUE), file.path(OUT, paste0("my_answer_", CASE, "_", JUSTICE, ".json")))
+} else {
+  mine <- NULL
+  cat("No API key found; skipping the live call.")
+}
+```
+
+---
+
+## 6. The full bench
+
+One twin is a guess; nine twins are a prediction. The block below assembles the
+nine cached answers for `CASE` into one table: each Justice's vote (petitioner or
+respondent), the probability it gave, and whether it expects to write separately.
+
+**Table 6.1.** `bench`: the nine twins on `CASE`.
+
+```{r bench}
+if (!is.null(cached)) {
+  bench <- rbindlist(lapply(names(cached$answers), function(j) {
+    a <- cached$answers[[j]]
+    data.table(justice = j, vote = a$vote, p_petitioner = round(a$p_petitioner, 2),
+               disposition = a$disposition, separate = a$separate_writing)
+  }))
+  bench <- merge(bench, mq[, .(justice = as.character(justice), mq = post_mn)], by = "justice")
+  setorder(bench, mq)
+  bench
+} else {
+  cat("Cached answers not yet in the package.")
+}
+```
+
+The next block turns Table 6.1 into the project's prediction: who wins, by what
+split, and, for the practice case, how that compares with what the Court did.
+For the live case it compares with the FantasySCOTUS crowd on 1 October instead.
+
+**Table 6.2.** `verdict`: the twins' prediction next to the reference.
+
+```{r verdict}
+if (!is.null(cached)) {
+  pet <- sum(bench$vote == "petitioner"); resp <- sum(bench$vote == "respondent")
+  cat(sprintf("Twins: %s wins, %d-%d\n", ifelse(pet > resp, "petitioner", "respondent"), max(pet, resp), min(pet, resp)))
+  if (CASE == "landor") {
+    truth <- fread(file.path(DATA, "landor_outcome.csv"))
+    cat(readLines(file.path(DATA, "landor_outcome_note.txt"), warn = FALSE), "\n")
+    # the petitioner lost below, so 'respondent' = the Court's majority side when the Court affirmed
+    verdict <- merge(bench[, .(justice, twin = vote)], truth[, .(justice, court = court_vote)], by = "justice")
+    verdict[, court_side := ifelse(court == "majority", "respondent", "petitioner")]
+    verdict[, agree := twin == court_side]
+    verdict[order(match(justice, mq$justice))]
+  } else {
+    crowd <- fread(file.path(DATA, "johnson_crowd.csv"))
+    cat(sprintf("FantasySCOTUS crowd on %s: %s %s\n", crowd$snapshot, crowd$crowd_outcome, crowd$crowd_split))
+  }
+}
+```
+
+The twins' accuracy per Justice on the practice case is the number of `TRUE` in
+the `agree` column of Table 6.2 out of nine. One case tells you little; the
+project's validation run scores the same twins on all 58 argued cases of October
+Term 2025, and that number is on the slide behind you.
+
+**Figure 6.1.** Each twin's probability for the petitioner against the Justice's
+Martin–Quinn score. If the twins were only reading the score, this would be a
+straight line.
+
+```{r bench-plot, fig.height = 4}
+if (!is.null(cached)) {
+  ggplot(bench, aes(x = mq, y = p_petitioner, label = justice)) +
+    geom_hline(yintercept = 0.5, linetype = "dotted") +
+    geom_point(size = 2.5) + geom_text(vjust = -0.8, size = 3) +
+    scale_x_continuous("Martin–Quinn score, OT2024") +
+    scale_y_continuous("Twin's probability that the petitioner wins", limits = c(0, 1)) +
+    theme_minimal()
+}
+```
+
+---
+
+## 7. Change one thing
+
+Everything above is one draw from one configuration. The question that matters
+for the method is which inputs the answer depends on. Pick one of the three
+changes below, re-run Section 5's live block, and compare.
+
+**(a) Drop the score.** The block below removes the Martin–Quinn line from the
+user message, so the twin has only the evidence and the packet.
+
+```{r change-a}
+user_no_mq <- sub("Ideal point \\(Martin–Quinn[^\n]*\n", "", tw$user)
+nchar(tw$user) - nchar(user_no_mq)   # characters removed; about 260
+```
+
+**(b) Swap a passage.** The block below replaces passage `N` with a passage from
+another Justice's evidence on the same case, keeping the header, so the twin is
+reasoning partly from a colleague's words. (Your own choice of `OTHER` and `N`.)
+
+```{r change-b}
+OTHER <- "thomas"; N <- 3
+other_p <- ev$justices[[OTHER]]$passages[[N]]
+mine_p  <- tw$passages[[N]]
+user_swapped <- sub(mine_p$text, other_p$text, tw$user, fixed = TRUE)
+c(original = nchar(tw$user), swapped = nchar(user_swapped))
+```
+
+**(c) Another Justice, or the live case.** Set `JUSTICE` in Section 2 or `CASE`
+in Section 1 and run the notebook again from the top; both load in a second.
+
+To re-ask with a changed message, call `ask_twin(tw$system, user_no_mq)` or
+`ask_twin(tw$system, user_swapped)` in the console, with a key set. Write down
+what changed in the vote and the probability; that is the result of this
+exercise, and it is yours.
+
+---
+
+## 8. What a twin cannot know
+
+Three things to carry out of the room.
+
+The twin only ever sees what is in Sections 1 to 4. Nothing from the term being
+predicted is in its evidence; the case at issue is excluded from retrieval by
+rule; the packet is checked by a person for anything that reveals an outcome.
+When the twins are right, it is for reasons you can read; when they are wrong,
+you can see what they were reading.
+
+A prediction filed before argument is a prediction. The project's October votes
+were filed on FantasySCOTUS on 4 October, each run logged with the hash of its
+packet, its evidence set, its prompt template and its model. The decisions come
+in the spring. Until then the numbers on the slide are the validation run on last
+term's cases, where the answers are known, and nothing else.
+
+And the obvious caveat: a model that has read the whole internet may remember a
+decided case however firmly it is told not to. That is exactly why the record is
+built on cases that are not yet decided.

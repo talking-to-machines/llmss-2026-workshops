@@ -1,0 +1,665 @@
+{
+ "cases": {
+  "johnson": {
+   "run": "20261003T123540Z_october_opus55_codex",
+   "docket": "25-735",
+   "binding": {
+    "index_version": "v3.1.1",
+    "chunks_sha256": "83b37cb2b31fd9d272ee1e5251a4914c8484d12445759ee8a500ae1eb34670a6",
+    "embeddings_sha256": "aa1cd5fd851338fea23113db79ed6f1c3e49f3abfd082105453ac6c03b21a89f",
+    "prompt_template": "twin_prompt_v1_1.md",
+    "prompt_template_sha256": "13acc96ffe70976ef5c305d78fc06f052c45806ad20fda18b5220d3eaac24ec0",
+    "model_requested": "claude-opus-5-5",
+    "model_effective": "claude-opus-5-5",
+    "harness_version": "1.2",
+    "thinking": {
+     "type": "adaptive"
+    },
+    "effort": "medium",
+    "max_tokens": 4000
+   },
+   "model_id": "claude-opus-5-5",
+   "inputs": {
+    "roberts": {
+     "input_sha256": "786f85755aa5940b5770e479df9b46c9496b03255048c5a6cdaf060f4033fe91",
+     "retrieved_set_sha256": "a6392295ca9788901f00454d637588f3f8d6be3d4b31d7b2b055c973f76d9117"
+    },
+    "thomas": {
+     "input_sha256": "cbd74a8455f7b34df5d4cb9edfffbcfdfbc3588eeae1441d5ccee76912c469b3",
+     "retrieved_set_sha256": "1c55789ea0fd9f3726a2cb01b0e31eeb7666873eb9ca098b5a39634b285c540c"
+    },
+    "alito": {
+     "input_sha256": "290516bd9fe31595abaf58b6d2b359251f7113f52c01b6ed2e2806ff0faf47bf",
+     "retrieved_set_sha256": "e32705d277663b7048ef627b2a7476a64c00e1c48deddb13f70f166077cf4e98"
+    },
+    "sotomayor": {
+     "input_sha256": "3bcba03956ba85ab9313ef9ed8f86f7626687895bdc528dcc57304440a956a4e",
+     "retrieved_set_sha256": "883325699c314528fbb5bbde78ac833af10f5bde2cbdbb8eefbc6b321b351206"
+    },
+    "kagan": {
+     "input_sha256": "e08ea58dac2f1320b685fadb183041fe6f885cbe6e35d6dd3ec2f8f99b346b5c",
+     "retrieved_set_sha256": "4fdd234e2219ab49d54863e299245435c0aaac524e04f829fcc25e95c88da025"
+    },
+    "gorsuch": {
+     "input_sha256": "024f2cd78d9a9b848207c4fe9d9084ee1e9566c554f1d7ee07e25f3dab85b4d2",
+     "retrieved_set_sha256": "4916c772b0d2ddd06e8ecd40c15481db981c1694550ae905897d17a28ab8c995"
+    },
+    "kavanaugh": {
+     "input_sha256": "31f335ccafa0857cdcf5162dc0bc41a6efdd66fa39b13a8d38b68cffff427163",
+     "retrieved_set_sha256": "081e0e9c3f02554ea4c8969e0a193f1906943fe5ff8d914ef2f8878b52af8a20"
+    },
+    "barrett": {
+     "input_sha256": "94b7762ea570fd1ac48481588d862c7aec198b0cbaed2803e4e0f0026285cdeb",
+     "retrieved_set_sha256": "64001f0ffc6c44dd22893963781a70ce096521f776c98529c2c8895a56eb7682"
+    },
+    "jackson": {
+     "input_sha256": "db0098b113d4db76cad5120133066c90f01f25dd896edcad5c8cf28e5549f3bd",
+     "retrieved_set_sha256": "f4e85c7d1ad9d9becbea79d9027893af894927fc2d485c180b966b973bb3791c"
+    }
+   },
+   "answers": {
+    "roberts": {
+     "justice": "roberts",
+     "vote": "respondent",
+     "p_petitioner": 0.3,
+     "disposition": "affirm",
+     "separate_writing": "none",
+     "rationale": "The question is whether Congress has displaced \u00a71331, and here it has said so in its own words. Section 511(a) reaches all questions of law 'necessary to a decision by the Secretary' under a benefits law. Whether \u00a75313 may constitutionally reduce Mr. Johnson's benefits is necessary to deciding the amount he receives. Congress then provided a precisely drawn channel of review: the Board, the Veterans Court, and the Federal Circuit, which it expressly empowered to decide the validity of statutes. Robison construed different language at a time when preclusion meant no judicial review at all. Today it means review in a specified forum. As in Elgin, the agency's inability to decide constitutional questions at the first stage does not defeat channeling when an Article III court sits at the end of the line. This claim is no structural attack wholly collateral to the scheme, as in Free Enterprise Fund or Axon. It is a dispute over a benefits award.",
+     "considerations": [
+      "Section 511(a)'s current text, 'necessary to a decision', covers a constitutional challenge to the statute that determines the benefit amount, and Congress amended the language Robison construed.",
+      "The VJRA is a detailed, specific review scheme that gives the Federal Circuit express authority over statutory validity, so meaningful judicial review is preserved, as in Elgin and Hinck.",
+      "Unlike the structural claims in Free Enterprise Fund and Axon, this claim is not wholly collateral; it seeks restoration of benefits, the core of the scheme."
+     ],
+     "precedents": [
+      "Elgin v. Department of Treasury",
+      "Thunder Basin Coal Co. v. Reich",
+      "Hinck v. United States",
+      "Free Enterprise Fund v. PCAOB",
+      "Axon Enterprise v. FTC"
+     ],
+     "evidence_used": [
+      1,
+      2,
+      8
+     ],
+     "confidence": 0.68,
+     "speculation": 0.45,
+     "confidence_note": "A persuasive showing that Congress re-enacted Robison's operative 'under' language with knowledge of its construction, or that the Federal Circuit cannot reach facial challenges, would move me toward the petitioner.",
+     "_problems": []
+    },
+    "thomas": {
+     "justice": "thomas",
+     "vote": "respondent",
+     "p_petitioner": 0.25,
+     "disposition": "affirm",
+     "separate_writing": "none",
+     "rationale": "The question is one of statutory text, not of Robison's gloss on a repealed provision. Section 511(a) directs the Secretary to decide \"all questions of law and fact necessary to a decision\" under a benefits law, and bars any court from reviewing \"any such question\" outside the statutory channels. Whether \u00a75313 may constitutionally reduce petitioner's award is a question of law necessary to fixing that award. Congress did not leave the veteran without a forum. It channeled review to the Veterans Court and the Federal Circuit, which \u00a77292 expressly empowers to pass on the validity of statutes. As in Elgin and Thunder Basin, Webster's heightened showing is not triggered where Congress merely channels review rather than forecloses it. Veterans' benefits are public rights, so Article III concerns of the kind raised in Axon do not arise. The pro-veteran canon cannot override clear text.",
+     "considerations": [
+      "The text of \u00a7511(a), \"all questions of law \u2026 necessary to a decision,\" reaches constitutional questions that determine the benefit amount, and it differs materially from the language construed in Robison.",
+      "Congress provided meaningful Article III review in the Federal Circuit, including express authority over the validity of statutes, so this is channeling rather than preclusion.",
+      "Benefits are public rights, and clear text leaves no ambiguity for the pro-veteran canon to resolve."
+     ],
+     "precedents": [
+      "Elgin v. Department of the Treasury",
+      "Thunder Basin Coal Co. v. Reich",
+      "Johnson v. Robison",
+      "Axon Enterprise v. FTC",
+      "Bufkin v. Collins"
+     ],
+     "evidence_used": [
+      1,
+      2,
+      5,
+      8,
+      3
+     ],
+     "confidence": 0.72,
+     "speculation": 0.4,
+     "confidence_note": "I would reconsider if persuaded that \"decision under a law\" ordinarily means application of a statute rather than adjudication of its validity, so that Congress re-enacted Robison's reading, or if the Board's inability to decide constitutional questions made the channeled route illusory.",
+     "_problems": []
+    },
+    "alito": {
+     "justice": "alito",
+     "vote": "petitioner",
+     "p_petitioner": 0.62,
+     "disposition": "reverse",
+     "separate_writing": "none",
+     "rationale": "Section 1331 confers jurisdiction over claims arising under the Constitution, so the question is not whether Congress conferred jurisdiction but whether it took it away. Section 511(a) reaches questions 'necessary to a decision by the Secretary under a law.' A decision under a statute applies that statute; it does not adjudicate the statute's validity. Robison read nearly identical language exactly that way, and Congress re-enacted it against that backdrop. As I explained in Elgin, it makes little sense to channel a facial constitutional attack into an administrative body that is forbidden to decide it. That body can only pass the claim along unaddressed, leaving an appellate court to act as a court of first review. Congress's long solicitude for veterans, which I noted in Henderson, reinforces the point: it would be strange to read this statute as imposing years of futile delay on a veteran's challenge to an act of Congress.",
+     "considerations": [
+      "Text: a decision 'under' a benefits law is most naturally read as one applying it, not one passing on its constitutionality, and Robison so held on the predecessor language that Congress re-enacted.",
+      "Structure: the Board and the Secretary cannot decide whether statutes are constitutional, so channelling facial challenges through them makes little sense, as I argued in Elgin.",
+      "Congress's solicitude for veterans and the pro-veteran canon counsel against inferring a jurisdiction-stripping rule that would only delay review."
+     ],
+     "precedents": [
+      "Johnson v. Robison",
+      "Elgin v. Department of Treasury",
+      "Henderson v. Shinseki",
+      "Axon Enterprise v. FTC",
+      "Thunder Basin Coal v. Reich"
+     ],
+     "evidence_used": [
+      1,
+      3,
+      5,
+      6,
+      8
+     ],
+     "confidence": 0.6,
+     "speculation": 0.45,
+     "confidence_note": "I would rethink my position if I were persuaded that the 1988 rewrite of \u00a7511(a) to cover 'all questions of law' necessary to the decision was a deliberate change displacing Robison's reading. The Federal Circuit's express power to decide whether statutes are valid would also count heavily, since it shows Congress built constitutional review into the channel.",
+     "_problems": []
+    },
+    "sotomayor": {
+     "justice": "sotomayor",
+     "vote": "petitioner",
+     "p_petitioner": 0.75,
+     "disposition": "reverse",
+     "separate_writing": "none",
+     "rationale": "Jurisdiction is governed by the intent of Congress, and Congress legislated against Johnson v. Robison when it re-enacted the 'decision \u2026 under a law' language in \u00a7511(a). A question 'necessary to a decision under' a benefits law is one the Secretary resolves in applying that law. A facial challenge to the law's validity is not such a question, and the Board itself disclaims authority to decide it. Forcing a veteran to spend years before an agency that cannot grant relief serves none of the purposes of channelling. Our cases also teach that preclusion of constitutional claims requires clear expression. If any ambiguity remains, the venerable canon that veterans' statutes are construed in the beneficiaries' favor resolves it. The district court had \u00a71331 jurisdiction over Johnson's challenge to \u00a75313.",
+     "considerations": [
+      "Re-enactment of language this Court had construed in Robison carries that construction forward, and \u00a7511(a)'s text reaches applications of benefits laws, not challenges to their constitutionality.",
+      "The Board cannot decide the constitutionality of statutes, so routing standalone constitutional claims through it is futile delay rather than meaningful channelling under Thunder Basin and Axon.",
+      "Any ambiguity is resolved by the pro-veteran canon and the presumption against reading statutes to foreclose review of constitutional claims."
+     ],
+     "precedents": [
+      "Johnson v. Robison",
+      "Axon Enterprise v. FTC",
+      "Henderson v. Shinseki",
+      "Brown v. Gardner",
+      "Webster v. Doe"
+     ],
+     "evidence_used": [
+      1,
+      2,
+      3,
+      5
+     ],
+     "confidence": 0.7,
+     "speculation": 0.45,
+     "confidence_note": "I would reconsider if the Federal Circuit's express power to review statutory validity under \u00a77292 persuaded me that Congress deliberately created an exclusive, meaningful channel, as Elgin found for the CSRA.",
+     "_problems": []
+    },
+    "kagan": {
+     "justice": "kagan",
+     "vote": "respondent",
+     "p_petitioner": 0.36,
+     "disposition": "affirm",
+     "separate_writing": "none",
+     "rationale": "The question is one of ordinary statutory interpretation: has Congress replaced \u00a71331 review with an exclusive scheme? Section 511(a) does so in express terms. It gives the Secretary 'all questions of law' necessary to a benefits decision, and whether \u00a75313 validly reduces Johnson's benefits is necessary to deciding how much he gets. Congress then sent review of 'any such question,' including statutory validity, to the Veterans Court and the Federal Circuit. Robison read different words, enacted when preclusion meant no judicial review at all. Congress rewrote the statute in 1988 and built a judicial channel, so preclusion now means routing, not foreclosure. Unlike Axon, this claim is not wholly collateral. It attacks the very benefit determination the scheme exists to make, and it receives meaningful Article III review. The pro-veteran canon cannot override clear text.",
+     "considerations": [
+      "Section 511(a)'s 'all questions of law \u2026 necessary to a decision' language expressly covers a constitutional challenge to the statute fixing the benefit amount.",
+      "The VJRA provides meaningful Article III review, including the Federal Circuit's express authority over statutory validity, so channeling forecloses nothing.",
+      "Robison construed a materially different, since-amended text, and Congress's 1988 rewrite shows a deliberate change; this claim is not wholly collateral as Axon's structural claims were."
+     ],
+     "precedents": [
+      "Thunder Basin Coal Co. v. Reich",
+      "Axon Enterprise v. FTC",
+      "Johnson v. Robison",
+      "Elgin v. Department of Treasury",
+      "McLaughlin Chiropractic v. McKesson (dissent)"
+     ],
+     "evidence_used": [
+      1,
+      2,
+      3,
+      6
+     ],
+     "confidence": 0.62,
+     "speculation": 0.5,
+     "confidence_note": "I would move toward petitioner if I were persuaded that 'under a law' tracks Robison's reading and that the Board's inability to decide constitutionality makes the claim functionally collateral, as I believed of the CSRA scheme in Elgin.",
+     "_problems": []
+    },
+    "gorsuch": {
+     "justice": "gorsuch",
+     "vote": "petitioner",
+     "p_petitioner": 0.66,
+     "disposition": "reverse",
+     "separate_writing": "none",
+     "rationale": "Section 1331 gives district courts power to hear Mr. Johnson's claim. The only question is whether Congress expressly took that power away. Section 511(a) bars review of questions 'necessary to a decision by the Secretary under a law' affecting benefits. Robison read materially identical language to reach questions arising in applying the statutes, not the validity of the statutes themselves. Congress re-enacted that language against Robison's backdrop. The Secretary and the Board do not, and by rule cannot, decide whether an act of Congress is constitutional. So that question is not 'necessary to a decision by the Secretary' at all. The government's channeling theory asks us to divest jurisdiction by implication and to read Thunder Basin factors into a text that does not contain them. I would not route veterans through a years-long process that cannot answer their question. Any doubt is resolved in their favor.",
+     "considerations": [
+      "Jurisdiction-stripping must come from clear statutory text, and \u00a7511(a)'s language, as construed in Robison and re-enacted, does not reach facial constitutional challenges to statutes.",
+      "The Secretary cannot decide the constitutionality of acts of Congress, so that question cannot be one 'necessary to a decision by the Secretary.'",
+      "The pro-veteran canon and the VA's track record counsel against a channeling scheme that delays review without any benefit."
+     ],
+     "precedents": [
+      "Johnson v. Robison",
+      "Axon Enterprise v. FTC",
+      "Brown v. Gardner",
+      "BP p.l.c. v. Mayor and City Council of Baltimore",
+      "Thunder Basin Coal v. Reich"
+     ],
+     "evidence_used": [
+      4,
+      6,
+      7,
+      8,
+      3
+     ],
+     "confidence": 0.62,
+     "speculation": 0.45,
+     "confidence_note": "If I became convinced that \u00a7511(a)'s 'all questions of law' language plainly sweeps in validity questions, with the Federal Circuit's express power to review statutes completing the scheme, the text would require me to affirm.",
+     "_problems": []
+    },
+    "kavanaugh": {
+     "justice": "kavanaugh",
+     "vote": "respondent",
+     "p_petitioner": 0.33,
+     "disposition": "affirm",
+     "separate_writing": "none",
+     "rationale": "The question is one of statutory text: did Congress expressly channel this claim? Section 511(a) reaches 'all questions of law' 'necessary to a decision' by the Secretary under a benefits law. Whether \u00a75313 is constitutional is necessary to the decision reducing this veteran's benefits. Congress also expressly authorized the Federal Circuit to decide the validity of statutes. So this is channeling, not preclusion. The presumption of judicial review that guided McLaughlin is satisfied, because meaningful Article III review remains available. Robison construed different language, in a scheme that then offered no judicial review at all. Congress rewrote that language when it created the Veterans Court. Unlike Axon, the claim is not wholly collateral; it is a challenge to the very benefits reduction at issue. Because the text is clear, the pro-veteran canon does no work, and I doubt its footing in any event.",
+     "considerations": [
+      "Section 511(a)'s 'necessary to a decision' text, together with the Federal Circuit's express authority to rule on the validity of statutes, channels constitutional challenges to benefits reductions.",
+      "Review is channeled rather than eliminated, so neither the presumption of judicial review nor any due-process concern is implicated as it was in McLaughlin.",
+      "Robison rests on materially different predecessor text and structure, and the pro-veteran canon cannot override clear text."
+     ],
+     "precedents": [
+      "Elgin v. Department of Treasury",
+      "Thunder Basin Coal Co. v. Reich",
+      "Axon Enterprise v. FTC",
+      "Johnson v. Robison",
+      "McLaughlin Chiropractic v. McKesson"
+     ],
+     "evidence_used": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      8
+     ],
+     "confidence": 0.62,
+     "speculation": 0.55,
+     "confidence_note": "I would move toward the petitioner if I were persuaded that the Board's inability to decide constitutional questions means such questions are not 'necessary to a decision by the Secretary,' or that Congress re-enacted Robison's construction.",
+     "_problems": []
+    },
+    "barrett": {
+     "justice": "barrett",
+     "vote": "respondent",
+     "p_petitioner": 0.3,
+     "disposition": "affirm",
+     "separate_writing": "none",
+     "rationale": "This is a case about express statutory preclusion, so I start and end with the text of \u00a7511(a), not with Thunder Basin's implied-preclusion factors. Congress rewrote the provision Robison construed. Section 511(a) now reaches 'all questions of law \u2026 necessary to a decision' affecting benefits, and it bars review of 'any such question' outside the VJRA's channels. Whether \u00a75313 validly reduces Mr. Johnson's benefits is a question necessary to deciding how much he receives. Section 7292 then expressly lets the Federal Circuit decide 'the validity of any statute.' That provision would make little sense if constitutional challenges could bypass the scheme. Robison read different language against a backdrop of no judicial review at all. Today preclusion means channeling, not foreclosure. The pro-veteran canon cannot override clear text, as George reflects.",
+     "considerations": [
+      "Section 511(a)'s 'necessary to a decision' language plainly encompasses the validity of the statute that sets the benefit amount.",
+      "Section 7292's express grant to the Federal Circuit to review the validity of statutes shows Congress channeled constitutional claims rather than leaving them to \u00a71331.",
+      "Robison construed a materially different predecessor statute, and the pro-veteran canon yields when the text is clear."
+     ],
+     "precedents": [
+      "Johnson v. Robison",
+      "Patel v. Garland",
+      "George v. McDonough",
+      "Elgin v. Department of Treasury",
+      "Thunder Basin Coal Co. v. Reich"
+     ],
+     "evidence_used": [
+      1,
+      2,
+      5,
+      7
+     ],
+     "confidence": 0.68,
+     "speculation": 0.45,
+     "confidence_note": "I would move toward petitioner if persuaded that a question the Secretary is forbidden to decide cannot be 'necessary to a decision by the Secretary,' making the text at least genuinely ambiguous.",
+     "_problems": []
+    },
+    "jackson": {
+     "justice": "jackson",
+     "vote": "petitioner",
+     "p_petitioner": 0.64,
+     "disposition": "reverse",
+     "separate_writing": "none",
+     "rationale": "Congress may withdraw \u00a71331 jurisdiction, but it must say so clearly, and we read the words it actually chose. Section 511(a) reaches questions 'necessary to a decision by the Secretary under' a benefits law. That describes the VA's interpretation and application of those laws. It does not describe a challenge to whether Congress could constitutionally enact them. Robison read materially identical language this way, and when Congress carries such language forward we presume it adopts the settled construction. The structure points the same direction. The Secretary and the Board, who \u00a7511(a) says must decide the covered questions, cannot pass on a statute's constitutionality. Funneling a facial challenge through years of agency process that cannot resolve it would serve only delay. To the extent doubt remains, the veterans canon resolves it in the veteran's favor.",
+     "considerations": [
+      "The text of \u00a7511(a) covers decisions applying benefits laws, not challenges to their validity, consistent with Robison's reading of the predecessor language.",
+      "Structure: the decisionmakers the statute names, the Secretary and the Board, cannot decide statutes' constitutionality, so such questions are not 'necessary to a decision by the Secretary.'",
+      "The pro-veteran canon resolves any residual ambiguity, especially given the delay channeling would impose on veterans."
+     ],
+     "precedents": [
+      "Johnson v. Robison",
+      "Brown v. Gardner",
+      "Henderson v. Shinseki",
+      "Axon Enterprise v. FTC",
+      "Thunder Basin Coal v. Reich"
+     ],
+     "evidence_used": [
+      1,
+      4,
+      6,
+      8
+     ],
+     "confidence": 0.6,
+     "speculation": 0.55,
+     "confidence_note": "My Bouarfa and Wilkinson writings show I enforce clear jurisdiction-stripping text. If I became persuaded that \u00a7511(a)'s 'all questions of law' language, paired with express Federal Circuit authority over statutory validity, unambiguously channels these claims, I would affirm.",
+     "_problems": []
+    }
+   },
+   "n_valid": 9
+  },
+  "landor": {
+   "run": "20261004T111634Z_landor_opus55_codex",
+   "docket": "23-1197",
+   "binding": {
+    "index_version": "v3.1.1",
+    "chunks_sha256": "83b37cb2b31fd9d272ee1e5251a4914c8484d12445759ee8a500ae1eb34670a6",
+    "embeddings_sha256": "aa1cd5fd851338fea23113db79ed6f1c3e49f3abfd082105453ac6c03b21a89f",
+    "prompt_template": "twin_prompt_v1_1.md",
+    "prompt_template_sha256": "13acc96ffe70976ef5c305d78fc06f052c45806ad20fda18b5220d3eaac24ec0",
+    "model_requested": "claude-opus-5-5",
+    "model_effective": "claude-opus-5-5",
+    "harness_version": "1.2",
+    "thinking": {
+     "type": "adaptive"
+    },
+    "effort": "medium",
+    "max_tokens": 4000
+   },
+   "model_id": "claude-opus-5-5",
+   "inputs": {
+    "roberts": {
+     "input_sha256": "5c84b8da1f1fd3b9a7261dcdf673653ceab7cc79b3034f5933154b361796bc5e",
+     "retrieved_set_sha256": "a5ada7ba63beeb16435f708d4876d03f0df6190a0b3133a71083e10f12e0288c"
+    },
+    "thomas": {
+     "input_sha256": "4f4bb6de8da2d2420c2808cce2bdf22f53e40a502f619f0e5c9f14dd3ea69f09",
+     "retrieved_set_sha256": "7d40ce1e658b9a3017165c64af15047440adc4050089c1f47cdc1ec629bd1884"
+    },
+    "alito": {
+     "input_sha256": "fd69f3e005bfbf9eb53812f45b2a5ed56533a404df2091f698a719a6a3f624d4",
+     "retrieved_set_sha256": "d048fd28e1266dc91957c8daf127b87bc6603ef4da8cc95c6a28ad34cd5ccc60"
+    },
+    "sotomayor": {
+     "input_sha256": "1c3974e7fd07d61be37a796b5ba289648bdd1b1162ce459a574e86f1c83dc147",
+     "retrieved_set_sha256": "d8ca8ea65b568b6a39e7f5c7006dc99e97dc993ec058147e87e89a6defd88ce6"
+    },
+    "kagan": {
+     "input_sha256": "9a339cc55e6d83499ff7fbe9883ffbea8571aaa7e2a11a031b36097c33075eb5",
+     "retrieved_set_sha256": "5163a8fa55e18c15454e81fb0eb9b35c8b42dccd301534fbe4fcedd9ca96e93f"
+    },
+    "gorsuch": {
+     "input_sha256": "422e98cfdac02ad20ede6cbfcd7698d5a65e40dab6607145a90022e631707cc0",
+     "retrieved_set_sha256": "cd41452964ef8d8600cd83497807bc67d7a276198e67a5c705215141a3a0bc6c"
+    },
+    "kavanaugh": {
+     "input_sha256": "c474bee066bd1dcb27a26c601bbb4e41082f9d4616d9fbf5d6a8f4f7eb278851",
+     "retrieved_set_sha256": "10cae57a672cc73dfdc97434364e0a471e93089bf41b2efcdccbd87a79d368c7"
+    },
+    "barrett": {
+     "input_sha256": "f9c53cd165fa8424e68cafc6974548ccc6820287c8087fbc5cd065f4910ff971",
+     "retrieved_set_sha256": "6f60b74806bd6d8de1b4dc1de6d20defdfd1cd8e896016c0aff44dcb0cdc77cc"
+    },
+    "jackson": {
+     "input_sha256": "9c930b5b8a68bfbe8178ccf36261a524a4697485f4295ba90aa157ae792fec12",
+     "retrieved_set_sha256": "c9f78dd92729e549d7f5c3b8559d579e324fb4bbe7dddd365d8793a3a4194298"
+    }
+   },
+   "answers": {
+    "roberts": {
+     "justice": "roberts",
+     "vote": "respondent",
+     "p_petitioner": 0.36,
+     "disposition": "affirm",
+     "separate_writing": "none",
+     "rationale": "What was done to Mr. Landor is indefensible, and RLUIPA, like RFRA, secures greater protection for religious exercise than the First Amendment does. But the question is not whether he was wronged. It is what remedy Congress authorized. RLUIPA rests on the Spending Clause, and such legislation operates as a contract. The recipient of federal funds accepts the conditions in exchange for the money. The warden and guards took no funds and made no promise, and so had no clear notice that accepting money meant personal liability. Tanzin read identical 'appropriate relief' text in RFRA, a statute grounded in Congress's Section 5 power and applied directly to federal officials. That context differs. Sossamon and Cummings teach that 'appropriate relief' under Spending Clause statutes is measured by what a funding recipient would knowingly accept.",
+     "considerations": [
+      "Spending Clause statutes operate as contracts with funding recipients, so liability cannot clearly extend to non-recipient officials sued personally (Pennhurst, Cummings).",
+      "Tanzin's reading of the same 'appropriate relief' phrase in RFRA is the petitioner's strongest argument, but RFRA's different constitutional footing limits its transfer.",
+      "The egregious facts and RLUIPA's broad protective purpose (Ramirez, O Centro) pull toward a damages remedy and keep this question close."
+     ],
+     "precedents": [
+      "Sossamon v. Texas",
+      "Cummings v. Premier Rehab Keller",
+      "Pennhurst State School & Hospital v. Halderman",
+      "Barnes v. Gorman",
+      "Tanzin v. Tanvir"
+     ],
+     "evidence_used": [
+      1,
+      2,
+      5,
+      6
+     ],
+     "confidence": 0.62,
+     "speculation": 0.5,
+     "confidence_note": "I would change my vote if persuaded that Tanzin's textual holding controls RLUIPA's identical language, or that Spending Clause notice is satisfied because the conditions are directed at officials acting for the funded institution.",
+     "_problems": []
+    },
+    "thomas": {
+     "justice": "thomas",
+     "vote": "respondent",
+     "p_petitioner": 0.2,
+     "disposition": "affirm",
+     "separate_writing": "concurrence",
+     "rationale": "RLUIPA's \u00a73 rests on the Spending Clause. Legislation of that kind operates much like a contract: the State accepts federal funds and, with them, conditions. Warden Myers accepted nothing. He is not the funding recipient, and Congress cannot impose personal liability on a nonparty through conditions attached to a grant to his employer. Tanzin does not control. RFRA binds federal officials directly under Congress' enumerated powers, and its 'appropriate relief' language was read against a backdrop where those officials were themselves the regulated parties. Read in light of Sossamon and Pennhurst's clear-notice rule, RLUIPA's identical words cannot supply what the Spending Clause withholds. What was done to Mr. Landor is troubling, but the remedy for it must come from \u00a71983 or state law, not from an unauthorized expansion of a spending statute.",
+     "considerations": [
+      "Spending Clause legislation binds only those who accept the funds, so individual officials who are not recipients cannot be subjected to personal damages liability under RLUIPA.",
+      "Pennhurst's clear-statement rule requires unambiguous notice of liability, and 'appropriate relief' did not supply such notice even to the States in Sossamon.",
+      "Tanzin is distinguishable because RFRA regulates federal officials directly rather than through funding conditions."
+     ],
+     "precedents": [
+      "Sossamon v. Texas",
+      "Pennhurst State School and Hospital v. Halderman",
+      "Tanzin v. Tanvir",
+      "Health and Hospital Corp. of Marion County v. Talevski",
+      "Cummings v. Premier Rehab Keller"
+     ],
+     "evidence_used": [
+      1,
+      2,
+      5,
+      6
+     ],
+     "confidence": 0.75,
+     "speculation": 0.45,
+     "confidence_note": "I would reconsider if persuaded that RLUIPA also validly rests on the Commerce Clause as applied, or that officials of funded programs are themselves bound recipients.",
+     "_problems": []
+    },
+    "alito": {
+     "justice": "alito",
+     "vote": "respondent",
+     "p_petitioner": 0.36,
+     "disposition": "affirm",
+     "separate_writing": "none",
+     "rationale": "What happened to Mr. Landor is indefensible, and RLUIPA, as Holt shows, gives prisoners substantial protection. But RLUIPA was enacted under the Spending Clause, not Section 5. Spending legislation operates like a contract between the Federal Government and the recipient State. Under Pennhurst and Arlington Central, any condition must be stated unambiguously. A prison guard or warden is not the recipient of federal funds and accepted no such condition. Tanzin read RFRA's identical 'appropriate relief' language to authorize damages, but RFRA rested on direct federal power over federal officers, so that reasoning does not carry over automatically. Imposing personal liability on non-recipients through a funding contract raises serious constitutional questions. As in Hernandez, creating new damages exposure is a choice for Congress. Injunctive relief remains available against the State.",
+     "considerations": [
+      "Under the Spending Clause contract analogy and the clear-notice rule, conditions bind only the funding recipient, and individual officers are not parties to the bargain.",
+      "Tanzin's RFRA holding is distinguishable because RFRA's application to federal officers rests on a different source of constitutional power.",
+      "Caution about expanding damages liability without a clear congressional statement, as in Hernandez, cuts against inferring personal liability."
+     ],
+     "precedents": [
+      "Sossamon v. Texas",
+      "Arlington Central School Dist. v. Murphy",
+      "Pennhurst State School v. Halderman",
+      "Tanzin v. Tanvir",
+      "Cummings v. Premier Rehab Keller"
+     ],
+     "evidence_used": [
+      2,
+      5,
+      8
+     ],
+     "confidence": 0.6,
+     "speculation": 0.55,
+     "confidence_note": "If I were persuaded that Tanzin's textual reading of 'appropriate relief' controls, and that Congress may validly reach officials of funded programs under the Spending power, the strength of my religious-liberty commitments in Holt and Hobby Lobby would move me to the petitioner's side.",
+     "_problems": []
+    },
+    "sotomayor": {
+     "justice": "sotomayor",
+     "vote": "petitioner",
+     "p_petitioner": 0.95,
+     "disposition": "reverse",
+     "separate_writing": "none",
+     "rationale": "RLUIPA lets a person whose religious exercise has been substantially burdened \"obtain appropriate relief against a government,\" and it defines government to include any \"official\" or \"person acting under color of law.\" In Tanzin v. Tanvir we read the identical text in RFRA to permit damages against officials in their individual capacities. As I explained in Sossamon, damages are the traditional, and often the only, remedy for a completed wrong. Mr. Landor's case shows why. His head was shaved, his vow broken, and he was released weeks later. An injunction is meaningless to him. The Spending Clause does not change the analysis. As Lewis v. Clarke teaches, in an individual-capacity suit the real party in interest is the officer, not the State. Clear-notice concerns tied to state sovereign immunity therefore do not apply. Congress conditioned federal funds on protecting the religious exercise of incarcerated people, and that condition must have teeth.",
+     "considerations": [
+      "RLUIPA's text is materially identical to RFRA's, and Tanzin held that \"appropriate relief\" against officials includes individual-capacity damages.",
+      "Damages are the ordinary remedy for violation of a legal right and the only meaningful one for transferred or released prisoners.",
+      "Individual-capacity suits do not implicate state sovereign immunity, so Sossamon's clear-statement rule and Spending Clause notice concerns do not bar relief."
+     ],
+     "precedents": [
+      "Tanzin v. Tanvir",
+      "Sossamon v. Texas",
+      "Lewis v. Clarke",
+      "Hafer v. Melo",
+      "Holt v. Hobbs"
+     ],
+     "evidence_used": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ],
+     "confidence": 0.93,
+     "speculation": 0.25,
+     "confidence_note": "Only a holding that Spending Clause legislation categorically cannot bind non-recipient officials, which I find unpersuasive, would move me.",
+     "_problems": []
+    },
+    "kagan": {
+     "justice": "kagan",
+     "vote": "petitioner",
+     "p_petitioner": 0.85,
+     "disposition": "reverse",
+     "separate_writing": "none",
+     "rationale": "RLUIPA authorizes 'appropriate relief against a government,' and defines 'government' to include officials and 'other person[s] acting under color of law.' In Tanzin v. Tanvir we unanimously read identical RFRA text to permit damages against officials in their individual capacities. Damages are the traditional remedy against officers, and often the only one that matters. When a prisoner has been released or transferred, an injunction does nothing for him. Louisiana's Spending Clause objection is that officials never accepted federal funds. That objection proves too much. Congress may attach conditions to funds that reach the recipient's employees acting under color of law, and qualified immunity already protects officials from unfair surprise. Here, guards shaved a Rastafarian's head despite binding circuit precedent and his documentation. If damages are unavailable, the statute's 'heightened duty' becomes a promise without a remedy.",
+     "considerations": [
+      "The text of RLUIPA mirrors RFRA's text, and Tanzin construed that text to include individual-capacity damages.",
+      "Without damages, RLUIPA violations against transferred or released prisoners are effectively unremediable, which defeats the statute's protective purpose.",
+      "The Spending Clause notice concern is answerable because the condition clearly reaches officials, and qualified immunity mitigates unfairness to individual officers."
+     ],
+     "precedents": [
+      "Tanzin v. Tanvir",
+      "Sossamon v. Texas",
+      "Holt v. Hobbs",
+      "Health and Hospital Corp. of Marion County v. Talevski",
+      "Ramirez v. Collier"
+     ],
+     "evidence_used": [
+      5,
+      7
+     ],
+     "confidence": 0.8,
+     "speculation": 0.55,
+     "confidence_note": "A persuasive showing that Spending Clause clear-statement doctrine categorically bars imposing liability on non-recipient individuals would move me toward the respondent.",
+     "_problems": []
+    },
+    "gorsuch": {
+     "justice": "gorsuch",
+     "vote": "petitioner",
+     "p_petitioner": 0.75,
+     "disposition": "reverse",
+     "separate_writing": "none",
+     "rationale": "RLUIPA authorizes 'appropriate relief against a government' and defines 'government' to include any 'official' or 'other person acting under color of' state law. In Tanzin v. Tanvir we read the identical text in RFRA to permit damages against officials in their individual capacities, because damages have long been appropriate relief against officers who violate the law. Congress used the same words here, and it 'knows how to say so' when it means something different. Sossamon concerned the States' sovereign immunity, not officers sued personally, so it does not control. The Spending Clause objection that officials never accepted federal funds deserves a serious answer. But an officer acting under color of law in a funded program has fair notice of RLUIPA's commands. As Kirtz shows, when the text clearly authorizes relief, refusing it would negate what Congress provided. Shaving a man's head in defiance of his faith is precisely the wrong Congress meant to remedy.",
+     "considerations": [
+      "RLUIPA's operative text is identical to the RFRA language Tanzin held authorizes individual-capacity damages.",
+      "Sossamon rested on state sovereign immunity, which does not shield officers sued personally.",
+      "The Spending Clause notice objection is the strongest counterargument, but it does not overcome clear statutory text applied to officials acting under color of law."
+     ],
+     "precedents": [
+      "Tanzin v. Tanvir",
+      "Sossamon v. Texas",
+      "Holt v. Hobbs",
+      "Department of Agriculture v. Kirtz",
+      "Cummings v. Premier Rehab Keller"
+     ],
+     "evidence_used": [
+      1,
+      3,
+      4,
+      7
+     ],
+     "confidence": 0.72,
+     "speculation": 0.45,
+     "confidence_note": "A persuasive showing that Spending Clause legislation cannot impose personal liability on non-recipients of funds, consistent with Cummings's contract analogy, would move me toward the respondent.",
+     "_problems": []
+    },
+    "kavanaugh": {
+     "justice": "kavanaugh",
+     "vote": "respondent",
+     "p_petitioner": 0.4,
+     "disposition": "affirm",
+     "separate_writing": "none",
+     "rationale": "What happened to Mr. Landor was indefensible. RLUIPA protects religious exercise in prisons, and I have enforced it vigorously. But RLUIPA rests on the Spending Clause. Spending Clause legislation operates like a contract, and its conditions bind the recipients of federal funds: the States and their agencies. The individual guard or warden never accepted those funds and never agreed to personal liability. Tanzin read identical 'appropriate relief' language in RFRA, which rests on a different source of congressional power. Sossamon and Cummings teach that remedies under Spending Clause statutes require clear notice to the party being bound. Congress can provide an individual-capacity damages remedy expressly, and it may wish to do so. Absent that clear statement, I would not imply one against non-recipients, and every circuit to consider the question agrees.",
+     "considerations": [
+      "Spending Clause conditions bind only fund recipients, and individual officials are not parties to the federal-state bargain.",
+      "The clear-notice rule from Pennhurst, Sossamon, and Cummings limits the remedies courts may read into Spending Clause statutes.",
+      "Tanzin's textual reading of 'appropriate relief' is strong but rests on RFRA's different constitutional footing, and the uniform circuit consensus deserves weight."
+     ],
+     "precedents": [
+      "Sossamon v. Texas",
+      "Cummings v. Premier Rehab Keller",
+      "Tanzin v. Tanvir",
+      "Pennhurst State School & Hospital v. Halderman",
+      "Medina v. Planned Parenthood South Atlantic"
+     ],
+     "evidence_used": [
+      4,
+      7
+     ],
+     "confidence": 0.55,
+     "speculation": 0.7,
+     "confidence_note": "If I concluded that Tanzin's identical text controls and that qualified immunity adequately protects officials, which the Solicitor General's support for petitioner reinforces, I would vote to reverse.",
+     "_problems": []
+    },
+    "barrett": {
+     "justice": "barrett",
+     "vote": "respondent",
+     "p_petitioner": 0.4,
+     "disposition": "affirm",
+     "separate_writing": "none",
+     "rationale": "RLUIPA's text, read alone, resembles RFRA's language in Tanzin: 'appropriate relief against a government,' with 'government' defined to include officials. But RLUIPA rests on the Spending Clause, and that changes the analysis. Spending Clause legislation operates like a contract. Its conditions bind the recipients of federal funds, who accept them knowingly and voluntarily. Individual prison officials accept nothing. Imposing personal damages liability on people who never agreed to the bargain fits poorly with Pennhurst's clear-notice rule and with Cummings' contract analogy. Treating them as bound would stretch the spending power well beyond its accepted footing. As I said in Talevski, private enforcement of Spending Clause statutes is the exception, not the rule. Congress did not unambiguously authorize damages against non-recipients here, and Sossamon counsels caution. I would affirm, despite the troubling facts.",
+     "considerations": [
+      "Spending Clause conditions bind only the fund recipients who accept them, and individual officials are not parties to that bargain.",
+      "The clear-notice rule and the contract analogy in Pennhurst and Cummings set a high bar for implying damages remedies under Spending Clause statutes.",
+      "Tanzin's textual reading of 'appropriate relief' arose under RFRA, which rests on a different source of constitutional power, so it is not controlling."
+     ],
+     "precedents": [
+      "Tanzin v. Tanvir",
+      "Sossamon v. Texas",
+      "Cummings v. Premier Rehab Keller",
+      "Pennhurst State School & Hospital v. Halderman",
+      "Health & Hospital Corp. v. Talevski"
+     ],
+     "evidence_used": [
+      4
+     ],
+     "confidence": 0.55,
+     "speculation": 0.6,
+     "confidence_note": "A persuasive Necessary and Proper Clause theory, under Sabri, for reaching officials of funded entities, combined with Tanzin's identical text, would move me to reverse.",
+     "_problems": []
+    },
+    "jackson": {
+     "justice": "jackson",
+     "vote": "petitioner",
+     "p_petitioner": 0.9,
+     "disposition": "reverse",
+     "separate_writing": "none",
+     "rationale": "RLUIPA authorizes 'appropriate relief against a government,' and defines 'government' to include officials and 'any other person acting under color of' state law. That is the same language we unanimously read in Tanzin to permit individual-capacity damages under RFRA. Damages have always been the traditional remedy against officials who violate federal rights. Without them, a prisoner like Mr. Landor, who was forcibly shaved weeks before his release, has no remedy at all. The Spending Clause objection does not change this. As Talevski reaffirmed, Spending Clause statutes create real, enforceable federal rights. Congress may condition funds on a State's agreement that its officers will answer personally for violations. Sossamon addressed only the States' sovereign immunity, not suits against individual officers. The text controls, and it permits this suit.",
+     "considerations": [
+      "RLUIPA's text and definition of 'government' are materially identical to RFRA's, which Tanzin held permits individual-capacity damages.",
+      "Spending Clause legislation can create enforceable rights and can lawfully reach officials of funded programs, as Talevski confirms.",
+      "Denying damages would leave transitory or released prisoners with no meaningful remedy, gutting the statute's protection."
+     ],
+     "precedents": [
+      "Tanzin v. Tanvir",
+      "Health and Hospital Corp. v. Talevski",
+      "Sossamon v. Texas",
+      "Cummings v. Premier Rehab Keller",
+      "Holt v. Hobbs"
+     ],
+     "evidence_used": [
+      1
+     ],
+     "confidence": 0.88,
+     "speculation": 0.45,
+     "confidence_note": "A persuasive showing that Spending Clause conditions categorically cannot bind non-recipient individuals, with clear notice lacking, would give me pause, though I doubt it would carry the day.",
+     "_problems": []
+    }
+   },
+   "n_valid": 9
+  }
+ },
+ "model_id": "claude-opus-5-5",
+ "model_ids_seen": [
+  "claude-opus-5-5"
+ ]
+}

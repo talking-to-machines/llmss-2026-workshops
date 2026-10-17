@@ -1,0 +1,23 @@
+# Non-Ohio panel results: non-commercial terms, not public (the site shows their output)
+W1_aipop/data/benchmark_12panels.csv
+W1_aipop/data/nj2025_holdout_*.csv
+
+# R and RStudio
+.Rhistory
+.RData
+.Rproj.user/
+.Renviron
+*_files/
+*.html
+!docs/**/*.html
+
+# Quarto
+/.quarto/
+
+# What the notebooks write when you run them (W1's starting panel is kept)
+*/output/*
+!*/output/.gitkeep
+!W1_aipop/output/oh_mini_panel_400.parquet
+!W1_aipop/output/oh_mini_panel_400_interviewed.parquet
+
+**/*.quarto_ipynb

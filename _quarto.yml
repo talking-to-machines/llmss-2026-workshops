@@ -1,0 +1,73 @@
+project:
+  type: website
+  output-dir: docs
+  render:
+    - index.qmd
+    - setup.qmd
+    - W1_aipop/notebooks/01_frame_and_sample.Rmd
+    - W1_aipop/notebooks/02_personas_and_interview.Rmd
+    - W1_aipop/notebooks/03_mrp_and_validation.Rmd
+    - W2_twins/notebooks/01_twins_and_interview.Rmd
+    - W2_twins/notebooks/02_signals_and_backtest.Rmd
+    - W3_audience/notebooks/02_silicon_voters.Rmd
+    - W3_legal/notebooks/01_justice_twins.Rmd
+
+execute:
+  freeze: auto   # the site is built from stored results; it never calls a model
+
+website:
+  title: "Talking to Machines · LLMSS 2026 Workshops"
+  site-url: https://talking-to-machines.github.io/llmss-2026-workshops/
+  repo-url: https://github.com/talking-to-machines/llmss-2026-workshops
+  repo-actions: [source, issue]
+  search: true
+  page-navigation: true
+  navbar:
+    left:
+      - text: Home
+        href: index.qmd
+      - text: Run it yourself
+        href: setup.qmd
+    right:
+      - icon: github
+        href: https://github.com/talking-to-machines/llmss-2026-workshops
+  sidebar:
+    style: docked
+    contents:
+      - index.qmd
+      - setup.qmd
+      - section: "Workshop 1 · AIPOP"
+        contents:
+          - text: "1. Building a silicon sample"
+            href: W1_aipop/notebooks/01_frame_and_sample.Rmd
+          - text: "2. Personas and the digital interview"
+            href: W1_aipop/notebooks/02_personas_and_interview.Rmd
+          - text: "3. MrP and validation"
+            href: W1_aipop/notebooks/03_mrp_and_validation.Rmd
+      - section: "Workshop 2 · The Wisdom of Digital Twins"
+        contents:
+          - text: "1. Finfluencer twins and the daily interview"
+            href: W2_twins/notebooks/01_twins_and_interview.Rmd
+          - text: "2. From twin answers to a market signal"
+            href: W2_twins/notebooks/02_signals_and_backtest.Rmd
+      - section: "Workshop 3 · The Silicon Audience"
+        contents:
+          - text: "Silicon Voters: ads for five kinds of voter"
+            href: W3_audience/notebooks/02_silicon_voters.Rmd
+          - text: "Silicon Jury: a justice twin, one case"
+            href: W3_legal/notebooks/01_justice_twins.Rmd
+  page-footer:
+    left: "Talking to Machines · LLMSS 2026 pre-conference workshops, City University of Hong Kong, 13 October 2026"
+    right: "Code: MIT · Text and data: CC BY 4.0"
+
+format:
+  html:
+    theme:
+      light: cosmo
+      dark: darkly
+    toc: true
+    toc-depth: 3
+    df-print: kable
+    code-copy: true
+    code-overflow: wrap
+    fig-align: center
