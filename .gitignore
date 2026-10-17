@@ -8,6 +8,7 @@ W1_aipop/data/nj2025_holdout_*.csv
 .Rproj.user/
 .Renviron
 *_files/
+!docs/**/*_files/
 *.html
 !docs/**/*.html
 
